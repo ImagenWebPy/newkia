@@ -5,14 +5,17 @@ $listElement1 = "";
 $listElement2 = "";
 $listElement3 = "";
 $seccionFooter = FALSE;
-switch ($paginaFooter[0]) {
-    case 'showroom':
-        $listElement1 = "showroom";
-        if ($paginaFooter[1] == 'caracteristica')
-            $listElement2 = 'caracteristica';
-        $listElement3 = $paginaFooter[3];
-        $seccionFooter = TRUE;
-        break;
+if (!empty($paginaFooter[0])) {
+    switch ($paginaFooter[0]) {
+        case 'showroom':
+            $listElement1 = "showroom";
+            if ($paginaFooter[1] == 'caracteristica')
+                $listElement2 = 'caracteristica';
+            if (!empty($paginaFooter[3]))
+                $listElement3 = $paginaFooter[3];
+            $seccionFooter = TRUE;
+            break;
+    }
 }
 ?>
 <div id="footer" >

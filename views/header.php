@@ -4,7 +4,8 @@ $pagina = $helper->getPage();
 $classWrap = "";
 if (!empty($pagina[1])) {
     switch ($pagina[1]) {
-        case 'modelo':
+        case 'caracteristica':
+        case 'galeria':
             $classWrap = "pip_wrap";
             break;
     }
@@ -13,33 +14,33 @@ if (!empty($pagina[1])) {
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Kia Motors Global | Sedans, Hatchbacks, SUVs & MPVs</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title><?= $this->title; ?></title>
         <meta name="keywords" content="">
-        <meta name="title" content="Kia Motors Global | Sedans, Hatchbacks, SUVs & MPVs" />
+        <meta name="title" content="<?= $this->title; ?>" />
         <meta name="description" content="Explore Kia’s wide range of cars from sedans to hatchback, hybrid to SUVs etc. Request a test drive, locate a dealer, download brochures & do more.">
-        <link rel="shortcut icon" href="http://org-www.kia.com/etc/designs/kia/favicon.ico" type="image/x-icon"> 
+        <link rel="shortcut icon" href="<?= URL; ?>public/img/favicon.ico" type="image/x-icon"> 
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
         <meta name="robots" content="NOODP, NOYDIR">
         <meta name="kia_metrics_pagename" content="main">
         <link rel="canonical" href="<?= URL; ?>">
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="Kia_Motors" />
-        <meta name="twitter:title" content="Kia Motors Global | Sedans, Hatchbacks, SUVs & MPVs" />
+        <meta name="twitter:site" content="<?= $this->meta_sitename; ?>" />
+        <meta name="twitter:title" content="<?= $this->title; ?>" />
         <meta name="twitter:description" content="Explore Kia’s wide range of cars from sedans to hatchback, hybrid to SUVs etc. Request a test drive, locate a dealer, download brochures & do more." />
         <meta name="twitter:image" content="" />
-        <meta property="og:site_name" content="KIA" />
-        <meta property="og:title" content="Kia Motors Global | Sedans, Hatchbacks, SUVs & MPVs" />
+        <meta property="og:site_name" content="<?= $this->meta_sitename; ?>" />
+        <meta property="og:title" content="<?= $this->title; ?>" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Explore Kia’s wide range of cars from sedans to hatchback, hybrid to SUVs etc. Request a test drive, locate a dealer, download brochures & do more." />
         <meta property="og:image" content="" />
-        <meta itemprop="name" content="Kia Motors Global | Sedans, Hatchbacks, SUVs & MPVs">
+        <meta itemprop="name" content="<?= $this->title; ?>">
         <meta itemprop="description" content="Explore Kia’s wide range of cars from sedans to hatchback, hybrid to SUVs etc. Request a test drive, locate a dealer, download brochures & do more.">
         <meta itemprop="image" content="">
-        <script type="text/javascript" src="http://org-www.kia.com/etc/designs/kia-global/clientlib/js/lib.js"></script>
+        <script type="text/javascript" src="<?= URL; ?>public/js/lib.js"></script>
         <script type="text/javascript" src="<?= URL; ?>public/js/angular.js"></script> 
         <script type="text/javascript" src="<?= URL; ?>public/js/angular-common-global.js"></script> 
         <script type="text/javascript" src="<?= URL; ?>public/js/angular-sanitize-1.0.0.js"></script>
@@ -138,230 +139,44 @@ if (!empty($pagina[1])) {
                             <div class="dth2_u dth_pip">
                                 <div class="car_tab">
                                     <a href="#" class="sort_a sort_on"><span class="cmm_tspr spr_sort">Todos los vehículos</span></a>
-                                    <a href="#" class="sort_a"><span class="cmm_tspr spr_sort">Automòviles</span></a>
-                                    <a href="#" class="sort_a"><span class="cmm_tspr spr_sort">SUV</span></a>
-                                    <a href="#" class="sort_a"><span class="cmm_tspr spr_sort">Familiares</span></a>
-                                    <a href="#" class="sort_a"><span class="cmm_tspr spr_sort">Commerciales</span></a>
+                                    <?php foreach ($helper->getCategoriasVehiculos() as $item): ?>
+                                        <a href="#" class="sort_a"><span class="cmm_tspr spr_sort"><?= utf8_encode($item['descripcion']); ?></span></a>
+                                    <?php endforeach; ?>
                                 </div>
                                 <div class="car_grid on">
                                     <strong class="hidden">Todos los Vehìculos</strong>
                                     <ul class="grid_u">
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/picanto.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-picanto.png" alt="Picanto"></span>
-                                                <strong class="g_name">PICANTO</strong>
-                                                <strong class="g_name">TA_15MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/rio-4-door.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-rio-4-door.png" alt="msg_vehicle_rio-4-door"></span>
-                                                <strong class="g_name">RIO 4-DOOR</strong>
-                                                <strong class="g_name">UB_4DR_16MY</strong>
-                                            </a>
-                                        </li>
-
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/rio-5-door.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-rio-5-door.png" alt="msg_vehicle_rio-5-door"></span>
-                                                <strong class="g_name">RIO 5-DOOR</strong>
-                                                <strong class="g_name">UB_5DR_16MY</strong>
-                                            </a>
-                                        </li>
-
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/cerato-forte.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-cerato-forte.png" alt="msg_vehicle_cerato-forte"></span>
-                                                <strong class="g_name">CERATO/FORTE</strong>
-                                                <strong class="g_name">YD 4DR_15MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/optima.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-optima.png" alt="Optima"></span>
-                                                <strong class="g_name">OPTIMA</strong>
-                                                <strong class="g_name">TF_15MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/cadenza.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-cadenza.png" alt="Cadenza"></span>
-                                                <strong class="g_name">CADENZA</strong>
-                                                <strong class="g_name">VG_14MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/kia-quoris.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-quoris.png" alt="msg_vehicle_kia-quoris"></span>
-                                                <strong class="g_name">KIA QUORIS</strong>
-                                                <strong class="g_name">KH_15MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/soul.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-soul.png" alt="Soul"></span>
-                                                <strong class="g_name">SOUL</strong>
-                                                <strong class="g_name">PS_16MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/sportage.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-sportage.png" alt="Sportage"></span>
-                                                <strong class="g_name">SPORTAGE</strong>
-                                                <strong class="g_name">SL_15MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/sorento.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-sorento.png" alt="Sorento"></span>
-                                                <strong class="g_name">SORENTO</strong>
-                                                <strong class="g_name">XM_14MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/carens-rondo.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-carens-rondo.png" alt="msg_vehicle_carens-rondo"></span>
-                                                <strong class="g_name">CARENS/RONDO</strong>
-                                                <strong class="g_name">RP_16MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/grand-carnival-yp-rhd.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-carnival-yp.png" alt="msg_vehicle_grand-carnival-yp-rhd"></span>
-                                                <strong class="g_name">CARNIVAL_RHD</strong>
-                                                <strong class="g_name">YP_16MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/k2700.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-k2700.png" alt="K2700"></span>
-                                                <strong class="g_name">K2700</strong>
-                                                <strong class="g_name">PU_16MY</strong>
-                                            </a>
-                                        </li>
+                                        <?php foreach ($helper->getModelos() as $item): ?>
+                                            <li class="grid_l">
+                                                <a href="<?= URL; ?>modelo/caracteristica/<?= $item['id'] ?>/<?= $helper->cleanUrl(utf8_encode($item['descripcion'])) ?>" class="grid_box">
+                                                    <span class="g_img"><img src="<?= THUMB_MENU . $item['img_thumb']; ?>" alt="<?= utf8_encode($item['descripcion']); ?>"></span>
+                                                    <strong class="g_name"><?= strtoupper(utf8_encode($item['descripcion'])) ?></strong>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
                                     </ul>
                                 </div>
-                                <div class="car_grid">
-                                    <strong class="hidden">Automóviles</strong>
-                                    <ul class="grid_u">
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/picanto.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-picanto.png" alt="Picanto"></span>
-                                                <strong class="g_name">PICANTO</strong>
-                                                <strong class="g_name">TA_15MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/rio-4-door.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-rio-4-door.png" alt="msg_vehicle_rio-4-door"></span>
-                                                <strong class="g_name">RIO 4-DOOR</strong>
-                                                <strong class="g_name">UB_4DR_16MY</strong>
-                                            </a>
-                                        </li>
-
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/rio-5-door.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-rio-5-door.png" alt="msg_vehicle_rio-5-door"></span>
-                                                <strong class="g_name">RIO 5-DOOR</strong>
-                                                <strong class="g_name">UB_5DR_16MY</strong>
-                                            </a>
-                                        </li>
-
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/cerato-forte.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-cerato-forte.png" alt="msg_vehicle_cerato-forte"></span>
-                                                <strong class="g_name">CERATO/FORTE</strong>
-                                                <strong class="g_name">YD 4DR_15MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/optima.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-optima.png" alt="Optima"></span>
-                                                <strong class="g_name">OPTIMA</strong>
-                                                <strong class="g_name">TF_15MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/cadenza.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-cadenza.png" alt="Cadenza"></span>
-                                                <strong class="g_name">CADENZA</strong>
-                                                <strong class="g_name">VG_14MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/kia-quoris.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-quoris.png" alt="msg_vehicle_kia-quoris"></span>
-                                                <strong class="g_name">KIA QUORIS</strong>
-                                                <strong class="g_name">KH_15MY</strong>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="car_grid">
-                                    <strong class="hidden">SUV</strong>		
-                                    <ul class="grid_u">
+                                <?php foreach ($helper->getCategoriasVehiculos() as $item): ?>
+                                    <div class="car_grid on">
+                                        <strong class="hidden"><?= utf8_encode($item['descripcion']); ?></strong>
                                         <ul class="grid_u">
-                                            <li class="grid_l">
-                                                <a href="http://org-www.kia.com/gt/showroom/soul.html" class="grid_box">
-                                                    <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-soul.png" alt="Soul"></span>
-                                                    <strong class="g_name">SOUL</strong>
-                                                    <strong class="g_name">PS_16MY</strong>
-                                                </a>
-                                            </li>
-                                            <li class="grid_l">
-                                                <a href="http://org-www.kia.com/gt/showroom/sportage.html" class="grid_box">
-                                                    <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-sportage.png" alt="Sportage"></span>
-                                                    <strong class="g_name">SPORTAGE</strong>
-                                                    <strong class="g_name">SL_15MY</strong>
-                                                </a>
-                                            </li>
-                                            <li class="grid_l">
-                                                <a href="http://org-www.kia.com/gt/showroom/sorento.html" class="grid_box">
-                                                    <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-sorento.png" alt="Sorento"></span>
-                                                    <strong class="g_name">SORENTO</strong>
-                                                    <strong class="g_name">XM_14MY</strong>
-                                                </a>
-                                            </li>
+                                            <?php foreach ($helper->getModelos($item['id']) as $modelo): ?>
+                                                <li class="grid_l">
+                                                    <a href="<?= URL; ?>modelos/caracteristica/<?= $modelo['id'] ?>/<?= $helper->cleanUrl(utf8_encode($modelo['descripcion'])) ?>" class="grid_box">
+                                                        <span class="g_img"><img src="<?= THUMB_MENU . $modelo['img_thumb']; ?>" alt="<?= utf8_encode($modelo['descripcion']); ?>"></span>
+                                                        <strong class="g_name"><?= strtoupper(utf8_encode($modelo['descripcion'])) ?></strong>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach; ?>
                                         </ul>
-                                    </ul>
-                                </div>
-                                <div class="car_grid">
-                                    <strong class="hidden">Familiares</strong>
-                                    <ul class="grid_u">
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/carens-rondo.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-carens-rondo.png" alt="msg_vehicle_carens-rondo"></span>
-                                                <strong class="g_name">CARENS/RONDO</strong>
-                                                <strong class="g_name">RP_16MY</strong>
-                                            </a>
-                                        </li>
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/grand-carnival-yp-rhd.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-carnival-yp.png" alt="msg_vehicle_grand-carnival-yp-rhd"></span>
-                                                <strong class="g_name">CARNIVAL_RHD</strong>
-                                                <strong class="g_name">YP_16MY</strong>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="car_grid">
-                                    <strong class="hidden">Comerciales</strong>
-                                    <ul class="grid_u">
-                                        <li class="grid_l">
-                                            <a href="http://org-www.kia.com/gt/showroom/k2700.html" class="grid_box">
-                                                <span class="g_img"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-k2700.png" alt="K2700"></span>
-                                                <strong class="g_name">K2700</strong>
-                                                <strong class="g_name">PU_16MY</strong>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>             
                         </li>
                         <li class="dth1_l"><a href="#" class="dth1_a">Compra un Kia</a>
                             <ul class="dth2_u">
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/build-your-own.html" class="dth2_a">Arma tu Kia</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/compare-car.html" class="dth2_a">Compara</a></li>
+                                <!--<li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/compare-car.html" class="dth2_a">Compara</a></li>-->
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/find-a-dealer.html" class="dth2_a">Encuentra tu Kia</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/download-a-brochure.html" class="dth2_a">Ficha Técnica</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/request-a-quote.html" class="dth2_a">Cotizar</a></li>
@@ -370,7 +185,7 @@ if (!empty($pagina[1])) {
                         </li>
                         <li class="dth1_l"><a href="#" class="dth1_a">Tengo un Kia</a>
                             <ul class="dth2_u">
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/service-care.html" class="dth2_a">Servicio PosVenta</a></li>
+                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/service-care.html" class="dth2_a">Servicio PostVenta</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/warranty.html" class="dth2_a">Garantía</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/book-a-service.html" class="dth2_a">Citas al Taller</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/roadside-assistance.html" class="dth2_a">Bienvenido a tu vida "0"</a></li>

@@ -33,7 +33,7 @@ class Helper {
         $String = str_replace("ý", "y", $String);
 
         $String = str_replace("'", "", $String);
-        //$String = str_replace(".", "_", $String);
+        $String = str_replace(".", "_", $String);
         $String = str_replace(" ", "_", $String);
         $String = str_replace("/", "_", $String);
 
@@ -180,32 +180,6 @@ class Helper {
         }
     }
 
-    public function listadoModelosIndex() {
-        $sql = $this->db->select("SELECT v.id,
-                                        m.descripcion as marca,
-                                        v.modelo,
-                                        v.version,
-                                        v.ano,
-                                        v.transmision,
-                                        v.precio,
-                                        v.fecha,
-                                        c.descripcion AS condicion,
-                                        com.descripcion AS combustible,
-                                        vi.imagen,
-                                        v.kilometraje,
-                                        v.vendido
-                                FROM vehiculo v
-                                LEFT JOIN marca m ON m.id = v.id_marca
-                                LEFT JOIN condicion c ON c.id = v.id_condicion
-                                LEFT JOIN combustible com ON com.id = v.id_combustible
-                                LEFT JOIN vehiculo_img vi ON vi.id_vehiculo = v.id
-                                WHERE vi.principal = 1
-                                and v.estado = 1
-                                ORDER BY v.id DESC
-                                LIMIT " . CANT_REG);
-        return $sql;
-    }
-
     /**
      * 
      * @param int $per_page
@@ -298,200 +272,6 @@ class Helper {
         return $paging;
     }
 
-    public function ultimosVehiculos($limit = 3) {
-        $sql = $this->db->select("select v.id,
-                                        m.descripcion as marca,
-                                        v.modelo,
-                                        v.version, 
-                                        v.ano, 
-                                        v.transmision,
-                                        v.precio,
-                                        v.fecha,
-                                        c.descripcion as condicion,
-                                        com.descripcion as combustible,
-                                        vi.imagen,
-                                        v.kilometraje
-                                from vehiculo v
-                                LEFT JOIN marca m on m.id = v.id_marca
-                                LEFT JOIN condicion c on c.id = v.id_condicion
-                                LEFT JOIN combustible com on com.id = v.id_combustible
-                                LEFT JOIN vehiculo_img vi on vi.id_vehiculo = v.id
-                                where vi.principal = 1
-                                ORDER BY v.id desc
-                                LIMIT $limit");
-        return $sql;
-    }
-
-    public function getSedes() {
-        $sql = $this->db->select("select * from sede where estado = 1 and id NOT IN (5) ORDER BY id ASC");
-        return $sql;
-    }
-
-    public function getSedesAdmin() {
-        $sql = $this->db->select("select * from sede where estado = 1 ORDER BY id ASC");
-        return $sql;
-    }
-
-    public function getEstado() {
-        $sql = $this->db->select("select * from estado where estado = 1 ORDER BY descripcion ASC");
-        return $sql;
-    }
-
-    public function getHorarioAtencion() {
-        $sql = $this->db->select("select horario_atencion from sede where principal = 1");
-        return $sql[0]['horario_atencion'];
-    }
-
-    public function getGardenMarcas() {
-        $sql = $this->db->select("SELECT * FROM `marca` where garden = 1 and estado = 1;");
-        return $sql;
-    }
-
-    public function getMarcas($filtro = NULL) {
-        if (empty($filtro)) {
-            $sql = $this->db->select("select id, descripcion from marca where estado = 1 ORDER BY descripcion ASC");
-        } else {
-            $sql = $this->db->select("select m.id, 
-                                            m.descripcion 
-                                    from marca m
-                                    RIGHT JOIN modelo mo on mo.id_marca = m.id
-                                    where m.estado = 1 
-                                    GROUP BY m.descripcion, m.id
-                                    ORDER BY m.descripcion ASC");
-        }
-        return $sql;
-    }
-
-    public function getMinMaxPrecio() {
-        $sql = $this->db->select("select MAX(precio) as max, MIN(precio) as min from vehiculo");
-        $data = array(
-            'max' => $sql[0]['max'],
-            'min' => $sql[0]['min']
-        );
-        return $data;
-    }
-
-    public function getTipoVehiculo($filtro = NULL) {
-        if (empty($filtro)) {
-            $sql = $this->db->select("select id, descripcion, img, img_hover from tipo_vehiculo where estado = 1 ORDER BY descripcion ASC");
-        } else {
-            $sql = $this->db->select("select tv.id, tv.descripcion, tv.img, tv.img_hover 
-                                    from tipo_vehiculo tv
-                                    RIGHT JOIN vehiculo v on v.id_tipo_vehiculo = tv.id
-                                    where tv.estado = 1
-                                    GROUP BY tv.id, tv.descripcion
-                                    ORDER BY tv.descripcion ASC");
-        }
-        return $sql;
-    }
-
-    public function getTipoCombusitble() {
-        $sql = $this->db->select("select id, descripcion from combustible where estado = 1");
-        return $sql;
-    }
-
-    public function getTipoTraccion() {
-        $sql = $this->db->select("select * from tipo_traccion where estado = 1");
-        return $sql;
-    }
-
-    public function loadBuscador() {
-        $marcas = $this->getMarcas(1);
-        $rangoPrecio = $this->getMinMaxPrecio();
-        $tipoVehiculo = $this->getTipoVehiculo(1);
-        $sede = $this->getSedes();
-        $combustible = $this->getTipoCombusitble();
-        $data = '<div class="col-lg-3 col-sm-4 col-xs-12">
-                <aside class="b-items__aside">
-                    <h2 class="s-title wow zoomInUp" style="font-size: 16px;" data-wow-delay="0.5s">REALIZA TU BÚSQUEDA</h2>
-                    <div class="b-items__aside-main wow zoomInUp" data-wow-delay="0.5s">
-                        <form method="POST" action="' . URL . 'busqueda/listado" id="frmBuscarVehiculo">
-                            <div class="b-items__aside-main-body">
-                                <div class="b-items__aside-main-body-item">
-                                    <label>MARCA</label>
-                                    <div>
-                                        <select name="marca" class="m-select">
-                                            <option value="" selected="">Cualquiera</option>';
-        foreach ($marcas as $item) {
-            $data .= '<option value="' . utf8_encode($item['id']) . '">' . utf8_encode($item['descripcion']) . '</option>';
-        }
-        $data .= '</select>
-                                        <span class="fa fa-caret-down"></span>
-                                    </div>
-                                </div>
-                                <div class="b-items__aside-main-body-item">
-                                    <label>RANGO DE PRECIO</label>
-                                    <div class="slider"></div>
-                                    <input type="hidden" name="min" id="minUsados" value="' . ceil($rangoPrecio['min']) . '" class="j-min" />
-                                    <input type="hidden" name="max" id="maxUsados" value="' . ceil($rangoPrecio['max']) . '" class="j-max" />
-                                    <input type="hidden" name="realMinValue" id="realMinValue" value=""/>
-                                    <input type="hidden" name="realMaxValue" id="realMaxValue" value=""/>
-                                </div>
-                                <div class="b-items__aside-main-body-item">
-                                    <label>TIPO DE VEHICULO</label>
-                                    <div>
-                                        <select name="tipo_vehiculo" class="m-select">
-                                            <option value="" selected="">Cualquiera</option>';
-        foreach ($tipoVehiculo as $item) {
-            $data .= '<option value="' . utf8_encode($item['id']) . '">' . utf8_encode($item['descripcion']) . '</option>';
-        }
-        $data .= '</select>
-                                        <span class="fa fa-caret-down"></span>
-                                    </div>
-                                </div>
-                                <div class="b-items__aside-main-body-item">
-                                    <label>SEDE</label>
-                                    <div>
-                                        <select name="sede" class="m-select">
-                                            <option value="" selected="">Cualquiera</option>';
-        foreach ($sede as $item) {
-            $data .= '<option value="' . utf8_encode($item['id']) . '">' . utf8_encode($item['descripcion']) . ' - ' . utf8_encode($item['ciudad']) . '</option>';
-        }
-        $data .= '</select>
-                                        <span class="fa fa-caret-down"></span>
-                                    </div>
-                                </div>
-                                <div class="b-items__aside-main-body-item">
-                                    <label>COMBUSTIBLE</label>
-                                    <div>
-                                        <select name="combustible" class="m-select">
-                                            <option value="" selected="">Todos</option>';
-        foreach ($combustible as $item) {
-            $data .= '<option value="' . utf8_encode($item['id']) . '">' . utf8_encode($item['descripcion']) . '</option>';
-        }
-        $data .= '  </select>
-                                        <span class="fa fa-caret-down"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <footer class="b-items__aside-main-footer">
-                                <button type="submit" class="btn m-btn" id="btn-BuscarVehiculos">BUSCAR VEHÍCULOS<span class="fa fa-angle-right"></span></button><br />
-                            </footer>
-                        </form>
-                    </div>
-                </aside>
-            </div>';
-        return $data;
-    }
-
-    public function getPermisosUsuario($id) {
-        $sql = $this->db->select("SELECT aup.id_permiso, ap.descripcion as permiso
-                                FROM admin_usuario_permiso aup 
-                                LEFT JOIN admin_permiso ap on ap.id = aup.id_permiso
-                                where id_usuario = $id;");
-        return $sql[0];
-    }
-
-    public function getCantidadVehiculosTipo($tipo) {
-        $sql = $this->db->select("select count(*) as cantidad from vehiculo where id_condicion = $tipo");
-        return $sql[0]['cantidad'];
-    }
-
-    public function getCondicion() {
-        $sql = $this->db->select("select * from condicion where estado = 1");
-        return $sql;
-    }
-
     function redimensionar($file, $nameFile, $ancho, $alto, $serverdir) {
         # se obtene la dimension y tipo de imagen 
         $datos = getimagesize($file);
@@ -557,54 +337,33 @@ class Helper {
         return true;
     }
 
-    public function verificaEstado($tabla, $id, $campo = NULL) {
-        $sql = $this->db->select("select estado from $tabla where id = $id");
-        return $sql[0]['estado'];
+    /**
+     * Funcion que retorna las categorias de los modelos
+     * @return array
+     */
+    public function getCategoriasVehiculos() {
+        $sql = $this->db->select("SELECT id, descripcion FROM tipo_vehiculo where estado = 1 ORDER BY orden ASC;");
+        return $sql;
     }
 
-    public function loadGalleryImage($id) {
-        $imagenes = $this->db->select("select * from vehiculo_img where id_vehiculo = $id");
-        $contenido = '';
-        foreach ($imagenes as $item) {
-            $id_img = $item['id'];
-            if ($item['principal'] == 1) {
-                $img_principal = '<a class="pointer btnImgPrincipal" id="imgPrincipal' . $id_img . '" data-id="' . $id_img . '"><span class="label label-success">Principal</span></a>';
-                $imgPrincipal = utf8_encode($item['imagen']);
-            } else {
-                $img_principal = '<a class="pointer btnImgPrincipal" id="imgPrincipal' . $id_img . '" data-id="' . $id_img . '"><span class="label label-warning">Principal</span></a>';
-            }
-            if ($item['estado'] == 1) {
-                $mostrar = '<a class="pointer btnMostrarImg" id="mostrarImg' . $id_img . '" data-id="' . $id_img . '"><span class="label label-success">Visible</span></a>';
-            } else {
-                $mostrar = '<a class="pointer btnMostrarImg" id="mostrarImg' . $id_img . '" data-id="' . $id_img . '"><span class="label label-danger">Oculta</span></a>';
-            }
-            $contenido .= '     <div class="col-sm-3" id="imagenGaleria' . $id_img . '">
-                                    <img class="img-responsive" src="' . URL . 'public/archivos/' . utf8_encode($item['imagen']) . '" alt="Photo">
-                                    <p>' . $img_principal . ' | ' . $mostrar . ' | <a class="pointer btnEliminarImg" data-id="' . $id_img . '" id="eliminarImg' . $id_img . '"><span class="label label-danger">Eliminar</span></a></p>
-                                </div>
-                                <!-- /.col -->';
-        }
-        return $contenido;
-    }
-
-    public function loadImage($id) {
-        $item = $this->getImage($id);
-        $id = $item[0]['id'];
-        $img_principal = '<a class="pointer btnImgPrincipal" id="imgPrincipal' . $id . '" data-id="' . $id . '"><span class="label label-warning">Principal</span></a>';
-        $mostrar = '<a class="pointer btnMostrarImg" id="mostrarImg' . $id . '" data-id="' . $id . '"><span class="label label-success">Visible</span></a>';
-        $contenido = '<div class="col-sm-3" id="imagenGaleria' . $id . '">
-                        <img class="img-responsive" src="' . URL . 'public/archivos/' . utf8_encode($item[0]['imagen']) . '" alt="Photo">
-                        <p>' . $img_principal . ' | ' . $mostrar . ' | <a class="pointer btnEliminarImg" data-id="' . $id . '" id="eliminarImg' . $id . '"><span class="label label-danger">Eliminar</span></a></p>
-                      </div>
-                      <!-- /.col -->';
-        return $contenido;
-    }
-
-    public function getImage($id) {
-        $item = $this->db->select("select *
-                                from vehiculo_img 
-                                where id = $id");
-        return $item;
+    /**
+     * Funcion que lista los vehiculos de acuerdo al tipo
+     * de categoria que se le pase
+     * @param int $tipo default NULL (Lista todos si no recibe nada)
+     * @return array (listado de vehiculos)
+     */
+    public function getModelos($tipo = NULL) {
+        $where = "";
+        if (!empty($tipo))
+            $where = "and tv.id = $tipo";
+        $sql = $this->db->select("SELECT m.id, 
+                                        m.descripcion, 
+                                        m.img_thumb 
+                                FROM modelo m
+                                LEFT JOIN tipo_vehiculo tv on tv.id = m.id_tipo_vehiculo
+                                where m.estado = 1
+                                $where");
+        return $sql;
     }
 
 }

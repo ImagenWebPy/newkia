@@ -46,15 +46,14 @@ define('HASH_GENERAL_KEY', 'MixitUp200');
 define('HASH_PASSWORD_KEY', '!@123456789ABCDEFGHIJKLMNOPRSTWYZ[¿]{?}<->');
 
 //Constantes varias
-define('SITE_TITLE', 'Garden Usados :: ');
+define('SITE_TITLE', 'Kia Motors :: ');
 define('ADMIN_TITLE', 'Administrador Usados :: ');
 define('TITLE_ADMIN', 'Institucional Admin :: ');
-define('CSS', URL . 'public/css/');
-define('JS', URL . 'public/js/');
-define('IMG', URL . 'public/images/');
-define('MEDIA', URL . 'public/media/');
-define('PUBLIC_FOLDER', URL . 'public/');
+define('THUMB_MENU', URL . 'public/img/vehiculos/imagenes/thumb-menu/');
+define('VEHICLE_LOGO', URL . 'public/img/vehiculos/logos/');
 define('CANT_REG', 16);
+
+define('META_SITENAME', 'Kia Motors Garden Automotores S.A.');
 
 function getHost() {
     $host = $_SERVER['HTTP_HOST'];
