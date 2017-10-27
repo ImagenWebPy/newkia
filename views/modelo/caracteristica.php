@@ -1,4 +1,5 @@
 <?php
+$modelo = $this->datosModelo;
 $datos = $this->datosModeloCaracteristica;
 ?>
 <div id="container">
@@ -8,9 +9,9 @@ $datos = $this->datosModeloCaracteristica;
             <div class="keyVisualInner">
                 <!-- 이미지 키비쥬얼 영역 -->
                 <div class="keyVisual01">
-                    <div class="keyBtnLeft">
-                        <a href="#">Vista 360&deg;</a>
-                    </div>
+                    <!--                    <div class="keyBtnLeft">
+                                            <a href="#">Vista 360&deg;</a>
+                                        </div>-->
                     <div class="bgArea">
                         <div class="bgInner">
                             <picture>
@@ -38,61 +39,63 @@ $datos = $this->datosModeloCaracteristica;
                         <ul></ul>
                     </div>
 
-                    <div class="keyBtnRight">
-                        <a href="#">Vista 360&deg;</a>
-                    </div>
+                    <!--                    <div class="keyBtnRight">
+                                            <a href="#">Vista 360&deg;</a>
+                                        </div>-->
 
                 </div>
                 <!-- //이미지 키비쥬얼 영역 -->
 
                 <!-- 360 키비쥬얼 영역 -->
-                <div class="keyVisual02">
-                    <div class="keyBtnLeft">
-                        <a href="#">principal</a>
-                    </div>
-                    <div class="bgArea"></div>
-                    <div class="textArea">
-                        <h3>360<span>&deg;</span> VR</h3>
-                        <ul class="view_inout">
-                            <li class="on"><a href="#">Exterior</a></li>
-                        </ul>
-                        <!-- 외장 -->
-                        <div class="choice_color_wr">
-                            <div class="choice_color">
-                                <a href="#" class="color_chip on"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_UD_L.gif" alt="CLEAR WHITE"></a>
-                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_SWP_L.gif" alt="SNOW WHITE PEARL"></a>
-                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_4SS_L.gif" alt="SILKY SILVER"></a>
-                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_MST_L.gif" alt="METAL STREAM"></a>
-                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_D7U_L.gif" alt="PLANET BLUE"></a>
-                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_K3U_L.gif" alt="GRAVITY BLUE"></a>
-                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_ABP_L.gif" alt="AURORA BLACK"></a>
-                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_K3N_L.gif" alt="RICH ESPRESSO"></a>
-                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_K3R_L.gif" alt="TEMPTATION RED"></a>
-                            </div>
-                            <p class="color_info">CLEAR WHITE</p>                    
-                            <div class="car_view">
-                                <div class="exVrArea"><img id="ex360vr_img" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/360_ex_Clear White/UD_L_0000.png" alt="" title=""/></div>
-                            </div>
-                            <div class="car_refresh">
-                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|360 vr view'; _satellite.track('internal_link');">   
-                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/img_pip_360Refresh.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <!--// 외장 -->
-                    </div>
-                    <div class="keyBtnRight">
-                        <a href="#">principal</a>
-                    </div>
-                </div>
+                <!--                <div class="keyVisual02">
+                                    <div class="keyBtnLeft">
+                                        <a href="#">principal</a>
+                                    </div>
+                                    <div class="bgArea"></div>
+                                    <div class="textArea">
+                                        <h3>360<span>&deg;</span> VR</h3>
+                                        <ul class="view_inout">
+                                            <li class="on"><a href="#">Exterior</a></li>
+                                        </ul>
+                                         외장 
+                                        <div class="choice_color_wr">
+                                            <div class="choice_color">
+                                                <a href="#" class="color_chip on"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_UD_L.gif" alt="CLEAR WHITE"></a>
+                                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_SWP_L.gif" alt="SNOW WHITE PEARL"></a>
+                                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_4SS_L.gif" alt="SILKY SILVER"></a>
+                                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_MST_L.gif" alt="METAL STREAM"></a>
+                                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_D7U_L.gif" alt="PLANET BLUE"></a>
+                                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_K3U_L.gif" alt="GRAVITY BLUE"></a>
+                                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_ABP_L.gif" alt="AURORA BLACK"></a>
+                                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_K3N_L.gif" alt="RICH ESPRESSO"></a>
+                                                <a href="#" class="color_chip"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/ico_cerato_yd_K3R_L.gif" alt="TEMPTATION RED"></a>
+                                            </div>
+                                            <p class="color_info">CLEAR WHITE</p>                    
+                                            <div class="car_view">
+                                                <div class="exVrArea">
+                                                    <img id="ex360vr_img" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/360vr/360_ex_Clear White/UD_L_0000.png" alt="" title=""/>
+                                                </div>
+                                            </div>
+                                            <div class="car_refresh">
+                                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|360 vr view'; _satellite.track('internal_link');">   
+                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/img_pip_360Refresh.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        // 외장 
+                                    </div>
+                                    <div class="keyBtnRight">
+                                        <a href="#">principal</a>
+                                    </div>
+                                </div>-->
                 <!-- //360 키비쥬얼 영역 -->
                 <!-- 페이징 -->
-                <div class="paging">
+<!--                <div class="paging">
                     <ul>
                         <li class="on"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
                     </ul>
-                </div>
+                </div>-->
                 <!-- //페이징 -->                  
             </div>
             <div class="carInfor">
@@ -516,8 +519,8 @@ $datos = $this->datosModeloCaracteristica;
                                     <picture>
                                         <!--[if IE 9]><video style="display: none;"><![endif]-->
                                         <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $item['img_w']; ?>" media="(min-width: 1025px)">
-                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $item['img_w']; ?>" media="(min-width: 768px)">
-                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $item['img_w']; ?>" media="(min-width: 200px)">
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $item['img_t']; ?>" media="(min-width: 768px)">
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $item['img_m']; ?>" media="(min-width: 200px)">
                                         <!--[if IE 9]></video><![endif]-->
                                         <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $item['img_w']; ?>" alt="Engineered for you and the environment">
                                     </picture>
@@ -639,199 +642,155 @@ $datos = $this->datosModeloCaracteristica;
             <div class="mainInner"> 
                 <div class="textArea">
                     <!-- GT SEO 20150826 h3 > h2 -->
-                    <h2 style="color:#FFFFFF;" class="indicTitle shadowBlack" >SAFETY</h2>
+                    <h2 style="color:#FFFFFF;" class="indicTitle shadowBlack">SEGURIDAD</h2>
                 </div>
-                <div class="screenBox screenBox1 on">
-                    <div class="bgArea">
-                        <!--<div class="bgInner"><img title="Body shell
-" alt="Body shell" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-safety-01-w.jpg" ></div>-->
-                        <div class="bgInner">
-                            <picture>
-                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-safety-01-w.jpg " media="(min-width: 1025px)">
-
-                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-safety-01-t.jpg " media="(min-width: 768px)">
-
-                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-safety-01-m.jpg " media="(min-width: 200px)">
-
-                                <!--[if IE 9]></video><![endif]-->
-
-                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-safety-01-w.jpg" alt="Body shell">
-
-                            </picture>
-                        </div>
-                        <div class="car_play">  
-                            <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-
-                                <div class="videoText">
-                                    <div class="videoTit shadowBlack">Body shell<br /></div>
-                                    <div class="videoTxt shadowBlack">Featuring a collision dispersal structure that diffuses forces upon impact, 
-                                        the new Cerato’s body shell is sturdy and intelligent at the same time.</div>
+                <?php
+                foreach ($datos['seguridad'] as $item):
+                    if ($item['portada'] == 1):
+                        ?>
+                        <div class="screenBox screenBox1 on">
+                            <div class="bgArea">
+                                <!--<div class="bgInner"><img title="Body shell
+        " alt="Body shell" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-safety-01-w.jpg" ></div>-->
+                                <div class="bgInner">
+                                    <picture>
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $item['img_w']; ?>" media="(min-width: 1025px)">
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $item['img_t']; ?>" media="(min-width: 768px)">
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $item['img_m']; ?>" media="(min-width: 200px)">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $item['img_w']; ?>" alt="<?= utf8_encode($item['titulo']); ?>">
+                                    </picture>
                                 </div>
-                            </a>
+                                <div class="car_play">  
+                                    <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
+                                        <div class="videoText">
+                                            <div class="videoTit shadowBlack"><?= utf8_encode($item['titulo']); ?><br /></div>
+                                            <div class="videoTxt shadowBlack"><?= utf8_encode($item['descripcion']); ?></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="textArea">
+                                <!-- GT SEO 20150826 h4 > h3 -->
+                                <h3 class="shadowBlack" style="color:#FFFFFF;"><?= utf8_encode($item['titulo']); ?><br /></h3>
+                                <div class="subTxt shadowBlack" style="color:#FFFFFF;"><?= utf8_encode($item['descripcion']); ?></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="textArea">
-                        <!-- GT SEO 20150826 h4 > h3 -->
-                        <h3 class="shadowBlack" style="color:#FFFFFF;">Body shell<br /></h3>
-                        <div class="subTxt shadowBlack" style="color:#FFFFFF;">Featuring a collision dispersal structure that diffuses forces upon impact, 
-                            the new Cerato’s body shell is sturdy and intelligent at the same time.</div>
-                    </div>
-                </div>
+                        <?php
+                    endif;
+                endforeach;
+                ?>
             </div></div>
         <div style="min-height:100px;" class="pipLayout section temp06">
-
             <div class="subInner">
+                <?php
+                $del = '';
+                foreach ($datos['seguridad'] as $key => $val) {
+                    if ($val['portada'] == 1)
+                        $del = $key;
+                }
+                unset($datos['seguridad'][$del]);
+                #reindexamos el array
+                array_splice($datos['seguridad'], 0, 0);
+                $canDesempeno = count($datos['seguridad']);
+                ?>
                 <ul class="imgList type6">
-                    <li class="leftArea on">
-                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view';
-                            _satellite.track('internal_link');">
-                            <dl>
-                                <dt>
-                                    <!--<img title="Suspension " alt="Suspension " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-01-w.jpg" >-->
-                                <picture>
-                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-01-w.jpg " media="(min-width: 1025px)">
-
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-01-t.jpg " media="(min-width: 768px)">
-
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-01-m.jpg " media="(min-width: 200px)">
-
-                                    <!--[if IE 9]></video><![endif]-->
-
-                                    <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-01-w.jpg" alt="Suspension ">
-
-                                </picture>
-
-                                </dt>
-                                <dd>
-                                    <!-- GT SEO 20150828 div > h4 -->
-                                    <h4 class="btmTextTit " style="color:#000000;">Suspension </h4>
-                                    <div class="btmTextTxt " style="color:#000000;">A MacPherson strut front suspension features a dual-path strut insulator to disperse shocks and vibrations and enhance steering stability. The coupled torsion beam axle rear suspension delivers stable and smooth ride quality.</div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li class="rightArea">
-                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-                            <dl>
-                                <dt>
-                                    <!--<img title="Brake response " alt="Brake response " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-02-w.jpg" >-->
-                                <picture>
-                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-02-w.jpg " media="(min-width: 1025px)">
-
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-02-t.jpg " media="(min-width: 768px)">
-
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-02-m.jpg " media="(min-width: 200px)">
-
-                                    <!--[if IE 9]></video><![endif]-->
-
-                                    <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-02-w.jpg" alt="Brake response ">
-
-                                </picture>
-
-                                </dt>
-                                <dd>
-                                    <!-- GT SEO 20150828 div > h4 -->
-                                    <h4 class="btmTextTit " style="color:#000000;">Brake response </h4>
-                                    <div class="btmTextTxt " style="color:#000000;">Brake response and feel are enhanced thanks to an enlarged master cylinder and the addition of a tie-rod to the booster.</div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
+                    <?php
+                    #reindexamos el array
+                    array_splice($datos['seguridad'], 0, 0);
+                    for ($i = 1; $i <= 2; $i++):
+                        $f = $i - 1;
+                        if ($i != 1) {
+                            $class = 'rightArea';
+                        } else {
+                            $class = 'leftArea on';
+                        }
+                        ?>
+                        <li class="<?= $class; ?>">
+                            <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
+                                <dl>
+                                    <dt>
+                                        <!--<img title="Suspension " alt="Suspension " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-01-w.jpg" >-->
+                                    <picture>
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" media="(min-width: 1025px)">
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['seguridad'][$f]['img_t']; ?>" media="(min-width: 768px)">
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['seguridad'][$f]['img_m']; ?>" media="(min-width: 200px)">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['seguridad'][$f]['titulo']); ?>">
+                                    </picture>
+                                    </dt>
+                                    <dd>
+                                        <!-- GT SEO 20150828 div > h4 -->
+                                        <h4 class="btmTextTit " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['titulo']); ?></h4>
+                                        <div class="btmTextTxt " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['descripcion']); ?></div>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                    <?php endfor; ?>
                 </ul>
             </div></div>
         <div style="min-height:100px;" class="pipLayout section temp06">
-
             <div class="subInner">
                 <ul class="imgList type6">
-                    <li class="leftArea on">
-                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-                            <dl>
-                                <dt>
-                                    <!--<img title="Flex Steer " alt="Flex Steer " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-w.jpg" >-->
-                                <picture>
-                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-w.jpg " media="(min-width: 1025px)">
-
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-t.jpg " media="(min-width: 768px)">
-
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-m.jpg " media="(min-width: 200px)">
-
-                                    <!--[if IE 9]></video><![endif]-->
-
-                                    <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-w.jpg" alt="Flex Steer ">
-
-                                </picture>
-
-                                </dt>
-                                <dd>
-                                    <!-- GT SEO 20150828 div > h4 -->
-                                    <h4 class="btmTextTit " style="color:#000000;">Flex Steer </h4>
-                                    <div class="btmTextTxt " style="color:#000000;">The Flex Steer system provides three driving modes (Comfort, Normal, and Sport) that deliver the appropriate level of steering assistance and feedback for different driving conditions.</div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li class="rightArea">
-                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view';
-                            _satellite.track('internal_link');">
-                            <dl>
-                                <dt>
-                                    <!--<img title="Hill-start Assist Control (HAC)" alt="Hill-start Assist Control (HAC)" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-04-w.jpg" >-->
-                                <picture>
-                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-04-w.jpg " media="(min-width: 1025px)">
-
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-04-t.jpg " media="(min-width: 768px)">
-
-                                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-04-m.jpg " media="(min-width: 200px)">
-
-                                    <!--[if IE 9]></video><![endif]-->
-
-                                    <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-04-w.jpg" alt="Hill-start Assist Control (HAC)">
-
-                                </picture>
-
-                                </dt>
-                                <dd>
-                                    <!-- GT SEO 20150828 div > h4 -->
-                                    <h4 class="btmTextTit " style="color:#000000;">Hill-start Assist Control (HAC)</h4>
-                                    <div class="btmTextTxt " style="color:#000000;">By maintaining brake grip until you press the accelerator, HAC prevents the vehicle from dangerously rolling backwards when pulling away from a standstill on an incline.</div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
+                    <?php
+                    unset($datos['seguridad'][0]);
+                    unset($datos['seguridad'][1]);
+                    #reindexamos el array
+                    array_splice($datos['seguridad'], 0, 0);
+                    for ($i = 1; $i <= 2; $i++):
+                        $f = $i - 1;
+                        if ($i != 1) {
+                            $class = 'rightArea';
+                        } else {
+                            $class = 'leftArea on';
+                        }
+                        ?>
+                        <li class="<?= $class; ?>">
+                            <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
+                                <dl>
+                                    <dt>
+                                        <!--<img title="Flex Steer " alt="Flex Steer " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-w.jpg" >-->
+                                    <picture>
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" media="(min-width: 1025px)">
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['seguridad'][$f]['img_t']; ?>" media="(min-width: 768px)">
+                                        <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['seguridad'][$f]['img_m']; ?>" media="(min-width: 200px)">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-w.jpg" alt="<?= utf8_encode($datos['seguridad'][$f]['titulo']); ?>">
+                                    </picture>
+                                    </dt>
+                                    <dd>
+                                        <!-- GT SEO 20150828 div > h4 -->
+                                        <h4 class="btmTextTit " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['titulo']); ?></h4>
+                                        <div class="btmTextTxt " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['descripcion']); ?></div>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                    <?php endfor; ?>
                 </ul>
             </div></div>
         <div class="section pip_build">
-
-
             <!-- 차량에 따라 차량명 변동 -->
-            <h3 class="build_tit indicTitle">CONOCE TU CERATO/FORTE</h3>
+            <h3 class="build_tit indicTitle">CONOCE TU CERATO</h3>
             <p class="build_txt"></p>
-            <div class="build_btn"><a href="http://org-www.kia.com/gt/shopping-tools/build-your-own.trim.cerato-forte.html" class="btnMedium btnType1"><span class="cmm_tspr spr_build">Aquí</span></a></div>
-
+            <!--<div class="build_btn"><a href="http://org-www.kia.com/gt/shopping-tools/build-your-own.trim.cerato-forte.html" class="btnMedium btnType1"><span class="cmm_tspr spr_build">Aquí</span></a></div>-->
             <div class="build_car">
                 <picture>
                     <!--[if IE 9]><video style="display: none;"><![endif]-->
-                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-byo-w.png " media="(min-width: 1025px)">
-
-                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-byo-t.png " media="(min-width: 768px)">
-
-                    <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-byo-m.png " media="(min-width: 200px)">
-
+                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $modelo['img_w']; ?> " media="(min-width: 1025px)">
+                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $modelo['img_t']; ?>" media="(min-width: 768px)">
+                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $modelo['img_m']; ?>" media="(min-width: 200px)">
                     <!--[if IE 9]></video><![endif]-->
-
-                    <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-cerato-forte-yd-byo-w.png" alt="BUILD YOUR CERATO/FORTE">
-
+                    <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $modelo['img_w']; ?>" alt="Cerato">
                 </picture>
             </div>
-
             <div class="build_link">
                 <ul class="link_lst">
-                    <li class="link_li link1"><a href="http://org-www.kia.com/gt/shopping-tools/request-a-brochure.html/carKey/cerato-forte" class="bl_typeW_a">Ficha Técnica</a></li>
+                    <li class="link_li link1"><a href="<?= URL; ?>public/fichas/<?= $modelo['ficha']; ?>" class="bl_typeW_a">Ficha Técnica</a></li>
                     <li class="link_li link2"><a href="http://org-www.kia.com/gt/shopping-tools/request-a-test-drive.html/carKey/cerato-forte" class="bl_typeW_a">Test Drive</a></li>
                     <li class="link_li link3"><a href="http://org-www.kia.com/gt/shopping-tools/find-a-dealer.html/carKey/cerato-forte" class="bl_typeW_a">Encuentra tu Kia</a></li>
                     <li class="link_li link4"><a href="http://org-www.kia.com/gt/shopping-tools/request-a-quote.html/carKey/cerato-forte" class="bl_typeW_a">Cotizar</a></li>
@@ -848,7 +807,7 @@ $datos = $this->datosModeloCaracteristica;
         <!-- indicator -->
         <div class="indicator">
             <div class="indicator_inner">
-                <a href="#" class="indicator_prev masked"><span class="hidden">prev</span></a> <!-- Overview 에서는 보이지 않음 Exterior 에서 부터 보임 기본 class="masked" -->
+                <a href="#" class="indicator_prev masked"><span class="hidden">ant</span></a> <!-- Overview 에서는 보이지 않음 Exterior 에서 부터 보임 기본 class="masked" -->
                 <ul>
                     <li class="on"><!-- 클릭시 class가 on 추가 -->
                         <a href="#" onclick="dtmDataLayer.scrolled_section = 'OVERVIEW'; _satellite.track('scrolled_section');">
@@ -900,8 +859,8 @@ $datos = $this->datosModeloCaracteristica;
                     </li>
 
                 </ul> 
-                <a href="#" class="indicator_next"><span class="hidden">next</span></a>
-                <div class="topBtn"><a href="#"><span class="hidden">Top</span></a></div>
+                <a href="#" class="indicator_next"><span class="hidden">sig</span></a>
+                <div class="topBtn"><a href="#"><span class="hidden">Arriba</span></a></div>
             </div>
         </div>
         <!-- //indicator -->

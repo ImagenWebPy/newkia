@@ -51,7 +51,7 @@ if (!empty($paginaFooter[0])) {
     <div class="site_info">
         <div class="inner">
             <span class="f_logo">
-                <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/lg_footer_kia.png" class="lg_img" alt="Kia - The Power to Surprise">
+                <img src="<?= URL; ?>public/img/lg_footer_kia.png" class="lg_img" alt="Kia - The Power to Surprise">
             </span>
             <div class="info_policy">
                 <div class="parbase link-f-7-1 link">

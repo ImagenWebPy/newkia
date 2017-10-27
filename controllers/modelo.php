@@ -12,6 +12,7 @@ class Modelo extends Controller {
         $idModelo = (!empty($url[2])) ? $url[2] : NULL;
 
         $datosModelos = $this->model->getDatosModelos($idModelo);
+        $this->view->datosModelo = $datosModelos;
         $this->view->datosModeloCaracteristica = $this->model->datosModeloCaracteristica($idModelo);
         $this->view->headerBarModelos = $this->model->headerBarModelos($url);
         $this->view->public_css = array("css/showroom/default_style.min.css");
@@ -29,6 +30,8 @@ class Modelo extends Controller {
         $idModelo = (!empty($url[2])) ? $url[2] : NULL;
 
         $datosModelos = $this->model->getDatosModelos($idModelo);
+        $this->view->datosModelo = $datosModelos;
+        $this->view->datosModeloGaleria = $this->model->datosModeloGaleria($idModelo);
         $this->view->headerBarModelos = $this->model->headerBarModelos($url);
         $this->view->public_css = array("css/showroom/default_style.min.css");
         $this->view->js = array("modelo/inc/js/default_script.js", "modelo/inc/js/feature_script.min.js");
@@ -45,9 +48,11 @@ class Modelo extends Controller {
         $idModelo = (!empty($url[2])) ? $url[2] : NULL;
 
         $datosModelos = $this->model->getDatosModelos($idModelo);
+        $this->view->datosModelo = $datosModelos;
+        $this->view->datosModeloEspecificaciones = $this->model->datosModeloEspecificaciones($idModelo);
+        $this->view->headerBarModelos = $this->model->headerBarModelos($url);
         $this->view->public_css = array("css/showroom/default_style.min.css");
         $this->view->js = array("modelo/inc/js/default_script.js");
-        $this->view->headerBarModelos = $this->model->headerBarModelos($url);
         $this->view->title = SITE_TITLE . 'Especificaciones ' . utf8_encode($datosModelos['descripcion']);
         $this->view->meta_sitename = META_SITENAME;
         $this->view->render('header');

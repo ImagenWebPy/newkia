@@ -138,6 +138,15 @@ class Modelo_Model extends Model {
                                             FROM modelo_desempeno md
                                             where md.id_modelo = $idModelo
                                             and md.estado = 1;");
+        $sqlSeguridad = $this->db->select("SELECT md.titulo,
+                                                    md.descripcion,
+                                                    md.img_m,
+                                                    md.img_t,
+                                                    md.img_w,
+                                                    md.portada
+                                            FROM modelo_seguridad md
+                                            where md.id_modelo = $idModelo
+                                            and md.estado = 1;");
         $data['general'] = $sqlGeneral[0];
         $data['exterior'] = $sqlExterior;
         $data['exterior_pie'] = $sqlExteriorPie;
@@ -145,12 +154,89 @@ class Modelo_Model extends Model {
         $data['interior_pie'] = $sqlInteriorPie;
         $data['destacados'] = $sqlDestacados;
         $data['desempeno'] = $sqlDesempeno;
+        $data['seguridad'] = $sqlSeguridad;
         return $data;
     }
 
     public function getDatosModelos($idModelo) {
         $sqlModelo = $this->db->select("select * from modelo where id = $idModelo");
         return $sqlModelo[0];
+    }
+
+    public function datosModeloGaleria($idModelo) {
+        $data = array(
+            'interior' => '',
+            'exterior' => ''
+        );
+        $sqlInterior = $this->db->select("SELECT mi.img_principal,
+                                                mi.img_thumb,
+                                                mi.img_w,
+                                                mi.img_t,
+                                                mi.img_m,
+                                                mi.principal
+                                        FROM modelo_imagenes mi
+                                        where mi.galeria = 1
+                                        and mi.estado = 1
+                                        and mi.id_modelo = $idModelo
+                                        and mi.tipo = 'INT'");
+        $sqlExterior = $this->db->select("SELECT mi.img_principal,
+                                                mi.img_thumb,
+                                                mi.img_w,
+                                                mi.img_t,
+                                                mi.img_m,
+                                                mi.principal
+                                        FROM modelo_imagenes mi
+                                        where mi.galeria = 1
+                                        and mi.estado = 1
+                                        and mi.id_modelo = $idModelo
+                                        and mi.tipo = 'EXT'");
+        $data['interior'] = $sqlInterior;
+        $data['exterior'] = $sqlExterior;
+        return $data;
+    }
+
+    public function datosModeloEspecificaciones($idModelo) {
+        $sqlDimensiones = $this->db->select("SELECT md.largo,
+                                                    md.ancho,
+                                                    md.altura,
+                                                    md.distancia_ejes,
+                                                    md.img_all
+                                                FROM modelo_dimension md 
+                                                where md.estado = 1
+                                                and md.id_modelo = $idModelo;");
+        $sqlDimensionesImg = $this->db->select("SELECT tipo, img_w, img_t, img_m FROM modelo_dimension_img where id_modelo =  $idModelo;");
+        $sqlMotor = $this->db->select("SELECT c.descripcion as combustible,
+                                                    mm.tipo_motor,
+                                                    mm.cilindraje,
+                                                    mm.potencia_max,
+                                                    mm.torque_max,
+                                                    mm.cilindraje,
+                                                    mm.valvula,
+                                                    mm.img,
+                                                    mv.descripcion as version
+                                            FROM modelo_motor mm
+                                            LEFT JOIN combustible c on c.id = mm.id_combustible
+                                            LEFT JOIN modelo_version mv on mv.id = mm.id_version
+                                            where mm.estado = 1
+                                            and mv.id_modelo = $idModelo");
+        $sqlLlanta = $this->db->select("SELECT mv.descripcion as version,
+                                                ml.descripcion as llanta,
+                                                ml.img,
+                                                ml.tipo,
+                                                c.descripcion as combustible
+                                            FROM modelo_llantas ml
+                                            LEFT JOIN modelo_version mv on mv.id = ml.id_version
+                                            LEFT JOIN modelo_motor mm on mm.id_version = mv.id
+                                            LEFT JOIN combustible c on c.id = mm.id_combustible
+                                            where ml.estado = 1
+                                            AND mv.id_modelo = $idModelo");
+        $data = array(
+            'dimension' => $sqlDimensiones,
+            'dimension_img' => $sqlDimensionesImg,
+            'motor' => $sqlMotor,
+            'llanta' => $sqlLlanta
+        );
+        return $data;
     }
 
 }

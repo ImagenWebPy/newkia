@@ -1,3 +1,7 @@
+<?php
+$modelo = $this->datosModelo;
+$datos = $this->datosModeloEspecificaciones;
+?>
 <div id="container">
     <?= $this->headerBarModelos; ?>
     <div class="parsys pipContents"><div class="pip_spec section">
@@ -5,7 +9,7 @@
                 <div class="spec_visual">
                     <div class="spec_data">
                         <!-- GT SEO 20150827 h3 > h1 -->
-                        <h1>Dimensions</h1>
+                        <h1>Dimensiones</h1>
                         <ul class="m_none"> <!-- tab 형식으로 활성화 탭시 li에 on class 추가 -->
                             <li><a href="#" class="btn_slide on">slide</a></li> 
                             <li><a href="#" class="btn_allview">allview</a></li>
@@ -14,38 +18,32 @@
                     <!-- spec_slide_area -->
                     <div class="spec_slide_area">
                         <div class="spec_img">
-                            <a href="#" class="spec_next">Next</a>
+                            <a href="#" class="spec_next">Sig</a>
                             <ul>
-                                <li>
-                                    <div class="imgArea">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-01-w" alt="Kia Cerato Dimensions" class="webImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-01-w.png">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-01-t" alt="Kia Cerato Dimensions" class="tabletImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-01-t.png">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-01-m" alt="Kia Cerato Dimensions" class="mobileImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-01-m.png">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="imgArea">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-02-w" alt="Kia Cerato Dimensions" class="webImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-02-w.png">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-02-t" alt="Kia Cerato Dimensions" class="tabletImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-02-t.png">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-02-m" alt="Kia Cerato Dimensions" class="mobileImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-02-m.png">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="imgArea">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-03-w" alt="Kia Cerato Dimensions" class="webImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-03-w.png">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-03-t" alt="Kia Cerato Dimensions" class="tabletImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-03-t.png">
-                                        <img title="kia-cerato-forte-yd-dimensions-slide-list-03-m" alt="Kia Cerato Dimensions" class="mobileImg" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-slide-list-03-m.png">
-                                    </div>
-                                </li>
+                                <?php foreach ($datos['dimension_img'] as $item): ?>
+                                    <li>
+                                        <div class="imgArea">
+                                            <img title="<?= $item['img_w']; ?>" alt="Kia <?= utf8_encode($modelo['descripcion']); ?> Dimensiones" class="webImg" src="<?= URL; ?>public/img/vehiculos/dimensiones/w/<?= $item['img_w']; ?>">
+                                            <img title="<?= $item['img_t']; ?>" alt="Kia <?= utf8_encode($modelo['descripcion']); ?> Dimensiones" class="tabletImg" src="<?= URL; ?>public/img/vehiculos/dimensiones/t/<?= $item['img_t']; ?>">
+                                            <img title="<?= $item['img_m']; ?>" alt="Kia <?= utf8_encode($modelo['descripcion']); ?> Dimensiones" class="mobileImg" src="<?= URL; ?>public/img/vehiculos/dimensiones/m/<?= $item['img_m']; ?>">
+                                        </div>
+                                    </li>
+                                <?php endforeach; ?>
                             </ul>
-                            <a href="#" class="spec_prev">Prev</a>
+                            <a href="#" class="spec_prev">Ant</a>
                         </div>
 
                         <div class="control">
                             <ul class="num">
-                                <li class="on"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
+                                <?php
+                                $cantDimensionImg = count($datos['dimension_img']);
+                                $classDimension = '';
+                                for ($i = 1; $i <= $cantDimensionImg; $i++):
+                                    if ($i == 1)
+                                        $classDimension = 'class="on"';
+                                    ?>
+                                    <li <?= $classDimension; ?>><a href="#"><?= $i; ?></a></li>
+                                <?php endfor; ?>
                             </ul>
                         </div>
                     </div>
@@ -55,7 +53,7 @@
                     <div class="spec_allview_area" style="display:none">
                         <div class="spec_img">
                             <ul>
-                                <li><img title="kia-cerato-forte-yd-dimensions-all-view" alt="Kia Cerato Dimensions" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-dimensions-all-view.png"></li>
+                                <li><img title="kia-<?= utf8_encode(strtolower($modelo['descripcion'])); ?>-yd-dimensions-all-view" alt="Kia <?= utf8_encode($modelo['descripcion']); ?> Dimensiones" src="<?= URL; ?>public/img/vehiculos/dimensiones/all/<?= $datos['dimension'][0]['img_all']; ?>"></li>
 
                             </ul>
                         </div>
@@ -65,76 +63,58 @@
                 </div> <!-- //spec_visual -->
             </div> <!-- //dimensions -->
             <div class="spec_list parsys"><div class="tableWrap section">
-                    <div class="tableTit"><strong>DIMENSIONS(mm)</strong></div>
+                    <div class="tableTit"><strong>DIMENSIONES(mm)</strong></div>
                     <div class="tableFix">
                         <a href="#tableScrollDIMENSIONS(mm)" class="hidden">skip_entry</a>
                         <table class="fixArea">
                             <caption>table fix area</caption>
                             <tbody>
-
                                 <tr><th class="tableTh">CAR</th></tr>
-
-                                <tr><th class="tableTh3">Overall length</th></tr>
-
-                                <tr><th class="tableTh3">Overall width</th></tr>
-
-                                <tr><th class="tableTh3">Overall height</th></tr>
-
-                                <tr><th class="tableTh3">Wheelbase</th></tr>
-
-                                <tr><th class="tableTh3">Wheel tread (F/R)</th></tr>
-
-                                <tr><th class="tableTh3">Overhang (F/R)</th></tr>
-
-                                <tr><th class="tableTh3">Headroom (1st/2nd)</th></tr>
-
-                                <tr><th class="tableTh3">Legroom (1st/2nd)</th></tr>
-
-                                <tr><th class="tableTh3">Shoulder room (F/R)</th></tr>
-
-                                <tr><th class="tableTh3">Fuel tank (ℓ)</th></tr>
-
+                                <tr><th class="tableTh3">Largo</th></tr>
+                                <tr><th class="tableTh3">Ancho</th></tr>
+                                <tr><th class="tableTh3">Altura</th></tr>
+                                <?php if (!empty($datos['dimension'][0]['distancia_ejes'])): ?>
+                                    <tr><th class="tableTh3">Distancia entre ejes</th></tr>
+                                <?php endif; ?>
                             </tbody>
                         </table>
                     </div>
                     <!-- 웹접근성 때문에 중복을 피하기 위해 tableScroll 수정-->
-                    <div class="tableScroll" id="tableScrollDIMENSIONS(mm)">
+                    <div class="tableScroll" id="tableScrollDIMENSIONS">
                         <table class="scrollArea" width="319" border="0" cellspacing="0" cellpadding="0">
-                            <tbody><tr><td width="319" height="14"><p>Cerato/Forte</p>
+                            <tbody>
+                                <tr>
+                                    <td width="319" height="14"><p>Cerato</p>
                                     </td>
-                                </tr><tr><td width="319" height="14"><p>4,560</p>
+                                </tr>
+                                <tr>
+                                    <td width="319" height="14"><p><?= number_format($datos['dimension'][0]['largo'], 3, ',', '.'); ?></p>
                                     </td>
-                                </tr><tr><td width="319" height="14"><p>1,780</p>
+                                </tr>
+                                <tr>
+                                    <td width="319" height="14"><p><?= number_format($datos['dimension'][0]['ancho'], 3, ',', '.'); ?></p>
                                     </td>
-                                </tr><tr><td width="319" height="14"><p>1,445</p>
+                                </tr>
+                                <tr><td width="319" height="14"><p><?= number_format($datos['dimension'][0]['altura'], 3, ',', '.'); ?></p>
                                     </td>
-                                </tr><tr><td width="319" height="14"><p>2,700</p>
-                                    </td>
-                                </tr><tr><td width="319" height="14"><p>1,557/1,570</p>
-                                    </td>
-                                </tr><tr><td width="319" height="14"><p>880/980</p>
-                                    </td>
-                                </tr><tr><td width="319" height="14"><p>992/948</p>
-                                    </td>
-                                </tr><tr><td width="319" height="14"><p>1,073/913</p>
-                                    </td>
-                                </tr><tr><td width="319" height="14"><p>1,424/1,395</p>
-                                    </td>
-                                </tr><tr><td>50</td>
-                                </tr></tbody></table>
-
-                    </div></div>
-
+                                </tr>
+                                <?php if (!empty($datos['dimension'][0]['distancia_ejes'])): ?>
+                                    <tr>
+                                        <td width="319" height="14"><p><?= number_format($datos['dimension'][0]['distancia_ejes'], 3, ',', '.'); ?></p></td>
+                                    </tr>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="pip_engine section">
-
-
             <div class="engine">
                 <div class="engine_visual">
                     <div class="engine_data">
                         <!-- GT SEO 20150826 h3 >  h2 -->
-                        <h2>Engine</h2>
+                        <h2>Motor</h2>
                         <p></p>
 
                         <ul class="m_none"> <!-- tab 형식으로 활성화 탭시 li에 on class 추가 -->
@@ -145,231 +125,84 @@
                     </div>
 
                     <div class="engine_slide_area">
-                        <a href="#" class="spec_next">Next</a>
+                        <a href="#" class="spec_next">Sig</a>
                         <div class="img_wrap">
                             <ul>
-                                <li>
-                                    <div class="engine_contents">
-                                        <!-- 20150827 GT SEO div > h3 -->
-                                        <h3 class="title">Nu 2.0 MPi</h3>
-
-                                        <div class="type"><span>Engine Type</span><strong>In-Line 4</strong></div>
-
-                                        <ul>
-
-                                            <li class="data1">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine01.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Displacement (cc)</span>
-                                                    <strong>1,999</strong>
-                                                </div>
-                                            </li>
-
-
-                                            <li class="data2">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine02.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Max. Power (ps/rpm)</span>
-                                                    <strong>152/6,200</strong>
-                                                </div>
-                                            </li>
-
-
-                                            <li class="data3">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine03.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Max. Torque (kg•m/rpm)</span>
-                                                    <strong>19.6/4,000</strong>
-                                                </div>
-                                            </li>
-
-
-
-
-                                        </ul>
-                                    </div>
-                                    <div class="img"><img title="Nu 2.0 MPi" alt="Nu 2.0 MPi" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-engine-slide-01.png"></div>
-                                </li>
-                                <li>
-                                    <div class="engine_contents">
-                                        <!-- 20150827 GT SEO div > h3 -->
-                                        <h3 class="title">Gamma 1.6 Mpi</h3>
-
-                                        <div class="type"><span>Engine Type</span><strong>In-Line 4</strong></div>
-
-                                        <ul>
-
-                                            <li class="data1">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine01.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Displacement (cc)</span>
-                                                    <strong>1,591</strong>
-                                                </div>
-                                            </li>
-
-
-                                            <li class="data2">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine02.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Max. Power (ps/rpm)</span>
-                                                    <strong>130/6,300</strong>
-                                                </div>
-                                            </li>
-
-
-                                            <li class="data3">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine03.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Max. Torque (kg•m/rpm)</span>
-                                                    <strong>16.0/4,850</strong>
-                                                </div>
-                                            </li>
-
-
-
-
-                                        </ul>
-                                    </div>
-                                    <div class="img"><img title="Gamma 1.6 Mpi" alt="Gamma 1.6 Mpi" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-engine-slide-02.png"></div>
-                                </li>
-                                <li>
-                                    <div class="engine_contents">
-                                        <div class="title">U II 1.6 VGT</div>
-
-                                        <div class="type"><span>Engine Type</span><strong>In-Line 4</strong></div>
-
-                                        <ul>
-
-                                            <li class="data1">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine01.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Displacement (cc)</span>
-                                                    <strong>1,582</strong>
-                                                </div>
-                                            </li>
-
-
-                                            <li class="data2">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine02.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Max. Power (ps/rpm)</span>
-                                                    <strong>136/4,000</strong>
-                                                </div>
-                                            </li>
-
-
-                                            <li class="data3">
-                                                <div class="dataImg">
-                                                    <img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_engine03.png" alt="">
-                                                </div>
-                                                <div class="dataCon">
-                                                    <span>Max. Torque (kg•m/rpm)</span>
-                                                    <strong>30.6/1,750~2,500</strong>
-                                                </div>
-                                            </li>
-
-
-
-
-                                        </ul>
-                                    </div>
-                                    <div class="img"><img title="U II 1.6 VGT" alt="U II 1.6 VGT" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-engine-slide-03.png"></div>
-                                </li>						
+                                <?php foreach ($datos['motor'] as $item): ?>
+                                    <li>
+                                        <div class="engine_contents">
+                                            <!-- 20150827 GT SEO div > h3 -->
+                                            <h3 class="title"><?= utf8_encode($item['version']) . ' ' . utf8_encode($item['combustible']); ?></h3>
+                                            <div class="type"><span>Motor</span><strong><?= utf8_encode($item['tipo_motor']); ?></strong></div>
+                                            <ul>
+                                                <li class="data1">
+                                                    <div class="dataImg">
+                                                        <img src="<?= URL; ?>public/img/icon_engine01.png" alt="">
+                                                    </div>
+                                                    <div class="dataCon">
+                                                        <span>Cilandraje (cc)</span>
+                                                        <strong><?= utf8_encode($item['cilindraje']); ?></strong>
+                                                    </div>
+                                                </li>
+                                                <li class="data2">
+                                                    <div class="dataImg">
+                                                        <img src="<?= URL; ?>public/img/icon_engine02.png" alt="">
+                                                    </div>
+                                                    <div class="dataCon">
+                                                        <span>Potencia Max. (hp/rpm)</span>
+                                                        <strong><?= utf8_encode($item['potencia_max']); ?></strong>
+                                                    </div>
+                                                </li>
+                                                <li class="data3">
+                                                    <div class="dataImg">
+                                                        <img src="<?= URL; ?>public/img/icon_engine03.png" alt="">
+                                                    </div>
+                                                    <div class="dataCon">
+                                                        <span>Torque Max.(kg•m/rpm)</span>
+                                                        <strong><?= utf8_encode($item['torque_max']); ?></strong>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="img"><img title="<?= utf8_encode($item['version']) . ' ' . utf8_encode($item['combustible']); ?>" alt="Nu 2.0 MPi" src="<?= URL; ?>public/img/vehiculos/motor/<?= $item['img']; ?>"></div>
+                                    </li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
-                        <a href="#" class="spec_prev">Prev</a>
+                        <a href="#" class="spec_prev">Ant</a>
                         <div class="control">
                             <ul class="num">
-
-                                <li class="on"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
+                                <?php
+                                $cantMotor = count($datos['motor']);
+                                $classMotor = '';
+                                for ($i = 1; $i <= $cantMotor; $i++):
+                                    if ($i == 1)
+                                        $classMotor = 'class="on"';
+                                    ?>
+                                    <li <?= $classMotor; ?>><a href="#"><?= $i; ?></a></li>
+                                <?php endfor; ?>
                             </ul>
                         </div>
                     </div> <!-- //engine_slide_area -->
-
                     <div class="engine_allview_area engineType03" style="display:none">
                         <div class="spec_img engine_spec_img">
-                            <a href="#" class="spec_next">Next</a>
+                            <a href="#" class="spec_next">Sig</a>
                             <ul class="cover_ul">
-
-                                <li class="img01">
-                                    <img title="Nu 2.0 MPi" alt="Nu 2.0 MPi" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-engine-all-view-01.png">
-                                    <ul>
-                                        <li><strong class="l_b">Nu 2.0 MPi</strong></li>
-
-                                        <li>1,999 (cc)</li>
-
-
-                                        <li>152/6,200 (ps/rpm)</li>
-
-
-                                        <li>19.6/4,000 (kg•m/rpm)</li>
-
-
-
-
-                                    </ul>
-                                </li>
-
-                                <li class="img02">
-                                    <img title="Gamma 1.6 Mpi" alt="Gamma 1.6 Mpi" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-engine-all-view-02.png">
-                                    <ul>
-                                        <li><strong  class="l_b">Gamma 1.6 Mpi</strong></li>
-
-                                        <li>1,591 (cc)</li>
-
-
-                                        <li>130/6,300 (ps/rpm)</li>
-
-
-                                        <li>16.0/4,850 (kg•m/rpm)</li>
-
-
-
-
-                                    </ul>
-                                </li>
-
-                                <li class="img03">
-                                    <img title="U II 1.6 VGT" alt="U II 1.6 VGT" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-engine-all-view-03.png">
-                                    <ul>
-                                        <li><strong  class="l_b">U II 1.6 VGT</strong></li>
-
-                                        <li>1,582 (cc)</li>
-
-
-                                        <li>136/4,000 (ps/rpm)</li>
-
-
-                                        <li>30.6/1,750~2,500 (kg•m/rpm)</li>
-
-
-
-
-                                    </ul>
-                                </li>
-
+                                <?php
+                                for ($i = 1; $i <= $cantMotor; $i++):
+                                    $f = $i - 1;
+                                    ?>
+                                    <li class="img0<?= $i; ?>">
+                                        <img title="<?= utf8_encode($datos['motor'][$f]['version']) . ' ' . utf8_encode($datos['motor'][$f]['combustible']); ?>" alt="Nu 2.0 MPi" src="<?= URL; ?>public/img/vehiculos/motor/<?= $datos['motor'][$f]['img']; ?>">
+                                        <ul>
+                                            <li><strong class="l_b"><?= utf8_encode($datos['motor'][$f]['version']) . ' ' . utf8_encode($datos['motor'][$f]['combustible']); ?></strong></li>
+                                            <li><?= utf8_encode($datos['motor'][$f]['cilindraje']); ?> (cc)</li>
+                                            <li><?= utf8_encode($datos['motor'][$f]['potencia_max']); ?> (hp/rpm)</li>
+                                            <li><?= utf8_encode($datos['motor'][$f]['torque_max']); ?> (kg•m/rpm)</li>
+                                        </ul>
+                                    </li>
+                                <?php endfor; ?>
                             </ul>
-
-
-
                         </div>
                     </div>
                     <!-- //engine_allview_area -->
@@ -378,139 +211,107 @@
 
             </div> <!-- //engine -->
             <div class="spec_list parsys"><div class="tableWrap section">
-
-
-
-
-                    <div class="tableTit"><strong>ENGINE</strong></div>
+                    <div class="tableTit"><strong>Motor</strong></div>
                     <div class="tableFix">
                         <a href="#tableScrollENGINE" class="hidden">skip_entry</a>
                         <table class="fixArea">
                             <caption>table fix area</caption>
                             <tbody>
-
                                 <tr><th class="tableTh"></th></tr>
-
-                                <tr><th class="tableTh3">Displacement (cc)</th></tr>
-
-                                <tr><th class="tableTh3">Max. Power (ps/rpm)</th></tr>
-
-                                <tr><th class="tableTh3">Max. Torque (kg•m/rpm)</th></tr>
-
+                                <tr><th class="tableTh3">Cilindraje (cc)</th></tr>
+                                <tr><th class="tableTh3">Potencia Max. (hp/rpm)</th></tr>
+                                <tr><th class="tableTh3">Torque Max. (kg•m/rpm)</th></tr>
                             </tbody>
                         </table>
                     </div>
                     <!-- 웹접근성 때문에 중복을 피하기 위해 tableScroll 수정-->
                     <div class="tableScroll" id="tableScrollENGINE">
                         <table class="scrollArea" width="429" border="0" cellspacing="0" cellpadding="0">
-                            <tbody><tr><td width="221" height="14"><p><b>Nu 2.0 MPi</b></p>
-                                    </td>
-                                    <td width="209"><b>Gamma 1.6 Mpi</b></td>
-                                    <td><b>U II 1.6 VGT</b></td>
-                                </tr><tr><td>1,999</td>
-                                    <td>1,591</td>
-                                    <td>1,582</td>
-                                </tr><tr><td width="221" height="14"><p>152/6,200</p>
-                                    </td>
-                                    <td width="209"><p>130/6,300</p>
-                                    </td>
-                                    <td>136/4,000</td>
-                                </tr><tr><td width="221" height="14"><p>19.6/4,000</p>
-                                    </td>
-                                    <td width="209"><p>16.0/4,850</p>
-                                    </td>
-                                    <td>30.6/1,750~2,500</td>
-                                </tr></tbody></table>
-
-                    </div></div>
-
+                            <tbody>
+                                <tr>
+                                    <?php for ($i = 0; $i <= count($datos['motor']) - 1; $i++): ?>
+                                        <td><p><b><?= utf8_encode($datos['motor'][$i]['version']) . ' ' . utf8_encode($datos['motor'][$i]['combustible']); ?></b></p></td>
+                                    <?php endfor; ?>
+                                </tr>
+                                <tr>
+                                    <?php for ($i = 0; $i <= count($datos['motor']) - 1; $i++): ?>
+                                        <td><?= utf8_encode($datos['motor'][$i]['cilindraje']); ?></td>
+                                    <?php endfor; ?>
+                                </tr>
+                                <tr>
+                                    <?php for ($i = 0; $i <= count($datos['motor']) - 1; $i++): ?>
+                                        <td><?= utf8_encode($datos['motor'][$i]['potencia_max']); ?></td>
+                                    <?php endfor; ?>
+                                </tr>
+                                <tr>
+                                    <?php for ($i = 0; $i <= count($datos['motor']) - 1; $i++): ?>
+                                        <td><?= utf8_encode($datos['motor'][$i]['torque_max']); ?></td>
+                                    <?php endfor; ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="pip_wheel section">
-
-
             <div class="wheel">
                 <div class="wheel_visual">
                     <div class="wheel_data">
                         <!-- GT SEO 20150827 h3 >  h2 -->
-                        <h2>Wheel</h2>
+                        <h2>Neumáticos</h2>
                         <p></p>
-
                         <ul class="m_none"> <!-- tab 형식으로 활성화 탭시 li에 on class 추가 -->
                             <li><a href="#" class="btn_slide on">slide</a></li> 
                             <li><a href="#" class="btn_allview">allview</a></li>
                         </ul>
                     </div>
-
                     <div class="wheel_slide_area">
-                        <a href="#" class="spec_next">Next</a>
+                        <a href="#" class="spec_next">Sig</a>
                         <div class="img_wrap">
                             <ul>
-                                <li>
-                                    <div class="wheel_contents">
-                                        <!-- 20150827 GT SEO div > h3 -->
-                                        <h3 class="title">195 / 65R 15” steel wheel </h3>
-                                    </div>
-                                    <div class="img"><img title="15&rdquo; steel wheel " alt="15&rdquo; steel wheel " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-wheel-slide-01.png"></div>
-                                </li>
-                                <li>
-                                    <div class="wheel_contents">
-                                        <!-- 20150827 GT SEO div > h3 -->
-                                        <h3 class="title">205 / 55R 16” steel wheel </h3>
-                                    </div>
-                                    <div class="img"><img title="16&rdquo; steel wheel " alt="16&rdquo; steel wheel " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-wheel-slide-02.png"></div>
-                                </li>
-                                <li>
-                                    <div class="wheel_contents">
-                                        <!-- 20150827 GT SEO div > h3 -->
-                                        <h3 class="title">205 / 55R 16” alloy wheel</h3>
-                                    </div>
-                                    <div class="img"><img title="16&rdquo; alloy wheel" alt="16&rdquo; alloy wheel" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-wheel-slide-03.png"></div>
-                                </li>
-                                <li>
-                                    <div class="wheel_contents">
-                                        <!-- 20150827 GT SEO div > h3 -->
-                                        <h3 class="title">215 / 45R 17” alloy wheel</h3>
-                                    </div>
-                                    <div class="img"><img title="17&rdquo; alloy wheel" alt="17&rdquo; alloy wheel" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-wheel-slide-04.png"></div>
-                                </li>
+                                <?php foreach ($datos['llanta'] as $item): ?>
+                                    <li>
+                                        <div class="wheel_contents">
+                                            <!-- 20150827 GT SEO div > h3 -->
+                                            <h5 class="title" style="font-size: 20px;"><?= utf8_encode($item['version']) . ' ' . utf8_encode($item['combustible']); ?></h5>
+                                            <h3 class="title"><?= utf8_encode($item['llanta']); ?></h3>
+                                        </div>
+                                        <div class="img"><img title="15&rdquo; steel wheel " alt="15&rdquo; steel wheel " src="<?= URL; ?>public/img/vehiculos/neumaticos/<?= utf8_encode($item['img']); ?>"></div>
+                                    </li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
-                        <a href="#" class="spec_prev">Prev</a>
+                        <a href="#" class="spec_prev">Ant</a>
                         <div class="control">
                             <ul class="num">
-                                <li class="on"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
+                                <?php
+                                $cantLlanta = count($datos['llanta']);
+                                for ($i = 1; $i <= $cantLlanta; $i++):
+                                    $classLlanta = '';
+                                    if ($i == 1)
+                                        $classLlanta = 'class="on"';
+                                    ?>
+                                    <li <?= $classLlanta; ?>><a href="#"><?= $i; ?></a></li>
+                                <?php endfor; ?>
                             </ul>
                         </div>
                     </div> <!-- //wheel_slide_area -->
-
                     <!--<div class="wheel_allview_area wheelType0" style="display:none">-->			
                     <div class="wheel_allview_area wheelType04" style="display:none">		
                         <div class="spec_img wheel_spec_img">
-                            <a href="#" class="spec_next">Next</a>
+                            <a href="#" class="spec_next">Sig</a>
                             <ul>	
-
-                                <li class="img01">
-                                    <img title="15&rdquo; steel wheel " alt="15&rdquo; steel wheel " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-wheel-all-view-01.png">
-                                    <p><strong>195 / 65R</strong> 15” steel wheel </p>
-                                </li>
-
-                                <li class="img02">
-                                    <img title="16&rdquo; steel wheel " alt="16&rdquo; steel wheel " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-wheel-all-view-02.png">
-                                    <p><strong>205 / 55R</strong> 16” steel wheel </p>
-                                </li>
-
-                                <li class="img03">
-                                    <img title="16&rdquo; alloy wheel" alt="16&rdquo; alloy wheel" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-wheel-all-view-03.png">
-                                    <p><strong>205 / 55R</strong> 16” alloy wheel</p>
-                                </li>
-                                <li class="img04">
-                                    <img title="17&rdquo; alloy wheel" alt="17&rdquo; alloy wheel" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Specification/kia-cerato-forte-yd-wheel-all-view-04.png">
-                                    <p><strong>215 / 45R</strong> 17” alloy wheel</p>
-                                </li>
+                                <?php
+                                for ($i = 1; $i <= $cantLlanta; $i++):
+                                    $f = $i - 1;
+                                    ?>
+                                    <li class="img0<?= $i; ?>">
+                                        <h4><?= utf8_encode($datos['llanta'][$f]['version']) . ' ' . utf8_encode($datos['llanta'][$f]['combustible']); ?></h4>
+                                        <img title="<?= utf8_encode($datos['llanta'][$f]['llanta']); ?>" alt="<?= utf8_encode($datos['llanta'][$f]['llanta']); ?>" src="<?= URL; ?>public/img/vehiculos/neumaticos/<?= $datos['llanta'][$f]['img']; ?>">
+                                        <p><strong><?= utf8_encode($datos['llanta'][$f]['llanta']); ?></strong> <?= utf8_encode($datos['llanta'][$f]['tipo']) ?></p>
+                                    </li>
+                                <?php endfor; ?>
                             </ul>
                         </div>	
                     </div>
@@ -524,7 +325,7 @@
             <div class="phrase">
                 <ul class="parbase_inner">
                     <li>
-                        All information and illustrations are based on data available at the time of publication and subject to change without notice.<br/>Contact your local Kia dealer for current information.
+                        Toda la información e ilustraciones se basan en los datos disponibles en el momento y están sujetos a cambios sin previo aviso.
                     </li>
                 </ul>
             </div>

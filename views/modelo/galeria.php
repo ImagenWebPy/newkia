@@ -1,23 +1,51 @@
+<?php
+$modelo = $this->datosModelo;
+$datos = $this->datosModeloGaleria;
+
+$imgPrincipalInt = '';
+$imgPrincipalExt = '';
+$delExt = '';
+$delInt = '';
+foreach ($datos['interior'] as $key => $val) {
+    if ($val['principal'] == 1) {
+        $delInt = $key;
+        $imgPrincipalInt = $val['img_principal'];
+    }
+}
+foreach ($datos['exterior'] as $key => $val) {
+    if ($val['principal'] == 1) {
+        $delExt = $key;
+        $imgPrincipalExt = $val['img_principal'];
+    }
+}
+unset($datos['interior'][$delInt]);
+unset($datos['exterior'][$delExt]);
+array_splice($datos['interior'], 0, 0);
+array_splice($datos['exterior'], 0, 0);
+$cantInterior = count($datos['interior']);
+$paginInt = ceil($cantInterior / 6);
+$cantExterior = count($datos['exterior']);
+$paginExt = ceil($cantExterior / 6);
+?>
 <div id="container">
     <?= $this->headerBarModelos; ?>
     <div id="content" class="parsys pipContents"><div class="pip_gallery section">
             <div class="pip_inner">
                 <div class="width_wrap">
                     <!-- 갤러리 선택 -->
-
                     <div class="gallery_select">
                         <div class="gallery_ext">
-                            <img title="Exterior" alt="CERATO/FORTE EXTERIOR" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-gallery-01.jpg">
+                            <img title="Exterior" alt="<?= $modelo['descripcion']; ?> EXTERIOR" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/<?= $imgPrincipalExt; ?>">
                             <a href="#" class="exterior">
                                 <!-- GT SEO 20150827 span > h2 -->
-                                <h2>Exterior</h2>(9)
+                                <h2>Exterior</h2>(<?= $cantExterior; ?>)
                             </a>
                         </div>
                         <div class="gallery_int">
-                            <img title="Interior" alt="CERATO/FORTE INTERIOR" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-gallery-02.jpg">
+                            <img title="Interior" alt="<?= $modelo['descripcion']; ?> INTERIOR" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/<?= $imgPrincipalInt; ?>">
                             <a href="#" class="interior">
                                 <!-- GT SEO 20150827 span > h2 -->
-                                <h2>Interior</h2>(12)
+                                <h2>Interior</h2>(<?= $cantInterior; ?>)
                             </a>
                         </div>
                     </div>
@@ -26,7 +54,7 @@
                     <!-- exterior 영역-->
 
                     <div class="gallery_exterior">
-                        <div class="hidden">Exterior photos</div>
+                        <div class="hidden">Exterior fotos</div>
                         <div class="gallery_wrap">
                             <div class="wide_gallery" style="display:none;"> <!-- wide_gallery 영역이 웹, 테블릿에서는 레이어팝업, 모바일에서는 리스트 -->
                                 <div class="wide_wrap">
@@ -34,223 +62,44 @@
                                         <a href="#" class="wide_prev">Prev</a>
                                     </div>
                                     <div class="img_wrap">
-                                        <h3>exterior photos</h3>
-
-                                        <div style="display:block;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <div style="display:none;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-11-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <div style="display:none;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-12-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <div style="display:none;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-13-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <div style="display:none;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-05-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <div style="display:none;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-06-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <div style="display:none;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-07-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <div style="display:none;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-08-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <div style="display:none;">
-                                            <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-09-w.jpg">
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-
-                                        <a href="#" class="wide_close">Close</a>
+                                        <h3>exterior fotos</h3>
+                                        <?php
+                                        foreach ($datos['exterior'] as $key => $val):
+                                            if ($key == 0)
+                                                $displayExt = 'style="display:block;"';
+                                            else
+                                                $displayExt = 'style="display:none;"';
+                                            ?>
+                                            <div <?= $displayExt; ?>>
+                                                <!--<img title=" " alt=" " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-exterior-10-w.jpg" >-->
+                                                <picture>
+                                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/galeria/w/<?= $val['img_w']; ?>" media="(min-width: 1025px)" alt="<?= URL; ?>public/img/vehiculos/imagenes/galeria/w/<?= $val['img_w']; ?>">
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/galeria/t/<?= $val['img_t']; ?>" media="(min-width: 768px)" alt="<?= URL; ?>public/img/vehiculos/imagenes/galeria/t/<?= $val['img_t']; ?>">
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/galeria/m/<?= $val['img_m']; ?>" alt="<?= URL; ?>public/img/vehiculos/imagenes/galeria/m/<?= $val['img_m']; ?>">
+                                                    <!--[if IE 9]></video><![endif]-->
+                                                    <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/galeria/w/<?= $val['img_w']; ?>" alt="<?= URL; ?>public/img/vehiculos/imagenes/galeria/w/<?= $val['img_w']; ?>">
+                                                </picture>
+                                                <span class="galleryTxt">
+                                                </span>
+                                            </div>
+                                        <?php endforeach; ?>
+                                        <a href="#" class="wide_close">Cerrar</a>
                                     </div>
                                     <div class="wideBtnRight" >  <!-- 스크립트에서 img height값 조절 -->
                                         <a href="#" class="wide_next">Next</a>
                                     </div>
                                     <div class="gallery_paging">
                                         <ul>
-
-                                            <li class="on"><a href="#"></a></li>
-
-                                            <li><a href="#"></a></li>
-
-                                            <li><a href="#"></a></li>
-
-                                            <li><a href="#"></a></li>
-
-                                            <li><a href="#"></a></li>
-
-                                            <li><a href="#"></a></li>
-
-                                            <li><a href="#"></a></li>
-
-                                            <li><a href="#"></a></li>
-
-                                            <li><a href="#"></a></li>
-
+                                            <?php
+                                            foreach ($datos['exterior'] as $key => $val):
+                                                if ($key == 0)
+                                                    $classExt = 'class="on"';
+                                                else
+                                                    $classExt = '';
+                                                ?>
+                                                <li <?= $classExt; ?>><a href="#"></a></li>
+                                            <?php endforeach; ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -261,55 +110,53 @@
                                         <span class="title">
                                             <a href="#">
                                                 <strong>Exterior</strong>
-                                                photos
+                                                fotos
                                             </a>
                                         </span>
                                         <span class="paging_dot">
-                                            <a href="#" class="on">1</a>
-                                            <a href="#">2</a>
+                                            <?php
+                                            for ($i = 1; $i <= $paginExt; $i++):
+                                                $classPagingExt = '';
+                                                if ($i == 1)
+                                                    $classPagingExt = 'class="on"';
+                                                ?>
+                                                <a href="#" <?= $classPagingExt; ?>><?= $i; ?></a>
+                                            <?php endfor; ?>
                                         </span>
                                     </span>
-
                                     <span class="bg_int">
                                         <span class="title">
                                             <a href="#">
                                                 <strong>Interior</strong>
-                                                photos
+                                                fotos
                                             </a>
                                         </span>
                                     </span>
                                 </div>
                                 <ul class="screen">
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view';
-                                                _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-10-w" alt="kia-cerato-forte-yd-wide-b-exterior-10-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-10.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-11-w" alt="kia-cerato-forte-yd-wide-b-exterior-11-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-11.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-12-w" alt="kia-cerato-forte-yd-wide-b-exterior-12-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-12.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-13-w" alt="kia-cerato-forte-yd-wide-b-exterior-13-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-13.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-05-w" alt="kia-cerato-forte-yd-wide-b-exterior-05-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-05.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-06-w" alt="kia-cerato-forte-yd-wide-b-exterior-06-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-06.jpg"></a>
-                                    </li>
-                                </ul><ul class="screen off" style="display:none;">
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-07-w" alt="kia-cerato-forte-yd-wide-b-exterior-07-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-07.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-08-w" alt="kia-cerato-forte-yd-wide-b-exterior-08-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-08.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-exterior-09-w" alt="kia-cerato-forte-yd-wide-b-exterior-09-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-exterior-09.jpg"></a>
-                                    </li>
+                                    <?php for ($i = 0; $i <= 5; $i++): ?>
+                                        <li>
+                                            <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['exterior'][$i]['img_w']; ?>" alt="<?= $datos['exterior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['exterior'][$i]['img_thumb']; ?>"></a>
+                                        </li>
+                                    <?php endfor; ?>
                                 </ul>
+                                <?php
+                                if ($paginExt > 1):
+                                    #quitamos las imagenes que ya se mostraron
+                                    for ($i = 0; $i <= 5; $i++) {
+                                        unset($datos['exterior'][$i]);
+                                    }
+                                    array_splice($datos['exterior'], 0, 0);
+                                    $cantThumbExt = count($datos['exterior']);
+                                    ?>
+                                    <ul class="screen off" style="display:none;">
+                                        <?php for ($i = 0; $i <= ($cantThumbExt - 1); $i++): ?>
+                                            <li>
+                                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['exterior'][$i]['img_w']; ?>" alt="<?= $datos['exterior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['exterior'][$i]['img_thumb']; ?>"></a>
+                                            </li>
+                                        <?php endfor; ?>
+                                    </ul>
+                                <?php endif; ?>
                             </div>
 
                         </div> <!-- //gallery_wrap -->
@@ -319,7 +166,7 @@
                     <!-- interior 영역-->
 
                     <div class="gallery_interior">
-                        <div class="hidden">Interior photos</div>
+                        <div class="hidden">Interior fotos</div>
                         <div class="gallery_wrap">
                             <div class="wide_gallery" style="display:none"> <!-- wide_gallery 영역이 웹, 테블릿에서는 레이어팝업, 모바일에서는 리스트 -->
                                 <div class="wide_wrap">
@@ -329,274 +176,43 @@
                                     <div class="img_wrap">
                                         <h3>Interior photos</h3>
                                         <!-- interiors.indexOf(node) : 0, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:block">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-01-w" alt="kia-cerato-forte-yd-wide-b-interior-01-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 1, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-02-w" alt="kia-cerato-forte-yd-wide-b-interior-02-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-02-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 2, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-03-w" alt="kia-cerato-forte-yd-wide-b-interior-03-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-03-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 3, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-04-w" alt="kia-cerato-forte-yd-wide-b-interior-04-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-04-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 4, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-05-w" alt="kia-cerato-forte-yd-wide-b-interior-05-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-05-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 5, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-06-w" alt="kia-cerato-forte-yd-wide-b-interior-06-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-06-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 6, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-07-w" alt="kia-cerato-forte-yd-wide-b-interior-07-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-07-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 7, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-08-w" alt="kia-cerato-forte-yd-wide-b-interior-08-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-08-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 8, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-09-w" alt="kia-cerato-forte-yd-wide-b-interior-09-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-w.jpg">
-
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-m.jpg">
-
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-09-w.jpg">
-
-
-                                            </picture>
-
-                                            <span class="galleryTxt">
-
-
-                                            </span>
-
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 9, interiors.size() : 12 , interiorsM.size() : 12 -->
-
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-10-w" alt="kia-cerato-forte-yd-wide-b-interior-10-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-w.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-m.jpg">
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-10-w.jpg">
-                                            </picture>
-                                            <span class="galleryTxt">
-                                            </span>
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 10, interiors.size() : 12 , interiorsM.size() : 12 -->
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-11-w" alt="kia-cerato-forte-yd-wide-b-interior-11-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-w.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-m.jpg">
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-11-w.jpg">
-                                            </picture>
-                                            <span class="galleryTxt">
-                                            </span>
-                                        </div>
-                                        <!-- interiors.indexOf(node) : 11, interiors.size() : 12 , interiorsM.size() : 12 -->
-                                        <div style="display:none">
-                                            <!--<img title="kia-cerato-forte-yd-wide-b-interior-12-w" alt="kia-cerato-forte-yd-wide-b-interior-12-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-w.jpg" >-->
-                                            <picture>
-                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-w.jpg" media="(min-width: 1025px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-w.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-t.jpg" media="(min-width: 768px)" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-t.jpg">
-                                                <source srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-m.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-m.jpg">
-                                                <!--[if IE 9]></video><![endif]-->
-                                                <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-w.jpg" alt="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-12-w.jpg">
-                                            </picture>
-                                            <span class="galleryTxt">
-                                            </span>
-                                        </div>
-                                        <a href="#" class="wide_close">Close</a>
+                                        <?php
+                                        foreach ($datos['interior'] as $key => $val):
+                                            if ($key == 0)
+                                                $displayInt = 'style="display:block;"';
+                                            else
+                                                $displayInt = 'style="display:none;"';
+                                            ?>
+                                            <div style="<?= $displayInt; ?>">
+                                                <!--<img title="kia-cerato-forte-yd-wide-b-interior-01-w" alt="kia-cerato-forte-yd-wide-b-interior-01-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-b-interior-01-w.jpg" >-->
+                                                <picture>
+                                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/galeria/w/<?= $val['img_w']; ?>" media="(min-width: 1025px)" alt="<?= URL; ?>public/img/vehiculos/imagenes/galeria/w/<?= $val['img_w']; ?>">
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/galeria/t/<?= $val['img_t']; ?>" media="(min-width: 768px)" alt="<?= URL; ?>public/img/vehiculos/imagenes/galeria/t/<?= $val['img_t']; ?>">
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/galeria/m/<?= $val['img_m']; ?>" alt="<?= URL; ?>public/img/vehiculos/imagenes/galeria/m/<?= $val['img_m']; ?>">
+                                                    <!--[if IE 9]></video><![endif]-->
+                                                    <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/galeria/w/<?= $val['img_w']; ?>" alt="<?= URL; ?>public/img/vehiculos/imagenes/galeria/w/<?= $val['img_w']; ?>">
+                                                </picture>
+                                                <span class="galleryTxt">
+                                                </span>
+                                            </div>
+                                        <?php endforeach; ?>
+                                        <a href="#" class="wide_close">Cerrar</a>
                                     </div>
                                     <div class="wideBtnRight" style="position:absolute;right:0;top:35px;height:263px">  <!-- 스크립트에서 img height값 조절 -->
                                         <a href="#" class="wide_next">Next</a>
                                     </div>
                                     <div class="gallery_paging">
                                         <ul>
-                                            <li class="on"><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"></a></li>
+                                            <?php
+                                            foreach ($datos['interior'] as $key => $val):
+                                                if ($key == 0)
+                                                    $classInt = 'class="on"';
+                                                else
+                                                    $classInt = '';
+                                                ?>
+                                                <li <?= $classInt; ?>><a href="#"></a></li>
+                                            <?php endforeach; ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -607,7 +223,7 @@
                                         <span class="title">
                                             <a href="#">
                                                 <strong>Exterior</strong>
-                                                photos
+                                                fotos
                                             </a>
                                         </span>
                                     </span>
@@ -615,55 +231,45 @@
                                         <span class="title">
                                             <a href="#">
                                                 <strong>Interior</strong>
-                                                photos
+                                                fotos
                                             </a>
                                         </span>
                                         <span class="paging_dot">
-                                            <a href="#" class="on">1</a>
-                                            <a href="#">2</a>
+                                            <?php
+                                            for ($i = 1; $i <= $paginInt; $i++):
+                                                $classPagingInt = '';
+                                                if ($i == 1)
+                                                    $classPagingInt = 'class="on"';
+                                                ?>
+                                                <a href="#" <?= $classPagingInt; ?>><?= $i; ?></a>
+                                            <?php endfor; ?>
                                         </span>
                                     </span>
                                 </div>
                                 <ul class="screen">
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view';
-                                                _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-01-w" alt="kia-cerato-forte-yd-wide-b-interior-01-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-01.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-02-w" alt="kia-cerato-forte-yd-wide-b-interior-02-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-02.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-03-w" alt="kia-cerato-forte-yd-wide-b-interior-03-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-03.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-04-w" alt="kia-cerato-forte-yd-wide-b-interior-04-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-04.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-05-w" alt="kia-cerato-forte-yd-wide-b-interior-05-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-05.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-06-w" alt="kia-cerato-forte-yd-wide-b-interior-06-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-06.jpg"></a>
-                                    </li>
-                                </ul><ul class="screen off" style="display:none;">
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-07-w" alt="kia-cerato-forte-yd-wide-b-interior-07-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-07.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-08-w" alt="kia-cerato-forte-yd-wide-b-interior-08-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-08.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-09-w" alt="kia-cerato-forte-yd-wide-b-interior-09-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-09.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-10-w" alt="kia-cerato-forte-yd-wide-b-interior-10-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-10.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-11-w" alt="kia-cerato-forte-yd-wide-b-interior-11-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-11.jpg"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="kia-cerato-forte-yd-wide-b-interior-12-w" alt="kia-cerato-forte-yd-wide-b-interior-12-w" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Gallery/kia-cerato-forte-yd-wide-interior-12.jpg"></a>
-                                    </li>
+                                    <?php for ($i = 0; $i <= 5; $i++): ?>
+                                        <li>
+                                            <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['interior'][$i]['img_w']; ?>" alt="<?= $datos['interior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['interior'][$i]['img_thumb']; ?>"></a>
+                                        </li>
+                                    <?php endfor; ?>
                                 </ul>
+                                <?php
+                                if ($paginInt > 1):
+                                    #quitamos las imagenes que ya se mostraron
+                                    for ($i = 0; $i <= 5; $i++) {
+                                        unset($datos['interior'][$i]);
+                                    }
+                                    array_splice($datos['interior'], 0, 0);
+                                    $cantThumbExt = count($datos['interior']);
+                                    ?>
+                                    <ul class="screen off" style="display:none;">
+                                        <?php for ($i = 0; $i <= ($cantThumbExt - 1); $i++): ?>
+                                            <li>
+                                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['interior'][$i]['img_w']; ?>" alt="<?= $datos['interior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['interior'][$i]['img_thumb']; ?>"></a>
+                                            </li>
+                                        <?php endfor; ?>
+                                    </ul>
+                                <?php endif; ?>
                             </div>
                         </div> <!-- //gallery_wrap -->
                     </div>
@@ -697,7 +303,8 @@
                         });
                     }
                 });
-            </script></div>
+            </script>
+        </div>
     </div>
     <!--cq:includeClientLib categories="apps.kia.default.script"/-->
 </div>
