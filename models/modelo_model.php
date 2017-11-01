@@ -76,7 +76,7 @@ class Modelo_Model extends Model {
                                                 descripcion
                                         FROM modelo_general 
                                         where estado = 1 
-                                        and id_modelo = 1; $idModelo");
+                                        and id_modelo = $idModelo");
         $sqlExterior = $this->db->select("SELECT  mi.titulo,
                                                 mi.descripcion,
                                                 mi.img_w,
@@ -237,6 +237,19 @@ class Modelo_Model extends Model {
             'llanta' => $sqlLlanta
         );
         return $data;
+    }
+
+    public function datosVehiculo($idModelo) {
+        $sqlDatos = $this->db->select("select min(mv.precio) as precio,
+                                                mm.cilindraje,
+                                                mm.potencia_max,
+                                                m.garantia
+                                        from modelo_version mv
+                                        LEFT JOIN modelo m on m.id = mv.id_modelo
+                                        LEFT JOIN modelo_motor mm on mm.id_version = mv.id
+                                        where m.id = $idModelo
+                                        GROUP BY mm.cilindraje, mm.potencia_max, m.garantia");
+        return $sqlDatos[0];
     }
 
 }

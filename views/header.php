@@ -45,6 +45,7 @@ if (!empty($pagina[1])) {
         <script type="text/javascript" src="<?= URL; ?>public/js/angular-common-global.js"></script> 
         <script type="text/javascript" src="<?= URL; ?>public/js/angular-sanitize-1.0.0.js"></script>
         <link rel="stylesheet" href="<?= URL; ?>public/css/clientlib.min.css" type="text/css">
+        <link rel="stylesheet" href="<?= URL; ?>public/css/custom.css" type="text/css">
         <script type="text/javascript" src="<?= URL; ?>public/js/clientlib.min.js"></script>
         <?php
         #cargamos los css de las vistas
@@ -128,7 +129,7 @@ if (!empty($pagina[1])) {
         <div id="header">
             <div class="header_in">
                 <!-- GT SEO 20150827 h1 > div -->
-                <div class="logo_h1"><a href="http://org-www.kia.com/gt/main.html" class="lg_a"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/lg_kia.png" class="lg_img" alt="KIA"></a></div>
+                <div class="logo_h1"><a href="<?= URL; ?>" class="lg_a"><img src="<?= URL; ?>public/img/lg_kia.png" class="lg_img" alt="KIA"></a></div>
                 <a href="#" class="open_gnb"><span class="cmm_spr spr_menu">open menu</span></a>
                 <!-- //GNB -->
                 <!-- GNB gnb_area open -->
@@ -175,12 +176,11 @@ if (!empty($pagina[1])) {
                         </li>
                         <li class="dth1_l"><a href="#" class="dth1_a">Compra un Kia</a>
                             <ul class="dth2_u">
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/build-your-own.html" class="dth2_a">Arma tu Kia</a></li>
-                                <!--<li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/compare-car.html" class="dth2_a">Compara</a></li>-->
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/find-a-dealer.html" class="dth2_a">Encuentra tu Kia</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/download-a-brochure.html" class="dth2_a">Ficha Técnica</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/request-a-quote.html" class="dth2_a">Cotizar</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/shopping-tools/request-a-test-drive.html" class="dth2_a">Test Drive</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/arma_tu_kia/" class="dth2_a">Arma tu Kia</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/encuentra_tu_kia/" class="dth2_a">Encuentra tu Kia</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/ficha_tecnica/" class="dth2_a">Ficha Técnica</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/cotizar/" class="dth2_a">Cotizar</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/test_drive/" class="dth2_a">Test Drive</a></li>
                             </ul>
                         </li>
                         <li class="dth1_l"><a href="#" class="dth1_a">Tengo un Kia</a>
@@ -208,7 +208,7 @@ if (!empty($pagina[1])) {
                             <li class="util_l"><a href="http://org-www.kia.com/gt/util/news.html" class="util_a">Noticias</a></li>
                             <li class="util_l"><a href="http://org-www.kia.com/gt/util/promotion.html" class="util_a">Promociones</a></li>
                             <li class="util_l"><a href="http://org-www.kia.com/gt/shopping-tools/find-a-dealer.html" class="util_a">Encuentra tu Kia</a></li>
-                            <li class="util_l"><a href="http://org-www.kia.com/gt/util/customer-center/contact-us.html" class="util_a">Contàctanos</a></li>
+                            <li class="util_l"><a href="<?= URL; ?>contacto/" class="util_a">Contàctanos</a></li>
                         </ul>
                         <div class="util_search">
                             <div class="u_sch_box">

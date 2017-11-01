@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-10-21 11:47:57
+Date: 2017-11-01 18:38:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -56,11 +56,14 @@ CREATE TABLE `combustible` (
   `descripcion` varchar(80) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of combustible
 -- ----------------------------
+INSERT INTO `combustible` VALUES ('1', 'Nafta', '1');
+INSERT INTO `combustible` VALUES ('2', 'Diesel', '1');
+INSERT INTO `combustible` VALUES ('3', 'Flex', '1');
 
 -- ----------------------------
 -- Table structure for departamento
@@ -123,6 +126,9 @@ CREATE TABLE `modelo` (
   `img_thumb` varchar(80) DEFAULT NULL,
   `ficha` varchar(60) DEFAULT NULL,
   `meta_descripcion` varchar(180) DEFAULT NULL,
+  `img_w` varchar(80) DEFAULT NULL,
+  `img_t` varchar(80) DEFAULT NULL,
+  `img_m` varchar(80) DEFAULT NULL,
   `estado` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -130,7 +136,7 @@ CREATE TABLE `modelo` (
 -- ----------------------------
 -- Records of modelo
 -- ----------------------------
-INSERT INTO `modelo` VALUES ('1', '1', 'Cerato', '5 años o 100.00 Km.', 'cerato.png', '1_cerato-thumb-menu.png', '3_Cerato_2017_baja.pdf', 'Deje que el nuevo Cerato lo lleve a lugares que usted sólo había imaginado.', '1');
+INSERT INTO `modelo` VALUES ('1', '1', 'Cerato', '5 años o 100.00 Km.', 'cerato.png', '1_cerato-thumb-menu.png', '1_Cerato_2017_baja.pdf', 'Deje que el nuevo Cerato lo lleve a lugares que usted sólo había imaginado.', '1_kia-cerato-forte-yd-byo-w.png', '1_kia-cerato-forte-yd-byo-t.png', '1_kia-cerato-forte-yd-byo-m.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_360
@@ -226,18 +232,36 @@ CREATE TABLE `modelo_dimension` (
   `ancho` decimal(20,3) DEFAULT NULL,
   `altura` decimal(20,3) DEFAULT NULL,
   `distancia_ejes` decimal(20,3) DEFAULT NULL,
-  `altura_libre_piso` decimal(20,3) DEFAULT NULL,
-  `capacidad_baul` decimal(20,3) DEFAULT NULL,
-  `capacidad_pasajeros` int(3) DEFAULT NULL,
-  `img_frente` varchar(80) DEFAULT NULL,
-  `img_atras` varchar(80) DEFAULT NULL,
-  `img_lateral` varchar(80) DEFAULT NULL,
+  `img_all` varchar(120) DEFAULT NULL,
+  `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension
 -- ----------------------------
+INSERT INTO `modelo_dimension` VALUES ('1', '1', '4.560', '1.780', '1.460', null, '1_kia-cerato-forte-yd-dimensions-all-view.png', '1');
+
+-- ----------------------------
+-- Table structure for modelo_dimension_img
+-- ----------------------------
+DROP TABLE IF EXISTS `modelo_dimension_img`;
+CREATE TABLE `modelo_dimension_img` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_modelo` int(11) unsigned DEFAULT NULL,
+  `tipo` enum('FRENTE','LATERAL','ATRAS') DEFAULT NULL,
+  `img_w` varchar(120) DEFAULT NULL,
+  `img_t` varchar(120) DEFAULT NULL,
+  `img_m` varchar(120) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of modelo_dimension_img
+-- ----------------------------
+INSERT INTO `modelo_dimension_img` VALUES ('1', '1', 'FRENTE', '1_kia-cerato-forte-yd-dimensions-slide-list-01-w.png', '1_kia-cerato-forte-yd-dimensions-slide-list-01-t.png', '1_kia-cerato-forte-yd-dimensions-slide-list-01-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('2', '1', 'ATRAS', '1_kia-cerato-forte-yd-dimensions-slide-list-02-w.png', '1_kia-cerato-forte-yd-dimensions-slide-list-02-t.png', '1_kia-cerato-forte-yd-dimensions-slide-list-02-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('3', '1', 'LATERAL', '1_kia-cerato-forte-yd-dimensions-slide-list-03-w.png', '1_kia-cerato-forte-yd-dimensions-slide-list-03-t.png', '1_kia-cerato-forte-yd-dimensions-slide-list-03-m.png');
 
 -- ----------------------------
 -- Table structure for modelo_especificacion
@@ -302,10 +326,13 @@ CREATE TABLE `modelo_imagenes` (
   `tipo` enum('INT','EXT') DEFAULT NULL,
   `titulo` varchar(120) DEFAULT NULL,
   `descripcion` text,
+  `img_principal` varchar(120) DEFAULT NULL,
+  `img_thumb` varchar(120) DEFAULT NULL,
   `img_w` varchar(120) DEFAULT NULL,
   `img_t` varchar(120) DEFAULT NULL,
   `img_m` varchar(120) DEFAULT NULL,
   `principal` int(1) DEFAULT '0',
+  `galeria` int(1) DEFAULT '0',
   `caracteristica` int(1) DEFAULT '0',
   `caracteristica_pie` int(1) DEFAULT '0',
   `caracteristicain` int(1) DEFAULT '0',
@@ -313,22 +340,45 @@ CREATE TABLE `modelo_imagenes` (
   `orden` int(1) unsigned DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_imagenes
 -- ----------------------------
-INSERT INTO `modelo_imagenes` VALUES ('1', '1', 'EXT', 'Agrega una dosis extraordinaria a tu vida', 'Tal vez nunca pensaste que la innovación, la excelencia técnica y el estilo excepcional se pudieran unir en un automóvil de pasajeros asequible. Pero finalmente lo hacen.\r\nDeja que el nuevo Cerato te lleve a lugares que solo has imaginado.', '1_kia-cerato-forte-yd-exterior-05-w.jpg', '1_kia-cerato-forte-yd-exterior-05-t.jpg', '1_kia-cerato-forte-yd-exterior-05-m.jpg', '0', '1', '0', '0', '0', '1', '1');
-INSERT INTO `modelo_imagenes` VALUES ('2', '1', 'EXT', 'Un atractivo estético que hace que el tiempo se detenga', 'Redefiniendo lo mejor en diseño de automóviles, el nuevo Cerato es audaz,\r\nlas proporciones parecidas a un coupé y las líneas y curvas llamativas exudan una rápida aceleración y una fluidez de movimiento sin esfuerzo.', '1_kia-cerato-forte-yd-exterior-06-w.jpg', '1_kia-cerato-forte-yd-exterior-06-t.jpg', '1_kia-cerato-forte-yd-exterior-06-m.jpg', '0', '1', '0', '0', '0', '2', '1');
-INSERT INTO `modelo_imagenes` VALUES ('3', '1', 'EXT', 'Una experiencia de conducción que despierta tus emociones.', '\r\n283/5000\r\nCombina un hermoso diseño exterior con excelente rendimiento y potencia, y la emoción de conducir realmente cobra vida.\r\nYa sea que navegue por curvas cerradas, acelere en las carreteras o frene en situaciones de parada repentina, el nuevo Cerato responde instintivamente a sus comandos.', '1_kia-cerato-forte-yd-exterior-07-w.jpg', '1_kia-cerato-forte-yd-exterior-07-t.jpg', '1_kia-cerato-forte-yd-exterior-07-m.jpg', '0', '1', '0', '0', '0', '3', '1');
-INSERT INTO `modelo_imagenes` VALUES ('4', '1', 'EXT', 'Lámparas LED combinadas traseras ', 'Las luces traseras combinadas LED no solo brindan una gran visibilidad para los conductores que se acercan por detrás, sino que también agregan un elemento de modernidad y estilo con su diseño multidimensional.', '1_kia-pop-cerato-forte-yd-exterior-01-w.jpg', '1_kia-pop-cerato-forte-yd-exterior-01-t.jpg', '1_kia-pop-cerato-forte-yd-exterior-01-m.jpg', '0', '0', '1', '0', '0', '1', '1');
-INSERT INTO `modelo_imagenes` VALUES ('5', '1', 'EXT', 'Faros antiniebla', '\r\n152/5000\r\nCon un diseño único de carcasa dividida que proporciona un efecto visual sorprendente, las luces antiniebla se colocan a baja altura en el paragolpes delantero para una mejor iluminación.', '1_kia-pop-cerato-forte-yd-exterior-02-w.jpg', '1_kia-pop-cerato-forte-yd-exterior-02-t.jpg', '1_kia-pop-cerato-forte-yd-exterior-02-m.jpg', '0', '0', '1', '0', '0', '2', '1');
-INSERT INTO `modelo_imagenes` VALUES ('6', '1', 'EXT', 'Faros HID', 'Al emitir un tono azul distintivo, los faros de proyección iluminan más la carretera con un rayo penetrante y preciso.', '1_kia-pop-cerato-forte-yd-exterior-03-w.jpg', '1_kia-pop-cerato-forte-yd-exterior-03-t.jpg', '1_kia-pop-cerato-forte-yd-exterior-03-m.jpg', '0', '0', '1', '0', '0', '3', '1');
-INSERT INTO `modelo_imagenes` VALUES ('7', '1', 'EXT', 'Sistema de iluminación de bienvenida inteligente', 'Una serie de luces exteriores se sincronizan con la tecla inteligente para iluminarlo y darle la bienvenida al automóvil.', '1_kia-pop-cerato-forte-yd-exterior-04-w.jpg', '1_kia-pop-cerato-forte-yd-exterior-04-t.jpg', '1_kia-pop-cerato-forte-yd-exterior-04-m.jpg', '0', '0', '1', '0', '0', '4', '1');
-INSERT INTO `modelo_imagenes` VALUES ('8', '1', 'INT', 'Entorno confortable 365 días al año', 'Un avanzado sistema de control del clima significa que usted y sus pasajeros pueden relajarse en cada viaje, durante todo el año. Un volante con calefacción y calentadores de asiento proporcionan una comodidad tranquilizadora en días fríos, mientras que el aire acondicionado automático y el asiento del conductor con ventilación de aire lo mantienen fresco cuando sube la temperatura. Un sistema automático de desempañado se activa por sí mismo cuando se detecta condensación en el cristal del parabrisas, y un ionizador de racimo garantiza que el aire que fluye al interior del automóvil esté limpio y libre de olores.', '1_kia-cerato-forte-yd-interior-01-w.jpg', '1_kia-cerato-forte-yd-interior-01-t.jpg', '1_kia-cerato-forte-yd-interior-01-m.jpg', '0', '0', '0', '1', '0', '1', '1');
-INSERT INTO `modelo_imagenes` VALUES ('9', '1', 'INT', 'clúster de supervisión', 'La interfaz intuitiva del clúster de supervisión le permite acceder a una amplia gama de configuraciones de usuario.', '1_kia-pop-cerato-forte-yd-interior-01-w.jpg', '1_kia-pop-cerato-forte-yd-interior-01-t.jpg', '1_kia-pop-cerato-forte-yd-interior-01-m.jpg', '0', '0', '0', '0', '1', '1', '1');
-INSERT INTO `modelo_imagenes` VALUES ('10', '1', 'INT', 'Volante con calefacción', 'El volante térmico forrado en piel es práctico y cómodo en los fríos días de invierno.', '1_kia-pop-cerato-forte-yd-interior-02-w.jpg', '1_kia-pop-cerato-forte-yd-interior-02-t.jpg', '1_kia-pop-cerato-forte-yd-interior-02-m.jpg', '0', '0', '0', '0', '1', '2', '1');
-INSERT INTO `modelo_imagenes` VALUES ('11', '1', 'INT', 'Asiento delantero ventilado', 'El aire que sopla a través del cojín del asiento y la espalda le ahorra la incomodidad de calentarse y pegarse durante el verano.', '1_kia-pop-cerato-forte-yd-interior-03-w.jpg', '1_kia-pop-cerato-forte-yd-interior-03-t.jpg', '1_kia-pop-cerato-forte-yd-interior-03-m.jpg', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('1', '1', 'EXT', 'Agrega una dosis extraordinaria a tu vida', 'Tal vez nunca pensaste que la innovación, la excelencia técnica y el estilo excepcional se pudieran unir en un automóvil de pasajeros asequible. Pero finalmente lo hacen.\r\nDeja que el nuevo Cerato te lleve a lugares que solo has imaginado.', null, '1_ico_cerato_forte_yd_paging5_on.png', '1_kia-cerato-forte-yd-exterior-05-w.jpg', '1_kia-cerato-forte-yd-exterior-05-t.jpg', '1_kia-cerato-forte-yd-exterior-05-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('2', '1', 'EXT', 'Un atractivo estético que hace que el tiempo se detenga', 'Redefiniendo lo mejor en diseño de automóviles, el nuevo Cerato es audaz,\r\nlas proporciones parecidas a un coupé y las líneas y curvas llamativas exudan una rápida aceleración y una fluidez de movimiento sin esfuerzo.', null, '1_ico_cerato_forte_yd_paging6_on.png', '1_kia-cerato-forte-yd-exterior-06-w.jpg', '1_kia-cerato-forte-yd-exterior-06-t.jpg', '1_kia-cerato-forte-yd-exterior-06-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('3', '1', 'EXT', 'Una experiencia de conducción que despierta tus emociones.', '\r\n283/5000\r\nCombina un hermoso diseño exterior con excelente rendimiento y potencia, y la emoción de conducir realmente cobra vida.\r\nYa sea que navegue por curvas cerradas, acelere en las carreteras o frene en situaciones de parada repentina, el nuevo Cerato responde instintivamente a sus comandos.', null, '1_ico_cerato_forte_yd_paging7_on.png', '1_kia-cerato-forte-yd-exterior-07-w.jpg', '1_kia-cerato-forte-yd-exterior-07-t.jpg', '1_kia-cerato-forte-yd-exterior-07-m.jpg', '0', '0', '1', '0', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('4', '1', 'EXT', 'Lámparas LED combinadas traseras ', 'Las luces traseras combinadas LED no solo brindan una gran visibilidad para los conductores que se acercan por detrás, sino que también agregan un elemento de modernidad y estilo con su diseño multidimensional.', null, null, '1_kia-pop-cerato-forte-yd-exterior-01-w.jpg', '1_kia-pop-cerato-forte-yd-exterior-01-t.jpg', '1_kia-pop-cerato-forte-yd-exterior-01-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('5', '1', 'EXT', 'Faros antiniebla', '\r\n152/5000\r\nCon un diseño único de carcasa dividida que proporciona un efecto visual sorprendente, las luces antiniebla se colocan a baja altura en el paragolpes delantero para una mejor iluminación.', null, null, '1_kia-pop-cerato-forte-yd-exterior-02-w.jpg', '1_kia-pop-cerato-forte-yd-exterior-02-t.jpg', '1_kia-pop-cerato-forte-yd-exterior-02-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('6', '1', 'EXT', 'Faros HID', 'Al emitir un tono azul distintivo, los faros de proyección iluminan más la carretera con un rayo penetrante y preciso.', null, null, '1_kia-pop-cerato-forte-yd-exterior-03-w.jpg', '1_kia-pop-cerato-forte-yd-exterior-03-t.jpg', '1_kia-pop-cerato-forte-yd-exterior-03-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('7', '1', 'EXT', 'Sistema de iluminación de bienvenida inteligente', 'Una serie de luces exteriores se sincronizan con la tecla inteligente para iluminarlo y darle la bienvenida al automóvil.', null, null, '1_kia-pop-cerato-forte-yd-exterior-04-w.jpg', '1_kia-pop-cerato-forte-yd-exterior-04-t.jpg', '1_kia-pop-cerato-forte-yd-exterior-04-m.jpg', '0', '0', '0', '1', '0', '0', '4', '1');
+INSERT INTO `modelo_imagenes` VALUES ('8', '1', 'INT', 'Entorno confortable 365 días al año', 'Un avanzado sistema de control del clima significa que usted y sus pasajeros pueden relajarse en cada viaje, durante todo el año. Un volante con calefacción y calentadores de asiento proporcionan una comodidad tranquilizadora en días fríos, mientras que el aire acondicionado automático y el asiento del conductor con ventilación de aire lo mantienen fresco cuando sube la temperatura. Un sistema automático de desempañado se activa por sí mismo cuando se detecta condensación en el cristal del parabrisas, y un ionizador de racimo garantiza que el aire que fluye al interior del automóvil esté limpio y libre de olores.', null, null, '1_kia-cerato-forte-yd-interior-01-w.jpg', '1_kia-cerato-forte-yd-interior-01-t.jpg', '1_kia-cerato-forte-yd-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('9', '1', 'INT', 'clúster de supervisión', 'La interfaz intuitiva del clúster de supervisión le permite acceder a una amplia gama de configuraciones de usuario.', null, null, '1_kia-pop-cerato-forte-yd-interior-01-w.jpg', '1_kia-pop-cerato-forte-yd-interior-01-t.jpg', '1_kia-pop-cerato-forte-yd-interior-01-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('10', '1', 'INT', 'Volante con calefacción', 'El volante térmico forrado en piel es práctico y cómodo en los fríos días de invierno.', null, null, '1_kia-pop-cerato-forte-yd-interior-02-w.jpg', '1_kia-pop-cerato-forte-yd-interior-02-t.jpg', '1_kia-pop-cerato-forte-yd-interior-02-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('11', '1', 'INT', 'Asiento delantero ventilado', 'El aire que sopla a través del cojín del asiento y la espalda le ahorra la incomodidad de calentarse y pegarse durante el verano.', null, null, '1_kia-pop-cerato-forte-yd-interior-03-w.jpg', '1_kia-pop-cerato-forte-yd-interior-03-t.jpg', '1_kia-pop-cerato-forte-yd-interior-03-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('12', '1', 'EXT', null, null, '1_kia-cerato-forte-yd-gallery-01.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('13', '1', 'INT', null, null, '1_kia-cerato-forte-yd-gallery-02.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('14', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-05.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-05-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-05-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('15', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-06.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-06-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-06-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('16', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-07.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-07-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-07-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('17', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-08.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-08-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-08-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('18', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-09.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-09-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-09-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('19', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-10.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-10-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-10-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('20', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-11.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-11-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-11-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('21', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-12.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-12-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-12-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('22', '1', 'EXT', null, null, null, '1_kia-cerato-forte-yd-wide-exterior-13.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-13-w.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-13-t.jpg', '1_kia-cerato-forte-yd-wide-b-exterior-13-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('23', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-01.jpg', '1_kia-cerato-forte-yd-wide-b-interior-01-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-01-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('24', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-02.jpg', '1_kia-cerato-forte-yd-wide-b-interior-02-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-02-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('25', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-03.jpg', '1_kia-cerato-forte-yd-wide-b-interior-03-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-03-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('26', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-04.jpg', '1_kia-cerato-forte-yd-wide-b-interior-04-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-04-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('27', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-05.jpg', '1_kia-cerato-forte-yd-wide-b-interior-05-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-05-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('28', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-06.jpg', '1_kia-cerato-forte-yd-wide-b-interior-06-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-06-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('29', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-07.jpg', '1_kia-cerato-forte-yd-wide-b-interior-07-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-07-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('30', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-08.jpg', '1_kia-cerato-forte-yd-wide-b-interior-08-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-08-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('31', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-09.jpg', '1_kia-cerato-forte-yd-wide-b-interior-09-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-09-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('32', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-10.jpg', '1_kia-cerato-forte-yd-wide-b-interior-10-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-10-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('33', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-11.jpg', '1_kia-cerato-forte-yd-wide-b-interior-11-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-11-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('34', '1', 'INT', null, null, null, '1_kia-cerato-forte-yd-wide-interior-12.jpg', '1_kia-cerato-forte-yd-wide-b-interior-12-w.jpg', '1_kia-cerato-forte-yd-wide-b-interior-12-t.jpg', '1_kia-cerato-forte-yd-wide-b-interior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes_thumb
@@ -358,16 +408,20 @@ INSERT INTO `modelo_imagenes_thumb` VALUES ('3', '3', 'EXT', null, '1_ico_cerato
 DROP TABLE IF EXISTS `modelo_llantas`;
 CREATE TABLE `modelo_llantas` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `id_modelo` int(11) unsigned DEFAULT NULL,
+  `id_version` int(11) unsigned DEFAULT NULL,
   `descripcion` varchar(60) DEFAULT NULL,
+  `tipo` varchar(80) DEFAULT NULL,
   `img` varchar(60) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_llantas
 -- ----------------------------
+INSERT INTO `modelo_llantas` VALUES ('1', '1', '205/55 R16', 'Llanta de Acero', '1_kia-cerato-forte-yd-wheel-slide-01.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('2', '2', '205/55 R16', 'Llanta de Acero', '1_kia-cerato-forte-yd-wheel-slide-01.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('3', '3', '205/55 R16', 'Llanta de Acero', '1_kia-cerato-forte-yd-wheel-slide-02.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_motor
@@ -377,19 +431,23 @@ CREATE TABLE `modelo_motor` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `id_version` int(11) unsigned DEFAULT NULL,
   `id_combustible` int(11) unsigned DEFAULT NULL,
-  `descripcion` varchar(120) DEFAULT NULL,
   `tipo_motor` varchar(80) DEFAULT NULL,
   `cilindraje` varchar(80) DEFAULT NULL,
   `potencia_max` varchar(80) DEFAULT NULL,
   `torque_max` varchar(80) DEFAULT NULL,
   `cilindros` varchar(80) DEFAULT NULL,
   `valvula` varchar(80) DEFAULT NULL,
+  `img` varchar(120) DEFAULT NULL,
+  `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_motor
 -- ----------------------------
+INSERT INTO `modelo_motor` VALUES ('1', '1', '3', 'DOHC 16 Valvulas / InyecciOn multipunto', '1.600 c.c', '130/6300', '16.0/4850', '4 en lJnea', null, '1_kia-cerato-forte-yd-engine-slide-01.png', '1');
+INSERT INTO `modelo_motor` VALUES ('2', '2', '3', 'DOHC 16 Valvulas / InyecciOn multipunto', '1.600 c.c', '130/6300', '16.0/4850', '4 en lJnea', null, '1_kia-cerato-forte-yd-engine-slide-01.png', '1');
+INSERT INTO `modelo_motor` VALUES ('3', '3', '3', 'DOHC 16 Valvulas / InyecciOn multipunto', '1.600 c.c', '130/6300', '16.0/4850', '4 en lJnea', null, '1_kia-cerato-forte-yd-engine-slide-01.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_seguridad
@@ -416,6 +474,67 @@ INSERT INTO `modelo_seguridad` VALUES ('2', '1', 'Suspensión\r\n', 'Una suspens
 INSERT INTO `modelo_seguridad` VALUES ('3', '1', 'Respuesta de freno', 'La respuesta y la sensación de frenado se mejoran gracias a un cilindro maestro ampliado y la adición de un tirante al amplificador.', '1_kia-pop-cerato-forte-yd-safety-02-w.jpg', '1_kia-pop-cerato-forte-yd-safety-02-t.jpg', '1_kia-pop-cerato-forte-yd-safety-02-m.jpg', '0', '1');
 INSERT INTO `modelo_seguridad` VALUES ('4', '1', 'Flex Steer', 'El sistema Flex Steer brinda tres modos de conducción (Comfort, Normal y Sport) que brindan el nivel apropiado de asistencia y retroalimentación de dirección para diferentes condiciones de manejo.', '1_kia-pop-cerato-forte-yd-safety-03-w.jpg', '1_kia-pop-cerato-forte-yd-safety-03-t.jpg', '1_kia-pop-cerato-forte-yd-safety-03-m.jpg', '0', '1');
 INSERT INTO `modelo_seguridad` VALUES ('5', '1', 'Hill-start Assist Control (HAC)', 'Al mantener el agarre de los frenos hasta que se presiona el acelerador, HAC evita que el vehículo ruede peligrosamente hacia atrás cuando se retira de una parada en una pendiente.', '1_kia-pop-cerato-forte-yd-safety-04-w.jpg', '1_kia-pop-cerato-forte-yd-safety-0-t.jpg', '1_kia-pop-cerato-forte-yd-safety-04-m.jpg', '0', '1');
+
+-- ----------------------------
+-- Table structure for modelo_version
+-- ----------------------------
+DROP TABLE IF EXISTS `modelo_version`;
+CREATE TABLE `modelo_version` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_modelo` int(11) unsigned DEFAULT NULL,
+  `descripcion` varchar(45) DEFAULT NULL,
+  `precio` decimal(20,3) DEFAULT NULL,
+  `bono` int(11) DEFAULT '0',
+  `ano` int(4) DEFAULT NULL,
+  `estado` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of modelo_version
+-- ----------------------------
+INSERT INTO `modelo_version` VALUES ('1', '1', 'Ex Mec.', '17990.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('2', '1', 'Ex. Aut.', '20000.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('3', '1', 'SX Aut.', '22400.000', '0', '2018', '1');
+
+-- ----------------------------
+-- Table structure for modelo_version_cuotas
+-- ----------------------------
+DROP TABLE IF EXISTS `modelo_version_cuotas`;
+CREATE TABLE `modelo_version_cuotas` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_version` int(11) unsigned DEFAULT NULL,
+  `id_moneda` int(11) unsigned DEFAULT NULL,
+  `cuota` decimal(22,3) DEFAULT NULL,
+  `entrega_inicial` decimal(22,3) DEFAULT NULL,
+  `cantidad_cuotas` int(3) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of modelo_version_cuotas
+-- ----------------------------
+INSERT INTO `modelo_version_cuotas` VALUES ('1', '1', '2', '338.000', '2250.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('2', '2', '2', '383.000', '2550.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('3', '3', '2', '428.000', '2850.000', '60');
+
+-- ----------------------------
+-- Table structure for moneda
+-- ----------------------------
+DROP TABLE IF EXISTS `moneda`;
+CREATE TABLE `moneda` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(60) DEFAULT NULL,
+  `simbologia` varchar(3) DEFAULT NULL,
+  `estado` int(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of moneda
+-- ----------------------------
+INSERT INTO `moneda` VALUES ('1', 'Guaraní', 'Gs.', '1');
+INSERT INTO `moneda` VALUES ('2', 'Dolar', 'U$D', '1');
 
 -- ----------------------------
 -- Table structure for servicio
@@ -454,15 +573,39 @@ DROP TABLE IF EXISTS `slider`;
 CREATE TABLE `slider` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `id_modelo` int(11) unsigned NOT NULL,
-  `titulo` varchar(80) DEFAULT NULL,
-  `descripcion` text,
-  `imagen` varchar(70) DEFAULT NULL,
-  `banner_lateral` varchar(70) DEFAULT NULL,
+  `img_banner_w` varchar(70) DEFAULT NULL,
+  `img_banner_t` varchar(70) DEFAULT NULL,
+  `img_banner_m` varchar(70) DEFAULT NULL,
+  `img_galeria` varchar(70) DEFAULT NULL,
+  `estado` int(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of slider
+-- ----------------------------
+INSERT INTO `slider` VALUES ('1', '1', 'kia-gt-interbrand-b-1610-01-w.jpg', 'kia-gt-interbrand-b-1610-01-t.jpg', 'kia-gt-interbrand-b-1610-01-m.jpg', '1_cerato_galeria.jpg', '1');
+
+-- ----------------------------
+-- Table structure for solicitud_cotizador
+-- ----------------------------
+DROP TABLE IF EXISTS `solicitud_cotizador`;
+CREATE TABLE `solicitud_cotizador` (
+  `id` int(11) NOT NULL,
+  `fecha` date DEFAULT NULL,
+  `modelo` varchar(60) DEFAULT NULL,
+  `version` varchar(60) DEFAULT NULL,
+  `precio` decimal(20,3) DEFAULT NULL,
+  `entrega` decimal(20,3) DEFAULT NULL,
+  `cuotas` decimal(20,3) DEFAULT NULL,
+  `cantidad` int(4) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `nombre` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of slider
+-- Records of solicitud_cotizador
 -- ----------------------------
 
 -- ----------------------------
@@ -485,21 +628,4 @@ INSERT INTO `tipo_vehiculo` VALUES ('2', 'Familiares', '2', '1');
 INSERT INTO `tipo_vehiculo` VALUES ('3', 'Crossover', '3', '1');
 INSERT INTO `tipo_vehiculo` VALUES ('4', 'Suv', '4', '1');
 INSERT INTO `tipo_vehiculo` VALUES ('5', 'Comerciales', '5', '1');
-
--- ----------------------------
--- Table structure for version
--- ----------------------------
-DROP TABLE IF EXISTS `version`;
-CREATE TABLE `version` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `id_modelo` int(11) unsigned DEFAULT NULL,
-  `descripcion` varchar(45) DEFAULT NULL,
-  `precio` decimal(20,3) DEFAULT NULL,
-  `estado` int(1) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of version
--- ----------------------------
 SET FOREIGN_KEY_CHECKS=1;

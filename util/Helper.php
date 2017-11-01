@@ -338,6 +338,20 @@ class Helper {
     }
 
     /**
+     * Funcion que envia un correo a travez de la funcion mail de PHP.
+     * @param string $para
+     * @param string $asunto
+     * @param string $mensaje
+     */
+    public function sendMail($para, $asunto, $mensaje) {
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= 'From: Garden Intranet <noresponder@kia.com.py>' . "\r\n";
+        $headers .= 'Reply-To: noresponder@kia.com.py' . "\r\n";
+        mail($para, $asunto, $mensaje, $headers);
+    }
+
+    /**
      * Funcion que retorna las categorias de los modelos
      * @return array
      */
@@ -355,14 +369,40 @@ class Helper {
     public function getModelos($tipo = NULL) {
         $where = "";
         if (!empty($tipo))
-            $where = "and tv.id = $tipo";
+            $where = "and tv.id IN ($tipo)";
         $sql = $this->db->select("SELECT m.id, 
                                         m.descripcion, 
-                                        m.img_thumb 
+                                        m.img_thumb,
+                                        m.ficha
                                 FROM modelo m
                                 LEFT JOIN tipo_vehiculo tv on tv.id = m.id_tipo_vehiculo
                                 where m.estado = 1
                                 $where");
+        return $sql;
+    }
+
+    public function sliderInicio() {
+        $sql = $this->db->select("SELECT m.id,
+                                        s.img_banner_w,
+                                        s.img_banner_m,
+                                        s.img_banner_t,
+                                        s.img_galeria,
+                                        mg.img_m,
+                                        mg.img_t,
+                                        mg.img_w,
+                                        mg.titulo,
+                                        mg.descripcion,
+                                        m.ficha,
+                                        m.logo,
+                                        m.descripcion as nombre,
+                                        (select mi.img_w from modelo_imagenes mi where mi.id_modelo = s.id_modelo and mi.tipo = 'EXT' and mi.caracteristica = 1 LIMIT 1) as img_w_galeria,
+                                        (select mi.img_t from modelo_imagenes mi where mi.id_modelo = s.id_modelo and mi.tipo = 'EXT' and mi.caracteristica = 1 LIMIT 1) as img_t_galeria,
+                                        (select mi.img_m from modelo_imagenes mi where mi.id_modelo = s.id_modelo and mi.tipo = 'EXT' and mi.caracteristica = 1 LIMIT 1) as img_m_galeria
+                                FROM slider s
+                                LEFT JOIN modelo_general mg on mg.id_modelo = s.id_modelo
+                                LEFT JOIN modelo m on m.id = s.id_modelo
+                                where s.id_modelo = 1
+                                and s.estado = 1");
         return $sql;
     }
 

@@ -1,6 +1,7 @@
 <?php
 $modelo = $this->datosModelo;
 $datos = $this->datosModeloCaracteristica;
+$vehiculo = $this->datosVehiculo;
 ?>
 <div id="container">
     <?= $this->headerBarModelos; ?>
@@ -90,12 +91,12 @@ $datos = $this->datosModeloCaracteristica;
                                 </div>-->
                 <!-- //360 키비쥬얼 영역 -->
                 <!-- 페이징 -->
-<!--                <div class="paging">
-                    <ul>
-                        <li class="on"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                    </ul>
-                </div>-->
+                <!--                <div class="paging">
+                                    <ul>
+                                        <li class="on"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                    </ul>
+                                </div>-->
                 <!-- //페이징 -->                  
             </div>
             <div class="carInfor">
@@ -106,28 +107,28 @@ $datos = $this->datosModeloCaracteristica;
                             <div>
                                 <img src="<?= URL; ?>public/img/icon_kv_spec_1.png" alt="">
                                 <span class="inforTit">Desde</span>
-                                <span class="inforTxt">&nbsp;</span>
+                                <span class="inforTxt"><?= number_format($vehiculo['precio'], 0, ',', '.'); ?></span>
                             </div>
                         </li>
                         <li class="infor2">
                             <div>
                                 <img src="<?= URL; ?>public/img/icon_kv_spec_2.png" alt="">
                                 <span class="inforTit">Cilindraje</span>
-                                <span class="inforTxt">&nbsp;</span>
+                                <span class="inforTxt"><?= $vehiculo['cilindraje']; ?></span>
                             </div>
                         </li>
                         <li class="infor3">
                             <div>
                                 <img src="<?= URL; ?>public/img/icon_kv_spec_3.png" alt="">
                                 <span class="inforTit">Potencia (hp/rpm)</span>
-                                <span class="inforTxt">&nbsp;<br /></span>
+                                <span class="inforTxt"><?= $vehiculo['potencia_max']; ?><br /></span>
                             </div>
                         </li>
                         <li class="infor4">
                             <div>
                                 <img src="<?= URL; ?>public/img/icon_kv_spec_5.png" alt="">
                                 <span class="inforTit">Garantía</span>
-                                <span class="inforTxt">&nbsp;</span>
+                                <span class="inforTxt"><?= utf8_encode($vehiculo['garantia']); ?></span>
                             </div>
                         </li>
                     </ul>
@@ -759,13 +760,13 @@ $datos = $this->datosModeloCaracteristica;
                                         <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['seguridad'][$f]['img_t']; ?>" media="(min-width: 768px)">
                                         <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['seguridad'][$f]['img_m']; ?>" media="(min-width: 200px)">
                                         <!--[if IE 9]></video><![endif]-->
-                                        <img srcset="http://org-www.kia.com/kmc/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-w.jpg" alt="<?= utf8_encode($datos['seguridad'][$f]['titulo']); ?>">
+                                        <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['seguridad'][$f]['titulo']); ?>">
                                     </picture>
                                     </dt>
                                     <dd>
                                         <!-- GT SEO 20150828 div > h4 -->
-                                        <h4 class="btmTextTit " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['titulo']); ?></h4>
-                                        <div class="btmTextTxt " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['descripcion']); ?></div>
+                                        <h4 class="btmTextTit" style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['titulo']); ?></h4>
+                                        <div class="btmTextTxt" style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['descripcion']); ?></div>
                                     </dd>
                                 </dl>
                             </a>

@@ -1,0 +1,97 @@
+.bcr .car_btnBox a {
+    display: block;
+    margin-bottom: 5px;
+}
+.car_list .car_box .car_name {
+    display: block;
+    height: 32px;
+    line-height: 16px;
+    padding: 0 15px;
+    color: #000;
+    font-family: kiaM;
+}
+.btnType7 {
+    position: relative;
+    width: 100px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #e1e1e1;
+    text-align: left;
+}
+.car_list .car_box .car_a {
+    height: 168px;
+}
+.bcr .car_btnBox a {
+    display: block;
+    margin-bottom: 5px;
+}
+.car_btnBox {
+    display: table;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -63px;
+    top: 80%;
+}
+.car_box.add_btn {
+    position: relative;
+}
+.car_wrap {
+    overflow-y: visible;
+    max-height: none;
+}
+.precioContado,.precioBono,.precioEntrega,.precioCuotas,.successSendMail{font-weight: normal;
+                                                                         font-family: kiaB;
+                                                                         display: block;}
+.precioContado,.precioCuotas,.successSendMail{ font-size: 1.5em;}
+.precioCuotas{padding: 10px 0px;}
+.precioBono{ color: #BA1D2F; padding: 10px 0px 0px;}
+.precioEntrega{ padding-bottom: 10px;}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+    color: #999;
+}
+.form-control::-webkit-input-placeholder {
+    color: #999;
+}
+.form-control::-ms-expand {
+    background-color: transparent;
+    border: 0;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    background-color: #eee;
+    opacity: 1;
+}
+.form-control[disabled],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+}

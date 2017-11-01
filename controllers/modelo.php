@@ -14,6 +14,7 @@ class Modelo extends Controller {
         $datosModelos = $this->model->getDatosModelos($idModelo);
         $this->view->datosModelo = $datosModelos;
         $this->view->datosModeloCaracteristica = $this->model->datosModeloCaracteristica($idModelo);
+        $this->view->datosVehiculo = $this->model->datosVehiculo($idModelo);
         $this->view->headerBarModelos = $this->model->headerBarModelos($url);
         $this->view->public_css = array("css/showroom/default_style.min.css");
         $this->view->js = array("modelo/inc/js/default_script.js", "modelo/inc/js/feature_script.min.js");

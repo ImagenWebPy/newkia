@@ -937,7 +937,7 @@ strong.bl_type2{display:block;margin:10px 0}
 .gnb_area .gnb_nav .dth_pip .car_grid .grid_box .g_name{display:block;margin-top:5px}
 @media(max-width:767px){.gnb_area .gnb_nav .dth_pip .car_grid .grid_box .g_name{height:auto}
 }
-@charset "utf-8";.form_chk .car_spr:before{content:'';display:block;width:66px;height:32px;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/shopping-tools/spr_category.png);background-repeat:no-repeat}
+@charset "utf-8";.form_chk .car_spr:before{content:'';display:block;width:66px;height:32px;background-image:url(../../public/img/spr_category.png);background-repeat:no-repeat}
 .form_chk .car_spr.sort1:before{background-position:0 0}
 .form_chk .car_spr.sort2:before{background-position:0 -33px}
 .form_chk .car_spr.sort3:before{background-position:0 -66px}
