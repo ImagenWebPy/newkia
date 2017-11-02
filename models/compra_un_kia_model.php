@@ -193,4 +193,69 @@ class Compra_un_kia_Model extends Model {
         return json_encode($datos);
     }
 
+    public function enviarSolicitudTestDrive($data) {
+        $id_modelo = $data['modelo'];
+        $modelo = $this->db->select("select descripcion from modelo where id = $id_modelo");
+        $asunto = 'Formulario de Test Drive';
+        $mail = $this->helper->getConfigEmail('testdrive');
+        $para = $mail['value'];
+        $mensaje = '
+                                    <table width="800" border="0" cellspacing="0" cellpadding="5">
+                                        <tr>
+                                            <td colspan="2"><h2>Nueva solicitud de Test Drive!</h2></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><h2>Formulario de Test Drive</h2><hr /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" bgcolor="#CCCCCC">Mensaje enviado en fecha: ' . date('Y-m-d H:i:s') . '</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="155" align="right"><strong>Nombres:</strong></td>
+                                            <td width="625">' . $data['nombre'] . '</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><strong>Cedula:</strong></td>
+                                            <td>' . $data['ci'] . '</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><strong>Modelo:</strong></td>
+                                            <td>' . $modelo[0]['descripcion'] . '</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><strong>Teléfono:</strong></td>
+                                            <td>' . $data['telefono'] . '</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><strong>E-mail:</strong></td>
+                                            <td>' . $data['email'] . '</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" valign="top"><strong>Ciudad</strong></td>
+                                            <td align="left" valign="top">' . $data['ciudad'] . '</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" valign="top"><strong>Direccion</strong></td>
+                                            <td align="left" valign="top">' . $data['direccion'] . '</td>
+                                        </tr>
+                                        <tr align="left" valign="top">
+                                            <td colspan="2" align="left" valign="top"><hr /></td>
+                                        </tr>
+                                    </table>';
+        $this->helper->sendMail($para, $asunto, $mensaje);
+        #insertamos los datos en la BD
+        $this->db->insert('solicitud_testdrive', array(
+            'id_modelo' => $data['modelo'],
+            'nombre' => utf8_decode($data['nombre']),
+            'ci' => utf8_decode($data['ci']),
+            'telefono' => utf8_decode($data['telefono']),
+            'email' => $data['email'],
+            'ciudad' => utf8_decode($data['ciudad']),
+            'direccion' => utf8_decode($data['direccion']),
+            'fecha' => date('Y-m-d H:i:s')
+        ));
+        $datos = '<span class="precioContado">Muchas gracias por solicitar un Test Drive <strong>' . $data['nombre'] . '</strong>. Su mensaje fue enviado con éxito</span>';
+        return json_encode($datos);
+    }
+
 }

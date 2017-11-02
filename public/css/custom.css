@@ -95,3 +95,4 @@ fieldset[disabled] .form-control {
 fieldset[disabled] .form-control {
     cursor: not-allowed;
 }
+.pointer{cursor: pointer;}

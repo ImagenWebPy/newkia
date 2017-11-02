@@ -14,7 +14,8 @@ class Compra_un_kia extends Controller {
     }
 
     public function encuentra_tu_kia() {
-        $this->view->title = 'Caracteristicas';
+        $this->view->title = SITE_TITLE . 'Encuentra tu Kia';
+        $this->view->meta_sitename = META_SITENAME;
         $this->view->render('header');
         $this->view->render('compra_un_kia/encuentra_tu_kia');
         $this->view->render('footer');
@@ -37,6 +38,8 @@ class Compra_un_kia extends Controller {
     }
 
     public function test_drive() {
+        $this->view->title = SITE_TITLE . 'Test Drive';
+        $this->view->meta_sitename = META_SITENAME;
         $this->view->title = 'Caracteristicas';
         $this->view->render('header');
         $this->view->render('compra_un_kia/test_drive');
@@ -73,6 +76,21 @@ class Compra_un_kia extends Controller {
             'id_version' => $this->helper->cleanInput($_POST['id_version'])
         );
         $datos = $this->model->enviarCotizacion($data);
+        echo $datos;
+    }
+
+    public function enviarSolicitudTestDrive() {
+        header('Content-type: application/json; charset=utf-8');
+        $data = array(
+            'modelo' => $this->helper->cleanInput($_POST['modelo']),
+            'nombre' => $this->helper->cleanInput($_POST['txtNombreCompleto']),
+            'ci' => $this->helper->cleanInput($_POST['txtCI']),
+            'telefono' => $this->helper->cleanInput($_POST['txtTelefono']),
+            'email' => $this->helper->cleanInput($_POST['txtEmail']),
+            'ciudad' => $this->helper->cleanInput($_POST['txtCiudad']),
+            'direccion' => $this->helper->cleanInput($_POST['txtDireccion'])
+        );
+        $datos = $this->model->enviarSolicitudTestDrive($data);
         echo $datos;
     }
 

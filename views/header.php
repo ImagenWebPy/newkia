@@ -123,7 +123,9 @@ if (!empty($pagina[1])) {
 </head>
 <body>
     <!-- content -->
-    <div class="accessbility"><a href="#content">Go to content</a></div>
+    <div class="accessbility">
+        <a href="#content">Go to content</a>
+    </div>
     <div id="wrap" ng-app="kwcmsAppModuleApp" ng-cloak class="<?= $classWrap; ?>">
         <link rel="shortcut icon" type="image/x-icon" href="http://org-www.kia.com/content/dam/kwcms/mx/es/images/main-mx/favicon.ico">
         <div id="header">
@@ -136,7 +138,8 @@ if (!empty($pagina[1])) {
                 <div class="gnb_area">
                     <ul class="gnb_nav">
                         <!-- dth1_l dth_on -->
-                        <li class="dth1_l"><a href="#" class="dth1_a">Modelos</a>
+                        <li class="dth1_l">
+                            <a class="dth1_a pointer">Modelos</a>
                             <div class="dth2_u dth_pip">
                                 <div class="car_tab">
                                     <a href="#" class="sort_a sort_on"><span class="cmm_tspr spr_sort">Todos los vehículos</span></a>
@@ -174,16 +177,18 @@ if (!empty($pagina[1])) {
                                 <?php endforeach; ?>
                             </div>             
                         </li>
-                        <li class="dth1_l"><a href="#" class="dth1_a">Compra un Kia</a>
+                        <li class="dth1_l">
+                            <a class="dth1_a pointer">Compra un Kia</a>
                             <ul class="dth2_u">
-                                <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/arma_tu_kia/" class="dth2_a">Arma tu Kia</a></li>
+                                <!--<li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/arma_tu_kia/" class="dth2_a">Arma tu Kia</a></li>-->
                                 <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/encuentra_tu_kia/" class="dth2_a">Encuentra tu Kia</a></li>
                                 <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/ficha_tecnica/" class="dth2_a">Ficha Técnica</a></li>
                                 <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/cotizar/" class="dth2_a">Cotizar</a></li>
                                 <li class="dth2_l"><a href="<?= URL; ?>compra_un_kia/test_drive/" class="dth2_a">Test Drive</a></li>
                             </ul>
                         </li>
-                        <li class="dth1_l"><a href="#" class="dth1_a">Tengo un Kia</a>
+                        <li class="dth1_l">
+                            <a class="dth1_a pointer">Tengo un Kia</a>
                             <ul class="dth2_u">
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/service-care.html" class="dth2_a">Servicio PostVenta</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/warranty.html" class="dth2_a">Garantía</a></li>
@@ -191,7 +196,8 @@ if (!empty($pagina[1])) {
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/roadside-assistance.html" class="dth2_a">Bienvenido a tu vida "0"</a></li>
                             </ul>
                         </li>
-                        <li class="dth1_l"><a href="#" class="dth1_a">Experiencia</a>
+                        <li class="dth1_l">
+                            <a class="dth1_a pointer">Experiencia</a>
                             <ul class="dth2_u">
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/about-kia.html" class="dth2_a">La Empresa</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/about-kia.html" class="dth2_a">Acerca de Kia</a></li>
@@ -212,7 +218,7 @@ if (!empty($pagina[1])) {
                         </ul>
                         <div class="util_search">
                             <div class="u_sch_box">
-                                <form action="http://org-www.kia.com/gt/util/search.html" method="get">
+                                <form action="<?= URL; ?>" method="get">
                                     <input type="text" name="q" id="txtTopSearch" class="sch_inp" title="Search Keyword" placeholder="Buscar">
                                     <button type="submit" class="sch_btn" title="Buscar"><span class="cmm_spr spr_search">Buscar</span></button>
                                 </form>

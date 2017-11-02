@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-01 18:38:19
+Date: 2017-11-02 18:30:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -64,6 +64,22 @@ CREATE TABLE `combustible` (
 INSERT INTO `combustible` VALUES ('1', 'Nafta', '1');
 INSERT INTO `combustible` VALUES ('2', 'Diesel', '1');
 INSERT INTO `combustible` VALUES ('3', 'Flex', '1');
+
+-- ----------------------------
+-- Table structure for config_mail
+-- ----------------------------
+DROP TABLE IF EXISTS `config_mail`;
+CREATE TABLE `config_mail` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `data` varchar(140) DEFAULT NULL,
+  `value` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of config_mail
+-- ----------------------------
+INSERT INTO `config_mail` VALUES ('1', 'testdrive', 'jpena@garden.com.py,dabenitez@garden.com.py,ssomoza@garden.com.py');
 
 -- ----------------------------
 -- Table structure for departamento
@@ -537,6 +553,45 @@ INSERT INTO `moneda` VALUES ('1', 'Guaraní', 'Gs.', '1');
 INSERT INTO `moneda` VALUES ('2', 'Dolar', 'U$D', '1');
 
 -- ----------------------------
+-- Table structure for preferencia_contacto
+-- ----------------------------
+DROP TABLE IF EXISTS `preferencia_contacto`;
+CREATE TABLE `preferencia_contacto` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(40) DEFAULT NULL,
+  `estado` int(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of preferencia_contacto
+-- ----------------------------
+INSERT INTO `preferencia_contacto` VALUES ('1', 'Correo', '1');
+INSERT INTO `preferencia_contacto` VALUES ('2', 'Celular', '1');
+INSERT INTO `preferencia_contacto` VALUES ('3', 'Casa', '1');
+
+-- ----------------------------
+-- Table structure for seccion_contacto
+-- ----------------------------
+DROP TABLE IF EXISTS `seccion_contacto`;
+CREATE TABLE `seccion_contacto` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(40) DEFAULT NULL,
+  `email` text,
+  `estado` int(1) unsigned DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of seccion_contacto
+-- ----------------------------
+INSERT INTO `seccion_contacto` VALUES ('1', 'Ventas', 'ssomoza@garden.com.py,dabenitez@garden.com.py,jpena@garden.com.py', '1');
+INSERT INTO `seccion_contacto` VALUES ('2', 'Taller', 'adelavellova@garden.com.py,recepcionkia@garden.com.py,dhan@garden.com.py,namarilla@garden.com.py', '1');
+INSERT INTO `seccion_contacto` VALUES ('3', 'Presidencia', 'darias@garden.com.py,avazquez@garden.com.py', '1');
+INSERT INTO `seccion_contacto` VALUES ('4', 'Marketing', 'rcolman@garden.com.py', '1');
+INSERT INTO `seccion_contacto` VALUES ('5', 'Recursos Humanos', 'seleccion@garden.com.py', '1');
+
+-- ----------------------------
 -- Table structure for servicio
 -- ----------------------------
 DROP TABLE IF EXISTS `servicio`;
@@ -587,6 +642,31 @@ CREATE TABLE `slider` (
 INSERT INTO `slider` VALUES ('1', '1', 'kia-gt-interbrand-b-1610-01-w.jpg', 'kia-gt-interbrand-b-1610-01-t.jpg', 'kia-gt-interbrand-b-1610-01-m.jpg', '1_cerato_galeria.jpg', '1');
 
 -- ----------------------------
+-- Table structure for solicitud_contacto
+-- ----------------------------
+DROP TABLE IF EXISTS `solicitud_contacto`;
+CREATE TABLE `solicitud_contacto` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_seccion_contacto` int(11) DEFAULT NULL,
+  `id_preferencia_contacto` int(11) DEFAULT NULL,
+  `nombre` varchar(60) DEFAULT NULL,
+  `apellido` varchar(60) DEFAULT NULL,
+  `email` varchar(80) DEFAULT NULL,
+  `celular` varchar(30) DEFAULT NULL,
+  `telefono` varchar(30) DEFAULT NULL,
+  `mensaje` text,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of solicitud_contacto
+-- ----------------------------
+INSERT INTO `solicitud_contacto` VALUES ('1', '1', '1', 'RaÃºl', 'RamÃ­rez', 'hola@hola.com', '0976921801', '601606', 'Hola, esto es un mensaje de prueba. AcciÃ³n', '2017-11-02 10:46:39');
+INSERT INTO `solicitud_contacto` VALUES ('2', '2', '1', 'Raúl', 'Ramírez', 'hola@hola.com', '0976921801', '', 'Hola, acción. Eñe', '2017-11-02 10:48:14');
+INSERT INTO `solicitud_contacto` VALUES ('3', null, null, 'raul', '', 'hola@hola.com', null, '232323', '', '2017-11-02 15:49:16');
+
+-- ----------------------------
 -- Table structure for solicitud_cotizador
 -- ----------------------------
 DROP TABLE IF EXISTS `solicitud_cotizador`;
@@ -606,6 +686,45 @@ CREATE TABLE `solicitud_cotizador` (
 
 -- ----------------------------
 -- Records of solicitud_cotizador
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for solicitud_testdrive
+-- ----------------------------
+DROP TABLE IF EXISTS `solicitud_testdrive`;
+CREATE TABLE `solicitud_testdrive` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_modelo` int(11) unsigned DEFAULT NULL,
+  `nombre` varchar(180) DEFAULT NULL,
+  `ci` varchar(30) DEFAULT NULL,
+  `telefono` varchar(30) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `ciudad` varchar(60) DEFAULT NULL,
+  `direccion` varchar(120) DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of solicitud_testdrive
+-- ----------------------------
+INSERT INTO `solicitud_testdrive` VALUES ('1', '1', 'Raúl Ramírez', '3749219', '601606', 'hola@hola.com', 'Asunción', 'Sarací 588', '2017-11-02 16:08:35');
+
+-- ----------------------------
+-- Table structure for sucursal
+-- ----------------------------
+DROP TABLE IF EXISTS `sucursal`;
+CREATE TABLE `sucursal` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `sucursal` varchar(60) DEFAULT NULL,
+  `telefono` varchar(60) DEFAULT NULL,
+  `horario_atencion` varchar(255) DEFAULT NULL,
+  `estado` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of sucursal
 -- ----------------------------
 
 -- ----------------------------

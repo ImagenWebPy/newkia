@@ -27,14 +27,14 @@
                             <p class="introTxt1">¿Tiene comentarios o preguntas sobre nuestros modelos, servicios o promociones de Kia?</p>
                             <!--<p class="introTxt2 icopadding">Please CONTACT US at the below Telephone No. or email us.<br> We will try our best to resolve the issue.</p>-->
                         </div>
-                        <div class="con_box">
+                        <div class="con_box" id="divFormulario">
                             <div class="localInfor"><div class="parsys contact-us-guide">
                                 </div>
                             </div>
                             <h4 class="bl_type1">Ingrese sus datos</h4>
                             <div class="parsys person-info">
                                 <div class="userdata-keyin section">
-                                    <form name="datainfo-comp-form" method="POST" action="">
+                                    <form name="datainfo-comp-form" method="POST" action="" id="frmContacto">
                                         <ul class="info_tbl">
                                             <li class="info_tr">
                                                 <div class="info_th">Sección a contactar<em class="ess">*</em></div>
@@ -43,11 +43,9 @@
                                                         <span class="sel_box inp_sel">
                                                             <select class="form-control" name="selectSeccionContactar" id="selectSeccionContactar" title="Title">
                                                                 <option value="">Seleccione una Sección</option>
-                                                                <option value="ventas">Ventas</option>
-                                                                <option value="taller">Taller</option>
-                                                                <option value="rrhh">Recursos humanos</option>
-                                                                <option value="presidencia">Presidencia</option>
-                                                                <option value="marketing">Marketing</option>
+                                                                <?php foreach ($this->seccionContacto as $item): ?>
+                                                                    <option value="<?= $item['id']; ?>"><?= $item['descripcion']; ?></option>
+                                                                <?php endforeach; ?>
                                                             </select>
                                                         </span>
                                                     </span>
@@ -70,9 +68,9 @@
                                                         <span class="sel_box inp_sel">
                                                             <select class="form-control" name="selectPreferencia" id="selectPreferencia" title="Preferencia de contacto">
                                                                 <option value="">Seleccione una Preferencia</option>
-                                                                <option value="email">Correo</option>
-                                                                <option value="celular">Celular</option>
-                                                                <option value="casa">Casa</option>
+                                                                <?php foreach ($this->metodoContacto as $item): ?>
+                                                                    <option value="<?= $item['id']; ?>"><?= $item['descripcion']; ?></option>
+                                                                <?php endforeach; ?>
                                                             </select>
                                                         </span>
                                                     </span>
@@ -118,7 +116,7 @@
                                 </div>
                             </div>
                             <div class="cuBtn">
-                                <a href="#submit" class="btnMedium btnType1" id="btnEnviarContacto"><span class="btnIcon arrow_r">Envíar</span></a>
+                                <a class="btnMedium btnType1 pointer" id="btnEnviarContacto"><span class="btnIcon arrow_r">Envíar</span></a>
                             </div>
                         </div>
                     </div>
@@ -185,8 +183,19 @@
             } else {
                 mensaje.css('border', '1px solid #d2d6de');
             }
-            if (terminos == true && seccion.val().trim().length > 1 && nombre.val().trim().length > 1 && apellido.val().trim().length > 1 && preferencia.val().trim().length > 1 && email.val().trim().length > 1 && celular.val().trim().length > 1 && mensaje.val().trim().length > 1) {
-
+            if (terminos == true && seccion.val().trim().length > 0 && nombre.val().trim().length > 0 && apellido.val().trim().length > 0 && preferencia.val().trim().length > 0 && email.val().trim().length > 0 && celular.val().trim().length > 0 && mensaje.val().trim().length > 0) {
+                if (validarEmail(email.val())) {
+                    $.ajax({
+                        url: "<?= URL; ?>contacto/sendContactData",
+                        type: "POST",
+                        data: $("#frmContacto").serialize(),
+                        dataType: "json"
+                    }).done(function (data) {
+                        $('#divFormulario').html(data);
+                    });
+                } else {
+                    email.css("border", "3px solid red");
+                }
             }
         });
     });
