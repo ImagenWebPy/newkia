@@ -75,4 +75,38 @@ class Tengo_un_kia_Model extends Model {
         return $data;
     }
 
+    public function listadoTalleres() {
+        $sql = $this->db->select("select t.taller,
+                                        t.direccion,
+                                        t.ciudad,
+                                        t.telefono,
+                                        t.email
+                                from talleres t
+                                where t.estado = 1 
+                                ORDER BY t.ciudad ASC");
+        return $sql;
+    }
+
+    public function repuestos() {
+        $sql = $this->db->select("select ra.titulo, ra.contenido
+                                from respuestos_accesorios ra
+                                where ra.estado = 1");
+        return $sql;
+    }
+
+    public function vida0() {
+        $sql = $this->db->select("select img, contenido from vida_0");
+        return $sql[0];
+    }
+
+    public function turno() {
+        $sql = $this->db->select("select img from turno");
+        return $sql[0];
+    }
+
+    public function tipoServicio() {
+        $sql = $this->db->select("select id, descripcion from tipo_servicio where estado = 1");
+        return $sql;
+    }
+
 }

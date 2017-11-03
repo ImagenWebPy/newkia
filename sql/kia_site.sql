@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-02 18:30:51
+Date: 2017-11-03 17:57:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -571,6 +571,25 @@ INSERT INTO `preferencia_contacto` VALUES ('2', 'Celular', '1');
 INSERT INTO `preferencia_contacto` VALUES ('3', 'Casa', '1');
 
 -- ----------------------------
+-- Table structure for respuestos_accesorios
+-- ----------------------------
+DROP TABLE IF EXISTS `respuestos_accesorios`;
+CREATE TABLE `respuestos_accesorios` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(120) DEFAULT NULL,
+  `contenido` text,
+  `estado` int(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of respuestos_accesorios
+-- ----------------------------
+INSERT INTO `respuestos_accesorios` VALUES ('1', 'Respaldo de la Marca', '<p>Nosotros entendemos la importancia de elegir KIA, es por eso que honramos su elección contando con la más amplia gama de repuestos originales de la marca. Nuestra política de repuestos originales le asegura contar con las piezas originales de la manera más rápida y cómoda, de manera casi inmediata.</p>\r\n<p>Contamos con la tecnología más avanzada de control de stock de repuestos, y junto con la red de servicio técnico en todo el país trabajamos para que usted sólo tenga que preocuparse de disfrutar de su KIA.</p>', '1');
+INSERT INTO `respuestos_accesorios` VALUES ('2', 'Beneficios de los Repuestos Originales KIA', '<p>Garden Automotores le recomienda utilizar siempre repuestos originales, y para su mayor tranquilidad, siempre que su vehículo necesite mantenimiento o reparación visite los talleres Autorizados KIA, que cuentan con la tecnología y el personal capacitado para responder a sus exigencias. Además disfrute de los beneficios de utilizar repuestos originales que prolongan la duración de su KIA, velan por su seguridad y la de sus seres queridos, evitan daños mayores y mantienen la garantía de su vehículo.</p>', '1');
+INSERT INTO `respuestos_accesorios` VALUES ('3', 'Importancia y Derechos de usar Repuestos Originales KIA', '<p>Los repuestos originales KIA están fabricados bajo las mismas normas de seguridad y calidad que las piezas originales de su vehículo. Cada vez que utiliza repuestos originales usted contribuye no solamente a la conservación del valor de su Kia sino también a conservar el medio ambiente y la seguridad durante la conducción, asegurando mayor economía del combustible y el buen desempeño de su vehículo.</p>', '1');
+
+-- ----------------------------
 -- Table structure for seccion_contacto
 -- ----------------------------
 DROP TABLE IF EXISTS `seccion_contacto`;
@@ -711,6 +730,30 @@ CREATE TABLE `solicitud_testdrive` (
 INSERT INTO `solicitud_testdrive` VALUES ('1', '1', 'Raúl Ramírez', '3749219', '601606', 'hola@hola.com', 'Asunción', 'Sarací 588', '2017-11-02 16:08:35');
 
 -- ----------------------------
+-- Table structure for solicitud_turno
+-- ----------------------------
+DROP TABLE IF EXISTS `solicitud_turno`;
+CREATE TABLE `solicitud_turno` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_tipo_servicio` int(11) unsigned DEFAULT NULL,
+  `nombre_completo` varchar(120) DEFAULT NULL,
+  `ci` varchar(30) DEFAULT NULL,
+  `celular` varchar(30) DEFAULT NULL,
+  `telefono` varchar(30) DEFAULT NULL,
+  `direccion` varchar(80) DEFAULT NULL,
+  `ciudad` varchar(45) DEFAULT NULL,
+  `barrio` varchar(45) DEFAULT NULL,
+  `modelo` varchar(45) DEFAULT NULL,
+  `kilometraje` int(8) DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of solicitud_turno
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for sucursal
 -- ----------------------------
 DROP TABLE IF EXISTS `sucursal`;
@@ -718,14 +761,80 @@ CREATE TABLE `sucursal` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `sucursal` varchar(60) DEFAULT NULL,
   `telefono` varchar(60) DEFAULT NULL,
+  `direccion` varchar(160) DEFAULT NULL,
   `horario_atencion` varchar(255) DEFAULT NULL,
-  `estado` int(1) DEFAULT NULL,
+  `latitud` varchar(45) DEFAULT NULL,
+  `longitud` varchar(45) DEFAULT NULL,
+  `casa_central` int(1) DEFAULT '0',
+  `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sucursal
 -- ----------------------------
+INSERT INTO `sucursal` VALUES ('1', 'Asunción: Casa Central:', '(021) 237 – 7090', 'Rca. Argentina esq. Isaac Kostianovsky', 'Lunes a Viernes 8:00 a 18:00, Sábados 8:00 a 12:00', '-25.306564', '-57.583621', '1', '1');
+INSERT INTO `sucursal` VALUES ('2', 'Asunción: Choferes del Chaco:', '(021) 238 9300', 'Avda. Choferes del Chaco esq. Capitan Pedro Carpinelli', 'Lunes a Viernes 8:00 a 18:00, Sábados 8:00 a 12:00', '-25.297172', '-57.592678', '0', '1');
+INSERT INTO `sucursal` VALUES ('3', 'Centro de Servicios y Repuestos KIA:', '(021) 237 – 7095', 'Avda. 	Fernando de la Mora esq. De la Victoria.', 'Lunes a Viernes 07:30 a 18:00, Sábados 07:30 a 12:00', '-25.333892', '-57.590092', '0', '1');
+INSERT INTO `sucursal` VALUES ('4', 'División Multimarcas', '(021) 237 – 7110', 'Avda. Fernando de la Mora esq. Ybapuru', 'Lunes a Viernes 8:00 a 18:00, Sábados 8:00 a 12:00', '-25.332820', '-57.590859', '0', '1');
+INSERT INTO `sucursal` VALUES ('5', 'Ciudad del Este:', '(021) 237 6910', ' Ruta Internacional Nro. 7, km 6,5.', 'Lunes a Viernes 8:00 a 18:00, Sábados 8:00 a 12:00', '-25.500003', '-54.657923', '0', '1');
+INSERT INTO `sucursal` VALUES ('6', 'Encarnación:', ' (021) 238 9500 | (071) 206702', 'Avda. Caballero esq. Artigas.', 'Lunes a Viernes 8:00 a 18:00, Sábados 8:00 a 12:00', '-27.329225', '-55.870781', '0', '1');
+INSERT INTO `sucursal` VALUES ('7', 'Caaguazu:', '(021) 338 6339', 'Ruta Internacional Nº 7, José Gaspar Rodríguez de Francia Km 182 (Barrio Industrial)', 'Lunes a Viernes 8:00 a 18:00, Sábados 8:00 a 12:00', '-25.460485', '-55.995753', '0', '1');
+
+-- ----------------------------
+-- Table structure for talleres
+-- ----------------------------
+DROP TABLE IF EXISTS `talleres`;
+CREATE TABLE `talleres` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `taller` varchar(80) DEFAULT NULL,
+  `direccion` varchar(120) DEFAULT NULL,
+  `ciudad` varchar(40) DEFAULT NULL,
+  `telefono` varchar(60) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `estado` int(1) unsigned DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of talleres
+-- ----------------------------
+INSERT INTO `talleres` VALUES ('1', 'Centro de Servicios y Repuestos KIA', 'Av. Fernando de la Mora y De la Victoria.', 'Asunción', '(021) 237 7095', 'lmiranda@garden.com.py', '1');
+INSERT INTO `talleres` VALUES ('2', 'NS Servicios Multimarcas', 'Av. Felix Bogado 2045 c/ 22 Proyectadas.', 'Asunción', '(021) 333 272', 'ns_multimarcas@hotmail.com', '1');
+INSERT INTO `talleres` VALUES ('3', 'Juan K Servicios y Repuestos', 'Ruta Nro. 6 y Jazmín del Paraguay, Km 3.', 'Encarnación', '(595 71) 203 251', 'Juank@itacom.com.py', '1');
+INSERT INTO `talleres` VALUES ('4', 'Taller GT', 'Capellan Molas 600', 'Encarnación', '(595 71) 200 816', 'hugotomas555@hotmail.com', '1');
+INSERT INTO `talleres` VALUES ('5', 'Garden  S.A.', 'Av. San Blas e/ O’huggins, Km. 6,2.', 'Ciudad del Este', '(595 21) 237 6910', 'fcrosa@garden.com.py', '1');
+INSERT INTO `talleres` VALUES ('6', 'Cristian Paats y Cia.', 'Carlos Antonio Lopez c/ Jose II Decoud', 'Coronel Oviedo', '(595 521) 202 345', 'cristianpaatsycia@hotmail.com', '1');
+INSERT INTO `talleres` VALUES ('7', 'Leiva Automotores S.R.L', 'Ruta Internacional Nro. 7, Km. 178', 'Caaguazú', '(535 522) 43 610', 'florens90@hotmail.com', '1');
+INSERT INTO `talleres` VALUES ('8', 'Taller Mk Autoservice', 'Colonia Menno, C.C. 883', 'Loma Plata', '(595 4922) 52 726', 'mkautoservice17@gmail.com', '1');
+INSERT INTO `talleres` VALUES ('9', 'Taller Motormack SRL', 'Avenida Central', 'Loma Plata', '(595 4922) 52 351', 'motormack@click.com.py', '1');
+INSERT INTO `talleres` VALUES ('10', 'Norte Autos', 'Avda. Tte. Herreros esq. Benjamin Aceval', 'Pedro Juan Caballero', '595 336) 273 450', null, '1');
+INSERT INTO `talleres` VALUES ('11', 'Taller Albert Neufeld', 'Calle Principal Hindenburg e/ Palo Santo', 'Filadelfia', '(595 4914) 32 521', null, '1');
+INSERT INTO `talleres` VALUES ('12', 'Taller Auto Latina', 'Calle Industrial 174-E c/ O. Miller', 'Filadelfia', '(595 4914) 32 521', 'tallerautolatina@gmail.com', '1');
+INSERT INTO `talleres` VALUES ('13', 'Mecanica Ruschel', 'Carlos Antonio Lopez y Juan E O’leary', 'Hohenau', '(595 775) 232 042', 'oscar-ruschel@hotmail.com', '1');
+INSERT INTO `talleres` VALUES ('14', 'Juan K Servicios y Repuestos', 'Eusebio Ayala c/ Tte. Fariña', 'Hohenau', '(595 775) 232 042', 'juank.colonias@hotmail.com', '1');
+INSERT INTO `talleres` VALUES ('15', 'Car Center', 'Ruta Internacional N° 7, km. 212', 'Campo 9', '(595 528) 222 988', 'carcentercampo9@hotmail.com', '1');
+INSERT INTO `talleres` VALUES ('16', 'Julio Mueller', 'Supercarretera a Salto del Guaira, km. 2.5', 'Hernandarias', '(595 0631) 22 710', 'mueller.julio@hotmail.com', '1');
+INSERT INTO `talleres` VALUES ('17', 'Parana Diesel', 'San Roque González de Santa Cruz c/ Perpetuo Socorro', 'Colonia Katuete', '(595 0471) 234 340', null, '1');
+INSERT INTO `talleres` VALUES ('18', 'Mecanica y Chaperia Do Kady', 'Fraccion Alexandrino, Ruta 6ta. Salida a 14 de Mayo', 'Santa Rita', '(595 0471) 234 340', null, '1');
+INSERT INTO `talleres` VALUES ('19', 'Taller H.P. Peters', 'Avenida Industrial', 'Colonia Neuland (Chaco)', '(595 0493) 240 656', null, '1');
+
+-- ----------------------------
+-- Table structure for tipo_servicio
+-- ----------------------------
+DROP TABLE IF EXISTS `tipo_servicio`;
+CREATE TABLE `tipo_servicio` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(60) DEFAULT NULL,
+  `estado` int(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tipo_servicio
+-- ----------------------------
+INSERT INTO `tipo_servicio` VALUES ('1', 'Service en Casa', '1');
+INSERT INTO `tipo_servicio` VALUES ('2', 'Service en Taller Kia', '1');
 
 -- ----------------------------
 -- Table structure for tipo_vehiculo
@@ -747,4 +856,35 @@ INSERT INTO `tipo_vehiculo` VALUES ('2', 'Familiares', '2', '1');
 INSERT INTO `tipo_vehiculo` VALUES ('3', 'Crossover', '3', '1');
 INSERT INTO `tipo_vehiculo` VALUES ('4', 'Suv', '4', '1');
 INSERT INTO `tipo_vehiculo` VALUES ('5', 'Comerciales', '5', '1');
+
+-- ----------------------------
+-- Table structure for turno
+-- ----------------------------
+DROP TABLE IF EXISTS `turno`;
+CREATE TABLE `turno` (
+  `id` int(11) NOT NULL,
+  `img` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of turno
+-- ----------------------------
+INSERT INTO `turno` VALUES ('1', 'reserva_turnos.jpg');
+
+-- ----------------------------
+-- Table structure for vida_0
+-- ----------------------------
+DROP TABLE IF EXISTS `vida_0`;
+CREATE TABLE `vida_0` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `img` varchar(80) DEFAULT NULL,
+  `contenido` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of vida_0
+-- ----------------------------
+INSERT INTO `vida_0` VALUES ('1', 'vida0-2017.jpg', null);
 SET FOREIGN_KEY_CHECKS=1;

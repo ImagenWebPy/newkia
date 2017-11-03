@@ -411,4 +411,18 @@ class Helper {
         return $sql[0];
     }
 
+    public function getSucursales() {
+        $sql = $this->db->select("select s.sucursal,
+                                        s.telefono,
+                                        s.direccion,
+                                        s.horario_atencion,
+                                        s.latitud,
+                                        s.longitud,
+                                        s.casa_central
+                                from sucursal s
+                                where s.estado = 1 
+                                ORDER BY s.casa_central DESC");
+        return $sql;
+    }
+
 }

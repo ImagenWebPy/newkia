@@ -96,3 +96,54 @@ fieldset[disabled] .form-control {
     cursor: not-allowed;
 }
 .pointer{cursor: pointer;}
+.contfull {
+    display: block;
+    padding: 20px 10px 0;
+}
+.btnref {
+    display: block;
+    margin-top: 10px;
+}
+.btnref .cambio {
+    color: #fff;
+}
+.mr20 {
+    margin-right: 20px;
+}
+.mt20 {
+    margin-top: 30px;
+    clear: both;
+}
+.left {
+    float: left;
+}
+.btnref .revision {
+    color: #666666;
+}
+.btnref .cambio, .btnref .revision {
+    float: left;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.cambio {
+    background: #af1f24;
+}
+.revision {
+    background: #e4e4e4;
+}
+.tabla {
+    vertical-align: middle;
+    font: 11px tahoma, AppleGothic;
+    margin-top: 20px; }
+.tabla thead {
+    background: #d4d4d4;
+    height: 33px;
+    text-align: left; }
+.tabla thead h3 {
+    font-weight: normal;
+    font-size: 12px; }
+.tabla tbody td {
+    border-top: 1px dashed #666;
+    border-right: 1px dashed #fff;
+    padding: 10px 0; }

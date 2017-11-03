@@ -16,7 +16,7 @@ class Compra_un_kia_Model extends Model {
                                 and mv.estado = 1");
         $datos = '<span class="form_wrp only">
                         <span class="sel_box inp_sel">
-                            <select class="form_select" name="version" id="version" title="Version">
+                            <select class="form-control" name="version" id="version" title="Version">
                                 <option value="">Seleccione una version</option>';
         foreach ($sql as $item) {
             $datos .= '<option value="' . $item['id'] . '">' . utf8_encode($item['version']) . '</option>';

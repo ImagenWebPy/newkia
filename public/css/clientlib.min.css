@@ -57,12 +57,12 @@ ul:after,ol:after{content:'';clear:both;display:block}
 .cmm_spr,.cmm_tspr:before,.cmm_tspr:after,.util_a:before,.dth1_a:after,[class*=bl_type]:before,[class*=bl_type]:after,.pg_arrow,.pg_btn,.pg_btn_on{background-image:url(../../public/img/spr_common.png)}
 .cmm_home{display:inline-block;color:transparent;text-indent:-999px;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/ico_home.png)}
 .sns_spr{background-image:url(../../public/img/spr_sns.png)}
-.map_spr{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_map2.png)}
+.map_spr{background-image:url(../../public/img/spr_map2.png)}
 .tool_spr,.tool_tspr:before{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_tool.png)}
 .kit_spr,.kit_tspr:before{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_kit.png)}
 .form_spr:before,.form_spr:after{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_form.png)}
 .btnIcon:before,.btnIcon:after{content:'';display:inline-block;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_button.png)!important;background-repeat:no-repeat;vertical-align:top}
-.tab_tspr:before{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_tab.png)}
+.tab_tspr:before{background-image:url(../../public/img/spr_tab.png)}
 @media screen and (-webkit-min-device-pixel-ratio:1.5){.cmm_spr,.cmm_tspr:before,.cmm_tspr:after,.util_a:before,.dth1_a:after,[class*=bl_type]:before,.pg_arrow,.pg_btn,.pg_btn_on{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_common_x2.png);background-size:175px 75px}
                                                        .sns_spr{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_sns_x2.png);background-size:175px 50px}
                                                        .map_spr{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_map2_x2.png);background-size:37px 29px}

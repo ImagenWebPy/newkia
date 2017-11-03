@@ -190,10 +190,10 @@ if (!empty($pagina[1])) {
                         <li class="dth1_l">
                             <a class="dth1_a pointer">Tengo un Kia</a>
                             <ul class="dth2_u">
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/service-care.html" class="dth2_a">Servicio PostVenta</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/warranty.html" class="dth2_a">Garantía</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/book-a-service.html" class="dth2_a">Citas al Taller</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/service/roadside-assistance.html" class="dth2_a">Bienvenido a tu vida "0"</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/postventa" class="dth2_a">Servicio PostVenta</a></li>
+                                <!--<li class="dth2_l"><a href="http://org-www.kia.com/gt/service/warranty.html" class="dth2_a">Garantía</a></li>-->
+                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/solicita_turno" class="dth2_a">Solicitá un turno</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/bienvenido_vida_0" class="dth2_a">Bienvenido a tu vida "0"</a></li>
                             </ul>
                         </li>
                         <li class="dth1_l">
@@ -213,7 +213,7 @@ if (!empty($pagina[1])) {
                         <ul class="util_menu">
                             <li class="util_l"><a href="http://org-www.kia.com/gt/util/news.html" class="util_a">Noticias</a></li>
                             <li class="util_l"><a href="http://org-www.kia.com/gt/util/promotion.html" class="util_a">Promociones</a></li>
-                            <li class="util_l"><a href="http://org-www.kia.com/gt/shopping-tools/find-a-dealer.html" class="util_a">Encuentra tu Kia</a></li>
+                            <li class="util_l"><a href="<?= URL; ?>compra_un_kia/encuentra_tu_kia/" class="util_a">Encuentra tu Kia</a></li>
                             <li class="util_l"><a href="<?= URL; ?>contacto/" class="util_a">Contàctanos</a></li>
                         </ul>
                         <div class="util_search">
@@ -226,7 +226,7 @@ if (!empty($pagina[1])) {
                         </div>
                     </div>
                     <div class="go_build">
-                        <a href="http://org-www.kia.com/gt/shopping-tools/build-your-own.html" class="btnMedium btnType1"><span class="cmm_tspr spr_build"><em class="desc">Cotizar tu Kia</em></span></a>
+                        <a href="<?= URL; ?>compra_un_kia/cotizar/" class="btnMedium btnType1"><span class="cmm_tspr spr_build"><em class="desc">Cotizar tu Kia</em></span></a>
                     </div>
                     <!-- GT SEO 20150827 h2 > div -->
                     <div class="hidden">msg_util_menu</div>

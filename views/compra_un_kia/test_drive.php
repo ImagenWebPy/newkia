@@ -94,7 +94,7 @@ $modelo = $helper->getModelos();
                                                             <div class="info_th">Ciudad<em class="ess">*</em></div>
                                                             <div class="info_td">
                                                                 <span class="form_wrp only">
-                                                                    <input type="email" name="txtCiudad" id="txtCiudad" class="input_box" title="Ciudad" maxlength="50" placeholder="Ciudad">
+                                                                    <input type="text" name="txtCiudad" id="txtCiudad" class="input_box" title="Ciudad" maxlength="50" placeholder="Ciudad">
                                                                 </span>
                                                             </div>
                                                         </li>
@@ -102,7 +102,7 @@ $modelo = $helper->getModelos();
                                                             <div class="info_th">Dirección<em class="ess">*</em></div>
                                                             <div class="info_td">
                                                                 <span class="form_wrp only">
-                                                                    <input type="email" name="txtDireccion" id="txtDireccion" class="input_box" title="Dirección" maxlength="50" placeholder="Dirección">
+                                                                    <input type="text" name="txtDireccion" id="txtDireccion" class="input_box" title="Dirección" maxlength="50" placeholder="Dirección">
                                                                 </span>
                                                             </div>
                                                         </li>

@@ -11,49 +11,346 @@
                         <!-- //20141219 hyj 아이콘 클래스명 변경 -->
                         <!-- maintenance -->
                         <div class="con_box">
-                            <div class="txt1 parsys">
-                                <div class="parbase semantic-markup section">
-                                    <h4 class="bl_type1">Maintenance!!</h4> 
-                                    <div class="txt_desc4">
-                                        In order to maintain the performance of your Kia we suggest regularly checking the following between your scheduled service intervals:
-                                        <ul class="list_type1"> 
-                                            <li class="bl_type4">Engine oil level</li> 
-                                            <li class="bl_type4">Fixed cost and inflation proof servicing</li> 
-                                            <li class="bl_type4">Available for the first 3 or first 5 services of your new Kia</li> 
-                                            <li class="bl_type4">Your Kia will receive a full service history enhancing your resale value</li> 
-                                            <li class="bl_type4">Packages are transferable to the new owner if you decide to sell your Kia</li> 
-                                            <li class="bl_type4">Kia trained technicians will only use Kia Genuine Parts, using the latest tools and diagnostic equipment</li> 
-                                            <li class="bl_type4">Prices are inclusive of VAT</li> 
-                                        </ul> You can find more information and advice in your Kia owner’s manual. To help you with the maintenance of your Kia, participating Kia dealers offer a complimentary Vehicle Health Check by one of our trained technicians. For more information and to make a booking please contact your Kia dealer.
-                                    </div>
+                            <div class="contfull">
+                                <div class="btnref">
+                                    <h2 class="left mr20">Referencias</h2>
+                                    <p class="cambio">CAMBIO</p>
+                                    <p class="revision">REVISIÓN</p>
                                 </div>
-                            </div>
-                            <div class="parsys txt2"><div class="parbase semantic-markup section">
-                                    <h4 class="bl_type1">Kia Care - 3</h4> 
-                                    <div class="txt_desc4">
-                                        Kia Care-3 and Care-3 Plus are our service packages which fix the price of your first 3 or 5 services at extremely competitive prices offering great value servicing for your new Kia. To welcome you to the Kia family we offer this exclusive service package on selected new Kia models.
-                                        <br> Some of the key benefits of Kia Care-3 and Care-3 Plus are:
-                                        <ul class="list_type1"> 
-                                            <li class="bl_type4">Excellent value for money</li> 
-                                            <li class="bl_type4">Brake fluid level</li> 
-                                            <li class="bl_type4">Coolant level</li> 
-                                            <li class="bl_type4">Windscreen washer level</li> 
-                                            <li class="bl_type4">Lights</li> 
-                                            <li class="bl_type4">Tyre pressures and their condition</li> 
-                                        </ul> Kia Care-3 customers can now also purchase their first MOT test for just £30 (3 service package only). So why not take advantage of our great value servicing and fix the price for your new Kia with Kia Care-3. Find out more about the Kia Care-3 Service Package.
-                                    </div>
+                                <p>&nbsp;</p>
+                                <h2 class="mt20">Guía Básica de Servicios para Vehículos de Pasajeros:</h2>
+                                <p class="mt20">● Picanto ● Río ● Cerato ● Koup ● Cadenza</p>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabla">
+                                    <thead>
+                                        <tr>
+                                            <td width="72"><h3 align="center">Serv/Km</h3></td>
+                                            <td width="98"><h3 align="center">Aceite Mot.</h3></td>
+                                            <td width="93"><h3 align="center">Filtro Aceite</h3></td>
+                                            <td width="104"><h3 align="center">Filtro Combustible</h3></td>
+                                            <td width="102"><h3 align="center">Filtro Aire</h3></td>
+                                            <td width="96"><h3 align="center">Bujías</h3></td>
+                                            <td width="87"><h3 align="center">Aceite Caja</h3></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div align="center">5.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">10.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">15.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">20.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">25.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">30.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">35.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">40.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">45.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">50.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                                </div>
+                                <h2 class="mt20">Guía Básica de Servicios para Vehículos Recreacionales Diesel y Nafteros:</h2>
+                                <p class="mt20">● Carens ● Carnival ● Sportage ● Sorento ● Mohave ● Soul</p>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabla">
+                                    <thead>
+                                        <tr>
+                                            <td width="52"><h3 align="center">Serv/Km</h3></td>
+                                            <td width="67"><h3 align="center">Aceite Mot.</h3></td>
+                                            <td width="73"><h3 align="center">Filtro Aceite</h3></td>
+                                            <td width="88"><h3 align="center">Filtro Combust.</h3></td>
+                                            <td width="86"><h3 align="center">Filtro Aire</h3></td>
+                                            <td width="91"><h3 align="center">Bujías</h3></td>
+                                            <td width="97"><h3 align="center">Aceite Caja</h3></td>
+                                            <td width="97"><h3 align="center">Aceite Dif.</h3></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr>
+                                            <td><div align="center">5.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">10.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">15.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">20.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td style="background-color:#af1f24; color: white;"><div align="center">Naf.</div></td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">25.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">30.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">35.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">40.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td style="background-color:#af1f24; color: white;"><div align="center">Naf.</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">45.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">50.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                    </tbody></table>
 
-                            </div>
-                            <div class="parsys txt3"><div class="parbase semantic-markup section">
-                                    <h4 class="bl_type1">Service Plans</h4> 
-                                    <div class="txt_desc4">
-                                        Our Kia dealers also offer Service Plans which allow you to spread the cost of future servicing through simple monthly payments.
-                                        <br> Just like our Care- 3 service packages, Service Plans are based on Kia service schedules including all parts, labour, engine oil and other lubricant requirements.
-                                        <br> A Service Plan not only applies to new Kia vehicles, but also to used Kia vehicles. Existing customers can also take up a Service Plan at any time to plan for future service requirements. A bespoke monthly payment plan can be calculated by your Kia dealer based on your model, annual mileage and your desired cover period.
-                                    </div>
-                                </div>
+
+                                <h2 class="mt20">Guía Básica de Servicios para Vehículos Comerciales:</h2>
+                                <p class="mt20">● K2700</p>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabla">
+                                    <thead>
+                                        <tr>
+                                            <td width="54"><h3 align="center">Serv/Km</h3></td>
+                                            <td width="80"><h3 align="center">Aceite Mot.</h3></td>
+                                            <td width="97"><h3 align="center">Filtro Aceite</h3></td>
+                                            <td width="104"><h3 align="center">Filtro Combustible</h3></td>
+                                            <td width="105"><h3 align="center">Filtro Aire</h3></td>
+                                            <td width="102"><h3 align="center">Aceite Caja</h3></td>
+                                            <td width="109"><h3 align="center">Aceite Dif.</h3></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div align="center">5.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">10.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">15.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">20.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">25.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">30.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">35.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">40.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">45.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div align="center">50.000</div></td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="cambio">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                            <td class="revision">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <!-- //maintenance -->
