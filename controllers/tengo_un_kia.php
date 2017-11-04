@@ -76,5 +76,23 @@ class Tengo_un_kia extends Controller {
         $this->view->render('tengo_un_kia/solicita_turno');
         $this->view->render('footer');
     }
+    
+    public function enviarSolicitudTurno(){
+        header('Content-type: application/json; charset=utf-8');
+        $data = array(
+            'id_tipo_servicio' => $this->helper->cleanInput($_POST['tipoServicio']),
+            'nombre' => $this->helper->cleanInput($_POST['txtNombre']),
+            'ci' => $this->helper->cleanInput($_POST['txtCi']),
+            'celular' => $this->helper->cleanInput($_POST['txtCelular']),
+            'telefono' => $this->helper->cleanInput($_POST['txtTelefono']),
+            'direccion' => $this->helper->cleanInput($_POST['txtDireccion']),
+            'barrio' => $this->helper->cleanInput($_POST['txtBarrio']),
+            'ciudad' => $this->helper->cleanInput($_POST['txtCiudad']),
+            'modelo' => $this->helper->cleanInput($_POST['txtModelo']),
+            'kilometraje' => $this->helper->cleanInput($_POST['txtKilometraje']),
+        );
+        $datos = $this->model->enviarSolicitudTurno($data);
+        echo $datos;
+    }
 
 }

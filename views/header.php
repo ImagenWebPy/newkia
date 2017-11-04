@@ -190,16 +190,16 @@ if (!empty($pagina[1])) {
                         <li class="dth1_l">
                             <a class="dth1_a pointer">Tengo un Kia</a>
                             <ul class="dth2_u">
-                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/postventa" class="dth2_a">Servicio PostVenta</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/postventa/" class="dth2_a">Servicio PostVenta</a></li>
                                 <!--<li class="dth2_l"><a href="http://org-www.kia.com/gt/service/warranty.html" class="dth2_a">Garantía</a></li>-->
-                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/solicita_turno" class="dth2_a">Solicitá un turno</a></li>
-                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/bienvenido_vida_0" class="dth2_a">Bienvenido a tu vida "0"</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/solicita_turno/" class="dth2_a">Solicitá un turno</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>tengo_un_kia/bienvenido_vida_0/" class="dth2_a">Bienvenido a tu vida "0"</a></li>
                             </ul>
                         </li>
                         <li class="dth1_l">
                             <a class="dth1_a pointer">Experiencia</a>
                             <ul class="dth2_u">
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/about-kia.html" class="dth2_a">La Empresa</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>experiencia/la_empresa/" class="dth2_a">La Empresa</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/about-kia.html" class="dth2_a">Acerca de Kia</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/brand.html" class="dth2_a">Marca</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/kia-social-media.html" class="dth2_a">Redes Sociales</a></li>
@@ -211,7 +211,7 @@ if (!empty($pagina[1])) {
                     </ul>
                     <div class="util_area">
                         <ul class="util_menu">
-                            <li class="util_l"><a href="http://org-www.kia.com/gt/util/news.html" class="util_a">Noticias</a></li>
+                            <li class="util_l"><a href="<?= URL; ?>noticias/listado" class="util_a">Noticias</a></li>
                             <li class="util_l"><a href="http://org-www.kia.com/gt/util/promotion.html" class="util_a">Promociones</a></li>
                             <li class="util_l"><a href="<?= URL; ?>compra_un_kia/encuentra_tu_kia/" class="util_a">Encuentra tu Kia</a></li>
                             <li class="util_l"><a href="<?= URL; ?>contacto/" class="util_a">Contàctanos</a></li>

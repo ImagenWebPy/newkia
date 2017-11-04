@@ -29,9 +29,9 @@
                         <div class="con_box">
                             <img src="<?= URL; ?>public/img/<?= $this->turno['img']; ?>" alt="<?= $this->vida0['img']; ?>" class="img-responsive" style=" width: 100%;">
                         </div>
-                        <div class="con_box">
+                        <div class="con_box" id="divTurnos" style="padding: 10px;">
                             <div class="userdata-keyin-new section">
-                                <form name="datainfo-comp-form" method="POST" action="" novalidate="novalidate" id="frmTestDrive">
+                                <form name="datainfo-comp-form" method="POST" action="" novalidate="novalidate" id="frmTurnos">
                                     <ul class="info_tbl">
                                         <li class="info_tr">
                                             <div class="info_th">Tipo de Servicio<em class="ess">*</em></div>
@@ -45,6 +45,14 @@
                                                             <?php endforeach; ?>
                                                         </select>
                                                     </span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="info_tr">
+                                            <div class="info_th">Nombre Completo<em class="ess">*</em></div>
+                                            <div class="info_td">
+                                                <span class="form_wrp only">
+                                                    <input type="text" name="txtNombre" id="txtNombre" class="input_box" title="Nombre Completo" maxlength="50" placeholder="Nombre Completo">
                                                 </span>
                                             </div>
                                         </li>
@@ -108,7 +116,7 @@
                                             <div class="info_th">Kilometraje (Solo Números)<em class="ess">*</em></div>
                                             <div class="info_td">
                                                 <span class="form_wrp only">
-                                                    <input type="text" name="txtKilometraje" id="txtKilometraje" class="input_box" title="Kilometraje" maxlength="50" placeholder="Kilometraje">
+                                                    <input type="number" name="txtKilometraje" id="txtKilometraje" class="input_box" title="Kilometraje" maxlength="50" placeholder="Kilometraje">
                                                 </span>
                                             </div>
                                         </li>
@@ -128,3 +136,73 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(function () {
+        $('#btnSolicitarTestDrive').click(function () {
+            var tipo_servicio = $('#tipoServicio');
+            var nombre = $('#txtNombre');
+            var ci = $('#txtCi');
+            var celular = $('#txtCelular');
+            var direccion = $('#txtDireccion');
+            var ciudad = $('#txtCiudad');
+            var barrio = $('#txtBarrio');
+            var modelo = $('#txtModelo');
+            var kilometraje = $('#txtKilometraje');
+            if (tipo_servicio.val().trim().length == 0) {
+                tipo_servicio.css("border", "3px solid red");
+            } else {
+                tipo_servicio.css("border", "1px solid #d6d6d6");
+            }
+            if (nombre.val().trim().length == 0) {
+                nombre.css("border", "3px solid red");
+            } else {
+                nombre.css("border", "1px solid #d6d6d6");
+            }
+            if (ci.val().trim().length == 0) {
+                ci.css("border", "3px solid red");
+            } else {
+                ci.css("border", "1px solid #d6d6d6");
+            }
+            if (celular.val().trim().length == 0) {
+                celular.css("border", "3px solid red");
+            } else {
+                celular.css("border", "1px solid #d6d6d6");
+            }
+            if (direccion.val().trim().length == 0) {
+                direccion.css("border", "3px solid red");
+            } else {
+                direccion.css("border", "1px solid #d6d6d6");
+            }
+            if (ciudad.val().trim().length == 0) {
+                ciudad.css("border", "3px solid red");
+            } else {
+                ciudad.css("border", "1px solid #d6d6d6");
+            }
+            if (barrio.val().trim().length == 0) {
+                barrio.css("border", "3px solid red");
+            } else {
+                barrio.css("border", "1px solid #d6d6d6");
+            }
+            if (modelo.val().trim().length == 0) {
+                modelo.css("border", "3px solid red");
+            } else {
+                modelo.css("border", "1px solid #d6d6d6");
+            }
+            if (kilometraje.val().trim().length == 0) {
+                kilometraje.css("border", "3px solid red");
+            } else {
+                kilometraje.css("border", "1px solid #d6d6d6");
+            }
+            if (nombre.val().trim().length > 0 && tipo_servicio.val().trim().length > 0 && ci.val().trim().length > 0 && celular.val().trim().length > 0 && direccion.val().trim().length > 0 && barrio.val().trim().length > 0 && ciudad.val().trim().length > 0 && modelo.val().trim().length > 0 && kilometraje.val().trim().length > 0) {
+                $.ajax({
+                    url: "<?= URL; ?>tengo_un_kia/enviarSolicitudTurno",
+                    type: "POST",
+                    data: $("#frmTurnos").serialize(),
+                    dataType: "json"
+                }).done(function (data) {
+                    $("#divTurnos").html(data);
+                });
+            }
+        });
+    });
+</script>

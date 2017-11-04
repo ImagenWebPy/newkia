@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/v2-kia/views/compra_un_kia/encuentra_tu_kia.php</file>
+            <file>file:/C:/wamp/www/kia.com.py/views/tengo_un_kia/solicita_turno.php</file>
+            <file>file:/C:/wamp/www/kia.com.py/controllers/tengo_un_kia.php</file>
+            <file>file:/C:/wamp/www/kia.com.py/views/experiencia/la_empresa.php</file>
+            <file>file:/C:/wamp/www/kia.com.py/views/header.php</file>
+            <file>file:/C:/wamp/www/kia.com.py/controllers/experiencia.php</file>
+            <file>file:/C:/wamp/www/kia.com.py/models/compra_un_kia_model.php</file>
+            <file>file:/C:/wamp/www/kia.com.py/models/experiencia_model.php</file>
         </group>
     </open-files>
 </project-private>
