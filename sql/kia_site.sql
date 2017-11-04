@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-03 17:57:23
+Date: 2017-11-04 18:14:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -74,12 +74,13 @@ CREATE TABLE `config_mail` (
   `data` varchar(140) DEFAULT NULL,
   `value` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of config_mail
 -- ----------------------------
 INSERT INTO `config_mail` VALUES ('1', 'testdrive', 'jpena@garden.com.py,dabenitez@garden.com.py,ssomoza@garden.com.py');
+INSERT INTO `config_mail` VALUES ('2', 'turnos', 'call_center@garden.com.py');
 
 -- ----------------------------
 -- Table structure for departamento
@@ -110,6 +111,22 @@ CREATE TABLE `estilo` (
 -- ----------------------------
 -- Records of estilo
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for la_empresa
+-- ----------------------------
+DROP TABLE IF EXISTS `la_empresa`;
+CREATE TABLE `la_empresa` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `img` varchar(60) DEFAULT NULL,
+  `contenido` longtext,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of la_empresa
+-- ----------------------------
+INSERT INTO `la_empresa` VALUES ('1', 'la-empresa.jpg', '<p>GARDEN AUTOMOTORES S.A., domiciliada en la Avda. República Argentina esq. Isaac Kostianovsky, Asunción-Paraguay, con sucursales en Ciudad del Este y Encarnación, desde hace siete años está Certificada por la KIA MOTORS Corporation, Seúl-Corea, como Distribuidor Oficial en todo el territorio de la República del Paraguay, de sus productos del sector automotriz marca KIA, que incluyen: vehículos, repuestos, accesorios originales y servicios especializados.</p>\r\n<p>GARDEN AUTOMOTORES S.A., es una empresa comercial y de servicios, constituida mediante escritura pública Nº 26, de fecha 17 de junio de 2002, con el objetivo de realizar las actividades de compra, venta, importación y representación de vehículos en general, auto-repuestos, accesorios, así como la explotación de servicios relacionados con la industria automotriz.</p>\r\n<p>El fortalecimiento empresarial que hoy GARDEN AUTOMOTORES S.A. expone al mercado nacional, no se ha generado de la noche a la mañana, sino que constituye la culminación de un proceso pleno de esfuerzos sostenidos y concentrados, con VISIÓN, MISIÓN y OBJETIVOS muy claros, orientados a:</p>\r\n<p>Satisfacer las necesidades de los clientes, mediante productos de calidad mundial marca KIA, que en los últimos años ha demostrado una evolución tecnológica fantástica, basada en la combinación perfecta de rendimiento, estilo, seguridad y valor.</p>\r\n<p>Es importante recordar que la KIA MOTORS Corporation, a inicios del 2009 ya se ubica como el 5to. mayor fabricante de vehículos a nivel mundial, con planes a mediano plazo que contemplan agresivos lanzamientos de nuevos modelos, para ir fortaleciendo la marca y demostrar al mundo, el aún ilimitado potencial de los productos KIA, como lo dice su eslogan “EL PODER DE SORPRENDER”.</p>\r\n<p>Conseguir el bienestar de nuestros funcionarios, en sus diferentes niveles de atribuciones y responsabilidades.</p>\r\n<p>Contamos actualmente con más de 100 empleados, motivados permanentemente a través de entrenamientos periódicos y específicos, en las áreas de su competencia, todas ellas enmarcadas dentro de la filosofía de trabajo del Grupo GARDEN, sintetizada en el esfuerzo continuo, el conocimiento, la tecnología y el trabajo en equipo.</p>\r\n<p>Anunciamos que vamos a seguir potenciando nuestra organización, con el mismo coraje, creatividad y dedicación que nos caracteriza, para beneficio de clientes actuales y potenciales, funcionarios, colaboradores, gobierno nacional y la misma sociedad paraguaya.</p>\r\n<p>GARDEN AUTOMOTORES S.A. está conformada exclusivamente por capital y recursos humanos de origen nacional, convertida actualmente en una empresa moderna y altamente competitiva, que le permite, por un lado, atender con calidad y solvencia la creciente cartera de clientes en el mercado nacional y por el otro, acompañar las exigencias técnicas y administrativas cada vez mayores de la KIA MOTORS Corporation, para los Distribuidores Oficiales de sus productos KIA, en las áreas de Ventas, Post-venta y Administrativas, ya que la misma desarrolla la visión fundamental de convertirse a mediano plazo en uno de los tres mayores fabricantes de automóviles del mundo.</p>\r\n<p>GARDEN AUTOMOTORES S.A., ofrece al mercado paraguayo la mayoría de los modelos de vehículos fabricados por la KIA MOTORS, con una política dirigida a satisfacer la demanda de los diferentes segmentos económicos del país, apoyado en un plan de financiamiento atractivo y un sistema de Post-Venta dinámico, que garantiza la inversión de los clientes en el vehículo de su preferencia, mediante un servicio técnico personalizado y la provisión de repuestos originales.</p>');
 
 -- ----------------------------
 -- Table structure for local
@@ -553,6 +570,28 @@ INSERT INTO `moneda` VALUES ('1', 'Guaraní', 'Gs.', '1');
 INSERT INTO `moneda` VALUES ('2', 'Dolar', 'U$D', '1');
 
 -- ----------------------------
+-- Table structure for noticia
+-- ----------------------------
+DROP TABLE IF EXISTS `noticia`;
+CREATE TABLE `noticia` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `img` varchar(60) DEFAULT NULL,
+  `img_thumb` varchar(60) DEFAULT NULL,
+  `titulo` varchar(140) DEFAULT NULL,
+  `contenido` longtext,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `estado` int(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of noticia
+-- ----------------------------
+INSERT INTO `noticia` VALUES ('1', 'noticia1.jpg', 'noticia1-thumb.jpg', 'Lorem ipsum dolor sit amet', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium, lectus in vestibulum dapibus, magna dui venenatis tortor, in porttitor justo arcu ut odio. Cras eget tortor at ligula congue porttitor sed nec enim. Mauris eu scelerisque turpis, sed finibus nulla. In quis scelerisque risus, id lacinia erat. Sed quis auctor magna. Donec leo nisi, dictum id consectetur sed, fermentum ac mauris. Etiam et turpis pretium, euismod arcu ac, volutpat urna. Vestibulum sit amet ante at nisi auctor fermentum id ut mi.</p>\r\n<p>In viverra rutrum vestibulum. Aenean dignissim vestibulum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus quis elit ipsum. Fusce a orci quis lacus elementum finibus eget sit amet felis. Phasellus a nunc ligula. Cras sed orci a dui volutpat gravida sit amet nec justo. Nunc quis eleifend magna. Pellentesque velit ipsum, eleifend condimentum egestas quis, tincidunt ut nisi. Nunc dictum interdum lorem eget tincidunt. Aenean tempus purus sit amet odio condimentum, vitae bibendum augue pulvinar. Ut in nunc tincidunt, fermentum enim auctor, pretium tortor. Pellentesque et pharetra magna, eget consequat sapien.</p>\r\n<p>Etiam consequat dui arcu, ut hendrerit eros faucibus et. Suspendisse vestibulum ac purus vel iaculis. Phasellus at luctus dui. Quisque neque orci, rhoncus vel turpis ullamcorper, dapibus tempus lacus. Aenean malesuada enim et eros consequat, ac rhoncus tortor feugiat. Suspendisse nec egestas velit. Fusce venenatis at odio quis porta. Nulla eget ante ornare, facilisis orci in, cursus mauris. Vestibulum pulvinar sollicitudin elit nec dictum. Nunc pulvinar augue eu turpis sodales posuere. Curabitur pellentesque neque vitae sapien vehicula, eget sagittis lectus malesuada. Etiam blandit pulvinar ante in varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla sapien mi, eleifend vitae lacus eu, tristique eleifend leo.</p>\r\n<p>Aliquam faucibus nisi et mi feugiat, sit amet vestibulum massa ultricies. Quisque sed purus eleifend, aliquam eros congue, dictum arcu. Morbi malesuada nibh dolor, id pharetra neque mattis quis. Nullam pharetra urna id dui laoreet, sit amet scelerisque dolor lobortis. Fusce maximus mauris at porta interdum. Aliquam nec odio nulla. Vestibulum aliquam nisi mauris, nec dictum enim sagittis ut. Pellentesque suscipit feugiat diam sit amet dictum. Suspendisse rhoncus accumsan urna at sagittis. Mauris mollis ex ultricies, vulputate tortor eget, dictum leo. Nunc nec interdum lectus. Ut sed molestie turpis. Cras et eros et massa ullamcorper elementum at non mauris.</p>\r\n<p>Maecenas eu efficitur ipsum. Morbi sit amet mattis lacus. Nulla ultrices justo non magna pulvinar consequat. Vestibulum consequat augue at augue commodo, ut hendrerit nisl varius. Quisque ac purus sit amet diam elementum lobortis. Integer lacinia, leo eu placerat malesuada, lacus augue cursus sapien, non maximus urna lorem sit amet nunc. Fusce porta aliquam metus, eu accumsan neque pellentesque et. Etiam ut leo molestie, placerat odio sit amet, vehicula ipsum. Quisque vitae nisi vestibulum, semper diam a, tristique orci. Sed rutrum felis vitae urna suscipit, a blandit est maximus. Integer imperdiet sodales lacinia. Aliquam posuere justo tellus, a condimentum nisl auctor at. Morbi fermentum nunc tempus nulla ultricies, et feugiat velit finibus. Ut neque turpis, suscipit ac odio nec, semper tempor diam. Nunc auctor erat urna, sit amet luctus lectus dictum sed. Curabitur ultricies in ipsum at cursus.</p>', '2017-11-03 12:00:09', '1');
+INSERT INTO `noticia` VALUES ('2', 'noticia2.jpg', 'noticia2-thumb.jpg', 'Lorem ipsum dolor sit amet', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium, lectus in vestibulum dapibus, magna dui venenatis tortor, in porttitor justo arcu ut odio. Cras eget tortor at ligula congue porttitor sed nec enim. Mauris eu scelerisque turpis, sed finibus nulla. In quis scelerisque risus, id lacinia erat. Sed quis auctor magna. Donec leo nisi, dictum id consectetur sed, fermentum ac mauris. Etiam et turpis pretium, euismod arcu ac, volutpat urna. Vestibulum sit amet ante at nisi auctor fermentum id ut mi.</p>\r\n<p>In viverra rutrum vestibulum. Aenean dignissim vestibulum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus quis elit ipsum. Fusce a orci quis lacus elementum finibus eget sit amet felis. Phasellus a nunc ligula. Cras sed orci a dui volutpat gravida sit amet nec justo. Nunc quis eleifend magna. Pellentesque velit ipsum, eleifend condimentum egestas quis, tincidunt ut nisi. Nunc dictum interdum lorem eget tincidunt. Aenean tempus purus sit amet odio condimentum, vitae bibendum augue pulvinar. Ut in nunc tincidunt, fermentum enim auctor, pretium tortor. Pellentesque et pharetra magna, eget consequat sapien.</p>\r\n<p>Etiam consequat dui arcu, ut hendrerit eros faucibus et. Suspendisse vestibulum ac purus vel iaculis. Phasellus at luctus dui. Quisque neque orci, rhoncus vel turpis ullamcorper, dapibus tempus lacus. Aenean malesuada enim et eros consequat, ac rhoncus tortor feugiat. Suspendisse nec egestas velit. Fusce venenatis at odio quis porta. Nulla eget ante ornare, facilisis orci in, cursus mauris. Vestibulum pulvinar sollicitudin elit nec dictum. Nunc pulvinar augue eu turpis sodales posuere. Curabitur pellentesque neque vitae sapien vehicula, eget sagittis lectus malesuada. Etiam blandit pulvinar ante in varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla sapien mi, eleifend vitae lacus eu, tristique eleifend leo.</p>\r\n<p>Aliquam faucibus nisi et mi feugiat, sit amet vestibulum massa ultricies. Quisque sed purus eleifend, aliquam eros congue, dictum arcu. Morbi malesuada nibh dolor, id pharetra neque mattis quis. Nullam pharetra urna id dui laoreet, sit amet scelerisque dolor lobortis. Fusce maximus mauris at porta interdum. Aliquam nec odio nulla. Vestibulum aliquam nisi mauris, nec dictum enim sagittis ut. Pellentesque suscipit feugiat diam sit amet dictum. Suspendisse rhoncus accumsan urna at sagittis. Mauris mollis ex ultricies, vulputate tortor eget, dictum leo. Nunc nec interdum lectus. Ut sed molestie turpis. Cras et eros et massa ullamcorper elementum at non mauris.</p>\r\n<p>Maecenas eu efficitur ipsum. Morbi sit amet mattis lacus. Nulla ultrices justo non magna pulvinar consequat. Vestibulum consequat augue at augue commodo, ut hendrerit nisl varius. Quisque ac purus sit amet diam elementum lobortis. Integer lacinia, leo eu placerat malesuada, lacus augue cursus sapien, non maximus urna lorem sit amet nunc. Fusce porta aliquam metus, eu accumsan neque pellentesque et. Etiam ut leo molestie, placerat odio sit amet, vehicula ipsum. Quisque vitae nisi vestibulum, semper diam a, tristique orci. Sed rutrum felis vitae urna suscipit, a blandit est maximus. Integer imperdiet sodales lacinia. Aliquam posuere justo tellus, a condimentum nisl auctor at. Morbi fermentum nunc tempus nulla ultricies, et feugiat velit finibus. Ut neque turpis, suscipit ac odio nec, semper tempor diam. Nunc auctor erat urna, sit amet luctus lectus dictum sed. Curabitur ultricies in ipsum at cursus.</p>', '2017-11-04 10:58:54', '1');
+INSERT INTO `noticia` VALUES ('3', 'noticia3.jpg', 'noticia3-thumb.jpg', 'Lorem ipsum dolor sit amet', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium, lectus in vestibulum dapibus, magna dui venenatis tortor, in porttitor justo arcu ut odio. Cras eget tortor at ligula congue porttitor sed nec enim. Mauris eu scelerisque turpis, sed finibus nulla. In quis scelerisque risus, id lacinia erat. Sed quis auctor magna. Donec leo nisi, dictum id consectetur sed, fermentum ac mauris. Etiam et turpis pretium, euismod arcu ac, volutpat urna. Vestibulum sit amet ante at nisi auctor fermentum id ut mi.</p>\r\n<p>In viverra rutrum vestibulum. Aenean dignissim vestibulum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus quis elit ipsum. Fusce a orci quis lacus elementum finibus eget sit amet felis. Phasellus a nunc ligula. Cras sed orci a dui volutpat gravida sit amet nec justo. Nunc quis eleifend magna. Pellentesque velit ipsum, eleifend condimentum egestas quis, tincidunt ut nisi. Nunc dictum interdum lorem eget tincidunt. Aenean tempus purus sit amet odio condimentum, vitae bibendum augue pulvinar. Ut in nunc tincidunt, fermentum enim auctor, pretium tortor. Pellentesque et pharetra magna, eget consequat sapien.</p>\r\n<p>Etiam consequat dui arcu, ut hendrerit eros faucibus et. Suspendisse vestibulum ac purus vel iaculis. Phasellus at luctus dui. Quisque neque orci, rhoncus vel turpis ullamcorper, dapibus tempus lacus. Aenean malesuada enim et eros consequat, ac rhoncus tortor feugiat. Suspendisse nec egestas velit. Fusce venenatis at odio quis porta. Nulla eget ante ornare, facilisis orci in, cursus mauris. Vestibulum pulvinar sollicitudin elit nec dictum. Nunc pulvinar augue eu turpis sodales posuere. Curabitur pellentesque neque vitae sapien vehicula, eget sagittis lectus malesuada. Etiam blandit pulvinar ante in varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla sapien mi, eleifend vitae lacus eu, tristique eleifend leo.</p>\r\n<p>Aliquam faucibus nisi et mi feugiat, sit amet vestibulum massa ultricies. Quisque sed purus eleifend, aliquam eros congue, dictum arcu. Morbi malesuada nibh dolor, id pharetra neque mattis quis. Nullam pharetra urna id dui laoreet, sit amet scelerisque dolor lobortis. Fusce maximus mauris at porta interdum. Aliquam nec odio nulla. Vestibulum aliquam nisi mauris, nec dictum enim sagittis ut. Pellentesque suscipit feugiat diam sit amet dictum. Suspendisse rhoncus accumsan urna at sagittis. Mauris mollis ex ultricies, vulputate tortor eget, dictum leo. Nunc nec interdum lectus. Ut sed molestie turpis. Cras et eros et massa ullamcorper elementum at non mauris.</p>\r\n<p>Maecenas eu efficitur ipsum. Morbi sit amet mattis lacus. Nulla ultrices justo non magna pulvinar consequat. Vestibulum consequat augue at augue commodo, ut hendrerit nisl varius. Quisque ac purus sit amet diam elementum lobortis. Integer lacinia, leo eu placerat malesuada, lacus augue cursus sapien, non maximus urna lorem sit amet nunc. Fusce porta aliquam metus, eu accumsan neque pellentesque et. Etiam ut leo molestie, placerat odio sit amet, vehicula ipsum. Quisque vitae nisi vestibulum, semper diam a, tristique orci. Sed rutrum felis vitae urna suscipit, a blandit est maximus. Integer imperdiet sodales lacinia. Aliquam posuere justo tellus, a condimentum nisl auctor at. Morbi fermentum nunc tempus nulla ultricies, et feugiat velit finibus. Ut neque turpis, suscipit ac odio nec, semper tempor diam. Nunc auctor erat urna, sit amet luctus lectus dictum sed. Curabitur ultricies in ipsum at cursus.</p>', '2017-11-06 10:58:49', '1');
+
+-- ----------------------------
 -- Table structure for preferencia_contacto
 -- ----------------------------
 DROP TABLE IF EXISTS `preferencia_contacto`;
@@ -747,11 +786,13 @@ CREATE TABLE `solicitud_turno` (
   `kilometraje` int(8) DEFAULT NULL,
   `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of solicitud_turno
 -- ----------------------------
+INSERT INTO `solicitud_turno` VALUES ('1', '1', 'RaÃºl RamÃ­rez', '3749219', '0976921801', '601606', 'Saravi', 'Asuncion', 'Recoleta', 'Sorento', '50000', '2017-11-04 08:22:43');
+INSERT INTO `solicitud_turno` VALUES ('2', '2', 'Raúl Ramírez', '3749219', '0976921801', '601606', 'Saravi', 'Asuncion', 'Recoleta', 'Sorento', '55555', '2017-11-04 08:25:53');
 
 -- ----------------------------
 -- Table structure for sucursal
