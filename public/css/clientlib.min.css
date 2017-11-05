@@ -3185,7 +3185,7 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .ex_visual{position:relative;width:100%;height:364px;text-align:center;background-repeat:no-repeat;background-position:50% 100%;background-size:cover;z-index:10}
 .ex_visual strong{display:block;padding:120px 0 5px;color:#000;font-size:72px;line-height:1;text-transform:uppercase}
 .ex_visual>span{color:#000;font-size:18px;font-family:kiaB}
-.ex_visual.history{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_history.jpg)}
+.ex_visual.history{background-image:url(../../public/img/img_history.jpg)}
 .exkia_inner{width:1120px;margin:95px auto 0 auto}
 .excon_tit{margin-bottom:45px;color:#000;font-size:40px;line-height:44px;text-align:center}
 .excon_tit span{display:block;padding-top:15px;font-size:17px;line-height:21px;font-family:'KiaM'}
@@ -3213,7 +3213,7 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .slideWrap .tab_history .history_list{position:absolute;top:0;left:0}
 .slideWrap .slider .history_list{width:5000px;padding-top:0;background:0}
 .slideWrap .slider .history_list li{width:12.5%;background:0}
-.ex_visual.philosophy{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_philosophy.jpg)}
+.ex_visual.philosophy{background-image:url(../../public/img/img_philosophy.jpg)}
 .ex_visual.philosophy strong,.ex_visual.philosophy span{color:#fff}
 .philosophycon.type2{background:#fff}
 .philosophycon.type2 .exkia_inner{padding:95px 0}
@@ -3236,11 +3236,11 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .corevalue{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_corevalues.png) no-repeat center 0}
 .corevalue .valueCon{position:relative;width:1120px;margin:0 auto;min-height:600px}
 .corevalue .valueCon>div{position:absolute;padding:80px 25px 0;background-repeat:no-repeat;background-position:left top}
-.corevalue .valueCon .valueList01{top:59px;left:0;width:178px;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_value01.png)}
-.corevalue .valueCon .valueList02{top:150px;left:228px;width:170px;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_value02.png)}
-.corevalue .valueCon .valueList03{top:40px;left:444px;width:178px;padding:0 25px 80px;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_value03.png);background-position:left bottom}
-.corevalue .valueCon .valueList04{top:86px;left:672px;width:170px;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_value04.png)}
-.corevalue .valueCon .valueList05{top:1px;left:892px;width:178px;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_value05.png)}
+.corevalue .valueCon .valueList01{top:59px;left:0;width:178px;background-image:url(../../public/img/bg_value01.png)}
+.corevalue .valueCon .valueList02{top:150px;left:228px;width:170px;background-image:url(../../public/img/bg_value02.png)}
+.corevalue .valueCon .valueList03{top:40px;left:444px;width:178px;padding:0 25px 80px;background-image:url(../../public/img/bg_value03.png);background-position:left bottom}
+.corevalue .valueCon .valueList04{top:86px;left:672px;width:170px;background-image:url(../../public/img/bg_value04.png)}
+.corevalue .valueCon .valueList05{top:1px;left:892px;width:178px;background-image:url(../../public/img/bg_value05.png)}
 .corevalue .valueCon strong{font-size:18px;color:#000}
 .corevalue .valueCon p{font-size:13px;color:#666}
 .historyList{margin:64px 0 0 352px}
@@ -4470,11 +4470,11 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .social_media{max-width:940px;margin:0 auto -100px}
 .exkia_inner .camp_move{padding-top:45px}
 .exkia_inner .camp_move2{padding-bottom:0}
-@media(min-width:1121px){.corevalue .valueCon .valueList01{width:140px;background-image:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_value01.png')}
+@media(min-width:1121px){.corevalue .valueCon .valueList01{width:140px;background-image:url('../../public/img/bg_value01.png')}
                          .corevalue .valueCon .valueList02{left:188px;width:140px}
                          .corevalue .valueCon .valueList03{top:22px;left:374px;width:140px}
                          .corevalue .valueCon .valueList04{left:562px;width:140px}
-                         .corevalue .valueCon .valueList05{left:750px;width:140px;background-image:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_value05.png')}
+                         .corevalue .valueCon .valueList05{left:750px;width:140px;background-image:url('../../public/img/bg_value05.png')}
                          .brand_video{width:825px;margin:0 auto}
                          .sound_gallery .form_wrp{width:auto}
                          .promotionCon .promotion_view{float:none;width:727px;margin:0 auto}

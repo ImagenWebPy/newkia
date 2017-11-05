@@ -200,7 +200,7 @@ if (!empty($pagina[1])) {
                             <a class="dth1_a pointer">Experiencia</a>
                             <ul class="dth2_u">
                                 <li class="dth2_l"><a href="<?= URL; ?>experiencia/la_empresa/" class="dth2_a">La Empresa</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/about-kia.html" class="dth2_a">Acerca de Kia</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>experiencia/filosofia/" class="dth2_a">Acerca de Kia</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/brand.html" class="dth2_a">Marca</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/kia-social-media.html" class="dth2_a">Redes Sociales</a></li>
                                 <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/sponsorship.html" class="dth2_a">Patrocinador Deportivo</a></li>
