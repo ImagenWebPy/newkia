@@ -212,7 +212,7 @@ if (!empty($pagina[1])) {
                     <div class="util_area">
                         <ul class="util_menu">
                             <li class="util_l"><a href="<?= URL; ?>noticias/listado" class="util_a">Noticias</a></li>
-                            <li class="util_l"><a href="http://org-www.kia.com/gt/util/promotion.html" class="util_a">Promociones</a></li>
+                            <li class="util_l"><a href="<?= URL; ?>promociones/" class="util_a">Promociones</a></li>
                             <li class="util_l"><a href="<?= URL; ?>compra_un_kia/encuentra_tu_kia/" class="util_a">Encuentra tu Kia</a></li>
                             <li class="util_l"><a href="<?= URL; ?>contacto/" class="util_a">Contàctanos</a></li>
                         </ul>

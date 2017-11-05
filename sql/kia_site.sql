@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-04 18:14:24
+Date: 2017-11-05 09:23:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -608,6 +608,28 @@ CREATE TABLE `preferencia_contacto` (
 INSERT INTO `preferencia_contacto` VALUES ('1', 'Correo', '1');
 INSERT INTO `preferencia_contacto` VALUES ('2', 'Celular', '1');
 INSERT INTO `preferencia_contacto` VALUES ('3', 'Casa', '1');
+
+-- ----------------------------
+-- Table structure for promociones
+-- ----------------------------
+DROP TABLE IF EXISTS `promociones`;
+CREATE TABLE `promociones` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `img` varchar(80) DEFAULT NULL,
+  `url` varchar(120) DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `estado` int(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of promociones
+-- ----------------------------
+INSERT INTO `promociones` VALUES ('1', 'cerato.jpg', '#', '2017-11-05 08:56:11', '1');
+INSERT INTO `promociones` VALUES ('2', 'k2700.jpg', '#', '2017-11-05 08:56:36', '1');
+INSERT INTO `promociones` VALUES ('3', 'sorento.jpg', '#', '2017-11-05 08:56:48', '1');
+INSERT INTO `promociones` VALUES ('4', 'soul.jpg', '#', '2017-11-05 08:57:01', '1');
+INSERT INTO `promociones` VALUES ('5', 'sportage.jpg', '#', '2017-11-05 08:57:17', '1');
 
 -- ----------------------------
 -- Table structure for respuestos_accesorios
