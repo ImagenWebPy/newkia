@@ -3275,7 +3275,7 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .award_list .list li a strong{display:block;padding-left:24px;font-size:16px;font-family:kiaM;line-height:58px}
 .popup .award_con .award_txt{padding-top:10px;font-size:16px}
 .popup .award_con img{width:100%}
-.ex_visual.sustainability{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_sustainability.jpg)}
+.ex_visual.sustainability{background-image:url(../../public/img/img_sustainability.jpg)}
 .sustain_list .major_cont{overflow:hidden;position:relative;min-height:195px;padding:0 0 40px 296px;background:#fff}
 .sustain_list .major_cont .img{position:absolute;top:0;left:0}
 .sustain_list .major_cont strong{display:block;padding-top:39px;font-size:20px}
@@ -3285,7 +3285,7 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .sustain_list .sorting{margin:30px 0 15px;text-align:right}
 .sustain_list .sorting .form_wrp{display:inline-block;width:110px;text-align:left}
 .sustain_list .sorting em{display:inline-block;padding-right:10px;line-height:38px;vertical-align:top}
-.ex_visual.environment{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_environment.jpg) no-repeat 50% 100%;background-size:cover}
+.ex_visual.environment{background:url(../../public/img/img_environment.jpg) no-repeat 50% 100%;background-size:cover}
 .about_environment.type2{background:#fff}
 .about_environment.type2 .exkia_inner{padding:95px 0}
 .con_operation{text-align:center}
@@ -3296,10 +3296,10 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .realizing p{font-size:14px}
 .cont_achievements{border-top:1px solid #000;padding-top:45px}
 .cont_achievements h3,.cont_achievements h5{font-size:20px;line-height:24px;color:#000}
-.cont_achievements .achievements1{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_achievements1.png) no-repeat right bottom}
-.cont_achievements .achievements2{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_achievements2.png) no-repeat right bottom}
-.cont_achievements .achievements3{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_achievements3.png) no-repeat right bottom}
-.cont_achievements .achievements4{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_achievements4.png) no-repeat right bottom}
+.cont_achievements .achievements1{background:url(../../public/img/bg_achievements1.png) no-repeat right bottom}
+.cont_achievements .achievements2{background:url(../../public/img/bg_achievements2.png) no-repeat right bottom}
+.cont_achievements .achievements3{background:url(../../public/img/bg_achievements3.png) no-repeat right bottom}
+.cont_achievements .achievements4{background:url(../../public/img/bg_achievements4.png) no-repeat right bottom}
 .cont_achievements .figure{display:block;font-family:helvetica;font-size:72px;line-height:76px;font-weight:bold;color:#54c4b4;margin:8px 0 3px}
 .cont_achievements .figure span{font-size:20px;line-height:24px}
 .cont_achievements .txt{font-size:14px;color:#666}
@@ -3309,12 +3309,12 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .cont_achievements .dbSection .dbRight{margin:0 56px}
 .about_environment .comment{text-align:right}
 .ex_kiaWrap.exception{margin-bottom:-100px}
-.ex_visual.design{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_design.jpg) no-repeat 50% 100%;background-size:cover}
-.ex_visual.kiaci{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_gt_ci_001.jpg) no-repeat 50% 100%;background-size:cover}
+.ex_visual.design{background:url(../../public/img/img_design.jpg) no-repeat 50% 100%;background-size:cover}
+.ex_visual.kiaci{background:url(../../public/img/img_gt_ci_001.jpg) no-repeat 50% 100%;background-size:cover}
 .kia_design.type4{width:100%;background:#fff}
-.titleImg.brand{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_brand.jpg) no-repeat 50% 100%;background-size:cover;margin-bottom:0}
-.titleImg.lines{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_lines.jpg) no-repeat 50% 100%;background-size:cover;margin-bottom:0;height:496px}
-.titleImg.family{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_family.jpg) no-repeat 50% 100%;background-size:cover;margin:-126px 0 0;height:418px}
+.titleImg.brand{background:url(../../public/img/img_brand.jpg) no-repeat 50% 100%;background-size:cover;margin-bottom:0}
+.titleImg.lines{background:url(../../public/img/img_lines.jpg) no-repeat 50% 100%;background-size:cover;margin-bottom:0;height:496px}
+.titleImg.family{background:url(../../public/img/img_family.jpg) no-repeat 50% 100%;background-size:cover;margin:-126px 0 0;height:418px}
 .kia_design .exkia_inner{margin:0 auto;padding:95px 0}
 .kia_design.type2{width:100%;background:#000}
 .kia_design.type3 .excon_tit{position:relative;z-index:10}
@@ -3692,7 +3692,7 @@ a:hover,a:focus .txtArea{text-decoration:underline}
 .careerCon li h3,.careerCon li strong{display:block;padding-top:20px;font-family:kiaB;font-size:18px;color:#000}
 .careerCon li p{padding-top:15px;color:#666}
 .brand_tab li.tab2Line a br{display:none}
-.ex_visual.identity{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/img_identity.jpg)}
+.ex_visual.identity{background-image:url(../../public/img/img_identity.jpg)}
 .ex_visual.identity strong,.ex_visual.identity span{color:#fff}
 .brand_ident .exkia_inner{position:relative;z-index:2}
 .brand_ident .img_direct{overflow:hidden;position:relative;margin:auto;z-index:1;max-width:940px}
@@ -4125,10 +4125,10 @@ a:hover,a:focus .txtArea{text-decoration:underline}
                                  .cont_achievements .dbSection{width:auto;margin:0 auto}
                                  .cont_achievements .dbSection .dbLeft{margin:24px 0 0 0}
                                  .cont_achievements .dbSection .dbRight{margin:24px 0 0 0}
-                                 .cont_achievements .achievements1{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_achievements1.png) no-repeat center bottom;background-size:128px 52px;text-align:center;padding-bottom:65px}
-                                 .cont_achievements .achievements2{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_achievements2.png) no-repeat center bottom;background-size:128px 52px;text-align:center;padding-bottom:65px}
-                                 .cont_achievements .achievements3{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_achievements3.png) no-repeat center bottom;background-size:128px 52px;text-align:center;padding-bottom:65px}
-                                 .cont_achievements .achievements4{background:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/experience/bg_achievements4.png) no-repeat center bottom;background-size:128px 52px;text-align:center;padding-bottom:65px}
+                                 .cont_achievements .achievements1{background:url(../../public/img/bg_achievements1.png) no-repeat center bottom;background-size:128px 52px;text-align:center;padding-bottom:65px}
+                                 .cont_achievements .achievements2{background:url(../../public/img/bg_achievements2.png) no-repeat center bottom;background-size:128px 52px;text-align:center;padding-bottom:65px}
+                                 .cont_achievements .achievements3{background:url(../../public/img/bg_achievements3.png) no-repeat center bottom;background-size:128px 52px;text-align:center;padding-bottom:65px}
+                                 .cont_achievements .achievements4{background:url(../../public/img/bg_achievements4.png) no-repeat center bottom;background-size:128px 52px;text-align:center;padding-bottom:65px}
                                  .cont_achievements .figure{font-size:54px;line-height:58px;margin:0}
                                  .cont_achievements .figure span{font-size:15px;line-height:19px}
                                  .cont_achievements .txt{font-size:12px;line-height:16px}

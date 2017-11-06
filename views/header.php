@@ -201,11 +201,11 @@ if (!empty($pagina[1])) {
                             <ul class="dth2_u">
                                 <li class="dth2_l"><a href="<?= URL; ?>experiencia/la_empresa/" class="dth2_a">La Empresa</a></li>
                                 <li class="dth2_l"><a href="<?= URL; ?>experiencia/filosofia/" class="dth2_a">Acerca de Kia</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/brand.html" class="dth2_a">Marca</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/kia-social-media.html" class="dth2_a">Redes Sociales</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/sponsorship.html" class="dth2_a">Patrocinador Deportivo</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/career.html" class="dth2_a">Trabaja en Kia</a></li>
-                                <li class="dth2_l"><a href="http://org-www.kia.com/gt/experience/awards.html" class="dth2_a">Premios</a></li>
+                                <li class="dth2_l"><a href="<?= URL; ?>experiencia/marca/" class="dth2_a">Marca</a></li>
+                                <!--<li class="dth2_l"><a href="<?= URL; ?>experiencia/redes_sociales/" class="dth2_a">Redes Sociales</a></li>-->
+                                <!--<li class="dth2_l"><a href="<?= URL; ?>experiencia/patrocinador_deportivo/" class="dth2_a">Patrocinador Deportivo</a></li>-->
+                                <!--<li class="dth2_l"><a href="<?= URL; ?>experiencia/" class="dth2_a">Trabaja en Kia</a></li>-->
+                                <!--<li class="dth2_l"><a href="<?= URL; ?>experiencia/premios/" class="dth2_a">Premios</a></li>-->
                             </ul>
                         </li>
                     </ul>

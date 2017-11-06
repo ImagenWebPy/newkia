@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-05 18:42:51
+Date: 2017-11-06 17:19:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -815,6 +815,31 @@ CREATE TABLE `solicitud_turno` (
 -- ----------------------------
 INSERT INTO `solicitud_turno` VALUES ('1', '1', 'RaÃºl RamÃ­rez', '3749219', '0976921801', '601606', 'Saravi', 'Asuncion', 'Recoleta', 'Sorento', '50000', '2017-11-04 08:22:43');
 INSERT INTO `solicitud_turno` VALUES ('2', '2', 'Raúl Ramírez', '3749219', '0976921801', '601606', 'Saravi', 'Asuncion', 'Recoleta', 'Sorento', '55555', '2017-11-04 08:25:53');
+
+-- ----------------------------
+-- Table structure for sostenibilidad
+-- ----------------------------
+DROP TABLE IF EXISTS `sostenibilidad`;
+CREATE TABLE `sostenibilidad` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(120) DEFAULT NULL,
+  `archivo` varchar(120) DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `estado` int(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of sostenibilidad
+-- ----------------------------
+INSERT INTO `sostenibilidad` VALUES ('1', 'Informe de sustentabilidad 2009', '2009+Sustainability+Magazine+Move.pdf', '2009-03-18 00:00:00', '1');
+INSERT INTO `sostenibilidad` VALUES ('2', 'Informe de sustentabilidad 2010', '2010+Sustainability+Magazine+Move.pdf', '2010-03-23 00:00:00', '1');
+INSERT INTO `sostenibilidad` VALUES ('3', 'Informe de sustentabilidad 2011', '2011+Sustainability+Magazine+Move.pdf', '2011-03-18 00:00:00', '1');
+INSERT INTO `sostenibilidad` VALUES ('4', 'Informe de sustentabilidad 2012', '2012+Sustainability+Magazine+Move.pdf', '2012-03-22 00:00:00', '1');
+INSERT INTO `sostenibilidad` VALUES ('5', 'Informe de sustentabilidad 2013', '2013+Sustainability+Magazine+Move.pdf', '2013-03-18 00:00:00', '1');
+INSERT INTO `sostenibilidad` VALUES ('6', 'Informe de sustentabilidad 2014', '2014+Sustainability+Magazine+Move.pdf', '2014-12-05 00:00:00', '1');
+INSERT INTO `sostenibilidad` VALUES ('7', 'Informe de sustentabilidad 2015', '2015+Sustainability+Magazine+Move.pdf', '2015-04-04 00:00:00', '1');
+INSERT INTO `sostenibilidad` VALUES ('8', 'Informe de Sustentabilidad 2016', '2016+Sustainability+Magazine+Move.pdf', '2016-05-25 00:00:00', '1');
 
 -- ----------------------------
 -- Table structure for sucursal

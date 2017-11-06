@@ -90,10 +90,47 @@ class Experiencia_Model extends Model {
                 break;
         }
         $data = '<ul class="history_list">
-                    <li class="' . $tabonHistory . '"><a href="'.URL.'experiencia/historia">2017~2011 <span class="hidden">año</span></a></li>
-                    <li class="' . $tabonHistory2 . '"><a href="'.URL.'experiencia/historia2">2010~2001 <span class="hidden">año</span></a></li>
-                    <li class="' . $tabonHistory3 . '"><a href="'.URL.'experiencia/historia3">2000~1991 <span class="hidden">año</span></a></li>
-                    <li class="' . $tabonHistory4 . '"><a href="'.URL.'experiencia/historia4">1990~1944 <span class="hidden">año</span></a></li>
+                    <li class="' . $tabonHistory . '"><a href="' . URL . 'experiencia/historia">2017~2011 <span class="hidden">año</span></a></li>
+                    <li class="' . $tabonHistory2 . '"><a href="' . URL . 'experiencia/historia2">2010~2001 <span class="hidden">año</span></a></li>
+                    <li class="' . $tabonHistory3 . '"><a href="' . URL . 'experiencia/historia3">2000~1991 <span class="hidden">año</span></a></li>
+                    <li class="' . $tabonHistory4 . '"><a href="' . URL . 'experiencia/historia4">1990~1944 <span class="hidden">año</span></a></li>
+                </ul>';
+        return $data;
+    }
+
+    public function informesSostenibilidad() {
+        $sql = $this->db->select("SELECT * FROM `sostenibilidad` where estado = 1 ORDER BY id DESC;");
+        return $sql;
+    }
+
+    public function headerBarMarca($url) {
+        $tabonMarca = '';
+        $tabonCampana = '';
+        $tabonMarcaMultiSensorial = '';
+        switch ($url[1]) {
+            case 'marca':
+                $tabonMarca = 'tab_on';
+                break;
+            case 'unidad_sorprendente':
+            case 'gear_up':
+            case 'road_trip':
+            case 'design_manifest':
+                $tabonCampana = 'tab_on';
+                break;
+            case 'sabor':
+            case 'sonido':
+            case 'olor':
+                $tabonMarcaMultiSensorial = 'tab_on';
+                break;
+        }
+        $data = '<ul class="col3">
+                    <li class="dep2Has tab2Line ' . $tabonMarca . '"><a href="' . URL . 'experiencia/marca/">Identidad DE MARCA</a></li>
+                    <li class="dep2Has tab2Line ' . $tabonCampana . '"><a href="#">CAMPAÑA GLOBAL DE MARCA</a>
+                        <ul class="tab_dep2">
+                            <li><a href="' . URL . 'experiencia/unidad_sorprendente/">Unidad Sorprendente</a></li>
+                            <li><a href="' . URL . 'experiencia/design_manifest/">RE:Design Manifesto</a></li>
+                        </ul>
+                    </li>
                 </ul>';
         return $data;
     }
