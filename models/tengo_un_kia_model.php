@@ -109,4 +109,32 @@ class Tengo_un_kia_Model extends Model {
         return $sql;
     }
 
+    public function enviarSolicitudTurno($data) {
+        $id_tipo_servicio = $data['id_tipo_servicio'];
+        $sqlServicio = $this->db->select("select descripcion from tipo_servicio where id = $id_tipo_servicio");
+        $sqlMail = $this->db->select("SELECT cm.`value` FROM `config_mail` cm where cm.`data` = 'turnos';");
+        $tipoServicio = utf8_encode($sqlServicio[0]['descripcion']);
+        //FALTA CODIFICAR ENVIO DE EMAIL
+        $para = $sqlMail[0]['value'];
+        $asunto = 'Solicitud de turno - ' . $tipoServicio;
+        $mensaje = '';
+        //$this->helper->sendMail($para, $asunto, $mensaje);
+        #insertamos en la BD
+        $this->db->insert('solicitud_turno', array(
+            'id_tipo_servicio' => $data['id_tipo_servicio'],
+            'nombre_completo' => utf8_decode($data['nombre']),
+            'ci' => $data['ci'],
+            'celular' => $data['celular'],
+            'telefono' => $data['telefono'],
+            'direccion' => utf8_decode($data['direccion']),
+            'ciudad' => utf8_decode($data['ciudad']),
+            'barrio' => utf8_decode($data['barrio']),
+            'modelo' => utf8_decode($data['modelo']),
+            'kilometraje' => $data['kilometraje'],
+            'fecha' => date('Y-m-d H:i:s'),
+        ));
+        $datos = '<span class="successSendMail">Gracias ' . $data['nombre'] . ' por solicitar el agendamiento de ' . $tipoServicio . '. Un asesor se estará contactando contigo.</span>';
+        return json_encode($datos);
+    }
+
 }

@@ -51,7 +51,7 @@ define('ADMIN_TITLE', 'Administrador Usados :: ');
 define('TITLE_ADMIN', 'Institucional Admin :: ');
 define('THUMB_MENU', URL . 'public/img/vehiculos/imagenes/thumb-menu/');
 define('VEHICLE_LOGO', URL . 'public/img/vehiculos/logos/');
-define('CANT_REG', 16);
+define('CANT_REG', 9);
 
 define('META_SITENAME', 'Kia Motors Garden Automotores S.A.');
 

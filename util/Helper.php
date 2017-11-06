@@ -425,4 +425,49 @@ class Helper {
         return $sql;
     }
 
+    public function shortMonthDate($month) {
+        switch ($month) {
+            case 'Jan':
+                $mes = 'Ene';
+                break;
+            case 'Feb':
+                $mes = 'Feb';
+                break;
+            case 'Mar':
+                $mes = 'Mar';
+                break;
+            case 'Apr':
+                $mes = 'Abr';
+                break;
+            case 'May':
+                $mes = 'May';
+                break;
+            case 'Jun':
+                $mes = 'Jun';
+                break;
+            case 'Jul':
+                $mes = 'Jul';
+                break;
+            case 'Aug':
+                $mes = 'Ago';
+                break;
+            case 'Sept':
+                $mes = 'Set';
+                break;
+            case 'Sep':
+                $mes = 'Set';
+                break;
+            case 'Oct':
+                $mes = 'Oct';
+                break;
+            case 'Nov':
+                $mes = 'Nov';
+                break;
+            case 'Dec':
+                $mes = 'Dic';
+                break;
+        }
+        return $mes;
+    }
+
 }
