@@ -791,10 +791,10 @@ $vehiculo = $this->datosVehiculo;
             </div>
             <div class="build_link">
                 <ul class="link_lst">
-                    <li class="link_li link1"><a href="<?= URL; ?>public/fichas/<?= $modelo['ficha']; ?>" class="bl_typeW_a">Ficha Técnica</a></li>
-                    <li class="link_li link2"><a href="http://org-www.kia.com/gt/shopping-tools/request-a-test-drive.html/carKey/cerato-forte" class="bl_typeW_a">Test Drive</a></li>
-                    <li class="link_li link3"><a href="http://org-www.kia.com/gt/shopping-tools/find-a-dealer.html/carKey/cerato-forte" class="bl_typeW_a">Encuentra tu Kia</a></li>
-                    <li class="link_li link4"><a href="http://org-www.kia.com/gt/shopping-tools/request-a-quote.html/carKey/cerato-forte" class="bl_typeW_a">Cotizar</a></li>
+                    <li class="link_li link1"><a href="<?= URL; ?>public/fichas/<?= $modelo['ficha']; ?>" class="bl_typeW_a" target="_blank">Ficha Técnica</a></li>
+                    <li class="link_li link2"><a href="<?= URL; ?>compra_un_kia/test_drive" class="bl_typeW_a">Test Drive</a></li>
+                    <li class="link_li link3"><a href="<?= URL; ?>compra_un_kia/encuentra_tu_kia" class="bl_typeW_a">Encuentra tu Kia</a></li>
+                    <li class="link_li link4"><a href="<?= URL; ?>compra_un_kia/cotizar" class="bl_typeW_a">Cotizar</a></li>
                 </ul>
             </div></div>
         <div class="parbase disclaimer section">

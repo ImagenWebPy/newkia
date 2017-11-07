@@ -17,7 +17,7 @@ $slider = $helper->sliderInicio();
     })(jQuery);
 </script>
 <div id="container">
-    <div id="content" class="main_inner" ng-app="kwcmsAppModuleApp" ng-cloak>
+    <div id="content" class="main_inner">
         <div class="main-cpnt page base Main_par">
             <!-- content -->
             <a href="#" class="mainPrev"><img src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/main/btn_main_left.png" alt="prev"></a>
@@ -85,7 +85,7 @@ $slider = $helper->sliderInicio();
                                 <div class="sales01">
                                     <div class="parsys parsys01_03"><div class="contbox-cpnt parbase section">
                                             <div class="contBoxWrap">
-                                                <a href="/gt/shopping-tools/request-a-brochure.html/carKey/new-sorento" onclick="dtmDataLayer.internal_link = 'promotion|promotion|contentbox2|request a brochure'; _satellite.track('internal_link');">
+                                                <a href="<?= URL; ?>public/fichas/<?= $item['ficha']; ?>">
                                                     <span class="txtArea">
                                                         <strong style="color:#FFFFFF">CATALOG</strong>
                                                         <span class="subTxt" style="color:#FFFFFF">Request Catalog<br />for the Kia of your choice. </span>
@@ -111,8 +111,7 @@ $slider = $helper->sliderInicio();
                                 <div class="sales03">
                                     <div class="parsys01_04 parsys"><div class="contbox-cpnt parbase section">
                                             <div class="contBoxWrap">
-                                                <a href="/gt/shopping-tools/find-a-dealer.html" onclick="dtmDataLayer.internal_link = 'promotion|promotion|contentbox3|find a dealer';
-                                                        _satellite.track('internal_link');">
+                                                <a href="<?= URL; ?>compra_un_kia/encuentra_tu_kia">
                                                     <span class="txtArea">
                                                         <strong style="color:#FFFFFF">ENCUENTRA TU SUCURSAL</strong>
                                                     </span>
@@ -139,7 +138,7 @@ $slider = $helper->sliderInicio();
                                             <div class="listWrap">
                                                 <ul>
                                                     <li style="display: block;">
-                                                        <a href="/gt/experience/brand/identity.html" onclick="dtmDataLayer.internal_link = 'promotion|promotion|contentbox4|identity'; _satellite.track('internal_link');">
+                                                        <a href="#">
                                                             <span class="txtArea">
                                                                 <strong style="color:#FFFFFF"></strong>
                                                                 <span class="subTxt" style="color:#FFFFFF"></span>

@@ -22,18 +22,18 @@ class Modelo_Model extends Model {
                 break;
         }
         $idModelo = $url[2];
-        $sqlModelo = $this->db->select("select descripcion, logo from modelo where id = $idModelo");
+        $sqlModelo = $this->db->select("select descripcion, logo, ficha from modelo where id = $idModelo");
         $data = '<div class="snb_pip snb_wrap">
                     <div class="inner">
                         <div class="snb_tit">
-                            <a href="http://org-www.kia.com/gt/showroom/cerato-forte-yd/features.html" class="">
+                            <a href="' . URL . 'modelo/caracteristica/' . $idModelo . '/' . $this->helper->cleanUrl(utf8_encode($sqlModelo[0]['descripcion'])) . '" class="">
                                 <img title="' . utf8_encode($sqlModelo[0]['descripcion']) . '" alt="' . utf8_encode($sqlModelo[0]['descripcion']) . '" class="lg_img" src="' . VEHICLE_LOGO . $sqlModelo[0]['logo'] . '">
                             </a>
                         </div>
                         <!-- SNB -->
                         <div class="snb_area">
                             <!-- open_snb open -->
-                            <a href="#" class="open_snb"><span class="cmm_tspr spr_snb">gallery</span></a>
+                            <a class="open_snb pointer"><span class="cmm_tspr spr_snb">gallery</span></a>
                             <!-- snb_nav open -->
                             <ul class="snb_nav">
                                 <li class="sdth1_l ' . $caracteristica . '"><a href="' . URL . 'modelo/caracteristica/' . $idModelo . '/' . utf8_encode($sqlModelo[0]['descripcion']) . '" class="sdth1_a">Características</a></li>
@@ -42,12 +42,12 @@ class Modelo_Model extends Model {
                             </ul>
                             <!-- sales_kit open -->
                             <div class="sales_kit">
-                                <a href="#" class="kit"><span class="kit_spr spr_basket">Sales Kit</span></a>
+                                <a class="kit pointer"><span class="kit_spr spr_basket">Sales Kit</span></a>
                                 <ul class="kit_menu">
-                                    <li class="kit_l"><a href="#" class="kit_a"><span class="kit_tspr spr_kit1">Testdrive</span></a></li>
-                                    <li class="kit_l"><a href="#" class="kit_a"><span class="kit_tspr spr_kit2">Cotizar</span></a></li>
-                                    <li class="kit_l"><a href="#" class="kit_a"><span class="kit_tspr spr_kit3">Ficha Técnica</span></a></li>
-                                    <li class="kit_l"><a href="#" class="kit_a"><span class="kit_tspr spr_kit4">Encuentra tu Kia</span></a></li>
+                                    <li class="kit_l"><a href="' . URL . 'compra_un_kia/test_drive" class="kit_a"><span class="kit_tspr spr_kit1">Testdrive</span></a></li>
+                                    <li class="kit_l"><a href="' . URL . 'compra_un_kia/cotizar" class="kit_a"><span class="kit_tspr spr_kit2">Cotizar</span></a></li>
+                                    <li class="kit_l"><a href="' . URL . 'public/fichas/' . $sqlModelo[0]['ficha'] . '" class="kit_a"><span class="kit_tspr spr_kit3">Ficha Técnica</span></a></li>
+                                    <li class="kit_l"><a href="' . URL . 'compra_un_kia/encuentra_tu_kia" class="kit_a"><span class="kit_tspr spr_kit4">Encuentra tu Kia</span></a></li>
                                 </ul>
                             </div>
                         </div>

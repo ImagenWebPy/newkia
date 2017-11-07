@@ -1,5 +1,6 @@
 <?php
 $helper = new Helper();
+$redes = $helper->getRedes();
 $paginaFooter = $helper->getPage();
 $listElement1 = "";
 $listElement2 = "";
@@ -55,42 +56,27 @@ if (!empty($paginaFooter[0])) {
             </span>
             <div class="info_policy">
                 <div class="parbase link-f-7-1 link">
-                    <a href="http://org-www.kia.com/gt/util/sitemap.html" class="depth_a" onclick="">Mapa del Sitio</a>
+                    <a href="<?= URL; ?>noticias/listado" class="depth_a" onclick="">Noticias</a>
                 </div>
                 <span class="bar">|</span>
                 <div class="parbase link-f-7-13 link">
-                    <a href="http://org-www.kia.com/gt/util/customer-center/contact-us.html" class="dth2_a" onclick="">Contáctanos</a>
+                    <a href="<?= URL; ?>contacto" class="dth2_a" onclick="">Contáctanos</a>
                 </div>
                 <span class="bar">|</span>
                 <div class="parbase link-f-7-14 link">
-                    <a href="http://org-www.kia.com/gt/experience.html" class="fms_a" onclick="">Privacidad</a>
+                    <a href="<?= URL; ?>pagina/privacidad" class="fms_a" onclick="">Privacidad</a>
                 </div>
                 <span class="bar">|</span>
                 <div class="link-f-7-15 parbase link">
-                    <a href="http://www.kia.com/ww" class="dth2_a" onclick="" title="Country Selector Link">Terminos y Condiciones</a>
+                    <a href="<?= URL; ?>pagina/terminos_y_condiciones" class="dth2_a" onclick="" title="Country Selector Link">Terminos y Condiciones</a>
                 </div>
             </div>
             <div class="info_sns">
-                <div class="link-f-8-0 parbase link">
-                    <a href="https://www.facebook.com/kia" class="sns_spr spr_facebook" onclick="dtmDataLayer.external_link = 'sns|facebook'; _satellite.track('external_link');" target="_blank" title="Facebook">Facebook</a>
-                </div>
-                <div class="link-f-8-1 parbase link">
-                    <a href="https://twitter.com/Kia_Motors" class="sns_spr spr_twitter" onclick="dtmDataLayer.external_link = 'sns|twitter'; _satellite.track('external_link');" target="_blank" title="Twitter">Twitter</a>
-                </div>
-                <div class="link-f-8-2 parbase link">
-                    <a href="https://www.youtube.com/user/KiaBUZZ" class="sns_spr spr_youtube" onclick="dtmDataLayer.external_link = 'sns|youtube'; _satellite.track('external_link');" target="_blank" title="Youtube">Youtube</a>
-                </div>
-                <div class="parbase link link-f-8-4">
-                    <a href="https://www.instagram.com/kiamotorsworldwide" class="sns_spr spr_instagram" onclick="dtmDataLayer.external_link = 'sns|instagram'; _satellite.track('external_link');" target="_blank" title="Instagram">Instagram</a>
-                </div>
-                <div class="parbase link-f-8-3 link">
-                </div>
-                <div class="parbase link-f-8-5 link">
-                </div>
-                <div class="parbase link-f-8-6 link">
-                </div>
-                <div class="parbase link link-f-8-7">
-                </div>
+                <?php foreach ($redes as $key => $val): ?>
+                    <div class="link-f-8-<?= $key; ?> parbase link">
+                        <a href="<?= $val['url']; ?>" class="sns_spr <?= $val['clase']; ?>" target="_blank" title="<?= $val['red']; ?>"><?= $val['red']; ?></a>
+                    </div>
+                <?php endforeach; ?>
             </div>
             <address class="cpr"><span class="br">Copyright(c) 2017 Kia Motors Corp. All Rights Reserved.</span></address>
         </div>
@@ -100,21 +86,21 @@ if (!empty($paginaFooter[0])) {
     <script type="text/javascript" src="<?= URL; ?>public/js/custom.js"></script>
     <!-- GA code add. 2015.02.25 mf-->
     <script type="text/javascript">
-                        (function (i, s, o, g, r, a, m) {
-                            i['GoogleAnalyticsObject'] = r;
-                            i[r] = i[r] || function () {
-                                (i[r].q = i[r].q || []).push(arguments)
-                            }, i[r].l = 1 * new Date();
-                            a = s.createElement(o),
-                                    m = s.getElementsByTagName(o)[0];
-                            a.async = 1;
-                            a.src = g;
-                            m.parentNode.insertBefore(a, m)
-                        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
 
-                        // 사용시 주석 제거 후 코드변경 할것.
-                        //ga('create', 'UA-37592437-25', 'auto');
-                        //ga('send', 'pageview');
+        // 사용시 주석 제거 후 코드변경 할것.
+        //ga('create', 'UA-37592437-25', 'auto');
+        //ga('send', 'pageview');
 
     </script>
     <script type="text/javascript">

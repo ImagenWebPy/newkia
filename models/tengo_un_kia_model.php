@@ -117,8 +117,62 @@ class Tengo_un_kia_Model extends Model {
         //FALTA CODIFICAR ENVIO DE EMAIL
         $para = $sqlMail[0]['value'];
         $asunto = 'Solicitud de turno - ' . $tipoServicio;
-        $mensaje = '';
-        //$this->helper->sendMail($para, $asunto, $mensaje);
+        $mensaje = '<table width="800" border="0" cellspacing="0" cellpadding="5">
+                        <tr>
+                            <td colspan="2"><h2>' . $asunto . '</h2><hr /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" bgcolor="#CCCCCC">Mensaje enviado en fecha: ' . date('d-m-Y H:i:s') . '</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" bgcolor="#CCCCCC">Datos Personales del titular:</td>
+                        </tr>
+                        <tr>
+                            <td align="right"><strong>Titular:</strong></td>
+                            <td>' . $data['nombre'] . '</td>
+                        </tr>
+                        <tr>
+                            <td align="right"><strong>Documento Nro.:</strong></td>
+                            <td>' . $data['ci'] . '</td>
+                        </tr>	
+                        <tr>
+                            <td align="right"><strong>Celular:</strong></td>
+                            <td>' . $data['celular'] . '</td>
+                        </tr>
+                        <tr>
+                            <td align="right"><strong>Teléfono:</strong></td>
+                            <td>' . $data['telefono'] . '</td>
+                        </tr>		
+                        <tr>
+                            <td align="right"><strong>Domicilio:</strong></td>
+                            <td>' . $data['direccion'] . '</td>
+                        </tr>
+                        <tr>
+                            <td align="right"><strong>Barrio:</strong></td>
+                            <td>' . $data['barrio'] . '</td>
+                        </tr>
+                        <tr>
+                            <td align="right"><strong>Ciudad:</strong></td>
+                            <td>' . $data['ciudad'] . '</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" bgcolor="#CCCCCC">Datos del Vehículo:</td>
+                        </tr>
+                        <tr>
+                            <td align="right"><strong>Modelo:</strong></td>
+                            <td>' . $data['modelo'] . '</td>
+                        </tr>			
+                        <tr>
+                            <td align="right"><strong>Kilometraje:</strong></td>
+                            <td>' . $data['kilometraje'] . '</td>
+                        </tr>
+                        <tr>
+                            <td width="155" align="right"><strong>Tipo de Servicio:</strong></td>
+                            <td width="625">' . $tipoServicio . '</td>
+                        </tr>
+
+                    </table>';
+        $this->helper->sendMail($para, $asunto, $mensaje);
         #insertamos en la BD
         $this->db->insert('solicitud_turno', array(
             'id_tipo_servicio' => $data['id_tipo_servicio'],

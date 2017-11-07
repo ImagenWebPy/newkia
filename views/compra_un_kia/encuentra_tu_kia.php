@@ -2,7 +2,7 @@
 $helper = new Helper();
 $sucursales = $helper->getSucursales();
 ?>
-<div id="container" ng-app="kwcmsAppModuleApp" ng-cloak>    
+<div id="container">    
     <div id="content" class="subContents">
         <div class="par parsys"><div class="parbase global-title section">
                 <div class="content_title">

@@ -470,4 +470,9 @@ class Helper {
         return $mes;
     }
 
+    public function getRedes() {
+        $sql = $this->db->select("SELECT red, url, clase FROM `redes` where estado = 1;");
+        return $sql;
+    }
+
 }
