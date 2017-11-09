@@ -252,4 +252,9 @@ class Modelo_Model extends Model {
         return $sqlDatos[0];
     }
 
+    public function view360($idModelo) {
+        $sql = $this->db->select("SELECT img FROM `modelo_360` where id_modelo = 1 and estado = $idModelo;");
+        return $sql;
+    }
+
 }

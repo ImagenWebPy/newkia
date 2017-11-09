@@ -1478,7 +1478,7 @@
 }
 .phrase{background:#f7f7f7}
 .phrase .parbase_inner{max-width:940px;padding:18px 0;margin:0 auto}
-.phrase .parbase_inner li{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/bl_square.gif') no-repeat 0 8px;padding-left:10px;font-family:kiaM,sans-serif;font-size:12px;text-align:left}
+.phrase .parbase_inner li{background:url('../../../public/img/bl_square.gif') no-repeat 0 8px;padding-left:10px;font-family:kiaM,sans-serif;font-size:12px;text-align:left}
 @media all and (min-width:1024px){.engine_allview_area ul li ul li strong.l_b{display:inline-block;height:52px}
 }
 .accessory .acc_box .ul{width:960px;overflow:hidden}

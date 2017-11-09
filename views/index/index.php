@@ -35,9 +35,9 @@ $slider = $helper->sliderInicio();
                                         </h2>
                                         <p class="subTxt2 " style="color:#000000"><?= utf8_encode($item['descripcion']); ?><br /></p>
                                         <div class="linkArea">
-                                            <a href="<?= URL; ?>modelo/caracteristica/<?= $item['id']; ?>/<?= utf8_encode($item['nombre']); ?>" onclick="dtmDataLayer.internal_link = 'promotion|promotion|maincenter|showroom'; _satellite.track('internal_link');"><img src="<?= URL; ?>public/img/btn_main_link1.png" alt="Modelo" title="Modelo"></a>
-                                            <a href="http://org-www.kia.com/gt/shopping-tools/request-a-quote.html/carKey/new-sorento" onclick="dtmDataLayer.internal_link = 'promotion|promotion|maincenter|request a brochure'; _satellite.track('internal_link');"><img src="<?= URL; ?>public/img/btn_main_link2.png" alt="Cotizar" title="Cotizar"></a>
-                                            <a href="http://org-www.kia.com/gt/shopping-tools/request-a-test-drive.html/carKey/new-sorento" onclick="dtmDataLayer.internal_link = 'promotion|promotion|maincenter|request a test drive'; _satellite.track('internal_link');"><img src="<?= URL; ?>public/img/btn_main_link3.png" alt="Solicitar un Test Drive" title="Solicitar un Test Drive"></a>
+                                            <a href="<?= URL; ?>modelo/caracteristica/<?= $item['id']; ?>/<?= utf8_encode($item['nombre']); ?>"><img src="<?= URL; ?>public/img/btn_main_link1.png" alt="Modelo" title="Modelo"></a>
+                                            <a href="<?= URL; ?>compra_un_kia/cotizar"><img src="<?= URL; ?>public/img/btn_main_link2.png" alt="Cotizar" title="Cotizar"></a>
+                                            <a href="<?= URL; ?>compra_un_kia/test_drive"><img src="<?= URL; ?>public/img/btn_main_link3.png" alt="Solicitar un Test Drive" title="Solicitar un Test Drive"></a>
                                         </div>
                                     </div>
                                     <span class="imgArea">

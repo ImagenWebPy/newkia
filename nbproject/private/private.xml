@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/wamp/www/v2-kia/views/experiencia/marca.php</file>
-            <file>file:/C:/wamp/www/v2-kia/views/header.php</file>
-            <file>file:/C:/wamp/www/v2-kia/views/experiencia/unidad_sorprendente.php</file>
-            <file>file:/C:/wamp/www/v2-kia/controllers/experiencia.php</file>
-            <file>file:/C:/wamp/www/v2-kia/public/css/surprising_drive.css</file>
-            <file>file:/C:/wamp/www/v2-kia/public/css/clientlib.min.css</file>
-            <file>file:/C:/wamp/www/v2-kia/models/experiencia_model.php</file>
-            <file>file:/C:/wamp/www/v2-kia/views/experiencia/redes_sociales.php</file>
-            <file>file:/C:/wamp/www/v2-kia/public/js/surprising_drive.js</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

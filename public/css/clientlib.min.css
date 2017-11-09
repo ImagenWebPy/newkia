@@ -58,8 +58,8 @@ ul:after,ol:after{content:'';clear:both;display:block}
 .cmm_home{display:inline-block;color:transparent;text-indent:-999px;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/ico_home.png)}
 .sns_spr{background-image:url(../../public/img/spr_sns.png)}
 .map_spr{background-image:url(../../public/img/spr_map2.png)}
-.tool_spr,.tool_tspr:before{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_tool.png)}
-.kit_spr,.kit_tspr:before{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_kit.png)}
+.tool_spr,.tool_tspr:before{background-image:url(../../public/img/spr_tool.png)}
+.kit_spr,.kit_tspr:before{background-image:url(../../public/img/spr_kit.png)}
 .form_spr:before,.form_spr:after{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_form.png)}
 .btnIcon:before,.btnIcon:after{content:'';display:inline-block;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_button.png)!important;background-repeat:no-repeat;vertical-align:top}
 .tab_tspr:before{background-image:url(../../public/img/spr_tab.png)}

@@ -85,7 +85,7 @@ if (!empty($paginaFooter[0])) {
     <script type="text/javascript" src="<?= URL; ?>public/js/picturefill.js"></script>
     <script type="text/javascript" src="<?= URL; ?>public/js/custom.js"></script>
     <!-- GA code add. 2015.02.25 mf-->
-    <script type="text/javascript">
+<!--    <script type="text/javascript">
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function () {
@@ -102,7 +102,7 @@ if (!empty($paginaFooter[0])) {
         //ga('create', 'UA-37592437-25', 'auto');
         //ga('send', 'pageview');
 
-    </script>
+    </script>-->
     <script type="text/javascript">
         $(document).ready(function () {
             //stylish selectbox init

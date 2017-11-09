@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-07 16:04:47
+Date: 2017-11-09 18:33:00
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -41,11 +41,12 @@ CREATE TABLE `color` (
   `img` varchar(60) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of color
 -- ----------------------------
+INSERT INTO `color` VALUES ('1', 'Blanco Perla', 'blanco_claro.gif', '1');
 
 -- ----------------------------
 -- Table structure for combustible
@@ -66,21 +67,40 @@ INSERT INTO `combustible` VALUES ('2', 'Diesel', '1');
 INSERT INTO `combustible` VALUES ('3', 'Flex', '1');
 
 -- ----------------------------
--- Table structure for config_mail
+-- Table structure for config_site
 -- ----------------------------
-DROP TABLE IF EXISTS `config_mail`;
-CREATE TABLE `config_mail` (
+DROP TABLE IF EXISTS `config_site`;
+CREATE TABLE `config_site` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `data` varchar(140) DEFAULT NULL,
+  `data` varchar(160) DEFAULT NULL,
   `value` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of config_mail
+-- Records of config_site
 -- ----------------------------
-INSERT INTO `config_mail` VALUES ('1', 'testdrive', 'jpena@garden.com.py,dabenitez@garden.com.py,ssomoza@garden.com.py');
-INSERT INTO `config_mail` VALUES ('2', 'turnos', 'call_center@garden.com.py');
+INSERT INTO `config_site` VALUES ('1', 'testdrive', 'jpena@garden.com.py,dabenitez@garden.com.py,ssomoza@garden.com.py');
+INSERT INTO `config_site` VALUES ('2', 'turnos', 'call_center@garden.com.py');
+INSERT INTO `config_site` VALUES ('3', 'meta_descripton', 'Explore la amplia gama de autos de Kia desde sedán hasta hatchback, desde híbridos hasta SUV. Solicite una prueba de manejo, busque un concesionario, conoce más.');
+INSERT INTO `config_site` VALUES ('4', 'meta_description_encuentra_tu_kia', 'Deja que nuestra red de atención te ayude a comprar un nuevo Kia, realizar un test drive o si ya cuentas con uno realiza el mantenimiento que te corresponda. Localiza la sucursal más cercana, aquí te esperamos!');
+INSERT INTO `config_site` VALUES ('5', 'meta_description_ficha', '¿Busca las últimas especificaciones de tu Kia favorito? Descargá las últimas fichas técnicas de Kia aquí.');
+INSERT INTO `config_site` VALUES ('6', 'meta_description_cotizar', 'COTIZA TU KIA! Permítanos ayudarle a comprarlo. Solicite una cotización aquí, y deje que uno de nuestros amables asesores lo guíe en sus próximos pasos.');
+INSERT INTO `config_site` VALUES ('7', 'meta_description_testdrive', '¿Listo para comprar su modelo favorito de Kia? Programe una prueba de manejo de su modelo Kia preferido hoy.');
+INSERT INTO `config_site` VALUES ('8', 'meta_description_postventa', 'En Kia nos comprometemos con ofrecerle una experiencia continua de servicio especializado y mejorado. Descubre más sobre nuestro servicio de post venta.');
+INSERT INTO `config_site` VALUES ('9', 'meta_description_talleres', '¿Busca un Centro de Servicio Kia autorizado? Déjenos ayudarle. Utilice la herramienta de Localización del Centro de Servicio Kia y localice el taller más cercano.');
+INSERT INTO `config_site` VALUES ('10', 'meta_description_repuestos', '¿Busca accesorios y piezas originales para tu Kia? No busque más. ¡Haga clic aquí y descubra cómo conseguir la las piezas y accesorios correctos de Kia para su Kia!');
+INSERT INTO `config_site` VALUES ('11', 'meta_description_vida0', 'Bienvenido a tu vida 0');
+INSERT INTO `config_site` VALUES ('12', 'meta_description_turno', 'En Kia nos comprometemos con ofrecerle una experiencia continua de servicio especializado y mejorado. Solicitá aquí un turno al taller o service en casa.');
+INSERT INTO `config_site` VALUES ('13', 'meta_description_laempresa', 'Acerca de Kia Paraguay');
+INSERT INTO `config_site` VALUES ('14', 'meta_description_filosofia', 'Conozca más acerca de la filosofía corporativa de Kia, el principio que nos guía, y una parte de la visión futurista de Kia.');
+INSERT INTO `config_site` VALUES ('15', 'meta_description_historia', 'La rica herencia de 70 años de Kia está adornada con una impresionante lista de logros y galardones. Lea más acerca de nuestro pasado y de cómo ha dado forma a nuestro futuro.');
+INSERT INTO `config_site` VALUES ('16', 'meta_description_sostenibilidad', 'Los esfuerzos de sostenibilidad de Kia se centran en proporcionar una diferencia positiva en el mundo a través de los coches. Lea nuestro informe de sostenibilidad para saber más.');
+INSERT INTO `config_site` VALUES ('17', 'meta_description_medioambiente', 'Kia Motors se preocupa por el medio ambiente. Lea más sobre nuestros logros en el funcionamiento medioambiental.');
+INSERT INTO `config_site` VALUES ('18', 'meta_description_diseno', 'Nuestros principios de diseño de motores son el corazón de nuestra filosofía de diseño en Kia, que guía a nuestros diseñadores de coches para crear los coches mejor diseñados del mundo. Lea más.');
+INSERT INTO `config_site` VALUES ('19', 'meta_description_corporativa', 'Lea acerca de nuestra identidad corporativa. Descubra el significado de nuestro logo y cómo simboliza nuestra responsabilidad, credibilidad y orgullo como fabricante de automóviles mundial.');
+INSERT INTO `config_site` VALUES ('20', 'meta_description_marca', 'Nuestro eslogan de marca \'El Poder de sorprender\' ejemplifica nuestro deseo de proporcionarle experiencias que superen sus expectativas. Lea más aquí.');
+INSERT INTO `config_site` VALUES ('21', 'meta_description_sorprendente', 'Sigue nuestro camino y descubre los resultados récord que creamos.');
 
 -- ----------------------------
 -- Table structure for departamento
@@ -182,11 +202,42 @@ CREATE TABLE `modelo_360` (
   `img` varchar(80) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_360
 -- ----------------------------
+INSERT INTO `modelo_360` VALUES ('1', '1', '1', '1_UD_L_0000.png', '1');
+INSERT INTO `modelo_360` VALUES ('2', '1', '1', '1_UD_L_0001.png', '1');
+INSERT INTO `modelo_360` VALUES ('3', '1', '1', '1_UD_L_0002.png', '1');
+INSERT INTO `modelo_360` VALUES ('4', '1', '1', '1_UD_L_0003.png', '1');
+INSERT INTO `modelo_360` VALUES ('5', '1', '1', '1_UD_L_0004.png', '1');
+INSERT INTO `modelo_360` VALUES ('6', '1', '1', '1_UD_L_0005.png', '1');
+INSERT INTO `modelo_360` VALUES ('7', '1', '1', '1_UD_L_0006.png', '1');
+INSERT INTO `modelo_360` VALUES ('8', '1', '1', '1_UD_L_0007.png', '1');
+INSERT INTO `modelo_360` VALUES ('9', '1', '1', '1_UD_L_0008.png', '1');
+INSERT INTO `modelo_360` VALUES ('10', '1', '1', '1_UD_L_0009.png', '1');
+INSERT INTO `modelo_360` VALUES ('11', '1', '1', '1_UD_L_0010.png', '1');
+INSERT INTO `modelo_360` VALUES ('12', '1', '1', '1_UD_L_0011.png', '1');
+INSERT INTO `modelo_360` VALUES ('13', '1', '1', '1_UD_L_0012.png', '1');
+INSERT INTO `modelo_360` VALUES ('14', '1', '1', '1_UD_L_0013.png', '1');
+INSERT INTO `modelo_360` VALUES ('15', '1', '1', '1_UD_L_0014.png', '1');
+INSERT INTO `modelo_360` VALUES ('16', '1', '1', '1_UD_L_0015.png', '1');
+INSERT INTO `modelo_360` VALUES ('17', '1', '1', '1_UD_L_0016.png', '1');
+INSERT INTO `modelo_360` VALUES ('18', '1', '1', '1_UD_L_0017.png', '1');
+INSERT INTO `modelo_360` VALUES ('19', '1', '1', '1_UD_L_0018.png', '1');
+INSERT INTO `modelo_360` VALUES ('20', '1', '1', '1_UD_L_0019.png', '1');
+INSERT INTO `modelo_360` VALUES ('21', '1', '1', '1_UD_L_0020.png', '1');
+INSERT INTO `modelo_360` VALUES ('22', '1', '1', '1_UD_L_0021.png', '1');
+INSERT INTO `modelo_360` VALUES ('23', '1', '1', '1_UD_L_0022.png', '1');
+INSERT INTO `modelo_360` VALUES ('24', '1', '1', '1_UD_L_0023.png', '1');
+INSERT INTO `modelo_360` VALUES ('25', '1', '1', '1_UD_L_0024.png', '1');
+INSERT INTO `modelo_360` VALUES ('26', '1', '1', '1_UD_L_0025.png', '1');
+INSERT INTO `modelo_360` VALUES ('27', '1', '1', '1_UD_L_0026.png', '1');
+INSERT INTO `modelo_360` VALUES ('28', '1', '1', '1_UD_L_0027.png', '1');
+INSERT INTO `modelo_360` VALUES ('29', '1', '1', '1_UD_L_0028.png', '1');
+INSERT INTO `modelo_360` VALUES ('30', '1', '1', '1_UD_L_0029.png', '1');
+INSERT INTO `modelo_360` VALUES ('31', '1', '1', '1_UD_L_0030.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_color
@@ -197,11 +248,12 @@ CREATE TABLE `modelo_color` (
   `id_modelo` int(11) unsigned DEFAULT NULL,
   `id_color` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_color
 -- ----------------------------
+INSERT INTO `modelo_color` VALUES ('1', '1', '1');
 
 -- ----------------------------
 -- Table structure for modelo_desempeno

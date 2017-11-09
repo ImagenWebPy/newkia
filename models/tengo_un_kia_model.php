@@ -112,7 +112,7 @@ class Tengo_un_kia_Model extends Model {
     public function enviarSolicitudTurno($data) {
         $id_tipo_servicio = $data['id_tipo_servicio'];
         $sqlServicio = $this->db->select("select descripcion from tipo_servicio where id = $id_tipo_servicio");
-        $sqlMail = $this->db->select("SELECT cm.`value` FROM `config_mail` cm where cm.`data` = 'turnos';");
+        $sqlMail = $this->db->select("SELECT cm.`value` FROM `config_site` cm where cm.`data` = 'turnos';");
         $tipoServicio = utf8_encode($sqlServicio[0]['descripcion']);
         //FALTA CODIFICAR ENVIO DE EMAIL
         $para = $sqlMail[0]['value'];

@@ -406,8 +406,8 @@ class Helper {
         return $sql;
     }
 
-    public function getConfigEmail($data) {
-        $sql = $this->db->select("SELECT cm.id, cm.`data`,cm.`value` FROM config_mail cm where cm.`data` = '$data';");
+    public function getConfigSite($data) {
+        $sql = $this->db->select("SELECT cm.id, cm.`data`,cm.`value` FROM config_site cm where cm.`data` = '$data';");
         return $sql[0];
     }
 

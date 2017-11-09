@@ -2,8 +2,11 @@
 
 class Compra_un_kia extends Controller {
 
+    private $meta_description = '';
+
     function __construct() {
         parent::__construct();
+        $this->meta_description = utf8_encode($this->helper->getConfigSite('meta_descripton')['value']);
     }
 
     public function arma_tu_kia() {
@@ -14,33 +17,44 @@ class Compra_un_kia extends Controller {
     }
 
     public function encuentra_tu_kia() {
+        if (!empty($this->helper->getConfigSite('meta_description_encuentra_tu_kia')['value']))
+            $this->meta_description = utf8_encode($this->helper->getConfigSite('meta_description_encuentra_tu_kia')['value']);
         $this->view->title = SITE_TITLE . 'Encuentra tu Kia';
         $this->view->meta_sitename = META_SITENAME;
+        $this->view->meta_description = $this->meta_description;
         $this->view->render('header');
         $this->view->render('compra_un_kia/encuentra_tu_kia');
         $this->view->render('footer');
     }
 
     public function ficha_tecnica() {
+        if (!empty($this->helper->getConfigSite('meta_description_ficha')['value']))
+            $this->meta_description = utf8_encode($this->helper->getConfigSite('meta_description_ficha')['value']);
         $this->view->title = SITE_TITLE . 'Ficha Técnica';
         $this->view->meta_sitename = META_SITENAME;
+        $this->view->meta_description = $this->meta_description;
         $this->view->render('header');
         $this->view->render('compra_un_kia/ficha_tecnica');
         $this->view->render('footer');
     }
 
     public function cotizar() {
+        if (!empty($this->helper->getConfigSite('meta_description_cotizar')['value']))
+            $this->meta_description = utf8_encode($this->helper->getConfigSite('meta_description_cotizar')['value']);
         $this->view->title = SITE_TITLE . 'Cotizar';
         $this->view->meta_sitename = META_SITENAME;
+        $this->view->meta_description = $this->meta_description;
         $this->view->render('header');
         $this->view->render('compra_un_kia/cotizar');
         $this->view->render('footer');
     }
 
     public function test_drive() {
+        if (!empty($this->helper->getConfigSite('meta_description_testdrive')['value']))
+            $this->meta_description = utf8_encode($this->helper->getConfigSite('meta_description_testdrive')['value']);
         $this->view->title = SITE_TITLE . 'Test Drive';
         $this->view->meta_sitename = META_SITENAME;
-        $this->view->title = 'Caracteristicas';
+        $this->view->meta_description = $this->meta_description;
         $this->view->render('header');
         $this->view->render('compra_un_kia/test_drive');
         $this->view->render('footer');

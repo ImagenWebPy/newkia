@@ -197,7 +197,7 @@ class Compra_un_kia_Model extends Model {
         $id_modelo = $data['modelo'];
         $modelo = $this->db->select("select descripcion from modelo where id = $id_modelo");
         $asunto = 'Formulario de Test Drive';
-        $mail = $this->helper->getConfigEmail('testdrive');
+        $mail = $this->helper->getConfigSite('testdrive');
         $para = $mail['value'];
         $mensaje = '
                                     <table width="800" border="0" cellspacing="0" cellpadding="5">
