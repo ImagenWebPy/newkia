@@ -47,8 +47,7 @@ define('HASH_PASSWORD_KEY', '!@123456789ABCDEFGHIJKLMNOPRSTWYZ[¿]{?}<->');
 
 //Constantes varias
 define('SITE_TITLE', 'Kia Motors :: ');
-define('ADMIN_TITLE', 'Administrador Usados :: ');
-define('TITLE_ADMIN', 'Institucional Admin :: ');
+define('ADMIN_TITLE', 'Administrador kIA :: ');
 define('THUMB_MENU', URL . 'public/img/vehiculos/imagenes/thumb-menu/');
 define('VEHICLE_LOGO', URL . 'public/img/vehiculos/logos/');
 define('CANT_REG', 9);

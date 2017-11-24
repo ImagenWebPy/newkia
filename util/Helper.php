@@ -475,4 +475,9 @@ class Helper {
         return $sql;
     }
 
+    public function getCantidadRegistrosSinLeer($tabla) {
+        $sql = $this->db->select("select count(*) as cantidad from $tabla where leido = 0");
+        return $sql[0]['cantidad'];
+    }
+
 }
