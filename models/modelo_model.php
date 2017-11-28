@@ -36,9 +36,9 @@ class Modelo_Model extends Model {
                             <a class="open_snb pointer"><span class="cmm_tspr spr_snb">gallery</span></a>
                             <!-- snb_nav open -->
                             <ul class="snb_nav">
-                                <li class="sdth1_l ' . $caracteristica . '"><a href="' . URL . 'modelo/caracteristica/' . $idModelo . '/' . utf8_encode($sqlModelo[0]['descripcion']) . '" class="sdth1_a">Características</a></li>
-                                <li class="sdth1_l ' . $galeria . '"><a href="' . URL . 'modelo/galeria/' . $idModelo . '/' . utf8_encode($sqlModelo[0]['descripcion']) . '" class="sdth1_a">Galería</a></li>
-                                <li class="sdth1_l ' . $especificacion . '"><a href="' . URL . 'modelo/especificacion/' . $idModelo . '/' . utf8_encode($sqlModelo[0]['descripcion']) . '" class="sdth1_a">Especificaciones</a></li>
+                                <li class="sdth1_l ' . $caracteristica . '"><a href="' . URL . 'modelo/caracteristica/' . $idModelo . '/' . $this->helper->cleanUrl(utf8_encode($sqlModelo[0]['descripcion'])) . '" class="sdth1_a">Características</a></li>
+                                <li class="sdth1_l ' . $galeria . '"><a href="' . URL . 'modelo/galeria/' . $idModelo . '/' . $this->helper->cleanUrl(utf8_encode($sqlModelo[0]['descripcion'])) . '" class="sdth1_a">Galería</a></li>
+                                <li class="sdth1_l ' . $especificacion . '"><a href="' . URL . 'modelo/especificacion/' . $idModelo . '/' . $this->helper->cleanUrl(utf8_encode($sqlModelo[0]['descripcion'])) . '" class="sdth1_a">Especificaciones</a></li>
                             </ul>
                             <!-- sales_kit open -->
                             <div class="sales_kit">
@@ -67,7 +67,8 @@ class Modelo_Model extends Model {
             'destacados' => '',
             'desempeno' => '',
             'seguridad' => '',
-            'compra' => ''
+            'compra' => '',
+            'secciones' => ''
         );
         $sqlGeneral = $this->db->select("SELECT img_m,
                                                 img_t,
@@ -82,7 +83,8 @@ class Modelo_Model extends Model {
                                                 mi.img_w,
                                                 mi.img_t,
                                                 mi.img_m,
-                                                (select img from modelo_imagenes_thumb mit where mit.id_modelo_imagenes = mi.id LIMIT 1) as ico
+                                                #(select img from modelo_imagenes_thumb mit where mit.id_modelo_imagenes = mi.id LIMIT 1) as ico
+                                                img_thumb as ico
                                         FROM modelo_imagenes mi
                                         where mi.estado = 1
                                         and mi.tipo = 'EXT'
@@ -155,6 +157,35 @@ class Modelo_Model extends Model {
         $data['destacados'] = $sqlDestacados;
         $data['desempeno'] = $sqlDesempeno;
         $data['seguridad'] = $sqlSeguridad;
+
+        $general = FALSE;
+        $exterior = FALSE;
+        $interior = FALSE;
+        $destacados = FALSE;
+        $desempeno = FALSE;
+        $seguridad = FALSE;
+        if (!empty($sqlGeneral[0]))
+            $general = TRUE;
+        if (!empty($sqlExterior))
+            $exterior = TRUE;
+        if (!empty($sqlInterior[0]))
+            $interior = TRUE;
+        if (!empty($sqlDestacados))
+            $destacados = TRUE;
+        if (!empty($sqlDesempeno))
+            $desempeno = TRUE;
+        if (!empty($sqlSeguridad))
+            $seguridad = TRUE;
+        $data['secciones'] = array(
+            'OVERVIEW' => array('titulo' => 'VISIÓN GENERAL', 'estado' => $general),
+            'EXTERIOR' => array('titulo' => 'EXTERIOR', 'estado' => $exterior),
+            'INTERIOR' => array('titulo' => 'INTERIOR', 'estado' => $interior),
+            'HIGHLIGHTS' => array('titulo' => 'DESTACADOS', 'estado' => $destacados),
+            'PERFORMANCE' => array('titulo' => 'DESEMPEÑO', 'estado' => $desempeno),
+            'SAFETY' => array('titulo' => 'SEGURIDAD', 'estado' => $sqlSeguridad),
+            'SHOPPING TOOLS' => array('titulo' => 'COMPRA UN KIA', 'estado' => TRUE),
+        );
+
         return $data;
     }
 
@@ -253,7 +284,7 @@ class Modelo_Model extends Model {
     }
 
     public function view360($idModelo) {
-        $sql = $this->db->select("SELECT img FROM `modelo_360` where id_modelo = 1 and estado = $idModelo;");
+        $sql = $this->db->select("SELECT img FROM `modelo_360` where id_modelo = $idModelo and estado = 1;");
         return $sql;
     }
 

@@ -135,9 +135,11 @@ $paginExt = ceil($cantExterior / 6);
                                 </div>
                                 <ul class="screen">
                                     <?php for ($i = 0; $i <= 5; $i++): ?>
-                                        <li>
-                                            <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['exterior'][$i]['img_w']; ?>" alt="<?= $datos['exterior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['exterior'][$i]['img_thumb']; ?>"></a>
-                                        </li>
+                                        <?php if (!empty($datos['exterior'][$i])): ?>
+                                            <li>
+                                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['exterior'][$i]['img_w']; ?>" alt="<?= $datos['exterior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['exterior'][$i]['img_thumb']; ?>"></a>
+                                            </li>
+                                        <?php endif; ?>
                                     <?php endfor; ?>
                                 </ul>
                                 <?php
@@ -151,9 +153,11 @@ $paginExt = ceil($cantExterior / 6);
                                     ?>
                                     <ul class="screen off" style="display:none;">
                                         <?php for ($i = 0; $i <= ($cantThumbExt - 1); $i++): ?>
-                                            <li>
-                                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['exterior'][$i]['img_w']; ?>" alt="<?= $datos['exterior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['exterior'][$i]['img_thumb']; ?>"></a>
-                                            </li>
+                                            <?php if (!empty($datos['exterior'][$i])): ?>
+                                                <li>
+                                                    <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['exterior'][$i]['img_w']; ?>" alt="<?= $datos['exterior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['exterior'][$i]['img_thumb']; ?>"></a>
+                                                </li>
+                                            <?php endif; ?>
                                         <?php endfor; ?>
                                     </ul>
                                 <?php endif; ?>
@@ -248,9 +252,11 @@ $paginExt = ceil($cantExterior / 6);
                                 </div>
                                 <ul class="screen">
                                     <?php for ($i = 0; $i <= 5; $i++): ?>
-                                        <li>
-                                            <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['interior'][$i]['img_w']; ?>" alt="<?= $datos['interior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['interior'][$i]['img_thumb']; ?>"></a>
-                                        </li>
+                                        <?php if (!empty($datos['interior'][$i])): ?>
+                                            <li>
+                                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['interior'][$i]['img_w']; ?>" alt="<?= $datos['interior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['interior'][$i]['img_thumb']; ?>"></a>
+                                            </li>
+                                        <?php endif; ?>
                                     <?php endfor; ?>
                                 </ul>
                                 <?php
@@ -264,9 +270,11 @@ $paginExt = ceil($cantExterior / 6);
                                     ?>
                                     <ul class="screen off" style="display:none;">
                                         <?php for ($i = 0; $i <= ($cantThumbExt - 1); $i++): ?>
-                                            <li>
-                                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['interior'][$i]['img_w']; ?>" alt="<?= $datos['interior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['interior'][$i]['img_thumb']; ?>"></a>
-                                            </li>
+                                            <?php if (!empty($datos['interior'][$i])): ?>
+                                                <li>
+                                                    <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');"><img title="<?= $datos['interior'][$i]['img_w']; ?>" alt="<?= $datos['interior'][$i]['img_w']; ?>" src="<?= URL; ?>public/img/vehiculos/imagenes/galeria/thumb/<?= $datos['interior'][$i]['img_thumb']; ?>"></a>
+                                                </li>
+                                            <?php endif; ?>
                                         <?php endfor; ?>
                                     </ul>
                                 <?php endif; ?>
