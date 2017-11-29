@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-28 16:50:13
+Date: 2017-11-29 18:31:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -205,13 +205,15 @@ CREATE TABLE `modelo` (
   `img_m` varchar(80) DEFAULT NULL,
   `estado` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo
 -- ----------------------------
 INSERT INTO `modelo` VALUES ('1', '1', 'Cerato', '5 años o 100.00 Km.', 'cerato.png', '1_cerato-thumb-menu.png', '1_Cerato_2017_baja.pdf', 'Deje que el nuevo Cerato lo lleve a lugares que usted sólo había imaginado.', '1_kia-cerato-forte-yd-byo-w.png', '1_kia-cerato-forte-yd-byo-t.png', '1_kia-cerato-forte-yd-byo-m.png', '1');
 INSERT INTO `modelo` VALUES ('2', '1', 'All New Rio Sedán', '5 años o 100.00 Km.', 'all-new-rio', '2_rio-sedan-thumb-menu.png', '2_Volante_NEW_RIO_2018_baja.pdf', 'Talentoso. Elegante. Supremo y funcional. El Kia Rio Sedán 4 Puertas es sencillamente el mejor coche de su clase. Compruebe su precio, interior y exterior.\r\n', '2_rio-sedan-w.png', '2_rio-sedan-t.png', '2_rio-sedan-m.png', '1');
+INSERT INTO `modelo` VALUES ('3', '1', 'All New Rio Hatch', '5 años o 100.00 Km.', 'all-new-rio', '3_rio_hatch-thumb.png', '3_all_new_Rio_Hatch.pdf', 'Entra ahora y conoce el All New Rio, un Hatchback que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '3_rio_hatch_w.png', '3_rio_hatch_t.png', '3_rio_hatch_m.png', '1');
+INSERT INTO `modelo` VALUES ('4', '1', 'Picanto', '5 años o 100.00 Km.', '4_picanto.png', '4_picanto_thumb.png', '4_picanto_baja.pdf', 'Descubre el deportivo Kia Picanto con la mejor garantía del mercado. Conozca más sobre su precio, rendimiento, seguridad y características.', '4_kia_picanto_w.png', '4_kia_picanto_t.png', '4_kia_picanto_m.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_360
@@ -225,7 +227,7 @@ CREATE TABLE `modelo_360` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_360` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=145 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=253 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_360
@@ -374,6 +376,114 @@ INSERT INTO `modelo_360` VALUES ('141', '2', '2', '2_all_new_rio_sedan_68.png', 
 INSERT INTO `modelo_360` VALUES ('142', '2', '2', '2_all_new_rio_sedan_69.png', '1');
 INSERT INTO `modelo_360` VALUES ('143', '2', '2', '2_all_new_rio_sedan_70.png', '1');
 INSERT INTO `modelo_360` VALUES ('144', '2', '2', '2_all_new_rio_sedan_71.png', '1');
+INSERT INTO `modelo_360` VALUES ('145', '3', null, '3_kia-rio_2017-2-clear-white_0000.png', '1');
+INSERT INTO `modelo_360` VALUES ('146', '3', null, '3_kia-rio_2017-2-clear-white_0001.png', '1');
+INSERT INTO `modelo_360` VALUES ('147', '3', null, '3_kia-rio_2017-2-clear-white_0002.png', '1');
+INSERT INTO `modelo_360` VALUES ('148', '3', null, '3_kia-rio_2017-2-clear-white_0003.png', '1');
+INSERT INTO `modelo_360` VALUES ('149', '3', null, '3_kia-rio_2017-2-clear-white_0004.png', '1');
+INSERT INTO `modelo_360` VALUES ('150', '3', null, '3_kia-rio_2017-2-clear-white_0005.png', '1');
+INSERT INTO `modelo_360` VALUES ('151', '3', null, '3_kia-rio_2017-2-clear-white_0006.png', '1');
+INSERT INTO `modelo_360` VALUES ('152', '3', null, '3_kia-rio_2017-2-clear-white_0007.png', '1');
+INSERT INTO `modelo_360` VALUES ('153', '3', null, '3_kia-rio_2017-2-clear-white_0008.png', '1');
+INSERT INTO `modelo_360` VALUES ('154', '3', null, '3_kia-rio_2017-2-clear-white_0009.png', '1');
+INSERT INTO `modelo_360` VALUES ('155', '3', null, '3_kia-rio_2017-2-clear-white_0010.png', '1');
+INSERT INTO `modelo_360` VALUES ('156', '3', null, '3_kia-rio_2017-2-clear-white_0011.png', '1');
+INSERT INTO `modelo_360` VALUES ('157', '3', null, '3_kia-rio_2017-2-clear-white_0012.png', '1');
+INSERT INTO `modelo_360` VALUES ('158', '3', null, '3_kia-rio_2017-2-clear-white_0013.png', '1');
+INSERT INTO `modelo_360` VALUES ('159', '3', null, '3_kia-rio_2017-2-clear-white_0014.png', '1');
+INSERT INTO `modelo_360` VALUES ('160', '3', null, '3_kia-rio_2017-2-clear-white_0015.png', '1');
+INSERT INTO `modelo_360` VALUES ('161', '3', null, '3_kia-rio_2017-2-clear-white_0016.png', '1');
+INSERT INTO `modelo_360` VALUES ('162', '3', null, '3_kia-rio_2017-2-clear-white_0017.png', '1');
+INSERT INTO `modelo_360` VALUES ('163', '3', null, '3_kia-rio_2017-2-clear-white_0018.png', '1');
+INSERT INTO `modelo_360` VALUES ('164', '3', null, '3_kia-rio_2017-2-clear-white_0019.png', '1');
+INSERT INTO `modelo_360` VALUES ('165', '3', null, '3_kia-rio_2017-2-clear-white_0020.png', '1');
+INSERT INTO `modelo_360` VALUES ('166', '3', null, '3_kia-rio_2017-2-clear-white_0021.png', '1');
+INSERT INTO `modelo_360` VALUES ('167', '3', null, '3_kia-rio_2017-2-clear-white_0022.png', '1');
+INSERT INTO `modelo_360` VALUES ('168', '3', null, '3_kia-rio_2017-2-clear-white_0023.png', '1');
+INSERT INTO `modelo_360` VALUES ('169', '3', null, '3_kia-rio_2017-2-clear-white_0024.png', '1');
+INSERT INTO `modelo_360` VALUES ('170', '3', null, '3_kia-rio_2017-2-clear-white_0025.png', '1');
+INSERT INTO `modelo_360` VALUES ('171', '3', null, '3_kia-rio_2017-2-clear-white_0026.png', '1');
+INSERT INTO `modelo_360` VALUES ('172', '3', null, '3_kia-rio_2017-2-clear-white_0027.png', '1');
+INSERT INTO `modelo_360` VALUES ('173', '3', null, '3_kia-rio_2017-2-clear-white_0028.png', '1');
+INSERT INTO `modelo_360` VALUES ('174', '3', null, '3_kia-rio_2017-2-clear-white_0029.png', '1');
+INSERT INTO `modelo_360` VALUES ('175', '3', null, '3_kia-rio_2017-2-clear-white_0030.png', '1');
+INSERT INTO `modelo_360` VALUES ('176', '3', null, '3_kia-rio_2017-2-clear-white_0031.png', '1');
+INSERT INTO `modelo_360` VALUES ('177', '3', null, '3_kia-rio_2017-2-clear-white_0032.png', '1');
+INSERT INTO `modelo_360` VALUES ('178', '3', null, '3_kia-rio_2017-2-clear-white_0033.png', '1');
+INSERT INTO `modelo_360` VALUES ('179', '3', null, '3_kia-rio_2017-2-clear-white_0034.png', '1');
+INSERT INTO `modelo_360` VALUES ('180', '3', null, '3_kia-rio_2017-2-clear-white_0035.png', '1');
+INSERT INTO `modelo_360` VALUES ('181', '3', null, '3_kia-rio_2017-2-clear-white_0036.png', '1');
+INSERT INTO `modelo_360` VALUES ('182', '3', null, '3_kia-rio_2017-2-clear-white_0037.png', '1');
+INSERT INTO `modelo_360` VALUES ('183', '3', null, '3_kia-rio_2017-2-clear-white_0038.png', '1');
+INSERT INTO `modelo_360` VALUES ('184', '3', null, '3_kia-rio_2017-2-clear-white_0039.png', '1');
+INSERT INTO `modelo_360` VALUES ('185', '3', null, '3_kia-rio_2017-2-clear-white_0040.png', '1');
+INSERT INTO `modelo_360` VALUES ('186', '3', null, '3_kia-rio_2017-2-clear-white_0041.png', '1');
+INSERT INTO `modelo_360` VALUES ('187', '3', null, '3_kia-rio_2017-2-clear-white_0042.png', '1');
+INSERT INTO `modelo_360` VALUES ('188', '3', null, '3_kia-rio_2017-2-clear-white_0043.png', '1');
+INSERT INTO `modelo_360` VALUES ('189', '3', null, '3_kia-rio_2017-2-clear-white_0044.png', '1');
+INSERT INTO `modelo_360` VALUES ('190', '3', null, '3_kia-rio_2017-2-clear-white_0045.png', '1');
+INSERT INTO `modelo_360` VALUES ('191', '3', null, '3_kia-rio_2017-2-clear-white_0046.png', '1');
+INSERT INTO `modelo_360` VALUES ('192', '3', null, '3_kia-rio_2017-2-clear-white_0047.png', '1');
+INSERT INTO `modelo_360` VALUES ('193', '3', null, '3_kia-rio_2017-2-clear-white_0048.png', '1');
+INSERT INTO `modelo_360` VALUES ('194', '3', null, '3_kia-rio_2017-2-clear-white_0049.png', '1');
+INSERT INTO `modelo_360` VALUES ('195', '3', null, '3_kia-rio_2017-2-clear-white_0050.png', '1');
+INSERT INTO `modelo_360` VALUES ('196', '3', null, '3_kia-rio_2017-2-clear-white_0051.png', '1');
+INSERT INTO `modelo_360` VALUES ('197', '3', null, '3_kia-rio_2017-2-clear-white_0052.png', '1');
+INSERT INTO `modelo_360` VALUES ('198', '3', null, '3_kia-rio_2017-2-clear-white_0053.png', '1');
+INSERT INTO `modelo_360` VALUES ('199', '3', null, '3_kia-rio_2017-2-clear-white_0054.png', '1');
+INSERT INTO `modelo_360` VALUES ('200', '3', null, '3_kia-rio_2017-2-clear-white_0055.png', '1');
+INSERT INTO `modelo_360` VALUES ('201', '3', null, '3_kia-rio_2017-2-clear-white_0056.png', '1');
+INSERT INTO `modelo_360` VALUES ('202', '3', null, '3_kia-rio_2017-2-clear-white_0057.png', '1');
+INSERT INTO `modelo_360` VALUES ('203', '3', null, '3_kia-rio_2017-2-clear-white_0058.png', '1');
+INSERT INTO `modelo_360` VALUES ('204', '3', null, '3_kia-rio_2017-2-clear-white_0059.png', '1');
+INSERT INTO `modelo_360` VALUES ('205', '3', null, '3_kia-rio_2017-2-clear-white_0060.png', '1');
+INSERT INTO `modelo_360` VALUES ('206', '3', null, '3_kia-rio_2017-2-clear-white_0061.png', '1');
+INSERT INTO `modelo_360` VALUES ('207', '3', null, '3_kia-rio_2017-2-clear-white_0062.png', '1');
+INSERT INTO `modelo_360` VALUES ('208', '3', null, '3_kia-rio_2017-2-clear-white_0063.png', '1');
+INSERT INTO `modelo_360` VALUES ('209', '3', null, '3_kia-rio_2017-2-clear-white_0064.png', '1');
+INSERT INTO `modelo_360` VALUES ('210', '3', null, '3_kia-rio_2017-2-clear-white_0065.png', '1');
+INSERT INTO `modelo_360` VALUES ('211', '3', null, '3_kia-rio_2017-2-clear-white_0066.png', '1');
+INSERT INTO `modelo_360` VALUES ('212', '3', null, '3_kia-rio_2017-2-clear-white_0067.png', '1');
+INSERT INTO `modelo_360` VALUES ('213', '3', null, '3_kia-rio_2017-2-clear-white_0068.png', '1');
+INSERT INTO `modelo_360` VALUES ('214', '3', null, '3_kia-rio_2017-2-clear-white_0069.png', '1');
+INSERT INTO `modelo_360` VALUES ('215', '3', null, '3_kia-rio_2017-2-clear-white_0070.png', '1');
+INSERT INTO `modelo_360` VALUES ('216', '3', null, '3_kia-rio_2017-2-clear-white_0071.png', '1');
+INSERT INTO `modelo_360` VALUES ('217', '4', null, '4_picanto-feature-360vr-clearwhite-01.png', '1');
+INSERT INTO `modelo_360` VALUES ('218', '4', null, '4_picanto-feature-360vr-clearwhite-02.png', '1');
+INSERT INTO `modelo_360` VALUES ('219', '4', null, '4_picanto-feature-360vr-clearwhite-03.png', '1');
+INSERT INTO `modelo_360` VALUES ('220', '4', null, '4_picanto-feature-360vr-clearwhite-04.png', '1');
+INSERT INTO `modelo_360` VALUES ('221', '4', null, '4_picanto-feature-360vr-clearwhite-05.png', '1');
+INSERT INTO `modelo_360` VALUES ('222', '4', null, '4_picanto-feature-360vr-clearwhite-06.png', '1');
+INSERT INTO `modelo_360` VALUES ('223', '4', null, '4_picanto-feature-360vr-clearwhite-07.png', '1');
+INSERT INTO `modelo_360` VALUES ('224', '4', null, '4_picanto-feature-360vr-clearwhite-08.png', '1');
+INSERT INTO `modelo_360` VALUES ('225', '4', null, '4_picanto-feature-360vr-clearwhite-09.png', '1');
+INSERT INTO `modelo_360` VALUES ('226', '4', null, '4_picanto-feature-360vr-clearwhite-10.png', '1');
+INSERT INTO `modelo_360` VALUES ('227', '4', null, '4_picanto-feature-360vr-clearwhite-11.png', '1');
+INSERT INTO `modelo_360` VALUES ('228', '4', null, '4_picanto-feature-360vr-clearwhite-12.png', '1');
+INSERT INTO `modelo_360` VALUES ('229', '4', null, '4_picanto-feature-360vr-clearwhite-13.png', '1');
+INSERT INTO `modelo_360` VALUES ('230', '4', null, '4_picanto-feature-360vr-clearwhite-14.png', '1');
+INSERT INTO `modelo_360` VALUES ('231', '4', null, '4_picanto-feature-360vr-clearwhite-15.png', '1');
+INSERT INTO `modelo_360` VALUES ('232', '4', null, '4_picanto-feature-360vr-clearwhite-16.png', '1');
+INSERT INTO `modelo_360` VALUES ('233', '4', null, '4_picanto-feature-360vr-clearwhite-17.png', '1');
+INSERT INTO `modelo_360` VALUES ('234', '4', null, '4_picanto-feature-360vr-clearwhite-18.png', '1');
+INSERT INTO `modelo_360` VALUES ('235', '4', null, '4_picanto-feature-360vr-clearwhite-19.png', '1');
+INSERT INTO `modelo_360` VALUES ('236', '4', null, '4_picanto-feature-360vr-clearwhite-20.png', '1');
+INSERT INTO `modelo_360` VALUES ('237', '4', null, '4_picanto-feature-360vr-clearwhite-21.png', '1');
+INSERT INTO `modelo_360` VALUES ('238', '4', null, '4_picanto-feature-360vr-clearwhite-22.png', '1');
+INSERT INTO `modelo_360` VALUES ('239', '4', null, '4_picanto-feature-360vr-clearwhite-23.png', '1');
+INSERT INTO `modelo_360` VALUES ('240', '4', null, '4_picanto-feature-360vr-clearwhite-24.png', '1');
+INSERT INTO `modelo_360` VALUES ('241', '4', null, '4_picanto-feature-360vr-clearwhite-25.png', '1');
+INSERT INTO `modelo_360` VALUES ('242', '4', null, '4_picanto-feature-360vr-clearwhite-26.png', '1');
+INSERT INTO `modelo_360` VALUES ('243', '4', null, '4_picanto-feature-360vr-clearwhite-27.png', '1');
+INSERT INTO `modelo_360` VALUES ('244', '4', null, '4_picanto-feature-360vr-clearwhite-28.png', '1');
+INSERT INTO `modelo_360` VALUES ('245', '4', null, '4_picanto-feature-360vr-clearwhite-29.png', '1');
+INSERT INTO `modelo_360` VALUES ('246', '4', null, '4_picanto-feature-360vr-clearwhite-30.png', '1');
+INSERT INTO `modelo_360` VALUES ('247', '4', null, '4_picanto-feature-360vr-clearwhite-31.png', '1');
+INSERT INTO `modelo_360` VALUES ('248', '4', null, '4_picanto-feature-360vr-clearwhite-32.png', '1');
+INSERT INTO `modelo_360` VALUES ('249', '4', null, '4_picanto-feature-360vr-clearwhite-33.png', '1');
+INSERT INTO `modelo_360` VALUES ('250', '4', null, '4_picanto-feature-360vr-clearwhite-34.png', '1');
+INSERT INTO `modelo_360` VALUES ('251', '4', null, '4_picanto-feature-360vr-clearwhite-35.png', '1');
+INSERT INTO `modelo_360` VALUES ('252', '4', null, '4_picanto-feature-360vr-clearwhite-36.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_color
@@ -407,7 +517,7 @@ CREATE TABLE `modelo_desempeno` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_desempeno
@@ -420,6 +530,12 @@ INSERT INTO `modelo_desempeno` VALUES ('5', '1', 'Transmisión automática de 6 
 INSERT INTO `modelo_desempeno` VALUES ('6', '2', 'Motor', 'Equipados con motor de inyección multipunto (MPI) de 1.4 litros, con su reconocida eficiencia, economía y durabilidad.', '2_Allnew_rio_sedan_performance_01_w.jpg', '2_Allnew_rio_sedan_performance_01_t.jpg', '2_Allnew_rio_sedan_performance_01_m.jpg', '1', '1');
 INSERT INTO `modelo_desempeno` VALUES ('7', '2', 'Transmisión mecánica de 6 velocidades', 'Toma el control del camino y lleva al límite tu All New Rio', '2_img_performance_detail2.jpg', '2_img_performance_detail2.jpg', '2_img_performance_detail2.jpg', '0', '1');
 INSERT INTO `modelo_desempeno` VALUES ('8', '2', 'Transmisión automática de 6 velocidades', 'Olvídate de los cambios manuales y disfruta de cada segundo manejando.', '2_img_performance_detail1.jpg', '2_img_performance_detail1.jpg', '2_img_performance_detail1.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('9', '3', 'El poder de seguir adelante', 'El nuevo Kia Rio combina la eficiencia de ahorro de combustible con una reserva constante de energía. Su manejo alrededor de la ciudad es suave y ágil, y cuando la velocidad es necesaria, le encantará el rendimiento que ofrece.	', '3_kia-rio-sc-performancekv-w.jpg', '3_kia-rio-sc-performancekv-w.jpg', '3_kia-rio-sc-performancekv-w.jpg', '1', '1');
+INSERT INTO `modelo_desempeno` VALUES ('13', '3', 'Transmisión automática de 6 velocidades', 'Transmisión automática de 6 velocidades. Transfiere con ligero esfuerzo del motor a las ruedas.', '2_img_performance_detail1.jpg', '2_img_performance_detail1.jpg', '2_img_performance_detail1.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('14', '3', 'Transmisión mecánica de 6 velocidades', 'Eficiente transmisión manual de 6 velocidades que ofrece cambios rápidos y suaves.', '2_img_performance_detail2.jpg', '2_img_performance_detail2.jpg', '2_img_performance_detail2.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('15', '4', 'Motor', '1.000 cc.<br>\r\nDOHC 12 válvulas<br>\r\ninyección multipunto', '4_kia-picanto-performance-01-2-w.jpg', '4_kia-picanto-performance-01-2-t.jpg', '4_kia-picanto-performance-01-2-m.jpg', '1', '1');
+INSERT INTO `modelo_desempeno` VALUES ('16', '4', 'Transmision Automática', 'Transmisión automática para los que buscan la comodidad y practicidad por sobre todo.', '4_kia-performance-detail1_960-w.jpg', '4_kia-performance-detail1_960-t.jpg', '4_kia-performance-detail1_960-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('17', '4', 'Transmision Manual', 'Tanto la transmisión manual de 5 velocidades como la transmisión automática de 4 velocidades ofrecen cambios de marcha suaves y a su vez silenciosos.', '4_picanto-2017-showroom-features-performance-thumbnail-02-w.jpg', '4_picanto-2017-showroom-features-performance-thumbnail-02-t.jpg', '4_picanto-2017-showroom-features-performance-thumbnail-02-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_destacado
@@ -436,7 +552,7 @@ CREATE TABLE `modelo_destacado` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_destacado
@@ -445,6 +561,10 @@ INSERT INTO `modelo_destacado` VALUES ('1', '1', 'Detección de punto ciego', 'U
 INSERT INTO `modelo_destacado` VALUES ('2', '1', 'Sistema de asistencia de aparcamiento delantero y trasero', 'Activado por un interruptor en la consola del piso, el sistema de asistencia de estacionamiento delantero y trasero muestra la distancia entre el automóvil y cualquier obstrucción por medio de un gráfico en el grupo de supervisión.', '1_kia-pop-cerato-forte-yd-highlights-01-w.jpg', '1_kia-pop-cerato-forte-yd-highlights-01-t.jpg', '1_kia-pop-cerato-forte-yd-highlights-01-m.jpg', '0', '1');
 INSERT INTO `modelo_destacado` VALUES ('3', '1', 'Sistema de 6 airbags', 'El nuevo sistema de bolsas de aire de Cerato comprende bolsas de aire para el conductor y el asiento delantero, bolsas de aire laterales delanteras, además de bolsas de aire de cortina que recorren todo el interior a cada lado.', '1_kia-pop-cerato-forte-yd-highlights-02-w.jpg', '1_kia-pop-cerato-forte-yd-highlights-02-t.jpg', '1_kia-pop-cerato-forte-yd-highlights-02-m.jpg', '0', '1');
 INSERT INTO `modelo_destacado` VALUES ('4', '1', 'Sistema de baulera inteligente', 'Ya no es necesario hacer malabares con sus comestibles, equipaje y paraguas. Configure la tapa del maletero para que se abra automáticamente cuando la llave inteligente esté en el área de detección durante al menos tres segundos.', '1_kia-pop-cerato-forte-yd-highlights-03-w.jpg', '1_kia-pop-cerato-forte-yd-highlights-03-t.jpg', '1_kia-pop-cerato-forte-yd-highlights-03-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('5', '3', 'Todo el espacio necesario para vivir sus sueños', 'Ya sea para un día en la ciudad o el viaje de la vida, el nuevo Kia Rio hace que la buena vida sea más fácil de alcanzar. Familiarizate con sus metodos inteligentes de almacenar cargas y poner a la gente comoda.', '3_kia-rio-5-door-highlights-01-w.jpg', '3_kia-rio-5-door-highlights-01-t.jpg', '3_kia-rio-5-door-highlights-01-m.jpg', '1', '1');
+INSERT INTO `modelo_destacado` VALUES ('6', '3', 'Red de equipaje', 'Una red elástica mantiene el equipaje de moverse en el espacio de carga.', '3_kia-rio-5-door-highlights-02-w.jpg', '3_kia-rio-5-door-highlights-02-t.jpg', '3_kia-rio-5-door-highlights-02-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('7', '3', 'Estante de cubierta', 'Con un estante trasero que mantiene la carga y el equipaje fuera de la vista. Se levanta al momento de abrir el maletero.', '3_kia-rio-5-door-highlights-03-w.jpg', '3_kia-rio-5-door-highlights-03-t.jpg', '3_kia-rio-5-door-highlights-03-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('8', '3', 'Sistema de auto desempañador', 'El desempañador automático detecta la niebla en el parabrisa y automáticamente despliega los ventiladores para limpiar el vidrio.', '3_kia-rio-5-door-highlights-04-w.jpg', '3_kia-rio-5-door-highlights-04-t.jpg', '3_kia-rio-5-door-highlights-04-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension
@@ -460,13 +580,15 @@ CREATE TABLE `modelo_dimension` (
   `img_all` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension
 -- ----------------------------
 INSERT INTO `modelo_dimension` VALUES ('1', '1', '4.560', '1.780', '1.460', null, '1_kia-cerato-forte-yd-dimensions-all-view.png', '1');
 INSERT INTO `modelo_dimension` VALUES ('2', '2', '4.385', '1.725', '1.475', '2.580', '2_Allnew_rio_sedan_dimension_04_w.png', '1');
+INSERT INTO `modelo_dimension` VALUES ('3', '3', '4.065', '1.725', '1.460', '2.580', '3_kia-rio-sc-dimensions-all-view.png', '1');
+INSERT INTO `modelo_dimension` VALUES ('4', '4', '3.595', '1.595', '1.480', '2.385', '4_picanto-ta-pe-dimensions-all-view.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension_img
@@ -480,7 +602,7 @@ CREATE TABLE `modelo_dimension_img` (
   `img_t` varchar(120) DEFAULT NULL,
   `img_m` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension_img
@@ -491,6 +613,12 @@ INSERT INTO `modelo_dimension_img` VALUES ('3', '1', 'LATERAL', '1_kia-cerato-fo
 INSERT INTO `modelo_dimension_img` VALUES ('4', '2', 'FRENTE', '2_Allnew_rio_sedan_dimension_01_w.png', '2_Allnew_rio_sedan_dimension_01_t.png', '2_Allnew_rio_sedan_dimension_01_m.png');
 INSERT INTO `modelo_dimension_img` VALUES ('5', '2', 'ATRAS', '2_Allnew_rio_sedan_dimension_02_w.png', '2_Allnew_rio_sedan_dimension_02_t.png', '2_Allnew_rio_sedan_dimension_02_m.png');
 INSERT INTO `modelo_dimension_img` VALUES ('6', '2', 'LATERAL', '2_Allnew_rio_sedan_dimension_03_w.png', '2_Allnew_rio_sedan_dimension_03_t.png', '2_Allnew_rio_sedan_dimension_03_m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('7', '3', 'FRENTE', '3_kia-rio-sc-dimensions-slide-list-01_w.png', '3_kia-rio-sc-dimensions-slide-list-01_t.png', '3_kia-rio-sc-dimensions-slide-list-01_m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('8', '3', 'ATRAS', '3_kia-rio-sc-dimensions-slide-list-02_w.png', '3_kia-rio-sc-dimensions-slide-list-02_t.png', '3_kia-rio-sc-dimensions-slide-list-02_m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('9', '3', 'LATERAL', '3_kia-rio-sc-dimensions-slide-list-03_w.png', '3_kia-rio-sc-dimensions-slide-list-03_t.png', '3_kia-rio-sc-dimensions-slide-list-03_m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('10', '4', 'FRENTE', '4_picanto-ta-pe-dimensions-slide-list-01-w.png', '4_picanto-ta-pe-dimensions-slide-list-01-t.png', '4_picanto-ta-pe-dimensions-slide-list-01-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('11', '4', 'ATRAS', '4_picanto-ta-pe-dimensions-slide-list-02-w.png', '4_picanto-ta-pe-dimensions-slide-list-02-t.png', '4_picanto-ta-pe-dimensions-slide-list-02-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('12', '4', 'LATERAL', '4_picanto-ta-pe-dimensions-slide-list-03-w.png', '4_picanto-ta-pe-dimensions-slide-list-03-t.png', '4_picanto-ta-pe-dimensions-slide-list-03-m.png');
 
 -- ----------------------------
 -- Table structure for modelo_especificacion
@@ -538,13 +666,15 @@ CREATE TABLE `modelo_general` (
   `descripcion` varchar(160) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_general
 -- ----------------------------
 INSERT INTO `modelo_general` VALUES ('1', '1', '1_kia-cerato-forte-yd-overview-02-w.jpg', '1_kia-cerato-forte-yd-overview-02-t.jpg', '1_kia-cerato-forte-yd-overview-02-m.jpg', 'CERATO', 'Un regalo de verdadera innovación', '1');
 INSERT INTO `modelo_general` VALUES ('2', '2', '2_general_rio_w.jpg', '2_general_rio_t.jpg', '2_general_rio_m.jpg', 'All New Rio Sedán', 'Totalmente Nuevo Kia Rio', '1');
+INSERT INTO `modelo_general` VALUES ('3', '3', '3_rio_hatch_general_w.jpg', '3_rio_hatch_general_t.jpg', '3_rio_hatch_general_m.jpg', 'MÁS GRANDE, MÁS AUDAZ Y LISTO PARA LA AVENTURA', null, '1');
+INSERT INTO `modelo_general` VALUES ('4', '4', '4_kia-picanto-overview-01-w.jpg', '4_kia-picanto-overview-01-t.jpg', '4_kia-picanto-overview-01-m.jpg', 'Todo en un Picanto', 'Conducir debería ser una extensión de ti mismo. Di hola al nuevo Picanto.', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes
@@ -570,7 +700,7 @@ CREATE TABLE `modelo_imagenes` (
   `orden` int(1) unsigned DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_imagenes
@@ -633,6 +763,41 @@ INSERT INTO `modelo_imagenes` VALUES ('56', '2', 'INT', null, null, null, '2_kia
 INSERT INTO `modelo_imagenes` VALUES ('57', '2', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-06.jpg', '2_kia-rio-5-door-wide-b-interior-06-w.jpg', '2_kia-rio-5-door-wide-b-interior-06-t.jpg', '2_kia-rio-5-door-wide-b-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 INSERT INTO `modelo_imagenes` VALUES ('58', '2', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-07.jpg', '2_kia-rio-5-door-wide-b-interior-07-w.jpg', '2_kia-rio-5-door-wide-b-interior-07-t.jpg', '2_kia-rio-5-door-wide-b-interior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 INSERT INTO `modelo_imagenes` VALUES ('59', '2', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-08.jpg', '2_kia-rio-5-door-wide-b-interior-08-w.jpg', '2_kia-rio-5-door-wide-b-interior-08-t.jpg', '2_kia-rio-5-door-wide-b-interior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('60', '3', 'EXT', 'Diseño con espíritu dinámico y deportivo', 'El increíble y atractivo diseño del All New Rio te llevará a vivir al máximo cada momento de tu vida.', null, '3_ico_rio_hatch_exterior_01_on.png', '3_Allnew_rio_hatchback_exterior_02_w.jpg', '3_Allnew_rio_hatchback_exterior_02_t.jpg', '3_Allnew_rio_hatchback_exterior_02_m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('61', '3', 'EXT', 'Un auto insuperable', 'El nuevo diseño exterior y la mejor tecnología en su interior se unen para crear All New Rio', null, '3_ico_rio_hatch_exterior_02_on.png', '3_Allnew_rio_hatchback_exterior_03_w.jpg', '3_Allnew_rio_hatchback_exterior_03_t.jpg', '3_Allnew_rio_hatchback_exterior_03_m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('62', '3', 'EXT', 'Spoiler trasero', 'Un Spoiler trasero mejora el vótice de aire alrededor del pilar C, para mejorar la fuerza aerodinámica en las llantas traseras.', null, null, '3_kia-rio-5-door-exterior-08-w.jpg', '3_kia-rio-5-door-exterior-08-t.jpg', '3_kia-rio-5-door-exterior-08-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('63', '3', 'EXT', 'Espejos exteriores rebatibles eléctronicamente', 'Mira tu camino favorito con la mejor tecnología', null, null, '2_kia_rio_sedan_exterior_03_w.jpg', '2_kia_rio_sedan_exterior_03_t.jpg', '2_kia_rio_sedan_exterior_03_m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('64', '3', 'EXT', 'Parrilla del Radiador', 'Nuestra icónica parrilla del radiador ha sido completamente reestructurada. La mayor parte del flujo de aire es utilizado para el enfriamiento eficiente del motor.', null, null, '2_kia-rio-5-door-exterior-06-w.jpg', '2_kia-rio-5-door-exterior-06-t.jpg', '2_kia-rio-5-door-exterior-06-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('65', '3', 'INT', 'Espacio interior rediseñado', 'Brinda una experiencia de conducción mucho más segura y confortable con un toque refinado y elegante que está presente en todos los materiales del vehículo.', null, null, '3_kia-rio-5-door-interior-01-w.jpg', '3_kia-rio-5-door-interior-01-t.jpg', '3_kia-rio-5-door-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('66', '3', 'INT', 'Asientos de segunda fila plegables', 'Los asientos traseros se pliegan completamente planos. Cuando sea necesario se pueden acomodar objetos largos o voluminosos en el espacio de atrás extendida.', null, null, '3_kia-rio-5-door-interior-10-w.jpg', '3_kia-rio-5-door-interior-10-t.jpg', '3_kia-rio-5-door-interior-10-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('67', '3', 'INT', 'Aire Acondicionado Manual', 'Sencillos botones que permiten ajustar la temperatura rápidamente con la mínima distracción.', null, null, '2_kia-rio-sc-interior-05-w.jpg', '2_kia-rio-sc-interior-05-t.jpg', '2_kia-rio-sc-interior-05-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('68', '3', 'INT', 'Controles de audio en el volante', 'Ajuste las opciones de audio solo utilizando el\r\npulgar para una mayor seguridad de conducción.', null, null, '2_kia-rio-sc-interior-02-w.jpg', '2_kia-rio-sc-interior-02-t.jpg', '2_kia-rio-sc-interior-02-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('69', '3', 'INT', 'Entrada auxiliar de audio y usb', 'Tu música favorita siempre estará abordo de tu All New Rio', null, null, '2_kia-rio-sc-interior-04-w.jpg', '2_kia-rio-sc-interior-04-t.jpg', '2_kia-rio-sc-interior-04-m.jpg', '0', '0', '0', '0', '0', '1', '4', '1');
+INSERT INTO `modelo_imagenes` VALUES ('70', '3', 'EXT', null, null, '3_kia-rio-sc-gallery-01.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('71', '3', 'INT', null, null, '3_kia-rio-sc-gallery-02.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('72', '3', 'EXT', null, null, null, '3_kia-rio-5-door-wide-exterior-01.jpg', '3_kia-rio-5-door-wide-b-exterior-01-w.jpg', '3_kia-rio-5-door-wide-b-exterior-01-m.jpg', '3_kia-rio-5-door-wide-b-exterior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('73', '3', 'EXT', null, null, null, '3_kia-rio-5-door-wide-exterior-02.jpg', '3_kia-rio-5-door-wide-b-exterior-02-w.jpg', '3_kia-rio-5-door-wide-b-exterior-02-m.jpg', '3_kia-rio-5-door-wide-b-exterior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('74', '3', 'EXT', null, null, null, '3_kia-rio-5-door-wide-exterior-03.jpg', '3_kia-rio-5-door-wide-b-exterior-03-w.jpg', '3_kia-rio-5-door-wide-b-exterior-03-m.jpg', '3_kia-rio-5-door-wide-b-exterior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('75', '3', 'EXT', null, null, null, '3_kia-rio-5-door-wide-exterior-04.jpg', '3_kia-rio-5-door-wide-b-exterior-04-w.jpg', '3_kia-rio-5-door-wide-b-exterior-04-m.jpg', '3_kia-rio-5-door-wide-b-exterior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('76', '3', 'EXT', null, null, null, '3_kia-rio-5-door-wide-exterior-05.jpg', '3_kia-rio-5-door-wide-b-exterior-05-w.jpg', '3_kia-rio-5-door-wide-b-exterior-05-m.jpg', '3_kia-rio-5-door-wide-b-exterior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('77', '3', 'EXT', null, null, null, '3_kia-rio-5-door-wide-exterior-06.jpg', '3_kia-rio-5-door-wide-b-exterior-06-w.jpg', '3_kia-rio-5-door-wide-b-exterior-06-m.jpg', '3_kia-rio-5-door-wide-b-exterior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('78', '3', 'EXT', null, null, null, '3_kia-rio-5-door-wide-exterior-07.jpg', '3_kia-rio-5-door-wide-b-exterior-07-w.jpg', '3_kia-rio-5-door-wide-b-exterior-07-m.jpg', '3_kia-rio-5-door-wide-b-exterior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('79', '3', 'EXT', null, null, null, '3_kia-rio-5-door-wide-exterior-08.jpg', '3_kia-rio-5-door-wide-b-exterior-08-w.jpg', '3_kia-rio-5-door-wide-b-exterior-08-m.jpg', '3_kia-rio-5-door-wide-b-exterior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('80', '3', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-01.jpg', '2_kia-rio-5-door-wide-b-interior-01-w.jpg', '2_kia-rio-5-door-wide-b-interior-01-t.jpg', '2_kia-rio-5-door-wide-b-interior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('81', '3', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-02.jpg', '2_kia-rio-5-door-wide-b-interior-02-w.jpg', '2_kia-rio-5-door-wide-b-interior-02-t.jpg', '2_kia-rio-5-door-wide-b-interior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('82', '3', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-03.jpg', '2_kia-rio-5-door-wide-b-interior-03-w.jpg', '2_kia-rio-5-door-wide-b-interior-03-t.jpg', '2_kia-rio-5-door-wide-b-interior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('83', '3', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-04.jpg', '2_kia-rio-5-door-wide-b-interior-04-w.jpg', '2_kia-rio-5-door-wide-b-interior-04-t.jpg', '2_kia-rio-5-door-wide-b-interior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('84', '3', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-05.jpg', '2_kia-rio-5-door-wide-b-interior-05-w.jpg', '2_kia-rio-5-door-wide-b-interior-05-t.jpg', '2_kia-rio-5-door-wide-b-interior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('85', '3', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-06.jpg', '2_kia-rio-5-door-wide-b-interior-06-w.jpg', '2_kia-rio-5-door-wide-b-interior-06-t.jpg', '2_kia-rio-5-door-wide-b-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('86', '3', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-07.jpg', '2_kia-rio-5-door-wide-b-interior-07-w.jpg', '2_kia-rio-5-door-wide-b-interior-07-t.jpg', '2_kia-rio-5-door-wide-b-interior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('87', '3', 'INT', null, null, null, '2_kia-rio-5-door-wide-interior-08.jpg', '2_kia-rio-5-door-wide-b-interior-08-w.jpg', '2_kia-rio-5-door-wide-b-interior-08-t.jpg', '2_kia-rio-5-door-wide-b-interior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('88', '4', 'EXT', 'Da vida a un nuevo color\r\n', null, null, '4_ico_picanto_paging1_1_on.png', '4_kia-picanto-exterior-01-w.jpg', '4_kia-picanto-exterior-01-t.jpg', '4_kia-picanto-exterior-01-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('89', '4', 'EXT', 'Los ojos se encuentran con la profundidad del alma', null, null, '4_ico_picanto_paging2_1_on.png', '4_kia-picanto-exterior-02-w.jpg', '4_kia-picanto-exterior-02-t.jpg', '4_kia-picanto-exterior-02-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('90', '4', 'EXT', 'La diversión simplemente acaba de comenzar', null, null, '4_ico_picanto_paging3_1_on.png', '4_kia-picanto-exterior-03-w.jpg', '4_kia-picanto-exterior-03-t.jpg', '4_kia-picanto-exterior-03-m.jpg', '0', '0', '1', '0', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('91', '4', 'EXT', 'Luces anti-niebla', null, null, null, '4_picanto-2017-showroom-features-exterior-thumbnail-01-w.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-01-t.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-01-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('92', '4', 'EXT', 'Desempañador de vidrio trasero', null, null, null, '4_picanto-2017-showroom-features-exterior-thumbnail-02-w.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-02-t.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-02-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('93', '4', 'EXT', 'Tercera Luz de Freno', null, null, null, '4_picanto-2017-showroom-features-exterior-thumbnail-03-w.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-03-t.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-03-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('94', '4', 'INT', 'Siéntete más cómodo y confiado', null, null, null, '4_kia-picanto-interior-01-w.jpg', '4_kia-picanto-interior-01-t.jpg', '4_kia-picanto-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes_thumb
@@ -668,7 +833,7 @@ CREATE TABLE `modelo_llantas` (
   `img` varchar(60) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_llantas
@@ -679,6 +844,7 @@ INSERT INTO `modelo_llantas` VALUES ('3', '3', '205/55 R16', 'Llanta de Acero', 
 INSERT INTO `modelo_llantas` VALUES ('4', '4', 'R15', 'Llanta de Acero', '2_rio_sedan_acero.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('5', '5', 'R15', 'Llanta de Aleación', '2_rio_sedan_aleacion.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('6', '6', 'R15', 'Llanta de Aleación', '2_rio_sedan_aleacion.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('7', '7', 'R15', 'Llanta de Aleación', '3_kia-rio-sc-wheel-slide-03.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_motor
@@ -697,7 +863,7 @@ CREATE TABLE `modelo_motor` (
   `img` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_motor
@@ -708,6 +874,9 @@ INSERT INTO `modelo_motor` VALUES ('3', '3', '3', 'DOHC 16 Valvulas / InyecciOn 
 INSERT INTO `modelo_motor` VALUES ('4', '4', '1', 'D-CVVT 16 válvulas', '1.400 c.c', '98/6000', '13.6/4000', '4 en Línea', null, '1_kia-cerato-forte-yd-engine-slide-01.png', '1');
 INSERT INTO `modelo_motor` VALUES ('5', '5', '1', 'D-CVVT 16 válvulas', '1.400 c.c', '98/6300', '15.4/4850', '4 en Línea', null, '1_kia-cerato-forte-yd-engine-slide-01.png', '1');
 INSERT INTO `modelo_motor` VALUES ('6', '6', '1', 'D-CVVT 16 válvulas', '1.400 c.c', '98/6300', '15.4/4850', '4 en Línea', null, '1_kia-cerato-forte-yd-engine-slide-01.png', '1');
+INSERT INTO `modelo_motor` VALUES ('7', '7', '3', 'FFV', '1.600 c.c', '128/6300', '15.4/4850', '4 en Línea', null, '3_rio_hatch.png', '1');
+INSERT INTO `modelo_motor` VALUES ('8', '8', '3', 'DOHC 12 v?lvulas', '1.000 cc', '80/6000', '12.2/4000', '3 en Línea', null, '4_kia-picanto-engine-slide-03.png', '1');
+INSERT INTO `modelo_motor` VALUES ('9', '9', '3', 'DOHC 12 v?lvulas', '1.000 cc', '80/6000', '12.2/4000', '3 en Línea', null, '4_kia-picanto-engine-slide-03.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_seguridad
@@ -724,7 +893,7 @@ CREATE TABLE `modelo_seguridad` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_seguridad
@@ -737,6 +906,9 @@ INSERT INTO `modelo_seguridad` VALUES ('5', '1', 'Hill-start Assist Control (HAC
 INSERT INTO `modelo_seguridad` VALUES ('6', '2', 'Nos obsesiona la seguridad', 'Creemos que un auto tiene un deber primordial: proteger a la gente dentro de él y alrededor de él. El nuevo Rio cuenta con tecnologías inteligentes de seguridad activa y sustanciales mejoras de seguridad pasiva para su tranquilidad.\r\n\r\n* La imagen debajo es un Rio-5-door.', '2_kia-rio-sc-safetykv-02-w.jpg', '2_kia-rio-sc-safetykv-02-m.jpg', '2_kia-rio-sc-safetykv-02-t.jpg', '1', '1');
 INSERT INTO `modelo_seguridad` VALUES ('7', '2', 'Frenos ABS', 'El Sistema Antibloqueo de Freno (ABS) acorta la distancia de frenado previniendo derrapes para mantener el control del vehículo.', '2_Allnew_rio_sedan_Safety_02_w.jpg', '2_Allnew_rio_sedan_Safety_02_w.jpg', '2_Allnew_rio_sedan_Safety_02_w.jpg', '0', '1');
 INSERT INTO `modelo_seguridad` VALUES ('8', '2', 'Sensores de estacionamiento traseros', null, '2_kia-rio-sedan-sh-sensores-estacionamiento-1.jpg', '2_kia-rio-sedan-sh-sensores-estacionamiento-1.jpg', '2_kia-rio-sedan-sh-sensores-estacionamiento-1.jpg', '0', '1');
+INSERT INTO `modelo_seguridad` VALUES ('9', '3', null, null, '3_Allnew_rio_hatch_Safety_01_w.jpg', '3_Allnew_rio_hatch_Safety_01_t.jpg', '3_Allnew_rio_hatch_Safety_01_m.jpg', '1', '1');
+INSERT INTO `modelo_seguridad` VALUES ('10', '3', 'Airbags para conductor y copiloto', 'El sistema de airbags brinda protección para el conductor y el copiloto', '3_kia-rio-4-door-Safety-04-w.jpg', '3_kia-rio-4-door-Safety-04-t.jpg', '3_kia-rio-4-door-Safety-04-m.jpg', '0', '1');
+INSERT INTO `modelo_seguridad` VALUES ('11', '3', 'Frenos ABS', 'El Sistema Antibloqueo de Freno (ABS) acorta la distancia de frenado previniendo derrapes para mantener el control del vehículo.', '2_Allnew_rio_sedan_Safety_02_w.jpg', '2_Allnew_rio_sedan_Safety_02_w.jpg', '2_Allnew_rio_sedan_Safety_02_w.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version
@@ -749,9 +921,9 @@ CREATE TABLE `modelo_version` (
   `precio` decimal(20,3) DEFAULT NULL,
   `bono` int(11) DEFAULT '0',
   `ano` int(4) DEFAULT NULL,
-  `estado` int(1) DEFAULT NULL,
+  `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version
@@ -762,6 +934,9 @@ INSERT INTO `modelo_version` VALUES ('3', '1', 'SX Aut.', '22400.000', '0', '201
 INSERT INTO `modelo_version` VALUES ('4', '2', 'Lx. Mec. 1.4 G.', '14990.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('5', '2', 'Ex. Aut. 1.4 G Full', '17600.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('6', '2', 'Ex. Aut. 1.4 G Limeted', '18800.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('7', '3', 'Ex. Aut. Full', '17600.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('8', '4', 'Lx. Mec. 1.0 FFV', '9200.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('9', '4', 'Lx. Aut. 1.0 FFV', '11200.000', '0', '2018', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version_cuotas
@@ -775,7 +950,7 @@ CREATE TABLE `modelo_version_cuotas` (
   `entrega_inicial` decimal(22,3) DEFAULT NULL,
   `cantidad_cuotas` int(3) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version_cuotas
@@ -786,6 +961,7 @@ INSERT INTO `modelo_version_cuotas` VALUES ('3', '3', '2', '428.000', '2850.000'
 INSERT INTO `modelo_version_cuotas` VALUES ('4', '4', '2', '284.000', '1950.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('5', '5', '2', '338.000', '2250.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('6', '6', '2', '360.000', '2400.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('7', '7', '2', '340.000', null, '0');
 
 -- ----------------------------
 -- Table structure for moneda

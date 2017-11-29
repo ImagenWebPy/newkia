@@ -11,9 +11,11 @@ $vehiculo = $this->datosVehiculo;
             <div class="keyVisualInner">
                 <!-- 이미지 키비쥬얼 영역 -->
                 <div class="keyVisual01">
-                    <div class="keyBtnLeft">
-                        <a href="#">Vista 360&deg;</a>
-                    </div>
+                    <?php if (!empty($this->view360)): ?>
+                        <div class="keyBtnLeft">
+                            <a href="#">Vista 360&deg;</a>
+                        </div>
+                    <?php endif; ?>
                     <div class="bgArea">
                         <div class="bgInner">
                             <picture>
@@ -28,23 +30,20 @@ $vehiculo = $this->datosVehiculo;
                     </div>
                     <div class="textArea">
                         <!-- GT SEO 20150826 h3 > h1 -->
-
-                        <h1 class="indicTitle shadowWhite" style="color:#000000;"><?= utf8_encode($datos['general']['titulo']); ?><br /></h1>
-
+                        <h1 class="indicTitle shadowBlack" style="color:#fff;"><?= utf8_encode($datos['general']['titulo']); ?><br /></h1>
                         <!-- GT SEO 20150826 h3 > h1 -->
-                        <p class="shadowWhite" style="color:#000000;"><?= utf8_encode($datos['general']['descripcion']); ?></p>
+                        <p class="shadowBlack" style="color:#fff;"><?= utf8_encode($datos['general']['descripcion']); ?></p>
                         <div class="keybtnSmall">
-
                         </div>
                     </div>
                     <div class="awardArea">
                         <ul></ul>
                     </div>
-
-                    <div class="keyBtnRight">
-                        <a href="#">Vista 360&deg;</a>
-                    </div>
-
+                    <?php if (!empty($this->view360)): ?>
+                        <div class="keyBtnRight">
+                            <a href="#">Vista 360&deg;</a>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <!-- //이미지 키비쥬얼 영역 -->
                 <!-- 360 키비쥬얼 영역 -->
@@ -148,7 +147,7 @@ $vehiculo = $this->datosVehiculo;
                 <div class="mainInner">
                     <div class="textArea" name="titleClassEXTERIOR">
                         <!-- GT SEO 20150826 h3 > h2 -->
-                        <h2 class="indicTitle shadowWhite" style="color:#000000;">EXTERIOR</h2>
+                        <h2 class="indicTitle shadowBlack" style="color:#fff;">EXTERIOR</h2>
                     </div>
                     <div class="pipBtnLeft">
                         <a href="#" class="pip_prev">Ant</a>
@@ -179,8 +178,8 @@ $vehiculo = $this->datosVehiculo;
                             </div>
                             <div class="textArea">
                                 <!-- GT SEO 20150826 h4 > h3-->
-                                <h3 class="shadowWhite" style="color:#000000;"><?= utf8_encode($datos['exterior'][$f]['titulo']); ?></h3>
-                                <div class="subTxt shadowWhite" style="color:#000000;"><?= utf8_encode($datos['exterior'][$f]['descripcion']); ?></div>
+                                <h3 class="shadowBlack" style="color:#fff;"><?= utf8_encode($datos['exterior'][$f]['titulo']); ?></h3>
+                                <div class="subTxt shadowBlack" style="color:#fff;"><?= utf8_encode($datos['exterior'][$f]['descripcion']); ?></div>
                             </div>
                         </div>
                     <?php endfor; ?>
@@ -295,7 +294,7 @@ $vehiculo = $this->datosVehiculo;
                 <div class="mainInner"> 
                     <div class="textArea">
                         <!-- GT SEO 20150826 h3 > h2 -->
-                        <h2 style="color:#000000;" class="indicTitle shadowWhite" >INTERIOR</h2>
+                        <h2 style="color:#fff;" class="indicTitle shadowBlack">INTERIOR</h2>
                     </div>
                     <div class="screenBox screenBox1 on">
                         <div class="bgArea">
@@ -322,77 +321,80 @@ $vehiculo = $this->datosVehiculo;
                         </div>
                         <div class="textArea">
                             <!-- GT SEO 20150826 h4 > h3 -->
-                            <h3 class="shadowWhite" style="color:#000000;"><?= utf8_encode($datos['interior']['titulo']); ?></h3>
-                            <div class="subTxt shadowWhite" style="color:#000000;"><?= utf8_encode($datos['interior']['descripcion']); ?></div>
+                            <h3 class="shadowBlack" style="color:#fff;"><?= utf8_encode($datos['interior']['titulo']); ?></h3>
+                            <div class="subTxt shadowBlack" style="color:#fff;"><?= utf8_encode($datos['interior']['descripcion']); ?></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="min-height:100px;" class="temp03 pipLayout section">
-
-                <div class="subInner">
-                    <div class="mInner">
-                        <div class="pipBtnLeft">
-                            <a href="#" class="pip_prev">Ant</a>
-                        </div>
-                        <?php
-                        $cantIntPie = count($datos['interior_pie']);
-                        if ($cantIntPie % 2 == 0)
-                            $typeInt = 4;
-                        else
-                            $typeInt = 3;
-                        ?>
-                        <ul class="imgList type<?= $typeInt; ?>">
+            <?php if (!empty($datos['interior_pie'])): ?>
+                <div style="min-height:100px;" class="temp03 pipLayout section">
+                    <div class="subInner">
+                        <div class="mInner">
+                            <div class="pipBtnLeft">
+                                <a href="#" class="pip_prev">Ant</a>
+                            </div>
                             <?php
-                            for ($i = 1; $i <= $cantIntPie; $i++):
-                                $f = $i - 1;
-                                if ($i != 1) {
-                                    $class = '';
-                                } else {
-                                    $class = 'on';
-                                }
-                                ?>
-                                <li class="<?= $class; ?>">
-                                    <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-                                        <!-- GT SEO 20150826 div > h4 -->
-                                        <h4 class="imgListTit shadowBlack" style="color:#FFFFFF;"><?= utf8_encode($datos['interior_pie'][$f]['titulo']); ?><br /></h4>
-                                        <!-- GT SEO 20150826 div > h4 -->
-                                        <div class="description" style="color:#FFFFFF;"><?= utf8_encode($datos['interior_pie'][$f]['descripcion']); ?></div>
-                                        <!--<img title="Supervision cluster
-        " alt="Supervision cluster" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-interior-01-w.jpg" >-->
-                                        <picture>
-                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['interior_pie'][$f]['img_w']; ?>" media="(min-width: 1025px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['interior_pie'][$f]['img_t']; ?>" media="(min-width: 768px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['interior_pie'][$f]['img_m']; ?>" media="(min-width: 200px)">
-                                            <!--[if IE 9]></video><![endif]-->
-                                            <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['interior_pie'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['interior_pie'][$f]['titulo']); ?>">
-                                        </picture>
-                                    </a>
-                                </li>
-                            <?php endfor; ?>
-                        </ul>
-                        <div class="pipBtnRight">
-                            <a href="#" class="pip_next">Sig</a>
+                            $cantIntPie = count($datos['interior_pie']);
+                            if ($cantIntPie % 2 == 0)
+                                $typeInt = 4;
+                            else
+                                $typeInt = 3;
+                            ?>
+                            <ul class="imgList type<?= $typeInt; ?>">
+                                <?php
+                                for ($i = 1; $i <= $cantIntPie; $i++):
+                                    $f = $i - 1;
+                                    if ($i != 1) {
+                                        $class = '';
+                                    } else {
+                                        $class = 'on';
+                                    }
+                                    if (!empty($datos['interior_pie'][$f])):
+                                        ?>
+                                        <li class="<?= $class; ?>">
+                                            <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
+                                                <!-- GT SEO 20150826 div > h4 -->
+                                                <h4 class="imgListTit shadowBlack" style="color:#FFFFFF;"><?= utf8_encode($datos['interior_pie'][$f]['titulo']); ?><br /></h4>
+                                                <!-- GT SEO 20150826 div > h4 -->
+                                                <div class="description" style="color:#FFFFFF;"><?= utf8_encode($datos['interior_pie'][$f]['descripcion']); ?></div>
+                                                <!--<img title="Supervision cluster
+                " alt="Supervision cluster" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-interior-01-w.jpg" >-->
+                                                <picture>
+                                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['interior_pie'][$f]['img_w']; ?>" media="(min-width: 1025px)">
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['interior_pie'][$f]['img_t']; ?>" media="(min-width: 768px)">
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['interior_pie'][$f]['img_m']; ?>" media="(min-width: 200px)">
+                                                    <!--[if IE 9]></video><![endif]-->
+                                                    <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['interior_pie'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['interior_pie'][$f]['titulo']); ?>">
+                                                </picture>
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
+                                <?php endfor; ?>
+                            </ul>
+                            <div class="pipBtnRight">
+                                <a href="#" class="pip_next">Sig</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="imgListPaging">
-                        <ul>
-                            <?php
-                            for ($i = 1; $i <= $cantIntPie; $i++):
-                                $f = $i - 1;
-                                if ($i != 1) {
-                                    $class = '';
-                                } else {
-                                    $class = 'on';
-                                }
-                                ?>
-                                <li class="<?= $class; ?>"><a href="#"><?= utf8_encode($datos['interior_pie'][$f]['titulo']); ?><br /></a></li>
-                            <?php endfor; ?>
-                        </ul>
+                        <div class="imgListPaging">
+                            <ul>
+                                <?php
+                                for ($i = 1; $i <= $cantIntPie; $i++):
+                                    $f = $i - 1;
+                                    if ($i != 1) {
+                                        $class = '';
+                                    } else {
+                                        $class = 'on';
+                                    }
+                                    ?>
+                                    <li class="<?= $class; ?>"><a href="#"><?= utf8_encode($datos['interior_pie'][$f]['titulo']); ?><br /></a></li>
+                                <?php endfor; ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         <?php endif; ?>
         <?php if ($datos['secciones']['HIGHLIGHTS']['estado'] == TRUE): ?>
             <div style="min-height:100px;" class="temp09 pipLayout section">
@@ -471,25 +473,27 @@ $vehiculo = $this->datosVehiculo;
                                 } else {
                                     $class = 'on';
                                 }
-                                ?>
-                                <li class="<?= $class; ?>">
-                                    <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-                                        <!-- GT SEO 20150826 div > h4 -->
-                                        <h4 class="imgListTit shadowBlack" style="color:#FFFFFF;"><?= utf8_encode($datos['destacados'][$f]['titulo']); ?><br /></h4>
-                                        <!-- GT SEO 20150826 div > h4 -->
-                                        <div class="description" style="color:#FFFFFF;"><?= utf8_encode($datos['destacados'][$f]['descripcion']); ?></div>
-                                        <!--<img title="Front and rear parking assist system
-        " alt="Front and rear parking assist system" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-highlights-01-w.jpg" >-->
-                                        <picture>
-                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['destacados'][$f]['img_w']; ?>" media="(min-width: 1025px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['destacados'][$f]['img_t']; ?>" media="(min-width: 768px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['destacados'][$f]['img_m']; ?>" media="(min-width: 200px)">
-                                            <!--[if IE 9]></video><![endif]-->
-                                            <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['destacados'][$f]['img_w']; ?>" alt="Front and rear parking assist system">
-                                        </picture>
-                                    </a>
-                                </li>
+                                if (!empty($datos['destacados'][$f])):
+                                    ?>
+                                    <li class="<?= $class; ?>">
+                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
+                                            <!-- GT SEO 20150826 div > h4 -->
+                                            <h4 class="imgListTit shadowBlack" style="color:#FFFFFF;"><?= utf8_encode($datos['destacados'][$f]['titulo']); ?><br /></h4>
+                                            <!-- GT SEO 20150826 div > h4 -->
+                                            <div class="description" style="color:#FFFFFF;"><?= utf8_encode($datos['destacados'][$f]['descripcion']); ?></div>
+                                            <!--<img title="Front and rear parking assist system
+            " alt="Front and rear parking assist system" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-highlights-01-w.jpg" >-->
+                                            <picture>
+                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['destacados'][$f]['img_w']; ?>" media="(min-width: 1025px)">
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['destacados'][$f]['img_t']; ?>" media="(min-width: 768px)">
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['destacados'][$f]['img_m']; ?>" media="(min-width: 200px)">
+                                                <!--[if IE 9]></video><![endif]-->
+                                                <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['destacados'][$f]['img_w']; ?>" alt="Front and rear parking assist system">
+                                            </picture>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
                             <?php endfor; ?>
                         </ul>
                         <div class="pipBtnRight">
@@ -519,7 +523,7 @@ $vehiculo = $this->datosVehiculo;
                 <div class="mainInner"> 
                     <div class="textArea">
                         <!-- GT SEO 20150826 h3 > h2 -->
-                        <h2 style="color:#000000;" class="indicTitle shadowWhite">DESEMPEÑO</h2>
+                        <h2 style="color:#fff;" class="indicTitle shadowBlack">DESEMPEÑO</h2>
                     </div>
                     <?php
                     foreach ($datos['desempeno'] as $item):
@@ -540,18 +544,17 @@ $vehiculo = $this->datosVehiculo;
                                     </div>
                                     <div class="car_play">  
                                         <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-
                                             <div class="videoText">
-                                                <div class="videoTit shadowWhite"><?= utf8_encode($item['titulo']); ?></div>
-                                                <div class="videoTxt shadowWhite"></div>
+                                                <div class="videoTit shadowBlack" style="color: #fff;"><?= utf8_encode($item['titulo']); ?></div>
+                                                <div class="videoTxt shadowBlack" style="color: #fff;"><?= utf8_encode($item['descripcion']); ?></div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="textArea">
                                     <!-- GT SEO 20150826 h4 > h3 -->
-                                    <h3 class="shadowWhite" style="color:#000000;"><?= utf8_encode($item['titulo']); ?></h3>
-                                    <div class="subTxt shadowWhite" style="color:#000000;"></div>
+                                    <h3 class="shadowBlack" style="color:#fff;"><?= utf8_encode($item['titulo']); ?></h3>
+                                    <div class="subTxt shadowBlack" style="color:#fff;"><?= utf8_encode($item['descripcion']); ?></div>
                                 </div>
                             </div>
                             <?php
@@ -571,44 +574,48 @@ $vehiculo = $this->datosVehiculo;
             array_splice($datos['desempeno'], 0, 0);
             $canDesempeno = count($datos['desempeno']);
             ?>
-            <div style="min-height:100px;" class="pipLayout section temp06">
-                <div class="subInner">
-                    <ul class="imgList type6">
-                        <?php
-                        for ($i = 1; $i <= 2; $i++):
-                            $f = $i - 1;
-                            if ($i != 1) {
-                                $class = 'rightArea';
-                            } else {
-                                $class = 'leftArea on';
-                            }
-                            ?>
-                            <li class="<?= $class; ?>">
-                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-                                    <dl>
-                                        <dt>
-                                            <!--<img title="7-speed DCT (Double Clutch Transmission)" alt="7-speed DCT (Double Clutch Transmission)" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-performance-01-w.jpg" >-->
-                                        <picture>
-                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['desempeno'][$f]['img_w']; ?>" media="(min-width: 1025px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['desempeno'][$f]['img_t']; ?>" media="(min-width: 768px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['desempeno'][$f]['img_m']; ?>" media="(min-width: 200px)">
-                                            <!--[if IE 9]></video><![endif]-->
-                                            <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['desempeno'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['desempeno'][$f]['titulo']); ?>">
-                                        </picture>
-                                        </dt>
-                                        <dd>
-                                            <!-- GT SEO 20150828 div > h4 -->
-                                            <h4 class="btmTextTit " style="color:#000000;"><?= utf8_encode($datos['desempeno'][$f]['titulo']); ?></h4>
-                                            <div class="btmTextTxt " style="color:#000000;"><?= utf8_encode($datos['desempeno'][$f]['descripcion']); ?></div>
-                                        </dd>
-                                    </dl>
-                                </a>
-                            </li>
-                        <?php endfor; ?>
-                    </ul>
+            <?php if (!empty($datos['desempeno'])): ?>
+                <div style="min-height:100px;" class="pipLayout section temp06">
+                    <div class="subInner">
+                        <ul class="imgList type6">
+                            <?php
+                            for ($i = 1; $i <= 2; $i++):
+                                $f = $i - 1;
+                                if ($i != 1) {
+                                    $class = 'rightArea';
+                                } else {
+                                    $class = 'leftArea on';
+                                }
+                                if (!empty($datos['desempeno'][$f])):
+                                    ?>
+                                    <li class="<?= $class; ?>">
+                                        <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
+                                            <dl>
+                                                <dt>
+                                                    <!--<img title="7-speed DCT (Double Clutch Transmission)" alt="7-speed DCT (Double Clutch Transmission)" src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-performance-01-w.jpg" >-->
+                                                <picture>
+                                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['desempeno'][$f]['img_w']; ?>" media="(min-width: 1025px)">
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['desempeno'][$f]['img_t']; ?>" media="(min-width: 768px)">
+                                                    <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['desempeno'][$f]['img_m']; ?>" media="(min-width: 200px)">
+                                                    <!--[if IE 9]></video><![endif]-->
+                                                    <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['desempeno'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['desempeno'][$f]['titulo']); ?>">
+                                                </picture>
+                                                </dt>
+                                                <dd>
+                                                    <!-- GT SEO 20150828 div > h4 -->
+                                                    <h4 class="btmTextTit " style="color:#000000;"><?= utf8_encode($datos['desempeno'][$f]['titulo']); ?></h4>
+                                                    <div class="btmTextTxt " style="color:#000000;"><?= utf8_encode($datos['desempeno'][$f]['descripcion']); ?></div>
+                                                </dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                            <?php endfor; ?>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            <?php endif; ?>
             <?php
             unset($datos['desempeno'][0]);
             unset($datos['desempeno'][1]);
@@ -684,8 +691,8 @@ $vehiculo = $this->datosVehiculo;
                                     <div class="car_play">  
                                         <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
                                             <div class="videoText">
-                                                <div class="videoTit shadowBlack"><?= utf8_encode($item['titulo']); ?><br /></div>
-                                                <div class="videoTxt shadowBlack"><?= utf8_encode($item['descripcion']); ?></div>
+                                                <div class="videoTit shadowBlack" style="color:#FFFFFF;"><?= utf8_encode($item['titulo']); ?><br /></div>
+                                                <div class="videoTxt shadowBlack" style="color:#FFFFFF;"><?= utf8_encode($item['descripcion']); ?></div>
                                             </div>
                                         </a>
                                     </div>
@@ -702,107 +709,111 @@ $vehiculo = $this->datosVehiculo;
                     ?>
                 </div>
             </div>
-            <div style="min-height:100px;" class="pipLayout section temp06">
-                <div class="subInner">
-                    <?php
-                    $del = '';
-                    foreach ($datos['seguridad'] as $key => $val) {
-                        if ($val['portada'] == 1)
-                            $del = $key;
-                    }
-                    unset($datos['seguridad'][$del]);
-#reindexamos el array
-                    array_splice($datos['seguridad'], 0, 0);
-                    $canDesempeno = count($datos['seguridad']);
-                    ?>
-                    <ul class="imgList type6">
+            <?php
+            $del = '';
+            foreach ($datos['seguridad'] as $key => $val) {
+                if ($val['portada'] == 1)
+                    $del = $key;
+            }
+            unset($datos['seguridad'][$del]);
+            if (!empty($datos['seguridad'])):
+                ?>
+                <div style="min-height:100px;" class="pipLayout section temp06">
+                    <div class="subInner">
                         <?php
 #reindexamos el array
                         array_splice($datos['seguridad'], 0, 0);
-                        for ($i = 1; $i <= 2; $i++):
-                            $f = $i - 1;
-                            if ($i != 1) {
-                                $class = 'rightArea';
-                            } else {
-                                $class = 'leftArea on';
-                            }
-                            ?>
-                            <li class="<?= $class; ?>">
-                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-                                    <dl>
-                                        <dt>
-                                            <!--<img title="Suspension " alt="Suspension " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-01-w.jpg" >-->
-                                        <picture>
-                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" media="(min-width: 1025px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['seguridad'][$f]['img_t']; ?>" media="(min-width: 768px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['seguridad'][$f]['img_m']; ?>" media="(min-width: 200px)">
-                                            <!--[if IE 9]></video><![endif]-->
-                                            <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['seguridad'][$f]['titulo']); ?>">
-                                        </picture>
-                                        </dt>
-                                        <dd>
-                                            <!-- GT SEO 20150828 div > h4 -->
-                                            <h4 class="btmTextTit " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['titulo']); ?></h4>
-                                            <div class="btmTextTxt " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['descripcion']); ?></div>
-                                        </dd>
-                                    </dl>
-                                </a>
-                            </li>
-                        <?php endfor; ?>
-                    </ul>
-                </div>
-            </div>
-        <?php endif; ?>
-        <?php
-        unset($datos['seguridad'][0]);
-        unset($datos['seguridad'][1]);
-        if (!empty($datos['seguridad'])):
-            ?>
-            <div style="min-height:100px;" class="pipLayout section temp06">
-                <div class="subInner">
-                    <ul class="imgList type6">
-                        <?php
+                        $canDesempeno = count($datos['seguridad']);
+                        ?>
+                        <ul class="imgList type6">
+                            <?php
 #reindexamos el array
-                        array_splice($datos['seguridad'], 0, 0);
-                        for ($i = 1; $i <= 2; $i++):
-                            $f = $i - 1;
-                            if ($i != 1) {
-                                $class = 'rightArea';
-                            } else {
-                                $class = 'leftArea on';
-                            }
-                            ?>
-                            <li class="<?= $class; ?>">
-                                <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
-                                    <dl>
-                                        <dt>
-                                            <!--<img title="Flex Steer " alt="Flex Steer " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-w.jpg" >-->
-                                        <picture>
-                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" media="(min-width: 1025px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['seguridad'][$f]['img_t']; ?>" media="(min-width: 768px)">
-                                            <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['seguridad'][$f]['img_m']; ?>" media="(min-width: 200px)">
-                                            <!--[if IE 9]></video><![endif]-->
-                                            <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['seguridad'][$f]['titulo']); ?>">
-                                        </picture>
-                                        </dt>
-                                        <dd>
-                                            <!-- GT SEO 20150828 div > h4 -->
-                                            <h4 class="btmTextTit" style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['titulo']); ?></h4>
-                                            <div class="btmTextTxt" style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['descripcion']); ?></div>
-                                        </dd>
-                                    </dl>
-                                </a>
-                            </li>
-                        <?php endfor; ?>
-                    </ul>
+                            array_splice($datos['seguridad'], 0, 0);
+                            for ($i = 1; $i <= 2; $i++):
+                                $f = $i - 1;
+                                if ($i != 1) {
+                                    $class = 'rightArea';
+                                } else {
+                                    $class = 'leftArea on';
+                                }
+                                ?>
+                                <li class="<?= $class; ?>">
+                                    <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
+                                        <dl>
+                                            <dt>
+                                                <!--<img title="Suspension " alt="Suspension " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-01-w.jpg" >-->
+                                            <picture>
+                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" media="(min-width: 1025px)">
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['seguridad'][$f]['img_t']; ?>" media="(min-width: 768px)">
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['seguridad'][$f]['img_m']; ?>" media="(min-width: 200px)">
+                                                <!--[if IE 9]></video><![endif]-->
+                                                <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['seguridad'][$f]['titulo']); ?>">
+                                            </picture>
+                                            </dt>
+                                            <dd>
+                                                <!-- GT SEO 20150828 div > h4 -->
+                                                <h4 class="btmTextTit " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['titulo']); ?></h4>
+                                                <div class="btmTextTxt " style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['descripcion']); ?></div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            <?php endfor; ?>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            <?php endif; ?>
+            <?php
+            unset($datos['seguridad'][0]);
+            unset($datos['seguridad'][1]);
+            if (!empty($datos['seguridad'])):
+                ?>
+                <div style="min-height:100px;" class="pipLayout section temp06">
+                    <div class="subInner">
+                        <ul class="imgList type6">
+                            <?php
+#reindexamos el array
+                            array_splice($datos['seguridad'], 0, 0);
+                            for ($i = 1; $i <= 2; $i++):
+                                $f = $i - 1;
+                                if ($i != 1) {
+                                    $class = 'rightArea';
+                                } else {
+                                    $class = 'leftArea on';
+                                }
+                                ?>
+                                <li class="<?= $class; ?>">
+                                    <a href="#" onclick="dtmDataLayer.internal_link = 'conversion|showroom|photo view'; _satellite.track('internal_link');">
+                                        <dl>
+                                            <dt>
+                                                <!--<img title="Flex Steer " alt="Flex Steer " src="http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/CeratoForte_YD/Features/kia-pop-cerato-forte-yd-safety-03-w.jpg" >-->
+                                            <picture>
+                                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" media="(min-width: 1025px)">
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/t/<?= $datos['seguridad'][$f]['img_t']; ?>" media="(min-width: 768px)">
+                                                <source srcset="<?= URL; ?>public/img/vehiculos/imagenes/m/<?= $datos['seguridad'][$f]['img_m']; ?>" media="(min-width: 200px)">
+                                                <!--[if IE 9]></video><![endif]-->
+                                                <img srcset="<?= URL; ?>public/img/vehiculos/imagenes/w/<?= $datos['seguridad'][$f]['img_w']; ?>" alt="<?= utf8_encode($datos['seguridad'][$f]['titulo']); ?>">
+                                            </picture>
+                                            </dt>
+                                            <dd>
+                                                <!-- GT SEO 20150828 div > h4 -->
+                                                <h4 class="btmTextTit" style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['titulo']); ?></h4>
+                                                <div class="btmTextTxt" style="color:#000000;"><?= utf8_encode($datos['seguridad'][$f]['descripcion']); ?></div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            <?php endfor; ?>
+                        </ul>
+                    </div>
+                </div>
+            <?php endif; ?>
         <?php endif; ?>
         <div class="section pip_build">
             <!-- 차량에 따라 차량명 변동 -->
-            <h3 class="build_tit indicTitle">CONOCE TU <?= strtoupper(utf8_encode($datos['general']['titulo'])); ?></h3>
+            <h3 class="build_tit indicTitle">CONOCE TU <?= strtoupper(utf8_encode($modelo['descripcion'])); ?></h3>
             <p class="build_txt"></p>
             <!--<div class="build_btn"><a href="http://org-www.kia.com/gt/shopping-tools/build-your-own.trim.cerato-forte.html" class="btnMedium btnType1"><span class="cmm_tspr spr_build">Aquí</span></a></div>-->
             <div class="build_car">

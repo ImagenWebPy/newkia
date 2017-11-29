@@ -149,10 +149,10 @@ class Modelo_Model extends Model {
                                             FROM modelo_seguridad md
                                             where md.id_modelo = $idModelo
                                             and md.estado = 1;");
-        $data['general'] = $sqlGeneral[0];
+        $data['general'] = (!empty($sqlGeneral[0])) ? $sqlGeneral[0] : NULL;
         $data['exterior'] = $sqlExterior;
         $data['exterior_pie'] = $sqlExteriorPie;
-        $data['interior'] = $sqlInterior[0];
+        $data['interior'] = (!empty($sqlInterior[0])) ? $sqlInterior[0] : NULL;
         $data['interior_pie'] = $sqlInteriorPie;
         $data['destacados'] = $sqlDestacados;
         $data['desempeno'] = $sqlDesempeno;
@@ -280,7 +280,7 @@ class Modelo_Model extends Model {
                                         LEFT JOIN modelo_motor mm on mm.id_version = mv.id
                                         where m.id = $idModelo
                                         GROUP BY mm.cilindraje, mm.potencia_max, m.garantia");
-        return $sqlDatos[0];
+        return (!empty($sqlDatos[0])) ? $sqlDatos[0] : NULL;
     }
 
     public function view360($idModelo) {
