@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-29 18:31:24
+Date: 2017-12-02 11:48:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -205,7 +205,7 @@ CREATE TABLE `modelo` (
   `img_m` varchar(80) DEFAULT NULL,
   `estado` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo
@@ -214,6 +214,7 @@ INSERT INTO `modelo` VALUES ('1', '1', 'Cerato', '5 años o 100.00 Km.', 'cerato
 INSERT INTO `modelo` VALUES ('2', '1', 'All New Rio Sedán', '5 años o 100.00 Km.', 'all-new-rio', '2_rio-sedan-thumb-menu.png', '2_Volante_NEW_RIO_2018_baja.pdf', 'Talentoso. Elegante. Supremo y funcional. El Kia Rio Sedán 4 Puertas es sencillamente el mejor coche de su clase. Compruebe su precio, interior y exterior.\r\n', '2_rio-sedan-w.png', '2_rio-sedan-t.png', '2_rio-sedan-m.png', '1');
 INSERT INTO `modelo` VALUES ('3', '1', 'All New Rio Hatch', '5 años o 100.00 Km.', 'all-new-rio', '3_rio_hatch-thumb.png', '3_all_new_Rio_Hatch.pdf', 'Entra ahora y conoce el All New Rio, un Hatchback que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '3_rio_hatch_w.png', '3_rio_hatch_t.png', '3_rio_hatch_m.png', '1');
 INSERT INTO `modelo` VALUES ('4', '1', 'Picanto', '5 años o 100.00 Km.', '4_picanto.png', '4_picanto_thumb.png', '4_picanto_baja.pdf', 'Descubre el deportivo Kia Picanto con la mejor garantía del mercado. Conozca más sobre su precio, rendimiento, seguridad y características.', '4_kia_picanto_w.png', '4_kia_picanto_t.png', '4_kia_picanto_m.png', '1');
+INSERT INTO `modelo` VALUES ('5', '4', 'Soul', '5 años o 100.00 Km.', '5_kia-new-cars-soul-logo.png', '5_soul_thumb.png', '5_Volante_Soul_baja.pdf', 'Entra ahora y conoce el Kia Soul, una Camioneta SUV que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '5_kia_soul_w.png', '5_kia_soul_t.png', '5_kia_soul_m.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_360
@@ -227,7 +228,7 @@ CREATE TABLE `modelo_360` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_360` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=253 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=326 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_360
@@ -484,6 +485,79 @@ INSERT INTO `modelo_360` VALUES ('249', '4', null, '4_picanto-feature-360vr-clea
 INSERT INTO `modelo_360` VALUES ('250', '4', null, '4_picanto-feature-360vr-clearwhite-34.png', '1');
 INSERT INTO `modelo_360` VALUES ('251', '4', null, '4_picanto-feature-360vr-clearwhite-35.png', '1');
 INSERT INTO `modelo_360` VALUES ('252', '4', null, '4_picanto-feature-360vr-clearwhite-36.png', '1');
+INSERT INTO `modelo_360` VALUES ('253', '5', null, '5_kia-soul-2-clear-white_0000.png', '1');
+INSERT INTO `modelo_360` VALUES ('254', '5', null, '5_kia-soul-2-clear-white_0001.png', '1');
+INSERT INTO `modelo_360` VALUES ('255', '5', null, '5_kia-soul-2-clear-white_0002.png', '1');
+INSERT INTO `modelo_360` VALUES ('256', '5', null, '5_kia-soul-2-clear-white_0003.png', '1');
+INSERT INTO `modelo_360` VALUES ('257', '5', null, '5_kia-soul-2-clear-white_0004.png', '1');
+INSERT INTO `modelo_360` VALUES ('258', '5', null, '5_kia-soul-2-clear-white_0005.png', '1');
+INSERT INTO `modelo_360` VALUES ('259', '5', null, '5_kia-soul-2-clear-white_0006.png', '1');
+INSERT INTO `modelo_360` VALUES ('260', '5', null, '5_kia-soul-2-clear-white_0007.png', '1');
+INSERT INTO `modelo_360` VALUES ('261', '5', null, '5_kia-soul-2-clear-white_0008.png', '1');
+INSERT INTO `modelo_360` VALUES ('262', '5', null, '5_kia-soul-2-clear-white_0009.png', '1');
+INSERT INTO `modelo_360` VALUES ('263', '5', null, '5_kia-soul-2-clear-white_0010.png', '1');
+INSERT INTO `modelo_360` VALUES ('264', '5', null, '5_kia-soul-2-clear-white_0011.png', '1');
+INSERT INTO `modelo_360` VALUES ('265', '5', null, '5_kia-soul-2-clear-white_0012.png', '1');
+INSERT INTO `modelo_360` VALUES ('266', '5', null, '5_kia-soul-2-clear-white_0013.png', '1');
+INSERT INTO `modelo_360` VALUES ('267', '5', null, '5_kia-soul-2-clear-white_0014.png', '1');
+INSERT INTO `modelo_360` VALUES ('268', '5', null, '5_kia-soul-2-clear-white_0015.png', '1');
+INSERT INTO `modelo_360` VALUES ('269', '5', null, '5_kia-soul-2-clear-white_0016.png', '1');
+INSERT INTO `modelo_360` VALUES ('270', '5', null, '5_kia-soul-2-clear-white_0017.png', '1');
+INSERT INTO `modelo_360` VALUES ('271', '5', null, '5_kia-soul-2-clear-white_0018.png', '1');
+INSERT INTO `modelo_360` VALUES ('272', '5', null, '5_kia-soul-2-clear-white_0019.png', '1');
+INSERT INTO `modelo_360` VALUES ('273', '5', null, '5_kia-soul-2-clear-white_0020.png', '1');
+INSERT INTO `modelo_360` VALUES ('274', '5', null, '5_kia-soul-2-clear-white_0021.png', '1');
+INSERT INTO `modelo_360` VALUES ('275', '5', null, '5_kia-soul-2-clear-white_0022.png', '1');
+INSERT INTO `modelo_360` VALUES ('276', '5', null, '5_kia-soul-2-clear-white_0023.png', '1');
+INSERT INTO `modelo_360` VALUES ('277', '5', null, '5_kia-soul-2-clear-white_0024.png', '1');
+INSERT INTO `modelo_360` VALUES ('278', '5', null, '5_kia-soul-2-clear-white_0025.png', '1');
+INSERT INTO `modelo_360` VALUES ('279', '5', null, '5_kia-soul-2-clear-white_0026.png', '1');
+INSERT INTO `modelo_360` VALUES ('280', '5', null, '5_kia-soul-2-clear-white_0027.png', '1');
+INSERT INTO `modelo_360` VALUES ('281', '5', null, '5_kia-soul-2-clear-white_0028.png', '1');
+INSERT INTO `modelo_360` VALUES ('282', '5', null, '5_kia-soul-2-clear-white_0029.png', '1');
+INSERT INTO `modelo_360` VALUES ('283', '5', null, '5_kia-soul-2-clear-white_0030.png', '1');
+INSERT INTO `modelo_360` VALUES ('284', '5', null, '5_kia-soul-2-clear-white_0031.png', '1');
+INSERT INTO `modelo_360` VALUES ('285', '5', null, '5_kia-soul-2-clear-white_0032.png', '1');
+INSERT INTO `modelo_360` VALUES ('286', '5', null, '5_kia-soul-2-clear-white_0033.png', '1');
+INSERT INTO `modelo_360` VALUES ('287', '5', null, '5_kia-soul-2-clear-white_0034.png', '1');
+INSERT INTO `modelo_360` VALUES ('288', '5', null, '5_kia-soul-2-clear-white_0035.png', '1');
+INSERT INTO `modelo_360` VALUES ('289', '5', null, '5_kia-soul-2-clear-white_0036.png', '1');
+INSERT INTO `modelo_360` VALUES ('290', '5', null, '5_kia-soul-2-clear-white_0037.png', '1');
+INSERT INTO `modelo_360` VALUES ('291', '5', null, '5_kia-soul-2-clear-white_0038.png', '1');
+INSERT INTO `modelo_360` VALUES ('292', '5', null, '5_kia-soul-2-clear-white_0039.png', '1');
+INSERT INTO `modelo_360` VALUES ('293', '5', null, '5_kia-soul-2-clear-white_0040.png', '1');
+INSERT INTO `modelo_360` VALUES ('294', '5', null, '5_kia-soul-2-clear-white_0041.png', '1');
+INSERT INTO `modelo_360` VALUES ('295', '5', null, '5_kia-soul-2-clear-white_0042.png', '1');
+INSERT INTO `modelo_360` VALUES ('296', '5', null, '5_kia-soul-2-clear-white_0043.png', '1');
+INSERT INTO `modelo_360` VALUES ('297', '5', null, '5_kia-soul-2-clear-white_0044.png', '1');
+INSERT INTO `modelo_360` VALUES ('298', '5', null, '5_kia-soul-2-clear-white_0045.png', '1');
+INSERT INTO `modelo_360` VALUES ('299', '5', null, '5_kia-soul-2-clear-white_0046.png', '1');
+INSERT INTO `modelo_360` VALUES ('300', '5', null, '5_kia-soul-2-clear-white_0047.png', '1');
+INSERT INTO `modelo_360` VALUES ('301', '5', null, '5_kia-soul-2-clear-white_0047.png', '1');
+INSERT INTO `modelo_360` VALUES ('302', '5', null, '5_kia-soul-2-clear-white_0048.png', '1');
+INSERT INTO `modelo_360` VALUES ('303', '5', null, '5_kia-soul-2-clear-white_0049.png', '1');
+INSERT INTO `modelo_360` VALUES ('304', '5', null, '5_kia-soul-2-clear-white_0050.png', '1');
+INSERT INTO `modelo_360` VALUES ('305', '5', null, '5_kia-soul-2-clear-white_0051.png', '1');
+INSERT INTO `modelo_360` VALUES ('306', '5', null, '5_kia-soul-2-clear-white_0052.png', '1');
+INSERT INTO `modelo_360` VALUES ('307', '5', null, '5_kia-soul-2-clear-white_0053.png', '1');
+INSERT INTO `modelo_360` VALUES ('308', '5', null, '5_kia-soul-2-clear-white_0054.png', '1');
+INSERT INTO `modelo_360` VALUES ('309', '5', null, '5_kia-soul-2-clear-white_0055.png', '1');
+INSERT INTO `modelo_360` VALUES ('310', '5', null, '5_kia-soul-2-clear-white_0056.png', '1');
+INSERT INTO `modelo_360` VALUES ('311', '5', null, '5_kia-soul-2-clear-white_0057.png', '1');
+INSERT INTO `modelo_360` VALUES ('312', '5', null, '5_kia-soul-2-clear-white_0058.png', '1');
+INSERT INTO `modelo_360` VALUES ('313', '5', null, '5_kia-soul-2-clear-white_0059.png', '1');
+INSERT INTO `modelo_360` VALUES ('314', '5', null, '5_kia-soul-2-clear-white_0060.png', '1');
+INSERT INTO `modelo_360` VALUES ('315', '5', null, '5_kia-soul-2-clear-white_0061.png', '1');
+INSERT INTO `modelo_360` VALUES ('316', '5', null, '5_kia-soul-2-clear-white_0062.png', '1');
+INSERT INTO `modelo_360` VALUES ('317', '5', null, '5_kia-soul-2-clear-white_0063.png', '1');
+INSERT INTO `modelo_360` VALUES ('318', '5', null, '5_kia-soul-2-clear-white_0064.png', '1');
+INSERT INTO `modelo_360` VALUES ('319', '5', null, '5_kia-soul-2-clear-white_0065.png', '1');
+INSERT INTO `modelo_360` VALUES ('320', '5', null, '5_kia-soul-2-clear-white_0066.png', '1');
+INSERT INTO `modelo_360` VALUES ('321', '5', null, '5_kia-soul-2-clear-white_0067.png', '1');
+INSERT INTO `modelo_360` VALUES ('322', '5', null, '5_kia-soul-2-clear-white_0068.png', '1');
+INSERT INTO `modelo_360` VALUES ('323', '5', null, '5_kia-soul-2-clear-white_0069.png', '1');
+INSERT INTO `modelo_360` VALUES ('324', '5', null, '5_kia-soul-2-clear-white_0070.png', '1');
+INSERT INTO `modelo_360` VALUES ('325', '5', null, '5_kia-soul-2-clear-white_0071.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_color
@@ -663,10 +737,10 @@ CREATE TABLE `modelo_general` (
   `img_t` varchar(120) DEFAULT NULL,
   `img_m` varchar(120) DEFAULT NULL,
   `titulo` varchar(80) DEFAULT NULL,
-  `descripcion` varchar(160) DEFAULT NULL,
+  `descripcion` text,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_general
@@ -675,6 +749,7 @@ INSERT INTO `modelo_general` VALUES ('1', '1', '1_kia-cerato-forte-yd-overview-0
 INSERT INTO `modelo_general` VALUES ('2', '2', '2_general_rio_w.jpg', '2_general_rio_t.jpg', '2_general_rio_m.jpg', 'All New Rio Sedán', 'Totalmente Nuevo Kia Rio', '1');
 INSERT INTO `modelo_general` VALUES ('3', '3', '3_rio_hatch_general_w.jpg', '3_rio_hatch_general_t.jpg', '3_rio_hatch_general_m.jpg', 'MÁS GRANDE, MÁS AUDAZ Y LISTO PARA LA AVENTURA', null, '1');
 INSERT INTO `modelo_general` VALUES ('4', '4', '4_kia-picanto-overview-01-w.jpg', '4_kia-picanto-overview-01-t.jpg', '4_kia-picanto-overview-01-m.jpg', 'Todo en un Picanto', 'Conducir debería ser una extensión de ti mismo. Di hola al nuevo Picanto.', '1');
+INSERT INTO `modelo_general` VALUES ('5', '5', '5_kia-new-cars-soul-hero-kv-w.jpg', '5_kia-new-cars-soul-hero-kv-t.jpg', '5_kia-new-cars-soul-hero-kv-m.jpg', 'Soul, más elegante que nunca', 'Presentamos un diseño innovador con un ADN urbano que lo ha transportado al futuro. El nuevo Kia Soul ha sido reforzado y refinado por dentro y por fuera con un estilo de SUV deportivo, una serie de tecnologías a la vanguardia y rendimiento mejorado para una mejor conducción.', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes
@@ -700,7 +775,7 @@ CREATE TABLE `modelo_imagenes` (
   `orden` int(1) unsigned DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=121 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_imagenes
@@ -798,6 +873,31 @@ INSERT INTO `modelo_imagenes` VALUES ('91', '4', 'EXT', 'Luces anti-niebla', nul
 INSERT INTO `modelo_imagenes` VALUES ('92', '4', 'EXT', 'Desempañador de vidrio trasero', null, null, null, '4_picanto-2017-showroom-features-exterior-thumbnail-02-w.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-02-t.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-02-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
 INSERT INTO `modelo_imagenes` VALUES ('93', '4', 'EXT', 'Tercera Luz de Freno', null, null, null, '4_picanto-2017-showroom-features-exterior-thumbnail-03-w.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-03-t.jpg', '4_picanto-2017-showroom-features-exterior-thumbnail-03-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
 INSERT INTO `modelo_imagenes` VALUES ('94', '4', 'INT', 'Siéntete más cómodo y confiado', null, null, null, '4_kia-picanto-interior-01-w.jpg', '4_kia-picanto-interior-01-t.jpg', '4_kia-picanto-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('95', '4', 'EXT', null, null, '4_img_gt_ci_001.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('96', '4', 'INT', null, null, '4_kia-picanto-ta-pe-gallery-02.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('97', '4', 'EXT', null, null, null, '4_kia-picanto-ta-pe-wide-exterior-01.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-01-w.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-01-t.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('98', '4', 'EXT', null, null, null, '4_kia-picanto-ta-pe-wide-exterior-02.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-02-w.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-02-t.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('99', '4', 'EXT', null, null, null, '4_kia-picanto-ta-pe-wide-exterior-03.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-03-w.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-03-t.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('100', '4', 'EXT', null, null, null, '4_kia-picanto-ta-pe-wide-exterior-04.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-04-w.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-04-t.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('101', '4', 'EXT', null, null, null, '4_kia-picanto-ta-pe-wide-exterior-05.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-05-w.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-05-t.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('102', '4', 'EXT', null, null, null, '4_kia-picanto-ta-pe-wide-exterior-06.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-06-w.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-06-t.jpg', '4_kia-picanto-ta-pe-wide-b-exterior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('103', '4', 'INT', null, null, null, '4_kia-picanto-ta-pe-wide-interior-01.jpg', '4_kia-picanto-ta-pe-wide-b-interior-01-w.jpg', '4_kia-picanto-ta-pe-wide-b-interior-01-t.jpg', '4_kia-picanto-ta-pe-wide-b-interior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('105', '4', 'INT', null, null, null, '4_kia-picanto-ta-pe-wide-interior-02.jpg', '4_kia-picanto-ta-pe-wide-b-interior-02-w.jpg', '4_kia-picanto-ta-pe-wide-b-interior-02-t.jpg', '4_kia-picanto-ta-pe-wide-b-interior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('106', '4', 'INT', null, null, null, '4_kia-picanto-ta-pe-wide-interior-03.jpg', '4_kia-picanto-ta-pe-wide-b-interior-03-w.jpg', '4_kia-picanto-ta-pe-wide-b-interior-03-t.jpg', '4_kia-picanto-ta-pe-wide-b-interior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('107', '4', 'INT', null, null, null, '4_kia-picanto-ta-pe-wide-interior-04.jpg', '4_kia-picanto-ta-pe-wide-b-interior-04-w.jpg', '4_kia-picanto-ta-pe-wide-b-interior-04-t.jpg', '4_kia-picanto-ta-pe-wide-b-interior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('108', '4', 'INT', null, null, null, '4_kia-picanto-ta-pe-wide-interior-05.jpg', '4_kia-picanto-ta-pe-wide-b-interior-05-w.jpg', '4_kia-picanto-ta-pe-wide-b-interior-05-t.jpg', '4_kia-picanto-ta-pe-wide-b-interior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('109', '4', 'INT', null, null, null, '4_kia-picanto-ta-pe-wide-interior-06.jpg', '4_kia-picanto-ta-pe-wide-b-interior-06-w.jpg', '4_kia-picanto-ta-pe-wide-b-interior-06-t.jpg', '4_kia-picanto-ta-pe-wide-b-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('110', '5', 'EXT', 'Un estilo que rompe todos los moldes', 'Los llamativos colores del exterior en sus versiones doble tonos, el estilo de las luces LED delanteras y traseras, son algunos puntos clave en el moderno diseño', null, '5_ico_gt_soul_paging1_1_on.png', '5_kia-soul-pe-exterior-01-w.jpg', '5_kia-soul-pe-exterior-01-t.jpg', '5_kia-soul-pe-exterior-01-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('111', '5', 'EXT', 'El aliado perfecto para una ciudad salvaje', 'No importa el camino, los recorridos, ni los rincones que quieras descubrir y explorar. El Soul es ese aliado perfecto que sabrá brillar con luces propias en una ciudad salvaje, sin perder nunca su icónico estilo.', null, '5_ico_soul_pe_paging2_on.png', '5_kia-soul-pe-exterior-02-w.jpg', '5_kia-soul-pe-exterior-02-t.jpg', '5_kia-soul-pe-exterior-02-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('112', '5', 'EXT', 'Diseño sofisticadamente futurista', 'La pintura bitono (en algunas versiones) junto con las luces, hacen del Kia Soul un vehículo único.', null, null, '5_kia-soul-exterior-07-w.jpg', '5_kia-soul-exterior-07-t.jpg', '5_kia-soul-exterior-07-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('113', '5', 'EXT', 'Faros anti-niebla', 'Detalles que hacen la diferencia, para que tu camino sea mucho más seguro.', null, null, '5_kia-soul-exterior-05-w.jpg', '5_kia-soul-exterior-05-t.jpg', '5_kia-soul-exterior-05-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('114', '5', 'EXT', 'Puerta trasera', 'El maletero auténtico y original posee un estilo innovador y único que le da presencia en la calle', null, null, '5_kia-pop-soul-pe-exterior-04-w.jpg', '5_kia-pop-soul-pe-exterior-04-t.jpg', '5_kia-pop-soul-pe-exterior-04-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('115', '5', 'EXT', 'Luces LED traseras', 'Las lámparas de combinación traseras LED de Soul ofrecen una visibilidad sobresaliente junto con una dosis seria de estilo ultramoderno.', null, null, '5_kia-pop-soul-pe-exterior-02-w.jpg', '5_kia-pop-soul-pe-exterior-02-t.jpg', '5_kia-pop-soul-pe-exterior-02-m.jpg', '0', '0', '0', '1', '0', '0', '4', '1');
+INSERT INTO `modelo_imagenes` VALUES ('116', '5', 'INT', 'Un concepto revolucionario desde su punto de vista', null, null, null, '5_kia-soul-pe-interior-01-w.jpg', '5_kia-soul-pe-interior-01-t.jpg', '5_kia-soul-pe-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('117', '5', 'INT', 'Volante ajustable en altura y profundidad', 'Conducción hecha a tu medida. Personaliza la forma en que conduces, graduando y ajustando el volante a tus necesidades para hacer del manejo del Soul una experiencia mucho más placentera y hecha a tu medida.', null, null, '5_kia-soul-interior-04-w.jpg', '5_kia-soul-interior-04-t.jpg', '5_kia-soul-interior-04-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('118', '5', 'INT', 'Asiento del conductor ajustable en altura', 'La comodidad también puede ajustarse. Sabemos que la comodidad de un asiento no se resume solo a su funcionalidad, en el nuevo Soul, el asiento del conductor puede ajustarse para conducir con mayor comodidad.', null, null, '5_kia-soul-interior-09-w.jpg', '5_kia-soul-interior-09-t.jpg', '5_kia-soul-interior-09-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('119', '5', 'INT', 'Radio MP3 USB Aux', null, null, null, '5_soul-2017-showroom-features-interior-thumbnail-07-w.jpg', '5_soul-2017-showroom-features-interior-thumbnail-07-t.jpg', '5_soul-2017-showroom-features-interior-thumbnail-07-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('120', '5', 'INT', 'Camara de retroceso integrada', null, null, null, '5_kia-soul-interior-02-w.jpg', '5_kia-soul-interior-02-t.jpg', '5_kia-soul-interior-02-m.jpg', '0', '0', '0', '0', '0', '1', '4', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes_thumb
@@ -833,7 +933,7 @@ CREATE TABLE `modelo_llantas` (
   `img` varchar(60) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_llantas
@@ -845,6 +945,8 @@ INSERT INTO `modelo_llantas` VALUES ('4', '4', 'R15', 'Llanta de Acero', '2_rio_
 INSERT INTO `modelo_llantas` VALUES ('5', '5', 'R15', 'Llanta de Aleación', '2_rio_sedan_aleacion.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('6', '6', 'R15', 'Llanta de Aleación', '2_rio_sedan_aleacion.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('7', '7', 'R15', 'Llanta de Aleación', '3_kia-rio-sc-wheel-slide-03.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('8', '8', '165/60 R14', 'Llanta de Acero', '2_rio_sedan_acero.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('9', '9', '165/60 R14', 'Llanta de Aleación', '4_kia-picanto-wheel-slide-06.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_motor
@@ -863,7 +965,7 @@ CREATE TABLE `modelo_motor` (
   `img` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_motor
@@ -877,6 +979,9 @@ INSERT INTO `modelo_motor` VALUES ('6', '6', '1', 'D-CVVT 16 válvulas', '1.400 
 INSERT INTO `modelo_motor` VALUES ('7', '7', '3', 'FFV', '1.600 c.c', '128/6300', '15.4/4850', '4 en Línea', null, '3_rio_hatch.png', '1');
 INSERT INTO `modelo_motor` VALUES ('8', '8', '3', 'DOHC 12 v?lvulas', '1.000 cc', '80/6000', '12.2/4000', '3 en Línea', null, '4_kia-picanto-engine-slide-03.png', '1');
 INSERT INTO `modelo_motor` VALUES ('9', '9', '3', 'DOHC 12 v?lvulas', '1.000 cc', '80/6000', '12.2/4000', '3 en Línea', null, '4_kia-picanto-engine-slide-03.png', '1');
+INSERT INTO `modelo_motor` VALUES ('10', '10', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4,850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('11', '11', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4,850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('12', '12', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4,850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_seguridad
@@ -923,7 +1028,7 @@ CREATE TABLE `modelo_version` (
   `ano` int(4) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version
@@ -937,6 +1042,9 @@ INSERT INTO `modelo_version` VALUES ('6', '2', 'Ex. Aut. 1.4 G Limeted', '18800.
 INSERT INTO `modelo_version` VALUES ('7', '3', 'Ex. Aut. Full', '17600.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('8', '4', 'Lx. Mec. 1.0 FFV', '9200.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('9', '4', 'Lx. Aut. 1.0 FFV', '11200.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('10', '5', 'Mec. 1,6 FFV	MID', '16400.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('11', '5', 'Aut. 1,6 FFV	FULL', '19200.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('12', '5', 'Aut. 1,6 FFV	FULL BI-COLOR LIMITED', '21200.000', '0', '2018', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version_cuotas
@@ -950,7 +1058,7 @@ CREATE TABLE `modelo_version_cuotas` (
   `entrega_inicial` decimal(22,3) DEFAULT NULL,
   `cantidad_cuotas` int(3) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version_cuotas
@@ -962,6 +1070,11 @@ INSERT INTO `modelo_version_cuotas` VALUES ('4', '4', '2', '284.000', '1950.000'
 INSERT INTO `modelo_version_cuotas` VALUES ('5', '5', '2', '338.000', '2250.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('6', '6', '2', '360.000', '2400.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('7', '7', '2', '340.000', null, '0');
+INSERT INTO `modelo_version_cuotas` VALUES ('8', '10', '2', '330.000', '2200.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('9', '11', '2', '375.000', '2500.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('10', '12', '2', '398.000', '2650.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('11', '8', '2', '195.000', '1300.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('12', '9', '2', '225.000', '1500.000', '60');
 
 -- ----------------------------
 -- Table structure for moneda
