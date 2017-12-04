@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-02 11:48:15
+Date: 2017-12-04 18:31:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -205,7 +205,7 @@ CREATE TABLE `modelo` (
   `img_m` varchar(80) DEFAULT NULL,
   `estado` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo
@@ -215,6 +215,7 @@ INSERT INTO `modelo` VALUES ('2', '1', 'All New Rio Sedán', '5 años o 100.00 K
 INSERT INTO `modelo` VALUES ('3', '1', 'All New Rio Hatch', '5 años o 100.00 Km.', 'all-new-rio', '3_rio_hatch-thumb.png', '3_all_new_Rio_Hatch.pdf', 'Entra ahora y conoce el All New Rio, un Hatchback que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '3_rio_hatch_w.png', '3_rio_hatch_t.png', '3_rio_hatch_m.png', '1');
 INSERT INTO `modelo` VALUES ('4', '1', 'Picanto', '5 años o 100.00 Km.', '4_picanto.png', '4_picanto_thumb.png', '4_picanto_baja.pdf', 'Descubre el deportivo Kia Picanto con la mejor garantía del mercado. Conozca más sobre su precio, rendimiento, seguridad y características.', '4_kia_picanto_w.png', '4_kia_picanto_t.png', '4_kia_picanto_m.png', '1');
 INSERT INTO `modelo` VALUES ('5', '4', 'Soul', '5 años o 100.00 Km.', '5_kia-new-cars-soul-logo.png', '5_soul_thumb.png', '5_Volante_Soul_baja.pdf', 'Entra ahora y conoce el Kia Soul, una Camioneta SUV que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '5_kia_soul_w.png', '5_kia_soul_t.png', '5_kia_soul_m.png', '1');
+INSERT INTO `modelo` VALUES ('6', '4', 'Sportage', '5 años o 100.00 Km.', '6_sportage.png', '6_sportage_thumb.png', '6_Volante Sportage baja.pdf', 'Kia Sportage, un SUV siempre listo para la aventura, sin importar el camino que tienes por delante. Explore su manejo ágil y características de suave conducción. Cotízalo ya.', '6_sportage_w.png', '6_sportage_t.png', '6_sportage_m.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_360
@@ -228,7 +229,7 @@ CREATE TABLE `modelo_360` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_360` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=326 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=398 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_360
@@ -558,6 +559,78 @@ INSERT INTO `modelo_360` VALUES ('322', '5', null, '5_kia-soul-2-clear-white_006
 INSERT INTO `modelo_360` VALUES ('323', '5', null, '5_kia-soul-2-clear-white_0069.png', '1');
 INSERT INTO `modelo_360` VALUES ('324', '5', null, '5_kia-soul-2-clear-white_0070.png', '1');
 INSERT INTO `modelo_360` VALUES ('325', '5', null, '5_kia-soul-2-clear-white_0071.png', '1');
+INSERT INTO `modelo_360` VALUES ('326', '6', null, '6_kia-sportage-gt-line-fusion-white_0000-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('327', '6', null, '6_kia-sportage-gt-line-fusion-white_0001-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('328', '6', null, '6_kia-sportage-gt-line-fusion-white_0002-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('329', '6', null, '6_kia-sportage-gt-line-fusion-white_0003-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('330', '6', null, '6_kia-sportage-gt-line-fusion-white_0004-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('331', '6', null, '6_kia-sportage-gt-line-fusion-white_0005-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('332', '6', null, '6_kia-sportage-gt-line-fusion-white_0006-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('333', '6', null, '6_kia-sportage-gt-line-fusion-white_0007-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('334', '6', null, '6_kia-sportage-gt-line-fusion-white_0008-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('335', '6', null, '6_kia-sportage-gt-line-fusion-white_0009-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('336', '6', null, '6_kia-sportage-gt-line-fusion-white_0010-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('337', '6', null, '6_kia-sportage-gt-line-fusion-white_0011-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('338', '6', null, '6_kia-sportage-gt-line-fusion-white_0012-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('339', '6', null, '6_kia-sportage-gt-line-fusion-white_0013-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('340', '6', null, '6_kia-sportage-gt-line-fusion-white_0014-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('341', '6', null, '6_kia-sportage-gt-line-fusion-white_0015-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('342', '6', null, '6_kia-sportage-gt-line-fusion-white_0016-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('343', '6', null, '6_kia-sportage-gt-line-fusion-white_0017-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('344', '6', null, '6_kia-sportage-gt-line-fusion-white_0018-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('345', '6', null, '6_kia-sportage-gt-line-fusion-white_0019-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('346', '6', null, '6_kia-sportage-gt-line-fusion-white_0020-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('347', '6', null, '6_kia-sportage-gt-line-fusion-white_0021-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('348', '6', null, '6_kia-sportage-gt-line-fusion-white_0022-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('349', '6', null, '6_kia-sportage-gt-line-fusion-white_0023-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('350', '6', null, '6_kia-sportage-gt-line-fusion-white_0024-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('351', '6', null, '6_kia-sportage-gt-line-fusion-white_0025-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('352', '6', null, '6_kia-sportage-gt-line-fusion-white_0026-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('353', '6', null, '6_kia-sportage-gt-line-fusion-white_0027-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('354', '6', null, '6_kia-sportage-gt-line-fusion-white_0028-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('355', '6', null, '6_kia-sportage-gt-line-fusion-white_0029-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('356', '6', null, '6_kia-sportage-gt-line-fusion-white_0030-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('357', '6', null, '6_kia-sportage-gt-line-fusion-white_0031-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('358', '6', null, '6_kia-sportage-gt-line-fusion-white_0032-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('359', '6', null, '6_kia-sportage-gt-line-fusion-white_0033-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('360', '6', null, '6_kia-sportage-gt-line-fusion-white_0034-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('361', '6', null, '6_kia-sportage-gt-line-fusion-white_0035-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('362', '6', null, '6_kia-sportage-gt-line-fusion-white_0036-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('363', '6', null, '6_kia-sportage-gt-line-fusion-white_0037-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('364', '6', null, '6_kia-sportage-gt-line-fusion-white_0038-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('365', '6', null, '6_kia-sportage-gt-line-fusion-white_0039-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('366', '6', null, '6_kia-sportage-gt-line-fusion-white_0040-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('367', '6', null, '6_kia-sportage-gt-line-fusion-white_0041-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('368', '6', null, '6_kia-sportage-gt-line-fusion-white_0042-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('369', '6', null, '6_kia-sportage-gt-line-fusion-white_0043-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('370', '6', null, '6_kia-sportage-gt-line-fusion-white_0044-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('371', '6', null, '6_kia-sportage-gt-line-fusion-white_0045-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('372', '6', null, '6_kia-sportage-gt-line-fusion-white_0046-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('373', '6', null, '6_kia-sportage-gt-line-fusion-white_0047-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('374', '6', null, '6_kia-sportage-gt-line-fusion-white_0048-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('375', '6', null, '6_kia-sportage-gt-line-fusion-white_0049-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('376', '6', null, '6_kia-sportage-gt-line-fusion-white_0050-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('377', '6', null, '6_kia-sportage-gt-line-fusion-white_0051-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('378', '6', null, '6_kia-sportage-gt-line-fusion-white_0052-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('379', '6', null, '6_kia-sportage-gt-line-fusion-white_0053-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('380', '6', null, '6_kia-sportage-gt-line-fusion-white_0054-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('381', '6', null, '6_kia-sportage-gt-line-fusion-white_0055-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('382', '6', null, '6_kia-sportage-gt-line-fusion-white_0056-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('383', '6', null, '6_kia-sportage-gt-line-fusion-white_0057-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('384', '6', null, '6_kia-sportage-gt-line-fusion-white_0058-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('385', '6', null, '6_kia-sportage-gt-line-fusion-white_0059-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('386', '6', null, '6_kia-sportage-gt-line-fusion-white_0060-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('387', '6', null, '6_kia-sportage-gt-line-fusion-white_0061-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('388', '6', null, '6_kia-sportage-gt-line-fusion-white_0062-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('389', '6', null, '6_kia-sportage-gt-line-fusion-white_0063-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('390', '6', null, '6_kia-sportage-gt-line-fusion-white_0064-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('391', '6', null, '6_kia-sportage-gt-line-fusion-white_0065-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('392', '6', null, '6_kia-sportage-gt-line-fusion-white_0066-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('393', '6', null, '6_kia-sportage-gt-line-fusion-white_0067-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('394', '6', null, '6_kia-sportage-gt-line-fusion-white_0068-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('395', '6', null, '6_kia-sportage-gt-line-fusion-white_0069-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('396', '6', null, '6_kia-sportage-gt-line-fusion-white_0070-min.png', '1');
+INSERT INTO `modelo_360` VALUES ('397', '6', null, '6_kia-sportage-gt-line-fusion-white_0071-min.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_color
@@ -591,7 +664,7 @@ CREATE TABLE `modelo_desempeno` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_desempeno
@@ -610,6 +683,11 @@ INSERT INTO `modelo_desempeno` VALUES ('14', '3', 'Transmisión mecánica de 6 v
 INSERT INTO `modelo_desempeno` VALUES ('15', '4', 'Motor', '1.000 cc.<br>\r\nDOHC 12 válvulas<br>\r\ninyección multipunto', '4_kia-picanto-performance-01-2-w.jpg', '4_kia-picanto-performance-01-2-t.jpg', '4_kia-picanto-performance-01-2-m.jpg', '1', '1');
 INSERT INTO `modelo_desempeno` VALUES ('16', '4', 'Transmision Automática', 'Transmisión automática para los que buscan la comodidad y practicidad por sobre todo.', '4_kia-performance-detail1_960-w.jpg', '4_kia-performance-detail1_960-t.jpg', '4_kia-performance-detail1_960-m.jpg', '0', '1');
 INSERT INTO `modelo_desempeno` VALUES ('17', '4', 'Transmision Manual', 'Tanto la transmisión manual de 5 velocidades como la transmisión automática de 4 velocidades ofrecen cambios de marcha suaves y a su vez silenciosos.', '4_picanto-2017-showroom-features-performance-thumbnail-02-w.jpg', '4_picanto-2017-showroom-features-performance-thumbnail-02-t.jpg', '4_picanto-2017-showroom-features-performance-thumbnail-02-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('18', '5', 'Diseñado para acelerar tus sentidos', 'El totalmente nuevo Soul tiene disposicion un motor eficiente en conjunto con avanzada transmision de 6V. Sea cual sea la combinación que elija, agregará emoción a su viaje.', '5_kia-soul-performance-01-w.jpg', '5_kia-soul-performance-01-t.jpg', '5_kia-soul-performance-01-m.jpg', '1', '1');
+INSERT INTO `modelo_desempeno` VALUES ('19', '5', 'Motor 1.6L, 16 Válvulas MLA', 'Cilindraje:1.600 cc Potencia max: 120 HP @6.300 RPM, Torque maximo: 15.5 kg-m@4850 RPM', '5_kia-soul-performance-03-w.jpg', '5_kia-soul-performance-03-t.jpg', '5_kia-soul-performance-03-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('20', '5', 'Transmisión mecánica de 6 velocidades', 'Una nueva experiencia. Estrenando mejoras considerables en el funcionamiento de la transmisión mecánica y mayor eficiencia en el consumo de combustible, esta novedosa transmisión de 6 velocidades te entregará una experiencia de conducción más deportiva y emocionante.', '5_kia-soul-performance-05-w.jpg', '5_kia-soul-performance-05-t.jpg', '5_kia-soul-performance-05-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('21', '5', 'Transmisión automática secuencial de 6 velocidades', 'Porque la comodidad es una prioridad en el Soul, esta transmisión automática, compacta y mucho más ligera ofrece suavidad para facilitar su manipulación y la conducción en general.', '5_kia-soul-performance-07-w.jpg', '5_kia-soul-performance-07-t.jpg', '5_kia-soul-performance-07-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('22', '6', 'Tecnología de vanguardia para máxima estabilidad de conducción', 'No hay nada como la sensación de la tecnología AWD de Kia cuando el nuevo Sportage toma todas las curvas en el camino. Girar nunca ha sido más divertido.', '6_kia-sportage-performance-01-w.jpg', '6_kia-sportage-performance-01-t.jpg', '6_kia-sportage-performance-01-m.jpg', '1', '1');
 
 -- ----------------------------
 -- Table structure for modelo_destacado
@@ -654,7 +732,7 @@ CREATE TABLE `modelo_dimension` (
   `img_all` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension
@@ -663,6 +741,8 @@ INSERT INTO `modelo_dimension` VALUES ('1', '1', '4.560', '1.780', '1.460', null
 INSERT INTO `modelo_dimension` VALUES ('2', '2', '4.385', '1.725', '1.475', '2.580', '2_Allnew_rio_sedan_dimension_04_w.png', '1');
 INSERT INTO `modelo_dimension` VALUES ('3', '3', '4.065', '1.725', '1.460', '2.580', '3_kia-rio-sc-dimensions-all-view.png', '1');
 INSERT INTO `modelo_dimension` VALUES ('4', '4', '3.595', '1.595', '1.480', '2.385', '4_picanto-ta-pe-dimensions-all-view.png', '1');
+INSERT INTO `modelo_dimension` VALUES ('5', '5', '4.140', '1.800', '1.619', '2.570', '5_kia-soul-dimensions-all-view.png', '1');
+INSERT INTO `modelo_dimension` VALUES ('6', '6', '4.480', '1.855', '1.655', '2.670', '6_new-sportage-r-showroom-specification-dimensions-all-view.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension_img
@@ -676,7 +756,7 @@ CREATE TABLE `modelo_dimension_img` (
   `img_t` varchar(120) DEFAULT NULL,
   `img_m` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension_img
@@ -693,6 +773,12 @@ INSERT INTO `modelo_dimension_img` VALUES ('9', '3', 'LATERAL', '3_kia-rio-sc-di
 INSERT INTO `modelo_dimension_img` VALUES ('10', '4', 'FRENTE', '4_picanto-ta-pe-dimensions-slide-list-01-w.png', '4_picanto-ta-pe-dimensions-slide-list-01-t.png', '4_picanto-ta-pe-dimensions-slide-list-01-m.png');
 INSERT INTO `modelo_dimension_img` VALUES ('11', '4', 'ATRAS', '4_picanto-ta-pe-dimensions-slide-list-02-w.png', '4_picanto-ta-pe-dimensions-slide-list-02-t.png', '4_picanto-ta-pe-dimensions-slide-list-02-m.png');
 INSERT INTO `modelo_dimension_img` VALUES ('12', '4', 'LATERAL', '4_picanto-ta-pe-dimensions-slide-list-03-w.png', '4_picanto-ta-pe-dimensions-slide-list-03-t.png', '4_picanto-ta-pe-dimensions-slide-list-03-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('13', '5', 'FRENTE', '5_showroom-soul-dimensions-slide-list-01-w.png', '5_showroom-soul-dimensions-slide-list-01-t.png', '5_showroom-soul-dimensions-slide-list-01-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('14', '5', 'ATRAS', '5_showroom-soul-dimensions-slide-list-02-w.png', '5_showroom-soul-dimensions-slide-list-02-t.png', '5_showroom-soul-dimensions-slide-list-02-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('15', '5', 'LATERAL', '5_showroom-soul-dimensions-slide-list-03-w.png', '5_showroom-soul-dimensions-slide-list-03-t.png', '5_showroom-soul-dimensions-slide-list-03-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('16', '6', 'FRENTE', '6_new-sportage-r-showroom-specification-dimensions-list-01-w.png', '6_new-sportage-r-showroom-specification-dimensions-list-01-t.png', '6_new-sportage-r-showroom-specification-dimensions-list-01-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('17', '6', 'ATRAS', '6_new-sportage-r-showroom-specification-dimensions-list-02-w.png', '6_new-sportage-r-showroom-specification-dimensions-list-02-t.png', '6_new-sportage-r-showroom-specification-dimensions-list-02-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('18', '6', 'LATERAL', '6_new-sportage-r-showroom-specification-dimensions-list-03-w.png', '6_new-sportage-r-showroom-specification-dimensions-list-03-t.png', '6_new-sportage-r-showroom-specification-dimensions-list-03-m.png');
 
 -- ----------------------------
 -- Table structure for modelo_especificacion
@@ -740,7 +826,7 @@ CREATE TABLE `modelo_general` (
   `descripcion` text,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_general
@@ -750,6 +836,7 @@ INSERT INTO `modelo_general` VALUES ('2', '2', '2_general_rio_w.jpg', '2_general
 INSERT INTO `modelo_general` VALUES ('3', '3', '3_rio_hatch_general_w.jpg', '3_rio_hatch_general_t.jpg', '3_rio_hatch_general_m.jpg', 'MÁS GRANDE, MÁS AUDAZ Y LISTO PARA LA AVENTURA', null, '1');
 INSERT INTO `modelo_general` VALUES ('4', '4', '4_kia-picanto-overview-01-w.jpg', '4_kia-picanto-overview-01-t.jpg', '4_kia-picanto-overview-01-m.jpg', 'Todo en un Picanto', 'Conducir debería ser una extensión de ti mismo. Di hola al nuevo Picanto.', '1');
 INSERT INTO `modelo_general` VALUES ('5', '5', '5_kia-new-cars-soul-hero-kv-w.jpg', '5_kia-new-cars-soul-hero-kv-t.jpg', '5_kia-new-cars-soul-hero-kv-m.jpg', 'Soul, más elegante que nunca', 'Presentamos un diseño innovador con un ADN urbano que lo ha transportado al futuro. El nuevo Kia Soul ha sido reforzado y refinado por dentro y por fuera con un estilo de SUV deportivo, una serie de tecnologías a la vanguardia y rendimiento mejorado para una mejor conducción.', '1');
+INSERT INTO `modelo_general` VALUES ('6', '6', '6_kia-sportage-overview-01-w.jpg', '6_kia-sportage-overview-01-t.jpg', '6_kia-sportage-overview-01-m.jpg', 'Nacida en el mundo moderno', 'Atrevida, con diseño dinámico que cautiva por su aspecto sofisticado. La nueva Sportage te hará vivir tu vida al máximo.', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes
@@ -775,7 +862,7 @@ CREATE TABLE `modelo_imagenes` (
   `orden` int(1) unsigned DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=121 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=150 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_imagenes
@@ -898,6 +985,35 @@ INSERT INTO `modelo_imagenes` VALUES ('117', '5', 'INT', 'Volante ajustable en a
 INSERT INTO `modelo_imagenes` VALUES ('118', '5', 'INT', 'Asiento del conductor ajustable en altura', 'La comodidad también puede ajustarse. Sabemos que la comodidad de un asiento no se resume solo a su funcionalidad, en el nuevo Soul, el asiento del conductor puede ajustarse para conducir con mayor comodidad.', null, null, '5_kia-soul-interior-09-w.jpg', '5_kia-soul-interior-09-t.jpg', '5_kia-soul-interior-09-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
 INSERT INTO `modelo_imagenes` VALUES ('119', '5', 'INT', 'Radio MP3 USB Aux', null, null, null, '5_soul-2017-showroom-features-interior-thumbnail-07-w.jpg', '5_soul-2017-showroom-features-interior-thumbnail-07-t.jpg', '5_soul-2017-showroom-features-interior-thumbnail-07-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
 INSERT INTO `modelo_imagenes` VALUES ('120', '5', 'INT', 'Camara de retroceso integrada', null, null, null, '5_kia-soul-interior-02-w.jpg', '5_kia-soul-interior-02-t.jpg', '5_kia-soul-interior-02-m.jpg', '0', '0', '0', '0', '0', '1', '4', '1');
+INSERT INTO `modelo_imagenes` VALUES ('121', '5', 'EXT', null, null, '5_kia-soul-gallery-01.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('122', '5', 'INT', null, null, '5_kia-soul-gallery-02.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('123', '5', 'EXT', null, null, null, '5_kia-soul-wide-exterior-01.jpg', '5_kia-soul-wide-b-exterior-01-w.jpg', '5_kia-soul-wide-b-exterior-01-t.jpg', '5_kia-soul-wide-b-exterior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('124', '5', 'EXT', null, null, null, '5_kia-soul-wide-exterior-02.jpg', '5_kia-soul-wide-b-exterior-02-w.jpg', '5_kia-soul-wide-b-exterior-02-t.jpg', '5_kia-soul-wide-b-exterior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('125', '5', 'EXT', null, null, null, '5_kia-soul-wide-exterior-03.jpg', '5_kia-soul-wide-b-exterior-03-w.jpg', '5_kia-soul-wide-b-exterior-03-t.jpg', '5_kia-soul-wide-b-exterior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('126', '5', 'EXT', null, null, null, '5_kia-soul-wide-exterior-04.jpg', '5_kia-soul-wide-b-exterior-04-w.jpg', '5_kia-soul-wide-b-exterior-04-t.jpg', '5_kia-soul-wide-b-exterior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('127', '5', 'EXT', null, null, null, '5_kia-soul-wide-exterior-05.jpg', '5_kia-soul-wide-b-exterior-05-w.jpg', '5_kia-soul-wide-b-exterior-05-t.jpg', '5_kia-soul-wide-b-exterior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('128', '5', 'EXT', null, null, null, '5_kia-soul-wide-exterior-06.jpg', '5_kia-soul-wide-b-exterior-06-w.jpg', '5_kia-soul-wide-b-exterior-06-t.jpg', '5_kia-soul-wide-b-exterior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('129', '5', 'EXT', null, null, null, '5_kia-soul-wide-exterior-07.jpg', '5_kia-soul-wide-b-exterior-07-w.jpg', '5_kia-soul-wide-b-exterior-07-t.jpg', '5_kia-soul-wide-b-exterior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('130', '5', 'EXT', null, null, null, '5_kia-soul-wide-exterior-08.jpg', '5_kia-soul-wide-b-exterior-08-w.jpg', '5_kia-soul-wide-b-exterior-08-t.jpg', '5_kia-soul-wide-b-exterior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('131', '5', 'INT', null, null, null, '5_kia-soul-wide-interior-01.jpg', '5_kia-soul-wide-b-interior-01-w.jpg', '5_kia-soul-wide-b-interior-01-t.jpg', '5_kia-soul-wide-b-interior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('132', '5', 'INT', null, null, null, '5_kia-soul-wide-interior-02.jpg', '5_kia-soul-wide-b-interior-02-w.jpg', '5_kia-soul-wide-b-interior-02-t.jpg', '5_kia-soul-wide-b-interior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('133', '5', 'INT', null, null, null, '5_kia-soul-wide-interior-03.jpg', '5_kia-soul-wide-b-interior-03-w.jpg', '5_kia-soul-wide-b-interior-03-t.jpg', '5_kia-soul-wide-b-interior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('134', '5', 'INT', null, null, null, '5_kia-soul-wide-interior-04.jpg', '5_kia-soul-wide-b-interior-04-w.jpg', '5_kia-soul-wide-b-interior-04-t.jpg', '5_kia-soul-wide-b-interior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('135', '5', 'INT', null, null, null, '5_kia-soul-wide-interior-05.jpg', '5_kia-soul-wide-b-interior-05-w.jpg', '5_kia-soul-wide-b-interior-05-t.jpg', '5_kia-soul-wide-b-interior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('136', '5', 'INT', null, null, null, '5_kia-soul-wide-interior-06.jpg', '5_kia-soul-wide-b-interior-06-w.jpg', '5_kia-soul-wide-b-interior-06-t.jpg', '5_kia-soul-wide-b-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('137', '5', 'INT', null, null, null, '5_kia-soul-wide-interior-07.jpg', '5_kia-soul-wide-b-interior-07-w.jpg', '5_kia-soul-wide-b-interior-07-t.jpg', '5_kia-soul-wide-b-interior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('138', '6', 'EXT', 'Listo para reinventar el juego', 'Toma tu experiencia de manejo a un nuevo nivel gracias al nuevo y único Sportage, las cabezas giraran con las miradas, el innovador uso de la tecnología y excepcional atención al detalle.', null, '6_ico_sportage_paging1_on.png', '6_kia-sportage-exterior-01-w.jpg', '6_kia-sportage-exterior-01-t.jpg', '6_kia-sportage-exterior-01-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('139', '6', 'EXT', 'Conducir en la ciudad nunca ha sido tan genial', 'El Sportage es el nuevo rey de la selva urbana con potencia suficiente para conducir de forma segura y sin problemas por los caminos de la ciudad con una perfecta combinación de estilo contemporáneo y recursos deportivos.', null, '6_ico_sportage_paging2_on.png', '6_kia-sportage-exterior-02-w.jpg', '6_kia-sportage-exterior-02-t.jpg', '6_kia-sportage-exterior-02-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('140', '6', 'EXT', 'Líneas llamativas que dibujan miradas de admiración', 'Todos queremos destacar y distinguirnos entre la multitud. Con esta línea elegante y deportiva, el nuevo y revolucionario Sportage es un SUV del cual se sentirá orgulloso al manejarlo.', null, '6_ico_sportage_paging3_on.png', '6_kia-sportage-exterior-03-w.jpg', '6_kia-sportage-exterior-03-t.jpg', '6_kia-sportage-exterior-03-m.jpg', '0', '0', '1', '0', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('141', '6', 'EXT', 'Mejoras aerodinámicas', null, null, null, '6_kia-sportage-exterior-08-w.jpg', '6_kia-sportage-exterior-08-t.jpg', '6_kia-sportage-exterior-08-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('142', '6', 'EXT', 'Retrovisores retráctiles con luces direccionales LED', null, null, null, '6_kia-sportage-exterior-09-w.jpg', '6_kia-sportage-exterior-09-t.jpg', '6_kia-sportage-exterior-09-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('143', '6', 'EXT', 'Luces Diurnas', null, null, null, '6_kia-sportage-exterior-04-w.jpg', '6_kia-sportage-exterior-04-t.jpg', '6_kia-sportage-exterior-04-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('144', '6', 'EXT', 'Lámparas combinadas traseras de tipo LED', null, null, null, '6_kia-sportage-exterior-06-w.jpg', '6_kia-sportage-exterior-06-t.jpg', '6_kia-sportage-exterior-06-m.jpg', '0', '0', '0', '1', '0', '0', '4', '1');
+INSERT INTO `modelo_imagenes` VALUES ('145', '6', 'INT', 'Máxima comodidad y diseño deportivo', null, null, null, '6_kia-sportage-interior-01-w.jpg', '6_kia-sportage-interior-01-t.jpg', '6_kia-sportage-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('146', '6', 'INT', 'Tome asiento para el impulso de su vida', 'Nuestros dedicados diseñadores cuidadosamente han combinado, los materiales más finos y duraderos con atención a los detalles para crear sensaciones de elegancia y pura comodidad que aumentará su sentimiento de paz interior, sin importar lo que pueda estar pasando afuera.', null, null, '6_kia-sportage-interior-02-w.jpg', '6_kia-sportage-interior-02-t.jpg', '6_kia-sportage-interior-02-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('147', '6', 'INT', 'Pantalla a color LCD de 4,2 pulgadas', 'La información es poder y la pantalla a color LCD de 4,2 pulgadas perfectamente situada entre los indicadores de agrupación muestra un vehículo vivaz y la información de manejo con una visibilidad sobresaliente.', null, null, '6_kia-sportage-interior-05-w.jpg', '6_kia-sportage-interior-05-t.jpg', '6_kia-sportage-interior-05-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('148', '6', 'INT', 'Asientos traseros totalmente abatibles', 'Los asientos posteriores se pliegan completamente para transportar la carga más fácilmente y con seguridad.', null, null, '6_kia-sportage-interior-16-w.jpg', '6_kia-sportage-interior-16-t.jpg', '6_kia-sportage-interior-16-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('149', '6', 'INT', 'Desempañador automático', 'Un sofisticado sensor detecta el empañamiento en el parabrisas frontal y lo limpia automáticamente, dándote claridad en todo momento al manejar.', null, null, '6_kia-sportage-interior-13-w.jpg', '6_kia-sportage-interior-13-t.jpg', '6_kia-sportage-interior-13-m.jpg', '0', '0', '0', '0', '0', '1', '4', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes_thumb
@@ -933,7 +1049,7 @@ CREATE TABLE `modelo_llantas` (
   `img` varchar(60) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_llantas
@@ -947,6 +1063,15 @@ INSERT INTO `modelo_llantas` VALUES ('6', '6', 'R15', 'Llanta de Aleación', '2_
 INSERT INTO `modelo_llantas` VALUES ('7', '7', 'R15', 'Llanta de Aleación', '3_kia-rio-sc-wheel-slide-03.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('8', '8', '165/60 R14', 'Llanta de Acero', '2_rio_sedan_acero.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('9', '9', '165/60 R14', 'Llanta de Aleación', '4_kia-picanto-wheel-slide-06.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('10', '10', '215/55 R17', 'Llanta de Aleación', '5_kia-soul-py-wheel-slide-04.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('11', '11', '215/55 R17', 'Llanta de Aleación', '5_kia-soul-py-wheel-slide-04.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('12', '12', '215/55 R17', 'Llanta de Aleación', '5_kia-soul-py-wheel-slide-04.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('13', '13', '255/60 R17', 'Llanta de Aleación', '6_kia-sportage-wheel-slide-17.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('14', '14', '255/60 R17', 'Llanta de Aleación', '6_kia-sportage-wheel-slide-17.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('15', '15', '255/60 R17', 'Llanta de Aleación', '6_kia-sportage-wheel-slide-17.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('16', '16', '225/55 R18 ', 'Llanta de Aleación', '6_kia-sportage-wheel-slide-18.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('17', '17', '245/45 R19', 'Llanta de Aleación', '6_kia-sportage-wheel-slide-19.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('18', '18', '245/45 R19', 'Llanta de Aleación', '6_kia-sportage-wheel-slide-19.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_motor
@@ -965,7 +1090,7 @@ CREATE TABLE `modelo_motor` (
   `img` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_motor
@@ -979,9 +1104,15 @@ INSERT INTO `modelo_motor` VALUES ('6', '6', '1', 'D-CVVT 16 válvulas', '1.400 
 INSERT INTO `modelo_motor` VALUES ('7', '7', '3', 'FFV', '1.600 c.c', '128/6300', '15.4/4850', '4 en Línea', null, '3_rio_hatch.png', '1');
 INSERT INTO `modelo_motor` VALUES ('8', '8', '3', 'DOHC 12 v?lvulas', '1.000 cc', '80/6000', '12.2/4000', '3 en Línea', null, '4_kia-picanto-engine-slide-03.png', '1');
 INSERT INTO `modelo_motor` VALUES ('9', '9', '3', 'DOHC 12 v?lvulas', '1.000 cc', '80/6000', '12.2/4000', '3 en Línea', null, '4_kia-picanto-engine-slide-03.png', '1');
-INSERT INTO `modelo_motor` VALUES ('10', '10', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4,850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
-INSERT INTO `modelo_motor` VALUES ('11', '11', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4,850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
-INSERT INTO `modelo_motor` VALUES ('12', '12', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4,850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('10', '10', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('11', '11', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('12', '12', '3', '16 Válvulas MLA', '1.600 c.c.', '120/6300', '15.5/4850', '4 en Línea', null, '5_kia-soul-pe-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('13', '13', '1', 'D-CVVT (16 valvulas) MPI', '2.000 c.c.', '155/6200', '19,6/4000', null, null, '6_kia-sportage-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('14', '14', '1', 'D-CVVT (16 valvulas) MPI', '2.000 c.c.', '155/6200', '19,6/4000', null, null, '6_kia-sportage-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('15', '15', '2', ' 16 valvulas HLA CRDI', '2.000 c.c.', '155/6200', '19,6/4000', null, null, '6_kia-sportage-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('16', '16', '2', ' 16 valvulas HLA CRDI', '2.000 c.c.', '155/6200', '19,6/4000', null, null, '6_kia-sportage-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('17', '17', '2', ' 16 valvulas HLA CRDI', '2.000 c.c.', '155/6200', '19,6/4000', null, null, '6_kia-sportage-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('18', '18', '2', ' 16 valvulas HLA CRDI', '2.000 c.c.', '155/6200', '19,6/4000', null, null, '6_kia-sportage-engine-slide-02.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_seguridad
@@ -998,7 +1129,7 @@ CREATE TABLE `modelo_seguridad` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_seguridad
@@ -1014,6 +1145,9 @@ INSERT INTO `modelo_seguridad` VALUES ('8', '2', 'Sensores de estacionamiento tr
 INSERT INTO `modelo_seguridad` VALUES ('9', '3', null, null, '3_Allnew_rio_hatch_Safety_01_w.jpg', '3_Allnew_rio_hatch_Safety_01_t.jpg', '3_Allnew_rio_hatch_Safety_01_m.jpg', '1', '1');
 INSERT INTO `modelo_seguridad` VALUES ('10', '3', 'Airbags para conductor y copiloto', 'El sistema de airbags brinda protección para el conductor y el copiloto', '3_kia-rio-4-door-Safety-04-w.jpg', '3_kia-rio-4-door-Safety-04-t.jpg', '3_kia-rio-4-door-Safety-04-m.jpg', '0', '1');
 INSERT INTO `modelo_seguridad` VALUES ('11', '3', 'Frenos ABS', 'El Sistema Antibloqueo de Freno (ABS) acorta la distancia de frenado previniendo derrapes para mantener el control del vehículo.', '2_Allnew_rio_sedan_Safety_02_w.jpg', '2_Allnew_rio_sedan_Safety_02_w.jpg', '2_Allnew_rio_sedan_Safety_02_w.jpg', '0', '1');
+INSERT INTO `modelo_seguridad` VALUES ('12', '5', 'Bolsas de aire para conductor y pasajero delantero', 'El sistema de airbag(s) brinda protección para los ocupantes del vehículo.', '5_soul-2017-showroom-features-safety-thumbnail-07-w.jpg', '5_soul-2017-showroom-features-safety-thumbnail-07-t.jpg', '5_soul-2017-showroom-features-safety-thumbnail-07-m.jpg', '0', '1');
+INSERT INTO `modelo_seguridad` VALUES ('13', '5', 'Tecnologías inteligentes para una seguridad definitiva', null, '5_kia-soul-safety-01-w.jpg', '5_kia-soul-safety-01-t.jpg', '5_kia-soul-safety-01-m.jpg', '1', '1');
+INSERT INTO `modelo_seguridad` VALUES ('14', '5', 'Sistema Antibloqueo de Frenos (ABS)', 'Preparados para toda situaciones. El sistema de frenos antibloqueo ABS del nuevo Soul, reduce la distancia del frenado en aquellas emergencias, aplicando la máxima fuerza de frenado cuando es necesario.', '5_kia-soul-safety-05-w.jpg', '5_kia-soul-safety-05-t.jpg', '5_kia-soul-safety-05-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version
@@ -1028,7 +1162,7 @@ CREATE TABLE `modelo_version` (
   `ano` int(4) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version
@@ -1045,6 +1179,12 @@ INSERT INTO `modelo_version` VALUES ('9', '4', 'Lx. Aut. 1.0 FFV', '11200.000', 
 INSERT INTO `modelo_version` VALUES ('10', '5', 'Mec. 1,6 FFV	MID', '16400.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('11', '5', 'Aut. 1,6 FFV	FULL', '19200.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('12', '5', 'Aut. 1,6 FFV	FULL BI-COLOR LIMITED', '21200.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('13', '6', 'LX. Mec. 2,0 FFV 2WD FLEX', '23800.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('14', '6', 'LX. Aut. 2,0 FFV 2WD FLEX', '24400.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('15', '6', 'EX. Aut. 2,0 FFV 2WD FLEX', '27200.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('16', '6', 'EX. Aut. 2,0 DSL 2WD', '30400.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('17', '6', 'EX. Aut. 2,0 DSL 4WD DSL FULL ll\r\n', '32400.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('18', '6', 'EX. Aut. 2,0 DSL 4WD DSL LIMITED', '37600.000', '0', '2018', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version_cuotas
@@ -1058,7 +1198,7 @@ CREATE TABLE `modelo_version_cuotas` (
   `entrega_inicial` decimal(22,3) DEFAULT NULL,
   `cantidad_cuotas` int(3) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version_cuotas
@@ -1075,6 +1215,12 @@ INSERT INTO `modelo_version_cuotas` VALUES ('9', '11', '2', '375.000', '2500.000
 INSERT INTO `modelo_version_cuotas` VALUES ('10', '12', '2', '398.000', '2650.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('11', '8', '2', '195.000', '1300.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('12', '9', '2', '225.000', '1500.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('13', '13', '2', '473.000', '3150.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('14', '14', '2', '503.000', '3350.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('15', '15', '2', '540.000', '3600.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('16', '16', '2', '600.000', '4000.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('17', '17', '2', '638.000', '4250.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('18', '18', '2', '735.000', '4900.000', '60');
 
 -- ----------------------------
 -- Table structure for moneda
