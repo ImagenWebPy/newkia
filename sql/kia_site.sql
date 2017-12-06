@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-05 18:28:57
+Date: 2017-12-06 18:22:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -205,7 +205,7 @@ CREATE TABLE `modelo` (
   `img_m` varchar(80) DEFAULT NULL,
   `estado` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo
@@ -217,6 +217,7 @@ INSERT INTO `modelo` VALUES ('4', '1', 'Picanto', '5 años o 100.00 Km.', '4_pic
 INSERT INTO `modelo` VALUES ('5', '4', 'Soul', '5 años o 100.00 Km.', '5_kia-new-cars-soul-logo.png', '5_soul_thumb.png', '5_Volante_Soul_baja.pdf', 'Entra ahora y conoce el Kia Soul, una Camioneta SUV que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '5_kia_soul_w.png', '5_kia_soul_t.png', '5_kia_soul_m.png', '1');
 INSERT INTO `modelo` VALUES ('6', '4', 'Sportage', '5 años o 100.00 Km.', '6_sportage.png', '6_sportage_thumb.png', '6_Volante Sportage baja.pdf', 'Kia Sportage, un SUV siempre listo para la aventura, sin importar el camino que tienes por delante. Explore su manejo ágil y características de suave conducción. Cotízalo ya.', '6_sportage_w.png', '6_sportage_t.png', '6_sportage_m.png', '1');
 INSERT INTO `modelo` VALUES ('7', '2', 'Grand Carnival', '5 años o 100.00 Km.', '7_grand_carnival.png', '7_grand_carnival_thumb.png', '7_Volante_Carnival_baja.pdf', 'Grand Carnival es un vehículo familiar con características de lujo. Eche un vistazo a su hermosa consola central, asientos altos y otros aspectos prometedores.', '7_grand-carnival-w.png', '7_grand-carnival-t.png', '7_grand-carnival-m.png', '1');
+INSERT INTO `modelo` VALUES ('8', '4', 'Sorento', '5 años o 100.00 Km.', '8_sorento.png', '8_sorento_thumb.png', '8_Volante_Sorento_baja.pdf', '¡Un todoterreno robusto, masculino y capaz! Prestigio renacido, Sorento. Ver imágenes e información de Sorento aquí.', '8_sorento_w.png', '8_sorento_t.png', '8_sorento_m.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_360
@@ -230,7 +231,7 @@ CREATE TABLE `modelo_360` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_360` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=470 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=541 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_360
@@ -704,6 +705,77 @@ INSERT INTO `modelo_360` VALUES ('466', '7', null, '7_grand_carnival_0068.jpg', 
 INSERT INTO `modelo_360` VALUES ('467', '7', null, '7_grand_carnival_0069.jpg', '1');
 INSERT INTO `modelo_360` VALUES ('468', '7', null, '7_grand_carnival_0070.jpg', '1');
 INSERT INTO `modelo_360` VALUES ('469', '7', null, '7_grand_carnival_0071.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('470', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0000.png', '1');
+INSERT INTO `modelo_360` VALUES ('471', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0001.png', '1');
+INSERT INTO `modelo_360` VALUES ('472', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0002.png', '1');
+INSERT INTO `modelo_360` VALUES ('473', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0003.png', '1');
+INSERT INTO `modelo_360` VALUES ('474', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0004.png', '1');
+INSERT INTO `modelo_360` VALUES ('475', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0005.png', '1');
+INSERT INTO `modelo_360` VALUES ('476', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0006.png', '1');
+INSERT INTO `modelo_360` VALUES ('477', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0007.png', '1');
+INSERT INTO `modelo_360` VALUES ('478', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0008.png', '1');
+INSERT INTO `modelo_360` VALUES ('479', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0009.png', '1');
+INSERT INTO `modelo_360` VALUES ('480', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0010.png', '1');
+INSERT INTO `modelo_360` VALUES ('481', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0011.png', '1');
+INSERT INTO `modelo_360` VALUES ('482', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0012.png', '1');
+INSERT INTO `modelo_360` VALUES ('483', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0013.png', '1');
+INSERT INTO `modelo_360` VALUES ('484', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0014.png', '1');
+INSERT INTO `modelo_360` VALUES ('485', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0015.png', '1');
+INSERT INTO `modelo_360` VALUES ('486', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0017.png', '1');
+INSERT INTO `modelo_360` VALUES ('487', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0018.png', '1');
+INSERT INTO `modelo_360` VALUES ('488', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0019.png', '1');
+INSERT INTO `modelo_360` VALUES ('489', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0020.png', '1');
+INSERT INTO `modelo_360` VALUES ('490', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0021.png', '1');
+INSERT INTO `modelo_360` VALUES ('491', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0022.png', '1');
+INSERT INTO `modelo_360` VALUES ('492', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0023.png', '1');
+INSERT INTO `modelo_360` VALUES ('493', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0024.png', '1');
+INSERT INTO `modelo_360` VALUES ('494', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0025.png', '1');
+INSERT INTO `modelo_360` VALUES ('495', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0026.png', '1');
+INSERT INTO `modelo_360` VALUES ('496', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0027.png', '1');
+INSERT INTO `modelo_360` VALUES ('497', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0028.png', '1');
+INSERT INTO `modelo_360` VALUES ('498', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0029.png', '1');
+INSERT INTO `modelo_360` VALUES ('499', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0030.png', '1');
+INSERT INTO `modelo_360` VALUES ('500', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0031.png', '1');
+INSERT INTO `modelo_360` VALUES ('501', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0032.png', '1');
+INSERT INTO `modelo_360` VALUES ('502', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0033.png', '1');
+INSERT INTO `modelo_360` VALUES ('503', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0034.png', '1');
+INSERT INTO `modelo_360` VALUES ('504', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0035.png', '1');
+INSERT INTO `modelo_360` VALUES ('505', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0036.png', '1');
+INSERT INTO `modelo_360` VALUES ('506', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0037.png', '1');
+INSERT INTO `modelo_360` VALUES ('507', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0038.png', '1');
+INSERT INTO `modelo_360` VALUES ('508', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0039.png', '1');
+INSERT INTO `modelo_360` VALUES ('509', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0040.png', '1');
+INSERT INTO `modelo_360` VALUES ('510', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0041.png', '1');
+INSERT INTO `modelo_360` VALUES ('511', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0042.png', '1');
+INSERT INTO `modelo_360` VALUES ('512', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0043.png', '1');
+INSERT INTO `modelo_360` VALUES ('513', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0044.png', '1');
+INSERT INTO `modelo_360` VALUES ('514', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0045.png', '1');
+INSERT INTO `modelo_360` VALUES ('515', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0046.png', '1');
+INSERT INTO `modelo_360` VALUES ('516', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0047.png', '1');
+INSERT INTO `modelo_360` VALUES ('517', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0048.png', '1');
+INSERT INTO `modelo_360` VALUES ('518', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0049.png', '1');
+INSERT INTO `modelo_360` VALUES ('519', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0050.png', '1');
+INSERT INTO `modelo_360` VALUES ('520', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0051.png', '1');
+INSERT INTO `modelo_360` VALUES ('521', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0052.png', '1');
+INSERT INTO `modelo_360` VALUES ('522', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0053.png', '1');
+INSERT INTO `modelo_360` VALUES ('523', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0054.png', '1');
+INSERT INTO `modelo_360` VALUES ('524', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0055.png', '1');
+INSERT INTO `modelo_360` VALUES ('525', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0056.png', '1');
+INSERT INTO `modelo_360` VALUES ('526', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0057.png', '1');
+INSERT INTO `modelo_360` VALUES ('527', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0058.png', '1');
+INSERT INTO `modelo_360` VALUES ('528', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0059.png', '1');
+INSERT INTO `modelo_360` VALUES ('529', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0060.png', '1');
+INSERT INTO `modelo_360` VALUES ('530', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0061.png', '1');
+INSERT INTO `modelo_360` VALUES ('531', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0062.png', '1');
+INSERT INTO `modelo_360` VALUES ('532', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0063.png', '1');
+INSERT INTO `modelo_360` VALUES ('533', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0064.png', '1');
+INSERT INTO `modelo_360` VALUES ('534', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0065.png', '1');
+INSERT INTO `modelo_360` VALUES ('535', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0066.png', '1');
+INSERT INTO `modelo_360` VALUES ('536', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0067.png', '1');
+INSERT INTO `modelo_360` VALUES ('537', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0068.png', '1');
+INSERT INTO `modelo_360` VALUES ('538', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0069.png', '1');
+INSERT INTO `modelo_360` VALUES ('539', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0070.png', '1');
+INSERT INTO `modelo_360` VALUES ('540', '8', null, '8_kia-all-new-sorento-kx-1-clear-white_0071.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_color
@@ -731,14 +803,14 @@ CREATE TABLE `modelo_desempeno` (
   `id_modelo` int(11) unsigned DEFAULT NULL,
   `titulo` varchar(120) DEFAULT NULL,
   `descripcion` text,
-  `img_w` varchar(80) DEFAULT NULL,
-  `img_t` varchar(80) DEFAULT NULL,
-  `img_m` varchar(80) DEFAULT NULL,
+  `img_w` varchar(85) DEFAULT NULL,
+  `img_t` varchar(85) DEFAULT NULL,
+  `img_m` varchar(85) DEFAULT NULL,
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_desempeno` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_desempeno
@@ -766,6 +838,11 @@ INSERT INTO `modelo_desempeno` VALUES ('23', '6', 'Transmisión automática', 'E
 INSERT INTO `modelo_desempeno` VALUES ('24', '6', 'Transmisión manual', 'La sexta marcha le permite navegar con comodidad y máxima eficiencia de combustible.', '6_kia-sportage-performance-03-w.jpg', '6_kia-sportage-performance-03-t.jpg', '6_kia-sportage-performance-03-m.jpg', '0', '1');
 INSERT INTO `modelo_desempeno` VALUES ('25', '6', 'Mejoras aerodinámicas', 'El inteligente adorno lateral del alerón posterior minimiza el coeficiente de resistencia para mejora la resistencia del combustible mientras una cortina de aire de la rueda mejorará el flujo de viento alrededor de las ruedas frontales ofreciendo una experiencia al conducir más cómoda.', '6_kia-sportage-performance-07-w.jpg', '6_kia-sportage-performance-07-t.jpg', '6_kia-sportage-performance-07-m.jpg', '0', '1');
 INSERT INTO `modelo_desempeno` VALUES ('26', '6', 'Suspensión', 'El diseño y la geometría de la nueva y mejorada suspensión del Sportage da un manejo aún más estable a altas velocidades para su seguridad y comodidad de conducción.', '6_kia-sportage-performance-05-w.jpg', '6_kia-sportage-performance-05-t.jpg', '6_kia-sportage-performance-05-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('27', '7', 'Puede contar con rendimiento a donde quiera que vaya', 'Ahora usted siempre se sentirá como en casa en su entorno, ya sea al aire libre o en la bulliciosa ciudad, gracias a la combinación ideal de tecnología inteligente y diseño inteligente.', '7_by_grand_carnival_2017_features_performance_kv_1_w.jpg', '7_by_grand_carnival_2017_features_performance_kv_1_t.jpg', '7_by_grand_carnival_2017_features_performance_kv_1_m.jpg', '1', '1');
+INSERT INTO `modelo_desempeno` VALUES ('28', '7', 'Control Electrónico de estabilidad (ESC)', 'El ESC controla automáticamente la presión de frenado en situaciones de conducción difíciles como vueltas repentinas, aceleración y frenado.', '7_kia-grand-carnival-performance-04-1-w.jpg', '7_kia-grand-carnival-performance-04-1-t.jpg', '7_kia-grand-carnival-performance-04-1-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('29', '7', 'Control de asistencia de arranque en colina (HAC)', 'Ahora usted nunca tiene que preocuparse de rodar hacia atrás cuando comience su coche a inclinarse Disfrute de la paz de la mente dondequiera que usted parquea.', '7_kia-grand-carnival-performance-03-1-w.jpg', '7_kia-grand-carnival-performance-03-1-t.jpg', '7_kia-grand-carnival-performance-03-1-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('30', '7', 'Desempeño aerodinámico gracias a una silueta más suave', 'Un perfil realmente elegante se logra prestando mucha atención a la resistencia al viento, incluyendo el diseño del labio del parachoques delantero, los reflectores de rueda y las cubiertas inferiores.', '7_kia-grand-carnival-performance-06-1-w.jpg', '7_kia-grand-carnival-performance-06-1-t.jpg', '7_kia-grand-carnival-performance-06-1-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('31', '7', 'La transmisión automática de 6 velocidades combina la potencia y el estilo', 'El estilo práctico y la precisión avanzada se combinan perfectamente en una palanca de cambios con una bota de textura de cuero que está totalmente en línea con el aspecto moderno del Gran Carnaval', '7_kia-grand-carnival-performance-07-1-w.jpg', '7_kia-grand-carnival-performance-07-1-t.jpg', '7_kia-grand-carnival-performance-07-1-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_destacado
@@ -782,7 +859,7 @@ CREATE TABLE `modelo_destacado` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_destacado
@@ -795,6 +872,10 @@ INSERT INTO `modelo_destacado` VALUES ('5', '3', 'Todo el espacio necesario para
 INSERT INTO `modelo_destacado` VALUES ('6', '3', 'Red de equipaje', 'Una red elástica mantiene el equipaje de moverse en el espacio de carga.', '3_kia-rio-5-door-highlights-02-w.jpg', '3_kia-rio-5-door-highlights-02-t.jpg', '3_kia-rio-5-door-highlights-02-m.jpg', '0', '1');
 INSERT INTO `modelo_destacado` VALUES ('7', '3', 'Estante de cubierta', 'Con un estante trasero que mantiene la carga y el equipaje fuera de la vista. Se levanta al momento de abrir el maletero.', '3_kia-rio-5-door-highlights-03-w.jpg', '3_kia-rio-5-door-highlights-03-t.jpg', '3_kia-rio-5-door-highlights-03-m.jpg', '0', '1');
 INSERT INTO `modelo_destacado` VALUES ('8', '3', 'Sistema de auto desempañador', 'El desempañador automático detecta la niebla en el parabrisa y automáticamente despliega los ventiladores para limpiar el vidrio.', '3_kia-rio-5-door-highlights-04-w.jpg', '3_kia-rio-5-door-highlights-04-t.jpg', '3_kia-rio-5-door-highlights-04-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('9', '8', 'Experimente el control preciso de cada rueda', 'Un innovador y continuamente activo sistema de acoplamiento AWD (tracción 4 por 4) ayuda al AWD (tracción 4 por 4) de un Sorento equipado a mantener la máxima tracción sobre superficies rugosas, sueltas o resbaladizas, y ayuda a mejorar la estabilidad lateral en las curvas.', '8_kia-sorento-um-17my-highlights-01-w.jpg', '8_kia-sorento-um-17my-highlights-01-t.jpg', '8_kia-sorento-um-17my-highlights-01-m.jpg', '1', '1');
+INSERT INTO `modelo_destacado` VALUES ('10', '8', 'Puerta trasera eléctrica inteligente', 'El portón trasero se abre automáticamente cuando se detecta la Llave inteligente durante 3 segundos o más y se cierra con sólo pulsar un botón.', '8_kia-pop-sorento-um-17my-highlights-01-w.jpg', '8_kia-pop-sorento-um-17my-highlights-01-t.jpg', '8_kia-pop-sorento-um-17my-highlights-01-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('11', '8', 'Sistema de selección en modo de manejo.', 'Elija el modo Normal, Eco o Sport para adaptarse a sus preferencias. Estándar en modelos de transmisión automática.', '8_kia-pop-sorento-um-17my-highlights-02-w.jpg', '8_kia-pop-sorento-um-17my-highlights-02-t.jpg', '8_kia-pop-sorento-um-17my-highlights-02-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('12', '8', 'Función de la memoria de la puerta trasera.', 'Los ángulos de apertura para el portón trasero se pueden almacenar en la memoria presionando y sosteniendo un botón, bajo el portón trasero durante 3 segundos. Opcional en modelos EX.', '8_kia-pop-sorento-um-17my-highlights-03-w.jpg', '8_kia-pop-sorento-um-17my-highlights-03-t.jpg', '8_kia-pop-sorento-um-17my-highlights-03-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension
@@ -810,7 +891,7 @@ CREATE TABLE `modelo_dimension` (
   `img_all` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension
@@ -822,6 +903,7 @@ INSERT INTO `modelo_dimension` VALUES ('4', '4', '3.595', '1.595', '1.480', '2.3
 INSERT INTO `modelo_dimension` VALUES ('5', '5', '4.140', '1.800', '1.619', '2.570', '5_kia-soul-dimensions-all-view.png', '1');
 INSERT INTO `modelo_dimension` VALUES ('6', '6', '4.480', '1.855', '1.655', '2.670', '6_new-sportage-r-showroom-specification-dimensions-all-view.png', '1');
 INSERT INTO `modelo_dimension` VALUES ('7', '7', '5.115', '1.985', '1.755', '3.060', '7-grand-carnival-dimensions-allview.png', '1');
+INSERT INTO `modelo_dimension` VALUES ('8', '8', '4.780', '1.890', '1.685', '2.780', '8_kia-new-sorento-dimensions-allview.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension_img
@@ -835,7 +917,7 @@ CREATE TABLE `modelo_dimension_img` (
   `img_t` varchar(120) DEFAULT NULL,
   `img_m` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension_img
@@ -861,6 +943,9 @@ INSERT INTO `modelo_dimension_img` VALUES ('18', '6', 'LATERAL', '6_new-sportage
 INSERT INTO `modelo_dimension_img` VALUES ('19', '7', 'FRENTE', '7-grand-carnival-dimensions-slide-list-01-w.png', '7-grand-carnival-dimensions-slide-list-01-t.png', '7-grand-carnival-dimensions-slide-list-01-m.png');
 INSERT INTO `modelo_dimension_img` VALUES ('20', '7', 'ATRAS', '7-grand-carnival-dimensions-slide-list-02-w.png', '7-grand-carnival-dimensions-slide-list-02-t.png', '7-grand-carnival-dimensions-slide-list-02-m.png');
 INSERT INTO `modelo_dimension_img` VALUES ('21', '7', 'LATERAL', '7-grand-carnival-dimensions-slide-list-03-w.png', '7-grand-carnival-dimensions-slide-list-03-t.png', '7-grand-carnival-dimensions-slide-list-03-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('22', '8', 'FRENTE', '8-sorento-um-17my-dimensions-slide-list-01-w.png', '8-sorento-um-17my-dimensions-slide-list-01-t.png', '8-kia-sorento-um-17my-dimensions-slide-list-01-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('23', '8', 'ATRAS', '8-sorento-um-17my-dimensions-slide-list-02-w.png', '8-sorento-um-17my-dimensions-slide-list-02-t.png', '8-kia-sorento-um-17my-dimensions-slide-list-02-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('24', '8', 'LATERAL', '8-sorento-um-17my-dimensions-slide-list-03-w.png', '8-sorento-um-17my-dimensions-slide-list-03-t.png', '8-kia-sorento-um-17my-dimensions-slide-list-03-m.png');
 
 -- ----------------------------
 -- Table structure for modelo_especificacion
@@ -908,7 +993,7 @@ CREATE TABLE `modelo_general` (
   `descripcion` text,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_general
@@ -920,6 +1005,7 @@ INSERT INTO `modelo_general` VALUES ('4', '4', '4_kia-picanto-overview-01-w.jpg'
 INSERT INTO `modelo_general` VALUES ('5', '5', '5_kia-new-cars-soul-hero-kv-w.jpg', '5_kia-new-cars-soul-hero-kv-t.jpg', '5_kia-new-cars-soul-hero-kv-m.jpg', 'Soul, más elegante que nunca', 'Presentamos un diseño innovador con un ADN urbano que lo ha transportado al futuro. El nuevo Kia Soul ha sido reforzado y refinado por dentro y por fuera con un estilo de SUV deportivo, una serie de tecnologías a la vanguardia y rendimiento mejorado para una mejor conducción.', '1');
 INSERT INTO `modelo_general` VALUES ('6', '6', '6_kia-sportage-overview-01-w.jpg', '6_kia-sportage-overview-01-t.jpg', '6_kia-sportage-overview-01-m.jpg', 'Nacida en el mundo moderno', 'Atrevida, con diseño dinámico que cautiva por su aspecto sofisticado. La nueva Sportage te hará vivir tu vida al máximo.', '1');
 INSERT INTO `modelo_general` VALUES ('7', '7', '7_by_grand_carnival_2017_features_overview_kv_1_w.jpg', '7_by_grand_carnival_2017_features_overview_kv_1_t.jpg', '7_by_grand_carnival_2017_features_overview_kv_1_m.jpg', 'Cambia las reglas y llega más lejos', 'El gran Carnival te lleva a un lugar donde el diseño superior y características verdaderamente inteligentes se combinan para entedender profundamente tus necesidades de conducción. Es un lugar donde el lujo va de la mano con la economía - un lugar donde lo excepcional cumple con lo cotidiano.', '1');
+INSERT INTO `modelo_general` VALUES ('8', '8', '8_kia-sorento-um-17my-overview-01-w.jpg', '8_kia-sorento-um-17my-overview-01-t.jpg', '8_kia-sorento-um-17my-overview-01-m.jpg', 'Un aventurero que es igual en casa como en los paisajes modernos de la ciudad.', 'El Sorento tiene un sólido legado de trabajo duro,forjado en practicalidad para todas las condiciones climáticas. Ahora incluso con un estilo aún más refinado, su ingenio resulta muy atractivo en las calles más sofisticadas de la ciudad.', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes
@@ -929,7 +1015,7 @@ CREATE TABLE `modelo_imagenes` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `id_modelo` int(11) unsigned DEFAULT NULL,
   `tipo` enum('INT','EXT') DEFAULT NULL,
-  `titulo` varchar(120) DEFAULT NULL,
+  `titulo` varchar(145) DEFAULT NULL,
   `descripcion` text,
   `img_principal` varchar(120) DEFAULT NULL,
   `img_thumb` varchar(120) DEFAULT NULL,
@@ -946,7 +1032,7 @@ CREATE TABLE `modelo_imagenes` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_imagenes` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=176 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=215 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_imagenes
@@ -1124,6 +1210,45 @@ INSERT INTO `modelo_imagenes` VALUES ('172', '6', 'INT', null, null, null, '6_ki
 INSERT INTO `modelo_imagenes` VALUES ('173', '6', 'INT', null, null, null, '6_kia-sportage-wide-interior-10.jpg', '6_kia-sportage-wide-b-interior-10-w.jpg', '6_kia-sportage-wide-b-interior-10-t.jpg', '6_kia-sportage-wide-b-interior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 INSERT INTO `modelo_imagenes` VALUES ('174', '6', 'INT', null, null, null, '6_kia-sportage-wide-interior-11.jpg', '6_kia-sportage-wide-b-interior-11-w.jpg', '6_kia-sportage-wide-b-interior-11-t.jpg', '6_kia-sportage-wide-b-interior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 INSERT INTO `modelo_imagenes` VALUES ('175', '6', 'INT', null, null, null, '6_kia-sportage-wide-interior-12.jpg', '6_kia-sportage-wide-b-interior-12-w.jpg', '6_kia-sportage-wide-b-interior-12-t.jpg', '6_kia-sportage-wide-b-interior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('176', '7', 'EXT', 'Conducción dinámica en un mundo apasionante', 'El Grand Carnival le permite tener un poder absoluto sobre el ambiente de conducción', null, '7_ico_grandcarnival_exterior1_1_on.png', '7_kia-grand-carnival-exterior-01-1-w.jpg', '7_kia-grand-carnival-exterior-01-1-t.jpg', '7_kia-grand-carnival-exterior-01-1-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('177', '7', 'EXT', 'Disfrute la libertad que brinda el lujo', 'Usted aspira por poder ir a cualquier parte, vivir la vida a lo máximo y explorar los límites de su potencial.\r\nEl Gran Carnaval te llevará allí con una comodidad y un estilo excepcionales. ', null, '7_ico_grandcarnival_exterior2_on.png', '7_kia-grand-carnival-exterior-02-w.jpg', '7_kia-grand-carnival-exterior-02-t.jpg', '7_kia-grand-carnival-exterior-02-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('178', '7', 'EXT', 'Experimente el placer de conducir', '\"Vivir la vida al máximo es disfrutar de todo lo que haces y eso incluye conducir.\r\nEl Gran Carnaval ha llegado a hacer de la conducción una parte verdaderamente satisfactoria de cómo llenar cada día con placer.\"', null, '7_ico_grandcarnival_exterior3_1_on.png', '7_kia-grand-carnival-exterior-03-1-w.jpg', '7_kia-grand-carnival-exterior-03-1-t.jpg', '7_kia-grand-carnival-exterior-03-1-m.jpg', '0', '0', '1', '0', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('179', '7', 'EXT', 'Puertas corredizas eléctricas dobles', 'Con sólo presionar un botón de tu llave remota o uno de los interruptores de la consola superior, accionarás las puertas traseras corredizas eléctricas que se abrirán automáticamente y de par en par, para darle la bienvenida a todos los pasajeros.', null, null, '7_kia-grand-carnival-exterior-04-1-w.jpg', '7_kia-grand-carnival-exterior-04-1-t.jpg', '7_kia-grand-carnival-exterior-04-1-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('180', '7', 'EXT', 'Luces delanteras tipo led', 'Las luces delanteras LED, iluminan la carretera con mayor nitidez y precisión, sumando un toque importante de elegancia gracias a su diseño estilizado y moderno. Estilo y seguridad, todo en uno.', null, null, '7_kia-grand-carnival-exterior-04-w.jpg', '7_kia-grand-carnival-exterior-04-t.jpg', '7_kia-grand-carnival-exterior-04-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('181', '7', 'EXT', 'Espejos eléctricos con direccionales, abatibles eléctricamente y desempañador', 'Para observar tu camino, tienes que contar con la mejor tecnología, y en el caso de la Grand Sedona SUV cuenta con espejos de un gran diseño, son abatibles eléctricamente, incluyen luces direccionales y desempañador, tres características pensadas para facilitar tu conducción. Tecnología al servicio de la comodidad, en todo sentido.', null, null, '7_kia-carnival-yp-exterior-07-w.jpg', '7_kia-carnival-yp-exterior-07-t.jpg', '7_kia-carnival-yp-exterior-07-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('182', '7', 'INT', 'Un asiento del conductor supremamente elegante y espacioso', 'La conducción contemporánea consiste en asegurarse en cada cosa que necesite esté a su alcance. Una consola amplia, horizontalmente plantada y una abundancia de espacio combinan con el estilo de lujo suoerar sus expectativas. * SXL', null, null, '7_kia-grand-carnival-interior-01-1-w.jpg', '7_kia-grand-carnival-interior-01-1-t.jpg', '7_kia-grand-carnival-interior-01-1-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('183', '7', 'INT', 'Aire acondicionado automático completo con control independiente de 3 zonas', 'Lo último en control de climatización de alta tecnología garantiza que la calidad del aire interior y la temperatura son lo suficientemente flexibles para adaptarse a todos a lo largo del viaje.', null, null, '7_kia-grand-carnival-interior-04-1-w.jpg', '7_kia-grand-carnival-interior-04-1-t.jpg', '7_kia-grand-carnival-interior-04-1-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('184', '7', 'INT', 'Control de audio y velocidad crucero en el volante', 'La Grand Carnival te ayudará a facilitar otras tareas que puedan significar una distracción a la hora de conducir, como por ejemplo el poder controlar tu música y la velocidad desde el volante sin perder la concentración en la vía. Al mismo tiempo la velocidad crucero, te ayudará a mantener una misma velocidad en largos caminos, sobretodo en carretera.', null, null, '7_kia-carnival-yp-interior-05-w.jpg', '7_kia-carnival-yp-interior-05-t.jpg', '7_kia-carnival-yp-interior-05-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('185', '7', 'INT', 'Amplia sala de carga', 'Un conjunto aparentemente interminable de variaciones de plegado de asientos da paso a un cavernoso Espacio para transportar objetos de todas las formas y tamaños.', null, null, '7_kia-grand-carnival-interior-06-1-w.jpg', '7_kia-grand-carnival-interior-06-1-t.jpg', '7_kia-grand-carnival-interior-06-1-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('186', '7', 'EXT', null, null, '7_kia-grand-carnival-gallery-01.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('187', '7', 'INT', null, null, '7_kia-grand-carnival-gallery-02.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('188', '7', 'EXT', null, null, null, '7_kia-grand-carnival-wide-exterior-02.jpg', '7_kia-grand-carnival-wide-b-exterior-02-w.jpg', '7_kia-grand-carnival-wide-b-exterior-02-t.jpg', '7_kia-grand-carnival-wide-b-exterior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('189', '7', 'EXT', null, null, null, '7_kia-grand-carnival-wide-exterior-03.jpg', '7_kia-grand-carnival-wide-b-exterior-03-w.jpg', '7_kia-grand-carnival-wide-b-exterior-03-t.jpg', '7_kia-grand-carnival-wide-b-exterior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('190', '7', 'EXT', null, null, null, '7_kia-grand-carnival-wide-exterior-04.jpg', '7_kia-grand-carnival-wide-b-exterior-04-w.jpg', '7_kia-grand-carnival-wide-b-exterior-04-t.jpg', '7_kia-grand-carnival-wide-b-exterior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('191', '7', 'EXT', null, null, null, '7_kia-grand-carnival-wide-exterior-05.jpg', '7_kia-grand-carnival-wide-b-exterior-05-w.jpg', '7_kia-grand-carnival-wide-b-exterior-05-t.jpg', '7_kia-grand-carnival-wide-b-exterior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('192', '7', 'EXT', null, null, null, '7_kia-grand-carnival-wide-exterior-06.jpg', '7_kia-grand-carnival-wide-b-exterior-06-w.jpg', '7_kia-grand-carnival-wide-b-exterior-06-t.jpg', '7_kia-grand-carnival-wide-b-exterior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('193', '7', 'EXT', null, null, null, '7_kia-grand-carnival-wide-exterior-07.jpg', '7_kia-grand-carnival-wide-b-exterior-07-w.jpg', '7_kia-grand-carnival-wide-b-exterior-07-t.jpg', '7_kia-grand-carnival-wide-b-exterior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('194', '7', 'EXT', null, null, null, '7_kia-grand-carnival-wide-exterior-08.jpg', '7_kia-grand-carnival-wide-b-exterior-08-w.jpg', '7_kia-grand-carnival-wide-b-exterior-08-t.jpg', '7_kia-grand-carnival-wide-b-exterior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('195', '7', 'EXT', null, null, null, '7_kia-grand-carnival-wide-exterior-09.jpg', '7_kia-grand-carnival-wide-b-exterior-09-w.jpg', '7_kia-grand-carnival-wide-b-exterior-09-t.jpg', '7_kia-grand-carnival-wide-b-exterior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('196', '7', 'INT', null, null, null, '7_kia-grand-carnival-wide-interior-04.jpg', '7_kia-grand-carnival-wide-interior-04-w.jpg', '7_kia-grand-carnival-wide-interior-04-t.jpg', '7_kia-grand-carnival-wide-interior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('197', '7', 'INT', null, null, null, '7_kia-grand-carnival-wide-interior-05.jpg', '7_kia-grand-carnival-wide-interior-05-w.jpg', '7_kia-grand-carnival-wide-interior-05-t.jpg', '7_kia-grand-carnival-wide-interior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('198', '7', 'INT', null, null, null, '7_kia-grand-carnival-wide-interior-06.jpg', '7_kia-grand-carnival-wide-interior-06-w.jpg', '7_kia-grand-carnival-wide-interior-06-t.jpg', '7_kia-grand-carnival-wide-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('199', '7', 'INT', null, null, null, '7_kia-grand-carnival-wide-interior-07.jpg', '7_kia-grand-carnival-wide-interior-07-w.jpg', '7_kia-grand-carnival-wide-interior-07-t.jpg', '7_kia-grand-carnival-wide-interior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('200', '7', 'INT', null, null, null, '7_kia-grand-carnival-wide-interior-08.jpg', '7_kia-grand-carnival-wide-interior-08-w.jpg', '7_kia-grand-carnival-wide-interior-08-t.jpg', '7_kia-grand-carnival-wide-interior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('201', '7', 'INT', null, null, null, '7_kia-grand-carnival-wide-interior-09.jpg', '7_kia-grand-carnival-wide-interior-09-w.jpg', '7_kia-grand-carnival-wide-interior-09-t.jpg', '7_kia-grand-carnival-wide-interior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('202', '7', 'INT', null, null, null, '7_kia-grand-carnival-wide-interior-10.jpg', '7_kia-grand-carnival-wide-interior-10-w.jpg', '7_kia-grand-carnival-wide-interior-10-t.jpg', '7_kia-grand-carnival-wide-interior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('203', '7', 'INT', null, null, null, '7_kia-grand-carnival-wide-interior-11.jpg', '7_kia-grand-carnival-wide-interior-11-w.jpg', '7_kia-grand-carnival-wide-interior-11-t.jpg', '7_kia-grand-carnival-wide-interior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('204', '8', 'EXT', 'La vida da la vuelta y la confianza llega en el momento justo.', 'Con una presencia más dominante y tecnologías avanzadas tanto para los conductores como para los pasajeros, el nuevo Kia Sorento se destaca entre los SUV de hoy en día. En ese momento de la vida, cuando el conducir se encuentra con la necesidad de espacio y un toque de sofisticación, el Sorento llega para salvar el día.', null, '8_ico_sorento_um_17my_paging1_on.png', '8_kia-sorento-um-17my-exterior-01-w.jpg', '8_kia-sorento-um-17my-exterior-01-t.jpg', '8_kia-sorento-um-17my-exterior-01-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('205', '8', 'EXT', 'Equipado para llegar justo a donde quieres estar', 'El imponente Kia Sorento te lleva a lugares nuevos y emocionantes, y te ofrece el equipo necesario para hacer el viaje con estilo y confianza.', null, '8_ico_sorento_um_17my_paging2_on.png', '8_kia-sorento-um-17my-exterior-02-w.jpg', '8_kia-sorento-um-17my-exterior-02-t.jpg', '8_kia-sorento-um-17my-exterior-02-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('206', '8', 'EXT', 'Una SUV diseñada para cualquier estilo de vida', 'El elegante y ágil Sorento trae lujo, tecnología y practicidad para la calle con proporciones idealmente equilibradas. La dinámica de manipulación avanzada, una seguridad que piensa por adelantado y una fuerte conectividad vienen junto a un sofisticado paquete que ayuda a navegar en las demandas de la vida moderna con estilo.', null, '8_ico_sorento_um_17my_paging3_on.png', '8_kia-sorento-um-17my-exterior-03-w.jpg', '8_kia-sorento-um-17my-exterior-03-t.jpg', '8_kia-sorento-um-17my-exterior-03-m.jpg', '0', '0', '1', '0', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('207', '8', 'EXT', 'Rejillas del radiador', null, null, null, '8_kia-pop-sorento-um-17my-exterior-01-w.jpg', '8_kia-pop-sorento-um-17my-exterior-01-t.jpg', '8_kia-pop-sorento-um-17my-exterior-01-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('208', '8', 'EXT', 'LED de luces traseras y luces de frenado.', null, null, null, '8_kia-pop-sorento-um-17my-exterior-03-w.jpg', '8_kia-pop-sorento-um-17my-exterior-03-t.jpg', '8_kia-pop-sorento-um-17my-exterior-03-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('209', '8', 'EXT', 'Limpiafaros delanteros', null, null, null, '8_limpiafaro-w.jpg', '8_limpiafaro-t.jpg', '8_limpiafaro-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('210', '8', 'INT', 'Rodearse a sí mismo con el contorno inteligente.', null, null, null, '8_kia-sorento-um-17my-interior-01-w.jpg', '8_kia-sorento-um-17my-interior-01-m.jpg', '8_kia-sorento-um-17my-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('211', '8', 'INT', 'Radio Touch Screen con CD MP3 USB/AUX', 'El sistema de audio de pantalla táctil de 4.3 pulgadas se suma a las capacidades del sistema estándar con una pantalla táctil de color más grande y una pantalla de cámara de copia de seguridad integrada.', null, null, '8_img_interior_detail6-w.jpg', '8_img_interior_detail6-t.jpg', '8_img_interior_detail6-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('212', '8', 'INT', 'Panel de supervisión TFT-LCD de 7 \"', 'Una pantalla de alta visibilidad en el medidor de centro informa de la temperatura exterior, información de audio, la distancia a vacío, el consumo de combustible.\r\nCLOSE', null, null, '8_kia-pop-sorento-um-17my-interior-05-w.jpg', '8_kia-pop-sorento-um-17my-interior-05-t.jpg', '8_kia-pop-sorento-um-17my-interior-05-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('213', '8', 'INT', 'Techo Panorámico\r\n', 'El amplio techo panorámico de doble panel le permite a usted y a sus pasajeros disfrutar de frescas brisas al aire libre, ya que crea un ambiente interior aún más espacioso. Una sola persiana enrollable motorizada, y la ausencia de un forro centro del techo, proporcionan una sensación de amplitud inigualable por los descapotables de la competencia.', null, null, '8_kia-pop-sorento-um-17my-interior-01-w.jpg', '8_kia-pop-sorento-um-17my-interior-01-t.jpg', '8_kia-pop-sorento-um-17my-interior-01-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('214', '8', 'INT', '5 o 7 asientos para máxima comodidad', 'El plegado parcial y completo de las filas del asiento trasero le dan al Sorento numerosas convinaciones para sentarse y llevar equipamento para un balance perfecto de comodidad y factibilidad para los pasajeros, incluyendo un enbarque conveniente para cargas grandes e inusuales y también equipamiento de ocio.', null, null, '8_kia-pop-sorento-um-17my-interior-04-w.jpg', '8_kia-pop-sorento-um-17my-interior-04-t.jpg', '8_kia-pop-sorento-um-17my-interior-04-m.jpg', '0', '0', '0', '0', '0', '1', '4', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes_thumb
@@ -1159,7 +1284,7 @@ CREATE TABLE `modelo_llantas` (
   `img` varchar(60) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_llantas
@@ -1183,6 +1308,9 @@ INSERT INTO `modelo_llantas` VALUES ('16', '16', '225/55 R18 ', 'Llanta de Aleac
 INSERT INTO `modelo_llantas` VALUES ('17', '17', '245/45 R19', 'Llanta de Aleación', '6_kia-sportage-wheel-slide-19.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('18', '18', '245/45 R19', 'Llanta de Aleación', '6_kia-sportage-wheel-slide-19.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('19', '19', '235/60 R18', 'Llanta de Aleación', '7_kia-grand-carnival-wheel-slide-01.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('20', '20', '235/65 R17', 'Llanta de Aleación', '8_sorento_aro_17_update.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('21', '21', '235/60 R18', 'Llanta de Aleación', '8_kia-sorento-um-17my-wheel-slide-02.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('22', '22', '235/60 R18', 'Llanta de Aleación', '8_kia-sorento-um-17my-wheel-slide-02.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_motor
@@ -1201,7 +1329,7 @@ CREATE TABLE `modelo_motor` (
   `img` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_motor
@@ -1225,6 +1353,9 @@ INSERT INTO `modelo_motor` VALUES ('16', '16', '2', ' 16 valvulas HLA CRDI', '2.
 INSERT INTO `modelo_motor` VALUES ('17', '17', '2', ' 16 valvulas HLA CRDI', '2.000 c.c.', '155/6200', '19,6/4000', '4 en Línea', null, '6_kia-sportage-engine-slide-02.png', '1');
 INSERT INTO `modelo_motor` VALUES ('18', '18', '2', ' 16 valvulas HLA CRDI', '2.000 c.c.', '155/6200', '19,6/4000', '4 en Línea', null, '6_kia-sportage-engine-slide-02.png', '1');
 INSERT INTO `modelo_motor` VALUES ('19', '19', '2', '2.2L TCI (VGT) CRDI ', '2,199 c.c.', '190/6300', '45/2750', '4 en Línea', null, '7_kia-grand-carnival-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('20', '20', '1', 'DOHC 16 valvulas MPI', '2,400 c.c.', '170/6000', '22,9/4000', '4 en Línea', null, '8_kia-sorento-um-17my-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('21', '21', '2', 'CRDI Turbo Charged Intercooler', '2,200 c.c.', '200/6000', '22,9/4000', '4 en Línea', null, '8_kia-sorento-um-17my-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('22', '22', '2', 'CRDI Turbo Charged Intercooler', '2,200 c.c.', '200/6000', '22,9/4000', '4 en Línea', null, '8_kia-sorento-um-17my-engine-slide-02.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_seguridad
@@ -1241,7 +1372,7 @@ CREATE TABLE `modelo_seguridad` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_seguridad
@@ -1263,6 +1394,9 @@ INSERT INTO `modelo_seguridad` VALUES ('14', '5', 'Sistema Antibloqueo de Frenos
 INSERT INTO `modelo_seguridad` VALUES ('15', '6', 'La Fuerza y la seguridad van acompañadas', 'EL uso de acero avanzado de alta resistencia combinado con la fuerza del chasis y el proceso de estampado en caliente hace a la nueva Sportage más comfiable y tranquila', '6_kia-sportage-safety-01-w.jpg', '6_kia-sportage-safety-01-t.jpg', '6_kia-sportage-safety-01-m.jpg', '1', '1');
 INSERT INTO `modelo_seguridad` VALUES ('16', '6', '6 airbags', 'Los airbags colocados estratégicamente en todo el interior le ofrecen protección y también sus pasajeros en caso de una colisión.', '6_kia-sportage-safety-02-w.jpg', '6_kia-sportage-safety-02-t.jpg', '6_kia-sportage-safety-02-m.jpg', '0', '1');
 INSERT INTO `modelo_seguridad` VALUES ('17', '6', 'Sensores de reversa', 'El sensor de reversa detecta y alerta al conductor sobre los vehículos que se acercan desde el lado izquierdo o derecho.', '6_kia-sportage-safety-04-w.jpg', '6_kia-sportage-safety-04-t.jpg', '6_kia-sportage-safety-04-m.jpg', '0', '1');
+INSERT INTO `modelo_seguridad` VALUES ('18', '7', 'Potencia y seguridad en armonía', 'La tranquilidad viene cuando la seguridad se considera desde todos los ángulos y el placer llega cuando el poder se combina con el refinamiento y la tranquilidad. El Grand Carnaval ofrece avanzadas características anti-colisión y un chasis de alta resistencia ofreciendo la máxima seguridad.', '7_by_grand_carnival_2017_features_safety_kv_1_w.jpg', '7_by_grand_carnival_2017_features_safety_kv_1_t.jpg', '7_by_grand_carnival_2017_features_safety_kv_1_m.jpg', '1', '1');
+INSERT INTO `modelo_seguridad` VALUES ('19', '7', 'Sensores de estacionamiento frontales y traseros', 'Los sensores ultrasónicos le señalan los obstáculos en frente y detrás de su vehículo para ayudar a mantenerlo seguro y en control en todo momento.', '7_kia-grand-carnival-safety-02-1-w.jpg', '7_kia-grand-carnival-safety-02-1-t.jpg', '7_kia-grand-carnival-safety-02-1-m.jpg', '0', '1');
+INSERT INTO `modelo_seguridad` VALUES ('20', '7', 'Cámera de vista trasera', 'Sea plenamente consciente de lo que está detrás de usted mediante el uso de todo color, cámera de alta definición de visión trasera como su guía de confianza.', '7_kia-grand-carnival-safety-04-1-w.jpg', '7_kia-grand-carnival-safety-04-1-t.jpg', '7_kia-grand-carnival-safety-04-1-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version
@@ -1278,7 +1412,7 @@ CREATE TABLE `modelo_version` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_version` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version
@@ -1302,6 +1436,9 @@ INSERT INTO `modelo_version` VALUES ('16', '6', 'EX. Aut. 2,0 DSL 2WD', '30400.0
 INSERT INTO `modelo_version` VALUES ('17', '6', 'EX. Aut. 2,0 DSL 4WD DSL FULL ll\r\n', '32400.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('18', '6', 'EX. Aut. 2,0 DSL 4WD DSL LIMITED', '37600.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('19', '7', 'Ex. Aut. 2.2 DSL Limited 8 Pasajeros', '44000.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('20', '8', 'Ex. Aut. 2,4 DSL 2WD GSL', '30000.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('21', '8', 'Ex. Aut. 2,4 DSL 2WD GSL SEMI FULL 7 PX', '36800.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('22', '8', 'Ex. Aut. 2,4 DSL 2WD GSL FULL 7 PX', '44800.000', '0', '2018', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version_cuotas
@@ -1316,7 +1453,7 @@ CREATE TABLE `modelo_version_cuotas` (
   `cantidad_cuotas` int(3) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `idx_id_version_vcuotas` (`id_version`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version_cuotas
@@ -1327,7 +1464,7 @@ INSERT INTO `modelo_version_cuotas` VALUES ('3', '3', '2', '428.000', '2850.000'
 INSERT INTO `modelo_version_cuotas` VALUES ('4', '4', '2', '284.000', '1950.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('5', '5', '2', '338.000', '2250.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('6', '6', '2', '360.000', '2400.000', '60');
-INSERT INTO `modelo_version_cuotas` VALUES ('7', '7', '2', '340.000', null, '0');
+INSERT INTO `modelo_version_cuotas` VALUES ('7', '7', '2', '340.000', null, '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('8', '10', '2', '330.000', '2200.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('9', '11', '2', '375.000', '2500.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('10', '12', '2', '398.000', '2650.000', '60');
@@ -1340,6 +1477,9 @@ INSERT INTO `modelo_version_cuotas` VALUES ('16', '16', '2', '600.000', '4000.00
 INSERT INTO `modelo_version_cuotas` VALUES ('17', '17', '2', '638.000', '4250.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('18', '18', '2', '735.000', '4900.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('19', '19', '2', '825.000', '5500.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('20', '20', '2', '593.000', '3950.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('21', '21', '2', '720.000', '4800.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('22', '22', '2', '870.000', '5800.000', '60');
 
 -- ----------------------------
 -- Table structure for moneda
