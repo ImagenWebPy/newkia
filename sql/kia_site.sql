@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-07 18:23:07
+Date: 2017-12-12 18:33:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -205,7 +205,7 @@ CREATE TABLE `modelo` (
   `img_m` varchar(80) DEFAULT NULL,
   `estado` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo
@@ -220,6 +220,7 @@ INSERT INTO `modelo` VALUES ('7', '2', 'Grand Carnival', '5 años o 100.00 Km.',
 INSERT INTO `modelo` VALUES ('8', '4', 'Sorento', '5 años o 100.00 Km.', '8_sorento.png', '8_sorento_thumb.png', '8_Volante_Sorento_baja.pdf', '¡Un todoterreno robusto, masculino y capaz! Prestigio renacido, Sorento. Ver imágenes e información de Sorento aquí.', '8_sorento_w.png', '8_sorento_t.png', '8_sorento_m.png', '1');
 INSERT INTO `modelo` VALUES ('9', '1', 'Optima', '5 años o 100.00 Km.', '9_optima.png', '9_optima_thumb.png', '9_Volante_Optima_baja.pdf', 'Una forma nueva y audaz. Detalles atractivos. Emocionante nueva tecnología. Y una distancia entre ejes extendida para una mejor estabilidad y comodidad. El todo nuevo y espacioso Kia Optima pone el refinamiento en un paquete irresistible.', '9_optima_w.png', '9_optima_t.png', '9_optima_m.png', '1');
 INSERT INTO `modelo` VALUES ('10', '1', 'Cadenza', '5 años o 100.00 Km.', '10_cadenza.png', '10_cadenza_thumb.png', '10_Volante_Cadenza_2017_baja.pdf', 'He aquí un virtuoso entre los sedanes de hoy en día. Desplegando una tecnología inteligente, un rendimiento emocionante y un encanto innegable que comienza con una nueva parrilla cóncava inspirada en el deporte clásico, la Cadenza, completamente nueva, da un nuevo significado al lujo moderno.', '10_cadenza_w.png', '10_cadenza_t.png', '10_cadenza_m.png', '1');
+INSERT INTO `modelo` VALUES ('11', '5', 'K2700', '5 años o 100.00 Km.', '11_k2700.png', '11_k2700_thumb.png', '11_Volante_KIA_K2700_2017.pdf', 'Kia K2700 está diseñado para transportar cargas pesadas en carreteras difíciles. Eche un vistazo a sus características y averigue por qué es la mejor relación calidad-precio para su negocio.', '11_k2700-w.png', '11_k2700-t.png', '11_k2700-m.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_360
@@ -956,7 +957,7 @@ CREATE TABLE `modelo_desempeno` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_desempeno` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_desempeno
@@ -995,6 +996,7 @@ INSERT INTO `modelo_desempeno` VALUES ('34', '8', 'Transmisión Automática de 6
 INSERT INTO `modelo_desempeno` VALUES ('35', '9', 'Reflejos rápidos como relámpago', 'El chasis del Optima ha sido diseñado para un paseo suave y con un manejo responsable a través de los giros y vueltas que nos tiene la carretera. Los robustos amortiguadores de las ruedas frontales y a su vez los grandes brazos de control inferior trasero le ayudan a refinar aún más sus características de conducción.', '9_kia-optima-jf-performance-01-w.jpg', '9_kia-optima-jf-performance-01-t.jpg', '9_kia-optima-jf-performance-01-m.jpg', '1', '1');
 INSERT INTO `modelo_desempeno` VALUES ('36', '9', 'Transmisión automática de 6 velocidades', 'Una transmisión que es automática y controlada electrónicamente le ofrece un cambio suave y sin fisuras.', '9_kia-pop-optima-jf-17my-performance-01-w.jpg', '9_kia-pop-optima-jf-17my-performance-01-t.jpg', '9_kia-pop-optima-jf-17my-performance-01-m.jpg', '0', '1');
 INSERT INTO `modelo_desempeno` VALUES ('37', '9', 'Freno de estacionamiento electrónico (EPB)', 'Aplique el freno de estacionamiento simplemente tirando de un botón y sin ninguna preocupación de si está bien acoplado o no.', '9_kia-pop-optima-jf-17my-performance-02-w.jpg', '9_kia-pop-optima-jf-17my-performance-02-t.jpg', '9_kia-pop-optima-jf-17my-performance-02-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('38', '11', '2.7 (J2) motor a diesel', 'El motor J2 mejorado de 2.700 cc es una unidad de aspiración normal la cual produce 80 ps (66 kW) a 4.000 rpm y 16.8 kg · m (165 Nm) de torsión a 2.400. Esto genera una eficiencia totalmente capaz, y eficiencia económica.', '11_kia-k2700-performance-01-w.jpg', '11_kia-k2700-performance-01-t.jpg', '11_kia-k2700-performance-01-m.jpg', '1', '1');
 
 -- ----------------------------
 -- Table structure for modelo_destacado
@@ -1011,7 +1013,7 @@ CREATE TABLE `modelo_destacado` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_destacado
@@ -1028,6 +1030,7 @@ INSERT INTO `modelo_destacado` VALUES ('9', '8', 'Experimente el control preciso
 INSERT INTO `modelo_destacado` VALUES ('10', '8', 'Puerta trasera eléctrica inteligente', 'El portón trasero se abre automáticamente cuando se detecta la Llave inteligente durante 3 segundos o más y se cierra con sólo pulsar un botón.', '8_kia-pop-sorento-um-17my-highlights-01-w.jpg', '8_kia-pop-sorento-um-17my-highlights-01-t.jpg', '8_kia-pop-sorento-um-17my-highlights-01-m.jpg', '0', '1');
 INSERT INTO `modelo_destacado` VALUES ('11', '8', 'Sistema de selección en modo de manejo.', 'Elija el modo Normal, Eco o Sport para adaptarse a sus preferencias. Estándar en modelos de transmisión automática.', '8_kia-pop-sorento-um-17my-highlights-02-w.jpg', '8_kia-pop-sorento-um-17my-highlights-02-t.jpg', '8_kia-pop-sorento-um-17my-highlights-02-m.jpg', '0', '1');
 INSERT INTO `modelo_destacado` VALUES ('12', '8', 'Función de la memoria de la puerta trasera.', 'Los ángulos de apertura para el portón trasero se pueden almacenar en la memoria presionando y sosteniendo un botón, bajo el portón trasero durante 3 segundos. Opcional en modelos EX.', '8_kia-pop-sorento-um-17my-highlights-03-w.jpg', '8_kia-pop-sorento-um-17my-highlights-03-t.jpg', '8_kia-pop-sorento-um-17my-highlights-03-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('13', '10', 'Compromiso total con la seguridad', null, '10_kia-cadenza-yg-highlights-01-w.jpg', '10_kia-cadenza-yg-highlights-01-t.jpg', '10_kia-cadenza-yg-highlights-01-m.jpg', '1', '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension
@@ -1041,23 +1044,26 @@ CREATE TABLE `modelo_dimension` (
   `altura` decimal(20,3) DEFAULT NULL,
   `distancia_ejes` decimal(20,3) DEFAULT NULL,
   `img_all` varchar(120) DEFAULT NULL,
+  `capacidad_tanque` int(3) DEFAULT NULL,
+  `capacidad_carga` varchar(30) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension
 -- ----------------------------
-INSERT INTO `modelo_dimension` VALUES ('1', '1', '4.560', '1.780', '1.460', null, '1_kia-cerato-forte-yd-dimensions-all-view.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('2', '2', '4.385', '1.725', '1.475', '2.580', '2_Allnew_rio_sedan_dimension_04_w.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('3', '3', '4.065', '1.725', '1.460', '2.580', '3_kia-rio-sc-dimensions-all-view.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('4', '4', '3.595', '1.595', '1.480', '2.385', '4_picanto-ta-pe-dimensions-all-view.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('5', '5', '4.140', '1.800', '1.619', '2.570', '5_kia-soul-dimensions-all-view.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('6', '6', '4.480', '1.855', '1.655', '2.670', '6_new-sportage-r-showroom-specification-dimensions-all-view.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('7', '7', '5.115', '1.985', '1.755', '3.060', '7-grand-carnival-dimensions-allview.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('8', '8', '4.780', '1.890', '1.685', '2.780', '8_kia-new-sorento-dimensions-allview.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('9', '9', '4.845', '1.830', '1.455', '2.795', '9_kia-optima-dimensions-all-view.png', '1');
-INSERT INTO `modelo_dimension` VALUES ('10', '10', '4.970', '1.870', '1.470', '2.855', '10_kia-cadenza-dimensions-all-view.png', '1');
+INSERT INTO `modelo_dimension` VALUES ('1', '1', '4.560', '1.780', '1.460', null, '1_kia-cerato-forte-yd-dimensions-all-view.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('2', '2', '4.385', '1.725', '1.475', '2.580', '2_Allnew_rio_sedan_dimension_04_w.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('3', '3', '4.065', '1.725', '1.460', '2.580', '3_kia-rio-sc-dimensions-all-view.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('4', '4', '3.595', '1.595', '1.480', '2.385', '4_picanto-ta-pe-dimensions-all-view.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('5', '5', '4.140', '1.800', '1.619', '2.570', '5_kia-soul-dimensions-all-view.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('6', '6', '4.480', '1.855', '1.655', '2.670', '6_new-sportage-r-showroom-specification-dimensions-all-view.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('7', '7', '5.115', '1.985', '1.755', '3.060', '7-grand-carnival-dimensions-allview.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('8', '8', '4.780', '1.890', '1.685', '2.780', '8_kia-new-sorento-dimensions-allview.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('9', '9', '4.845', '1.830', '1.455', '2.795', '9_kia-optima-dimensions-all-view.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('10', '10', '4.970', '1.870', '1.470', '2.855', '10_kia-cadenza-dimensions-all-view.png', null, null, '1');
+INSERT INTO `modelo_dimension` VALUES ('11', '11', '4.825', '1.740', '1.975', '2.415', null, '60', '1.500kg.', '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension_img
@@ -1153,7 +1159,7 @@ CREATE TABLE `modelo_general` (
   `descripcion` text,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_general
@@ -1168,6 +1174,7 @@ INSERT INTO `modelo_general` VALUES ('7', '7', '7_by_grand_carnival_2017_feature
 INSERT INTO `modelo_general` VALUES ('8', '8', '8_kia-sorento-um-17my-overview-01-w.jpg', '8_kia-sorento-um-17my-overview-01-t.jpg', '8_kia-sorento-um-17my-overview-01-m.jpg', 'Un aventurero que es igual en casa como en los paisajes modernos de la ciudad.', 'El Sorento tiene un sólido legado de trabajo duro,forjado en practicalidad para todas las condiciones climáticas. Ahora incluso con un estilo aún más refinado, su ingenio resulta muy atractivo en las calles más sofisticadas de la ciudad.', '1');
 INSERT INTO `modelo_general` VALUES ('9', '9', '9_kia-optima-jf-overview-01-w.jpg', '9_kia-optima-jf-overview-01-t.jpg', '9_kia-optima-jf-overview-01-m.jpg', 'Optima, fascinante perfección', null, '1');
 INSERT INTO `modelo_general` VALUES ('10', '10', '10_kia-cadenza-yg-overview-01-w.jpg', '10_kia-cadenza-yg-overview-01-t.jpg', '10_kia-cadenza-yg-overview-01-m.jpg', 'Cadenza: inteligencia dinámica', 'Prepárese para un nivel totalmente inesperado de belleza estética, rendimiento refinado y destreza tecnológica. El Cadenza ha sido rediseñado con el objetivo de crear la mezcla perfecta de estilo dinámico, lujo maravilloso y características de alta tecnología. Es un sedan superior sorprendente que va a fascinar tanto a su mente como a sus sentidos.', '1');
+INSERT INTO `modelo_general` VALUES ('11', '11', '11_kia-k2700-overview-01-w.jpg', '11_kia-k2700-overview-01-t.jpg', '11_kia-k2700-overview-01-m.jpg', 'Disfruta de tu trabajo K2700', 'La refrescada serie K del camión de Kia cambiará la forma en que miras los camiones. Con una mejor utilidad y añadiendo un nivel de refinación el cual tu esperarías hallar solamente en un automóvil de pasajeros, el camión de la serie K no sólo facilita el trabajo, si no que además le permite hacerlo con confort.', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes
@@ -1194,7 +1201,7 @@ CREATE TABLE `modelo_imagenes` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_imagenes` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=260 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=318 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_imagenes
@@ -1456,6 +1463,64 @@ INSERT INTO `modelo_imagenes` VALUES ('256', '9', 'INT', null, null, null, '9_ki
 INSERT INTO `modelo_imagenes` VALUES ('257', '9', 'INT', null, null, null, '9_kia-optima-jf-wide-interior-05.jpg', '9_kia-optima-jf-wide-b-interior-05-w.jpg', '9_kia-optima-jf-wide-b-interior-05-t.jpg', '9_kia-optima-jf-wide-b-interior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 INSERT INTO `modelo_imagenes` VALUES ('258', '9', 'INT', null, null, null, '9_kia-optima-jf-wide-interior-06.jpg', '9_kia-optima-jf-wide-b-interior-06-w.jpg', '9_kia-optima-jf-wide-b-interior-06-t.jpg', '9_kia-optima-jf-wide-b-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 INSERT INTO `modelo_imagenes` VALUES ('259', '9', 'INT', null, null, null, '9_kia-optima-jf-wide-interior-07.jpg', '9_kia-optima-jf-wide-b-interior-07-w.jpg', '9_kia-optima-jf-wide-b-interior-07-t.jpg', '9_kia-optima-jf-wide-b-interior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('260', '10', 'EXT', 'Combinación perfecta entre elegancia y tecnología', '', null, '10_ico_cadenza_yg_paging1_on.png', '10_kia-cadenza-yg-exterior-01-w.jpg', '10_kia-cadenza-yg-exterior-01-t.jpg', '10_kia-cadenza-yg-exterior-01-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('261', '10', 'EXT', 'Sedán de lujo construido para un rendimiento dinámico.', null, null, '10_ico_cadenza_yg_paging2_on.png', '10_kia-cadenza-yg-exterior-02-w.jpg', '10_kia-cadenza-yg-exterior-02-t.jpg', '10_kia-cadenza-yg-exterior-02-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('262', '10', 'EXT', 'Reinventamos la manera de conducir a todo lujo', null, null, '10_ico_cadenza_yg_paging3_on.png', '10_kia-cadenza-yg-exterior-03-w.jpg', '10_kia-cadenza-yg-exterior-03-t.jpg', '10_kia-cadenza-yg-exterior-03-m.jpg', '0', '0', '1', '0', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('263', '10', 'EXT', 'Diseño aerodinámico', null, null, null, '10_kia-pop-cadenza-yg-exterior-01-w.jpg', '10_kia-pop-cadenza-yg-exterior-01-t.jpg', '10_kia-pop-cadenza-yg-exterior-01-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('264', '10', 'EXT', 'Limpiafaros Delanteros', null, null, null, '10_kia-pop-cadenza-yg-exterior-02-w.jpg', '10_kia-pop-cadenza-yg-exterior-02-t.jpg', '10_kia-pop-cadenza-yg-exterior-02-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('265', '10', 'EXT', 'Faros Neblineros Delanteros LED', null, null, null, '10_kia-pop-cadenza-yg-exterior-03-w.jpg', '10_kia-pop-cadenza-yg-exterior-03-t.jpg', '10_kia-pop-cadenza-yg-exterior-03-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('266', '10', 'INT', null, null, null, null, '10_kia-cadenza-yg-interior-01-w.jpg', '10_kia-cadenza-yg-interior-01-t.jpg', '10_kia-cadenza-yg-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('267', '10', 'INT', 'Panel de Instrumentos: Supervision Cluster TFT LCD 7\'\'', null, null, null, '10_kia-pop-cadenza-yg-interior-06-w.jpg', '10_kia-pop-cadenza-yg-interior-06-t.jpg', '10_kia-pop-cadenza-yg-interior-06-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('268', '10', 'INT', 'Espacio amplio, hace que el viaje se convierte en place', null, null, null, '10_kia-pop-cadenza-yg-interior-07-w.jpg', '10_kia-pop-cadenza-yg-interior-07-t.jpg', '10_kia-pop-cadenza-yg-interior-07-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('269', '10', 'INT', 'Apoyabrazos Central en Asientos Posteriores con Posavasos', null, null, null, '10_kia-pop-cadenza-yg-interior-09-w.jpg', '10_kia-pop-cadenza-yg-interior-09-t.jpg', '10_kia-pop-cadenza-yg-interior-09-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('270', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-01.jpg', '10_kia-cadenza-yg-wide-b-exterior-01-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-01-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('271', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-02.jpg', '10_kia-cadenza-yg-wide-b-exterior-02-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-02-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('272', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-03.jpg', '10_kia-cadenza-yg-wide-b-exterior-03-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-03-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('273', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-04.jpg', '10_kia-cadenza-yg-wide-b-exterior-04-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-04-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('274', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-05.jpg', '10_kia-cadenza-yg-wide-b-exterior-05-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-05-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('275', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-06.jpg', '10_kia-cadenza-yg-wide-b-exterior-06-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-06-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('276', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-07.jpg', '10_kia-cadenza-yg-wide-b-exterior-07-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-07-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('277', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-08.jpg', '10_kia-cadenza-yg-wide-b-exterior-08-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-08-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('278', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-09.jpg', '10_kia-cadenza-yg-wide-b-exterior-09-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-09-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('279', '10', 'EXT', null, null, null, '10_kia-cadenza-yg-wide-exterior-10.jpg', '10_kia-cadenza-yg-wide-b-exterior-10-w.jpg', '10_kia-cadenza-yg-wide-b-exterior-10-t.jpg', '10_kia-cadenza-yg-wide-b-exterior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('280', '10', 'EXT', null, null, '10_kia-cadenza-yg-gallery-01.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('281', '10', 'INT', null, null, '10_kia-cadenza-yg-gallery-02.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('282', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-01.jpg', '10_kia-cadenza-yg-wide-b-interior-01-w.jpg', '10_kia-cadenza-yg-wide-b-interior-01-t.jpg', '10_kia-cadenza-yg-wide-b-interior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('283', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-02.jpg', '10_kia-cadenza-yg-wide-b-interior-02-w.jpg', '10_kia-cadenza-yg-wide-b-interior-02-t.jpg', '10_kia-cadenza-yg-wide-b-interior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('284', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-03.jpg', '10_kia-cadenza-yg-wide-b-interior-03-w.jpg', '10_kia-cadenza-yg-wide-b-interior-03-t.jpg', '10_kia-cadenza-yg-wide-b-interior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('285', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-04.jpg', '10_kia-cadenza-yg-wide-b-interior-04-w.jpg', '10_kia-cadenza-yg-wide-b-interior-04-t.jpg', '10_kia-cadenza-yg-wide-b-interior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('286', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-05.jpg', '10_kia-cadenza-yg-wide-b-interior-05-w.jpg', '10_kia-cadenza-yg-wide-b-interior-05-t.jpg', '10_kia-cadenza-yg-wide-b-interior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('287', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-06.jpg', '10_kia-cadenza-yg-wide-b-interior-06-w.jpg', '10_kia-cadenza-yg-wide-b-interior-06-t.jpg', '10_kia-cadenza-yg-wide-b-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('288', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-07.jpg', '10_kia-cadenza-yg-wide-b-interior-07-w.jpg', '10_kia-cadenza-yg-wide-b-interior-07-t.jpg', '10_kia-cadenza-yg-wide-b-interior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('289', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-08.jpg', '10_kia-cadenza-yg-wide-b-interior-08-w.jpg', '10_kia-cadenza-yg-wide-b-interior-08-t.jpg', '10_kia-cadenza-yg-wide-b-interior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('290', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-09.jpg', '10_kia-cadenza-yg-wide-b-interior-09-w.jpg', '10_kia-cadenza-yg-wide-b-interior-09-t.jpg', '10_kia-cadenza-yg-wide-b-interior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('291', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-10.jpg', '10_kia-cadenza-yg-wide-b-interior-10-w.jpg', '10_kia-cadenza-yg-wide-b-interior-10-t.jpg', '10_kia-cadenza-yg-wide-b-interior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('292', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-11.jpg', '10_kia-cadenza-yg-wide-b-interior-11-w.jpg', '10_kia-cadenza-yg-wide-b-interior-11-t.jpg', '10_kia-cadenza-yg-wide-b-interior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('293', '10', 'INT', null, null, null, '10_kia-cadenza-yg-wide-interior-12.jpg', '10_kia-cadenza-yg-wide-b-interior-12-w.jpg', '10_kia-cadenza-yg-wide-b-interior-12-t.jpg', '10_kia-cadenza-yg-wide-b-interior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('294', '11', 'EXT', 'Está todo en los detalles', 'Hemos forjado una reputación de durabilidad y de gran valor, y no hay un mejor ejemplo que el camión Kia de la serie K. Con un aspecto moderno, un rendimiento dinámico y atención a los detalles, el camión Serie K establece un estándar completamente nuevo para el segmento en todas sus estimaciones.', null, '11_ico_k2700_paging2_on.png', '11_kia-k2700-exterior-02-w.jpg', '11_kia-k2700-exterior-02-t.jpg', '11_kia-k2700-exterior-02-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('295', '11', 'EXT', 'No importa el sitio al que quieras ir, el está listo.', null, null, '11_ico_k2700_paging3_on.png', '11_kia-k2700-exterior-03-w.jpg', '11_kia-k2700-exterior-03-t.jpg', '11_kia-k2700-exterior-03-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('296', '11', 'EXT', 'Cadena de puerta posterior cubierta', 'La cubierta envolvente protege la cadena de la corrosión, así de esta manera permitirá mantener su uso durante toda la vida.', null, null, '11_kia-k2700-exterior-04-w.jpg', '11_kia-k2700-exterior-04-t.jpg', '11_kia-k2700-exterior-04-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('297', '11', 'EXT', 'Su receptor es de fácil manejo', 'Promete un mejor agarre gracias a su mango ergonómico mientras que el muelle interior garantiza un movimiento suave', null, null, '11_kia-k2700-exterior-05-w.jpg', '11_kia-k2700-exterior-05-t.jpg', '11_kia-k2700-exterior-05-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('298', '11', 'EXT', 'Vagon de carga tipo Drop Side', null, null, null, '11_pa-K2700-2017-showroom-features-exterior-thumbnail-03-w.jpg', '11_pa-K2700-2017-showroom-features-exterior-thumbnail-03-t.jpg', '11_pa-K2700-2017-showroom-features-exterior-thumbnail-03-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('299', '11', 'INT', 'Diseñado para las necesidades de tu negocio', null, null, null, '11_kia-k2700-interior-01-w.jpg', '11_kia-k2700-interior-01-t.jpg', '11_kia-k2700-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('300', '11', 'INT', 'Dirección Hidráulica', null, null, null, '11_kia-k2700-interior-02-w.jpg', '11_kia-k2700-interior-02-t.jpg', '11_kia-k2700-interior-02-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('301', '11', 'INT', 'Radio CD +MP3', null, null, null, '11_kia-k2700-interior-03-w.jpg', '11_kia-k2700-interior-03-t.jpg', '11_kia-k2700-interior-03-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('302', '11', 'INT', 'Guantera', null, null, null, '11_kia-k2700-interior-04-w.jpg', '11_kia-k2700-interior-04-t.jpg', '11_kia-k2700-interior-04-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('303', '11', 'EXT', null, null, '11_kia-k2700-gallery-01.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('304', '11', 'INT', null, null, '11_kia-k2700-gallery-02.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('305', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-01.jpg', '11_kia-k2700-wide-b-exterior-01-w.jpg', '11_kia-k2700-wide-b-exterior-01-t.jpg', '11_kia-k2700-wide-b-exterior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('306', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-02.jpg', '11_kia-k2700-wide-b-exterior-02-w.jpg', '11_kia-k2700-wide-b-exterior-02-t.jpg', '11_kia-k2700-wide-b-exterior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('307', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-03.jpg', '11_kia-k2700-wide-b-exterior-03-w.jpg', '11_kia-k2700-wide-b-exterior-03-t.jpg', '11_kia-k2700-wide-b-exterior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('308', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-04.jpg', '11_kia-k2700-wide-b-exterior-04-w.jpg', '11_kia-k2700-wide-b-exterior-04-t.jpg', '11_kia-k2700-wide-b-exterior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('309', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-05.jpg', '11_kia-k2700-wide-b-exterior-05-w.jpg', '11_kia-k2700-wide-b-exterior-05-t.jpg', '11_kia-k2700-wide-b-exterior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('310', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-06.jpg', '11_kia-k2700-wide-b-exterior-06-w.jpg', '11_kia-k2700-wide-b-exterior-06-t.jpg', '11_kia-k2700-wide-b-exterior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('311', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-07.jpg', '11_kia-k2700-wide-b-exterior-07-w.jpg', '11_kia-k2700-wide-b-exterior-07-t.jpg', '11_kia-k2700-wide-b-exterior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('312', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-08.jpg', '11_kia-k2700-wide-b-exterior-08-w.jpg', '11_kia-k2700-wide-b-exterior-08-t.jpg', '11_kia-k2700-wide-b-exterior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('313', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-09.jpg', '11_kia-k2700-wide-b-exterior-09-w.jpg', '11_kia-k2700-wide-b-exterior-09-t.jpg', '11_kia-k2700-wide-b-exterior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('314', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-10.jpg', '11_kia-k2700-wide-b-exterior-10-w.jpg', '11_kia-k2700-wide-b-exterior-10-t.jpg', '11_kia-k2700-wide-b-exterior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('315', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-11.jpg', '11_kia-k2700-wide-b-exterior-11-w.jpg', '11_kia-k2700-wide-b-exterior-11-t.jpg', '11_kia-k2700-wide-b-exterior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('316', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-12.jpg', '11_kia-k2700-wide-b-exterior-12-w.jpg', '11_kia-k2700-wide-b-exterior-12-t.jpg', '11_kia-k2700-wide-b-exterior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('317', '11', 'INT', null, null, null, '11_kia-k2700-wide-interior-01.jpg', '11_kia-k2700-wide-b-interior-01-w.jpg', '11_kia-k2700-wide-b-interior-01-t.jpg', '11_kia-k2700-wide-b-interior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes_thumb
@@ -1538,7 +1603,7 @@ CREATE TABLE `modelo_motor` (
   `img` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_motor
@@ -1567,6 +1632,11 @@ INSERT INTO `modelo_motor` VALUES ('21', '21', '2', 'CRDI Turbo Charged Intercoo
 INSERT INTO `modelo_motor` VALUES ('22', '22', '2', 'CRDI Turbo Charged Intercooler', '2,200 c.c.', '200/6000', '22,9/4000', '4 en Línea', null, '8_kia-sorento-um-17my-engine-slide-02.png', '1');
 INSERT INTO `modelo_motor` VALUES ('23', '23', '1', 'DOHC dual CVVT MPI', '2,000 c.c.', '174/6200', '20,2/4600\r\n', '4 en Línea', null, '9_kia-optima-engine-slide-02.png', '1');
 INSERT INTO `modelo_motor` VALUES ('24', '24', '1', 'V6 DOHC dual CVVT', '3,500 c.c.', '285/6600', '34.5/5000', '6 cilindros en V.', null, '10_kia-cadenza-engine-slide-01.png', '1');
+INSERT INTO `modelo_motor` VALUES ('25', '25', '2', '2.7 (J2) A DIESEL', '2.700 c.c.', '80/4000', '16.8/2400', '4 en Línea', null, '11_kia-k2700-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('26', '26', '2', '2.7 (J2) A DIESEL', '2.700 c.c.', '80/4000', '16.8/2400', '4 en Línea', null, '11_kia-k2700-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('27', '27', '2', '2.7 (J2) A DIESEL', '2.700 c.c.', '80/4000', '16.8/2400', '4 en Línea', null, '11_kia-k2700-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('28', '28', '2', '2.7 (J2) A DIESEL', '2.700 c.c.', '80/4000', '16.8/2400', '4 en Línea', null, '11_kia-k2700-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('29', '29', '2', '2.7 (J2) A DIESEL', '2.700 c.c.', '80/4000', '16.8/2400', '4 en Línea', null, '11_kia-k2700-engine-slide-02.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_seguridad
@@ -1583,7 +1653,7 @@ CREATE TABLE `modelo_seguridad` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_seguridad
@@ -1614,6 +1684,7 @@ INSERT INTO `modelo_seguridad` VALUES ('23', '8', '6 Bolsas de aire', 'Tú y tu 
 INSERT INTO `modelo_seguridad` VALUES ('24', '9', 'Materiales avanzados para su paz y tranquilidad', 'Gracias a un uso más inteligente de los metales y adhesivos de vanguardia en los puntos críticos del chasis del vehículo, el nuevo Kia Optima le rodea con una jaula de peso ligero pero reforzado, a su vez estableciendo un nuevo estándar para la seguridad de todos pasajeros.', '9_kia-optima-jf-safety-01-w.jpg', '9_kia-optima-jf-safety-01-t.jpg', '9_kia-optima-jf-safety-01-m.jpg', '1', '1');
 INSERT INTO `modelo_seguridad` VALUES ('25', '9', 'Control de estabilidad electrónico (ESC)', 'El ESC se activa en situaciones de frenado repentino, lo que regula el torque del motor y aplica fuerza de frenado a cada neumático para disminuir la velocidad en forma segura.', '9_kia-optima-safety-03-w.jpg', '9_kia-optima-safety-03-t.jpg', '9_kia-optima-safety-03-m.jpg', '0', '1');
 INSERT INTO `modelo_seguridad` VALUES ('26', '9', 'Frenos de Disco', 'Viene equipados con discos de frenos más grandes que proporcionan un frenado potente y más seguro.', '9_pa-optima-2017-showroom-features-safety-thumbnail-06-w.jpg', '9_pa-optima-2017-showroom-features-safety-thumbnail-06-t.jpg', '9_pa-optima-2017-showroom-features-safety-thumbnail-06-m.jpg', '0', '1');
+INSERT INTO `modelo_seguridad` VALUES ('27', '11', 'Estructura', null, '11_pa-K2700-2017-showroom-features-safety-KV-02-w.jpg', '11_pa-K2700-2017-showroom-features-safety-KV-02-t.jpg', '11_pa-K2700-2017-showroom-features-safety-KV-02-m.jpg', '1', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version
@@ -1629,7 +1700,7 @@ CREATE TABLE `modelo_version` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_version` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version
@@ -1658,6 +1729,11 @@ INSERT INTO `modelo_version` VALUES ('21', '8', 'Ex. Aut. 2,4 DSL 2WD GSL SEMI F
 INSERT INTO `modelo_version` VALUES ('22', '8', 'Ex. Aut. 2,4 DSL 2WD GSL FULL 7 PX', '44800.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('23', '9', 'Ex. Aut. 3,5 G GSL FULL', '26400.000', '0', '2017', '1');
 INSERT INTO `modelo_version` VALUES ('24', '10', 'Ex. Aut. 3,5 G GSL FULL', '36800.000', '0', '2017', '1');
+INSERT INTO `modelo_version` VALUES ('25', '11', 'C/S Mec. 2,7 DSL SENCILLO C/C', '16800.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('26', '11', 'C/S Mec. 2,7 DSL SENCILLO C/C & A/A', '18000.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('27', '11', 'C/S Mec. 2,7 DSL DUAL C/C ', '17200.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('28', '11', 'C/S Mec. 2,7 DSL 4X4 C/C & A/A', '19600.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('29', '11', 'D/C Mec. 2,7 DSL 4X4 C/C & A/A', '21200.000', '0', '2018', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version_cuotas
@@ -1672,7 +1748,7 @@ CREATE TABLE `modelo_version_cuotas` (
   `cantidad_cuotas` int(3) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `idx_id_version_vcuotas` (`id_version`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version_cuotas
@@ -1701,6 +1777,11 @@ INSERT INTO `modelo_version_cuotas` VALUES ('21', '21', '2', '720.000', '4800.00
 INSERT INTO `modelo_version_cuotas` VALUES ('22', '22', '2', '870.000', '5800.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('23', '23', '2', '525.000', '3500.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('24', '24', '2', '690.000', '4600.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('25', '25', '2', '323.000', '2150.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('26', '26', '2', '338.000', '2250.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('27', '27', '2', '323.000', '2150.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('28', '28', '2', '368.000', '2450.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('29', '29', '2', '398.000', '2650.000', '60');
 
 -- ----------------------------
 -- Table structure for moneda

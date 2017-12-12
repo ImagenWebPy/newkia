@@ -83,7 +83,9 @@ $vehiculo = $this->datosVehiculo;
                 <div class="paging">
                     <ul>
                         <li class="on"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
+                        <?php if (!empty($this->view360)): ?>
+                            <li><a href="#">2</a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
                 <!-- //페이징 -->                  
