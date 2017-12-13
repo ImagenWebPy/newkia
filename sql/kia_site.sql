@@ -1944,7 +1944,7 @@ CREATE TABLE `noticia` (
   `img_thumb` varchar(60) DEFAULT NULL,
   `titulo` varchar(140) DEFAULT NULL,
   `contenido` longtext,
-  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `fecha` datetime DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
@@ -1998,7 +1998,7 @@ CREATE TABLE `promociones` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `img` varchar(80) DEFAULT NULL,
   `url` varchar(120) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `fecha` datetime DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -2137,7 +2137,7 @@ CREATE TABLE `solicitud_contacto` (
   `celular` varchar(30) DEFAULT NULL,
   `telefono` varchar(30) DEFAULT NULL,
   `mensaje` text,
-  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `fecha` datetime DEFAULT NULL,
   `leido` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
@@ -2185,7 +2185,7 @@ CREATE TABLE `solicitud_testdrive` (
   `email` varchar(45) DEFAULT NULL,
   `ciudad` varchar(60) DEFAULT NULL,
   `direccion` varchar(120) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `fecha` datetime DEFAULT NULL,
   `leido` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -2211,7 +2211,7 @@ CREATE TABLE `solicitud_turno` (
   `barrio` varchar(45) DEFAULT NULL,
   `modelo` varchar(45) DEFAULT NULL,
   `kilometraje` int(8) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `fecha` datetime DEFAULT NULL,
   `leido` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -2230,7 +2230,7 @@ CREATE TABLE `sostenibilidad` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `titulo` varchar(120) DEFAULT NULL,
   `archivo` varchar(120) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `fecha` datetime DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
