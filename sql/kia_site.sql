@@ -10,13 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-13 11:59:31
+Date: 2017-12-13 15:01:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for admin_usuario
+-- Table structure for `admin_usuario`
 -- ----------------------------
 DROP TABLE IF EXISTS `admin_usuario`;
 CREATE TABLE `admin_usuario` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin_usuario` (
 INSERT INTO `admin_usuario` VALUES ('1', 'Raúl Ramírez', 'raul.ramirez@garden.com.py', '4530ad981d5c02d9cb0456c360fae460803922f556c56022e1dc0187c16ced50', null, '1');
 
 -- ----------------------------
--- Table structure for ciudad
+-- Table structure for `ciudad`
 -- ----------------------------
 DROP TABLE IF EXISTS `ciudad`;
 CREATE TABLE `ciudad` (
@@ -51,7 +51,7 @@ CREATE TABLE `ciudad` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for color
+-- Table structure for `color`
 -- ----------------------------
 DROP TABLE IF EXISTS `color`;
 CREATE TABLE `color` (
@@ -68,7 +68,7 @@ CREATE TABLE `color` (
 INSERT INTO `color` VALUES ('1', 'Blanco Perla', 'blanco_claro.gif', '1');
 
 -- ----------------------------
--- Table structure for combustible
+-- Table structure for `combustible`
 -- ----------------------------
 DROP TABLE IF EXISTS `combustible`;
 CREATE TABLE `combustible` (
@@ -86,7 +86,7 @@ INSERT INTO `combustible` VALUES ('2', 'Diesel', '1');
 INSERT INTO `combustible` VALUES ('3', 'Flex', '1');
 
 -- ----------------------------
--- Table structure for config_site
+-- Table structure for `config_site`
 -- ----------------------------
 DROP TABLE IF EXISTS `config_site`;
 CREATE TABLE `config_site` (
@@ -124,7 +124,7 @@ INSERT INTO `config_site` VALUES ('22', 'meta_description_noticias', 'Obtenga lo
 INSERT INTO `config_site` VALUES ('23', 'meta_description_contacto', 'En Kia, nuestro motivo es ayudarlo siempre. No dude en comunicarse con nosotros mediante el siguiente formulario para cualquier tipo de consulta o solicitud que tenga.');
 
 -- ----------------------------
--- Table structure for departamento
+-- Table structure for `departamento`
 -- ----------------------------
 DROP TABLE IF EXISTS `departamento`;
 CREATE TABLE `departamento` (
@@ -139,7 +139,7 @@ CREATE TABLE `departamento` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for estilo
+-- Table structure for `estilo`
 -- ----------------------------
 DROP TABLE IF EXISTS `estilo`;
 CREATE TABLE `estilo` (
@@ -154,7 +154,7 @@ CREATE TABLE `estilo` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for la_empresa
+-- Table structure for `la_empresa`
 -- ----------------------------
 DROP TABLE IF EXISTS `la_empresa`;
 CREATE TABLE `la_empresa` (
@@ -170,7 +170,7 @@ CREATE TABLE `la_empresa` (
 INSERT INTO `la_empresa` VALUES ('1', 'la-empresa.jpg', '<p>GARDEN AUTOMOTORES S.A., domiciliada en la Avda. República Argentina esq. Isaac Kostianovsky, Asunción-Paraguay, con sucursales en Ciudad del Este y Encarnación, desde hace siete años está Certificada por la KIA MOTORS Corporation, Seúl-Corea, como Distribuidor Oficial en todo el territorio de la República del Paraguay, de sus productos del sector automotriz marca KIA, que incluyen: vehículos, repuestos, accesorios originales y servicios especializados.</p>\r\n<p>GARDEN AUTOMOTORES S.A., es una empresa comercial y de servicios, constituida mediante escritura pública Nº 26, de fecha 17 de junio de 2002, con el objetivo de realizar las actividades de compra, venta, importación y representación de vehículos en general, auto-repuestos, accesorios, así como la explotación de servicios relacionados con la industria automotriz.</p>\r\n<p>El fortalecimiento empresarial que hoy GARDEN AUTOMOTORES S.A. expone al mercado nacional, no se ha generado de la noche a la mañana, sino que constituye la culminación de un proceso pleno de esfuerzos sostenidos y concentrados, con VISIÓN, MISIÓN y OBJETIVOS muy claros, orientados a:</p>\r\n<p>Satisfacer las necesidades de los clientes, mediante productos de calidad mundial marca KIA, que en los últimos años ha demostrado una evolución tecnológica fantástica, basada en la combinación perfecta de rendimiento, estilo, seguridad y valor.</p>\r\n<p>Es importante recordar que la KIA MOTORS Corporation, a inicios del 2009 ya se ubica como el 5to. mayor fabricante de vehículos a nivel mundial, con planes a mediano plazo que contemplan agresivos lanzamientos de nuevos modelos, para ir fortaleciendo la marca y demostrar al mundo, el aún ilimitado potencial de los productos KIA, como lo dice su eslogan “EL PODER DE SORPRENDER”.</p>\r\n<p>Conseguir el bienestar de nuestros funcionarios, en sus diferentes niveles de atribuciones y responsabilidades.</p>\r\n<p>Contamos actualmente con más de 100 empleados, motivados permanentemente a través de entrenamientos periódicos y específicos, en las áreas de su competencia, todas ellas enmarcadas dentro de la filosofía de trabajo del Grupo GARDEN, sintetizada en el esfuerzo continuo, el conocimiento, la tecnología y el trabajo en equipo.</p>\r\n<p>Anunciamos que vamos a seguir potenciando nuestra organización, con el mismo coraje, creatividad y dedicación que nos caracteriza, para beneficio de clientes actuales y potenciales, funcionarios, colaboradores, gobierno nacional y la misma sociedad paraguaya.</p>\r\n<p>GARDEN AUTOMOTORES S.A. está conformada exclusivamente por capital y recursos humanos de origen nacional, convertida actualmente en una empresa moderna y altamente competitiva, que le permite, por un lado, atender con calidad y solvencia la creciente cartera de clientes en el mercado nacional y por el otro, acompañar las exigencias técnicas y administrativas cada vez mayores de la KIA MOTORS Corporation, para los Distribuidores Oficiales de sus productos KIA, en las áreas de Ventas, Post-venta y Administrativas, ya que la misma desarrolla la visión fundamental de convertirse a mediano plazo en uno de los tres mayores fabricantes de automóviles del mundo.</p>\r\n<p>GARDEN AUTOMOTORES S.A., ofrece al mercado paraguayo la mayoría de los modelos de vehículos fabricados por la KIA MOTORS, con una política dirigida a satisfacer la demanda de los diferentes segmentos económicos del país, apoyado en un plan de financiamiento atractivo y un sistema de Post-Venta dinámico, que garantiza la inversión de los clientes en el vehículo de su preferencia, mediante un servicio técnico personalizado y la provisión de repuestos originales.</p>');
 
 -- ----------------------------
--- Table structure for local
+-- Table structure for `local`
 -- ----------------------------
 DROP TABLE IF EXISTS `local`;
 CREATE TABLE `local` (
@@ -188,7 +188,7 @@ CREATE TABLE `local` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for modelo
+-- Table structure for `modelo`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo`;
 CREATE TABLE `modelo` (
@@ -225,7 +225,7 @@ INSERT INTO `modelo` VALUES ('11', '5', 'K2700', '5 años o 100.00 Km.', '11_k27
 INSERT INTO `modelo` VALUES ('12', '1', 'Quoris', '5 años o 100.00 Km.', '12_quoris.png', '12_kia-quoris-thumb.png', '12_Volante_Quoris_baja.pdf', 'Prepárate para ser mimado! Presentando al Kia Quoris, un lujoso sedán de 4 puertas equipado con características innovadoras para darle una experiencia de conducción de primera calidad', '12_kia-quoris-w.png', '12_kia-quoris-t.png', '12_kia-quoris-m.png', '7', '1');
 
 -- ----------------------------
--- Table structure for modelo_360
+-- Table structure for `modelo_360`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_360`;
 CREATE TABLE `modelo_360` (
@@ -999,7 +999,7 @@ INSERT INTO `modelo_360` VALUES ('755', '12', null, '12_quoris_00070.jpg', '1');
 INSERT INTO `modelo_360` VALUES ('756', '12', null, '12_quoris_00071.jpg', '1');
 
 -- ----------------------------
--- Table structure for modelo_color
+-- Table structure for `modelo_color`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_color`;
 CREATE TABLE `modelo_color` (
@@ -1016,7 +1016,7 @@ INSERT INTO `modelo_color` VALUES ('1', '1', '1');
 INSERT INTO `modelo_color` VALUES ('2', '2', '1');
 
 -- ----------------------------
--- Table structure for modelo_desempeno
+-- Table structure for `modelo_desempeno`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_desempeno`;
 CREATE TABLE `modelo_desempeno` (
@@ -1078,7 +1078,7 @@ INSERT INTO `modelo_desempeno` VALUES ('42', '12', 'Motor de 3.8 lMPI V6', 'En e
 INSERT INTO `modelo_desempeno` VALUES ('43', '12', 'Suspensión de Aire', 'El óptimo control de carrocería está garantizado gracias a los modos de conducción que atienden a las necesidades en las diferentes condiciones de manejo.', '12_kia-quoris-performance-05-w.jpg', '12_kia-quoris-performance-05-t.jpg', '12_kia-quoris-performance-05-m.jpg', '0', '1');
 
 -- ----------------------------
--- Table structure for modelo_destacado
+-- Table structure for `modelo_destacado`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_destacado`;
 CREATE TABLE `modelo_destacado` (
@@ -1117,7 +1117,7 @@ INSERT INTO `modelo_destacado` VALUES ('18', '12', 'Asientos del Soporte Lumbar 
 INSERT INTO `modelo_destacado` VALUES ('19', '12', 'Sistema de Entretenimiento Trasero (Monitores Duales de 9.2 pulgadas)', 'Los pasajeros traseros disfrutarán de una experiencia de diversión de primera clase gracias a los monitores gemelos de 9.2 pulgadas colocados en el respaldo de cada asiento delantero. Acomódese y disfrute de un multimedia rico en formatos de video con un sonido de calidad premium.', '12_kia-quoris-highlights-05-w.jpg', '12_kia-quoris-highlights-05-t.jpg', '12_kia-quoris-highlights-05-m.jpg', '0', '1');
 
 -- ----------------------------
--- Table structure for modelo_dimension
+-- Table structure for `modelo_dimension`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_dimension`;
 CREATE TABLE `modelo_dimension` (
@@ -1151,7 +1151,7 @@ INSERT INTO `modelo_dimension` VALUES ('11', '11', '4.825', '1.740', '1.975', '2
 INSERT INTO `modelo_dimension` VALUES ('12', '12', '5.090', '1.900', '1.490', '3.045', '12_kia-quoris-dimensions-all-view.png', null, null, '1');
 
 -- ----------------------------
--- Table structure for modelo_dimension_img
+-- Table structure for `modelo_dimension_img`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_dimension_img`;
 CREATE TABLE `modelo_dimension_img` (
@@ -1202,7 +1202,7 @@ INSERT INTO `modelo_dimension_img` VALUES ('32', '12', 'ATRAS', '12_quoris-showr
 INSERT INTO `modelo_dimension_img` VALUES ('33', '12', 'LATERAL', '12_quoris-showroom-specificaion-dimensions-slide-list-03-w.png', '12_quoris-showroom-specificaion-dimensions-slide-list-03-t.png', '12_quoris-showroom-specificaion-dimensions-slide-list-03-m.png');
 
 -- ----------------------------
--- Table structure for modelo_especificacion
+-- Table structure for `modelo_especificacion`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_especificacion`;
 CREATE TABLE `modelo_especificacion` (
@@ -1219,7 +1219,7 @@ CREATE TABLE `modelo_especificacion` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for modelo_estilo
+-- Table structure for `modelo_estilo`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_estilo`;
 CREATE TABLE `modelo_estilo` (
@@ -1234,7 +1234,7 @@ CREATE TABLE `modelo_estilo` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for modelo_general
+-- Table structure for `modelo_general`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_general`;
 CREATE TABLE `modelo_general` (
@@ -1266,7 +1266,7 @@ INSERT INTO `modelo_general` VALUES ('11', '11', '11_kia-k2700-overview-01-w.jpg
 INSERT INTO `modelo_general` VALUES ('12', '12', '12_kia-quoris-overview-01-w.jpg', '12_kia-quoris-overview-01-t.jpg', '12_kia-quoris-overview-01-m.jpg', 'Un cautivante líder de su clase', 'Es momento de dejarte seducir por un automóvil que nunca terminará de sorprenderte. Quoris es una invitación a descubrir un nuevo nivel de conducción en cada detalle de tu viaje.', '1');
 
 -- ----------------------------
--- Table structure for modelo_imagenes
+-- Table structure for `modelo_imagenes`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_imagenes`;
 CREATE TABLE `modelo_imagenes` (
@@ -1650,7 +1650,7 @@ INSERT INTO `modelo_imagenes` VALUES ('354', '12', 'INT', null, null, null, '12_
 INSERT INTO `modelo_imagenes` VALUES ('355', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-12.jpg', '12_kia-quoris-wide-b-interior-12-w.jpg', '12_kia-quoris-wide-b-interior-12-t.jpg', '12_kia-quoris-wide-b-interior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 
 -- ----------------------------
--- Table structure for modelo_imagenes_thumb
+-- Table structure for `modelo_imagenes_thumb`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_imagenes_thumb`;
 CREATE TABLE `modelo_imagenes_thumb` (
@@ -1672,7 +1672,7 @@ INSERT INTO `modelo_imagenes_thumb` VALUES ('2', '2', 'EXT', null, '1_ico_cerato
 INSERT INTO `modelo_imagenes_thumb` VALUES ('3', '3', 'EXT', null, '1_ico_cerato_forte_yd_paging7_on.png', '0', '1');
 
 -- ----------------------------
--- Table structure for modelo_llantas
+-- Table structure for `modelo_llantas`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_llantas`;
 CREATE TABLE `modelo_llantas` (
@@ -1715,7 +1715,7 @@ INSERT INTO `modelo_llantas` VALUES ('24', '24', '225/55R17', 'Llanta de Aleaci�
 INSERT INTO `modelo_llantas` VALUES ('25', '30', '195/65 R18', 'Llanta de Aleación', '12_kia-quoris-wheel-slide-01.png', '1');
 
 -- ----------------------------
--- Table structure for modelo_motor
+-- Table structure for `modelo_motor`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_motor`;
 CREATE TABLE `modelo_motor` (
@@ -1768,7 +1768,7 @@ INSERT INTO `modelo_motor` VALUES ('29', '29', '2', '2.7 (J2) A DIESEL', '2.700 
 INSERT INTO `modelo_motor` VALUES ('30', '30', '1', '3.8 Inyección Multi Punto V6', '3.800 c.c.', '294/6200', '36.5/4500', '6 cilindros en línea', null, '12_kia-quoris-engine-silde-01.png', '1');
 
 -- ----------------------------
--- Table structure for modelo_seguridad
+-- Table structure for `modelo_seguridad`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_seguridad`;
 CREATE TABLE `modelo_seguridad` (
@@ -1819,7 +1819,7 @@ INSERT INTO `modelo_seguridad` VALUES ('29', '12', 'Sistema Avanzado de 9 airbag
 INSERT INTO `modelo_seguridad` VALUES ('30', '12', 'Portaequipajes inteligente', 'La inteligencia de Kia Quoris se demuestra, cuando el vehículo reconoce al conductor que sostiene la llave inteligente, abriendo automáticamente el portaequipaje después de tres segundos.', '12_kia-quoris-safety-06-w.jpg', '12_kia-quoris-safety-06-t.jpg', '12_kia-quoris-safety-06-m.jpg', '0', '1');
 
 -- ----------------------------
--- Table structure for modelo_version
+-- Table structure for `modelo_version`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_version`;
 CREATE TABLE `modelo_version` (
@@ -1866,10 +1866,10 @@ INSERT INTO `modelo_version` VALUES ('26', '11', 'C/S Mec. 2,7 DSL SENCILLO C/C 
 INSERT INTO `modelo_version` VALUES ('27', '11', 'C/S Mec. 2,7 DSL DUAL C/C ', '17200.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('28', '11', 'C/S Mec. 2,7 DSL 4X4 C/C & A/A', '19600.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('29', '11', 'D/C Mec. 2,7 DSL 4X4 C/C & A/A', '21200.000', '0', '2018', '1');
-INSERT INTO `modelo_version` VALUES ('30', '12', '3.8 CVVT', null, '0', '2016', '1');
+INSERT INTO `modelo_version` VALUES ('30', '12', '3.8 CVVT', '68000.000', '0', '2016', '1');
 
 -- ----------------------------
--- Table structure for modelo_version_cuotas
+-- Table structure for `modelo_version_cuotas`
 -- ----------------------------
 DROP TABLE IF EXISTS `modelo_version_cuotas`;
 CREATE TABLE `modelo_version_cuotas` (
@@ -1881,7 +1881,7 @@ CREATE TABLE `modelo_version_cuotas` (
   `cantidad_cuotas` int(3) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `idx_id_version_vcuotas` (`id_version`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version_cuotas
@@ -1915,9 +1915,10 @@ INSERT INTO `modelo_version_cuotas` VALUES ('26', '26', '2', '338.000', '2250.00
 INSERT INTO `modelo_version_cuotas` VALUES ('27', '27', '2', '323.000', '2150.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('28', '28', '2', '368.000', '2450.000', '60');
 INSERT INTO `modelo_version_cuotas` VALUES ('29', '29', '2', '398.000', '2650.000', '60');
+INSERT INTO `modelo_version_cuotas` VALUES ('30', '30', '2', '1130.000', null, '60');
 
 -- ----------------------------
--- Table structure for moneda
+-- Table structure for `moneda`
 -- ----------------------------
 DROP TABLE IF EXISTS `moneda`;
 CREATE TABLE `moneda` (
@@ -1935,7 +1936,7 @@ INSERT INTO `moneda` VALUES ('1', 'Guaraní', 'Gs.', '1');
 INSERT INTO `moneda` VALUES ('2', 'Dolar', 'U$D', '1');
 
 -- ----------------------------
--- Table structure for noticia
+-- Table structure for `noticia`
 -- ----------------------------
 DROP TABLE IF EXISTS `noticia`;
 CREATE TABLE `noticia` (
@@ -1957,7 +1958,7 @@ INSERT INTO `noticia` VALUES ('2', 'noticia2.jpg', 'noticia2-thumb.jpg', 'Lorem 
 INSERT INTO `noticia` VALUES ('3', 'noticia3.jpg', 'noticia3-thumb.jpg', 'Lorem ipsum dolor sit amet', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium, lectus in vestibulum dapibus, magna dui venenatis tortor, in porttitor justo arcu ut odio. Cras eget tortor at ligula congue porttitor sed nec enim. Mauris eu scelerisque turpis, sed finibus nulla. In quis scelerisque risus, id lacinia erat. Sed quis auctor magna. Donec leo nisi, dictum id consectetur sed, fermentum ac mauris. Etiam et turpis pretium, euismod arcu ac, volutpat urna. Vestibulum sit amet ante at nisi auctor fermentum id ut mi.</p>\r\n<p>In viverra rutrum vestibulum. Aenean dignissim vestibulum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus quis elit ipsum. Fusce a orci quis lacus elementum finibus eget sit amet felis. Phasellus a nunc ligula. Cras sed orci a dui volutpat gravida sit amet nec justo. Nunc quis eleifend magna. Pellentesque velit ipsum, eleifend condimentum egestas quis, tincidunt ut nisi. Nunc dictum interdum lorem eget tincidunt. Aenean tempus purus sit amet odio condimentum, vitae bibendum augue pulvinar. Ut in nunc tincidunt, fermentum enim auctor, pretium tortor. Pellentesque et pharetra magna, eget consequat sapien.</p>\r\n<p>Etiam consequat dui arcu, ut hendrerit eros faucibus et. Suspendisse vestibulum ac purus vel iaculis. Phasellus at luctus dui. Quisque neque orci, rhoncus vel turpis ullamcorper, dapibus tempus lacus. Aenean malesuada enim et eros consequat, ac rhoncus tortor feugiat. Suspendisse nec egestas velit. Fusce venenatis at odio quis porta. Nulla eget ante ornare, facilisis orci in, cursus mauris. Vestibulum pulvinar sollicitudin elit nec dictum. Nunc pulvinar augue eu turpis sodales posuere. Curabitur pellentesque neque vitae sapien vehicula, eget sagittis lectus malesuada. Etiam blandit pulvinar ante in varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla sapien mi, eleifend vitae lacus eu, tristique eleifend leo.</p>\r\n<p>Aliquam faucibus nisi et mi feugiat, sit amet vestibulum massa ultricies. Quisque sed purus eleifend, aliquam eros congue, dictum arcu. Morbi malesuada nibh dolor, id pharetra neque mattis quis. Nullam pharetra urna id dui laoreet, sit amet scelerisque dolor lobortis. Fusce maximus mauris at porta interdum. Aliquam nec odio nulla. Vestibulum aliquam nisi mauris, nec dictum enim sagittis ut. Pellentesque suscipit feugiat diam sit amet dictum. Suspendisse rhoncus accumsan urna at sagittis. Mauris mollis ex ultricies, vulputate tortor eget, dictum leo. Nunc nec interdum lectus. Ut sed molestie turpis. Cras et eros et massa ullamcorper elementum at non mauris.</p>\r\n<p>Maecenas eu efficitur ipsum. Morbi sit amet mattis lacus. Nulla ultrices justo non magna pulvinar consequat. Vestibulum consequat augue at augue commodo, ut hendrerit nisl varius. Quisque ac purus sit amet diam elementum lobortis. Integer lacinia, leo eu placerat malesuada, lacus augue cursus sapien, non maximus urna lorem sit amet nunc. Fusce porta aliquam metus, eu accumsan neque pellentesque et. Etiam ut leo molestie, placerat odio sit amet, vehicula ipsum. Quisque vitae nisi vestibulum, semper diam a, tristique orci. Sed rutrum felis vitae urna suscipit, a blandit est maximus. Integer imperdiet sodales lacinia. Aliquam posuere justo tellus, a condimentum nisl auctor at. Morbi fermentum nunc tempus nulla ultricies, et feugiat velit finibus. Ut neque turpis, suscipit ac odio nec, semper tempor diam. Nunc auctor erat urna, sit amet luctus lectus dictum sed. Curabitur ultricies in ipsum at cursus.</p>', '2017-11-06 10:58:49', '1');
 
 -- ----------------------------
--- Table structure for paginas
+-- Table structure for `paginas`
 -- ----------------------------
 DROP TABLE IF EXISTS `paginas`;
 CREATE TABLE `paginas` (
@@ -1973,7 +1974,7 @@ CREATE TABLE `paginas` (
 INSERT INTO `paginas` VALUES ('1', '<strong class=\"fontBl\">PRIVACIDAD Y DE PROTECCIÓN DE DATOS</strong> \r\n                                    <ul class=\"pt20 pb10\"> \r\n                                        <li>En relación con la información recolectada en el formulario de registro dispuesto en la página web se enuncian las siguientes Políticas de Privacidad y Protección de Datos, y sus condiciones las cuales se entenderán aceptadas en forma automática, una vez el usuario diligencie sus datos Protección de datos. </li> \r\n                                        <li><u><b>a. Protección de Datos:</b></u></li> \r\n                                        <li>En cumplimiento de la ley 1682 de 2001 que reglamenta la información de caracter privado, Garden Automotores S.A. ha desarrollado una Política de Protección de Datos Personales la cual le garantizará la seguridad debida sobre los mismos y el ejercicio pleno de sus derechos. Los datos personales suministrados por usted a Garden Automotores S.A., incluyendo aquellos que gozan de carácter sensible, podrán ser utilizados por ésta y por terceros que tengan vínculos comerciales con ésta, para el desarrollo de actividades comerciales, estudios con fines estadísticos y de conocimiento del cliente, para la ejecución de servicios contratados, para informarle a sus clientes sobre novedades, productos, servicios y ofertas especiales, para el desarrollo de actividades comerciales. Garden Automotores S.A., podrá transferir y transmitir sus datos personales a terceros que tengan vínculo comercial con Garden Automotores S.A. incluyendo terceros ubicados en países que no proporcionen niveles adecuados de protección de Datos Personales. </li> \r\n                                        <li>La recolección de datos realizada a través de los formularios dispuestos en la página web se realiza con fines comerciales. Garden Automotores S.A. es responsable de manejo de los datos diligenciados. Garden Automotores S.A. utilizará la base de datos recolectada, para ofrecer los servicios de asesoría comercial en línea sobre todo el portafolio de vehículos, planes financieros y promociones. Esta asesoría, será brindada a cada cliente que diligencie el formulario, únicamente por un asesor comercial de Garden Automotores S.A. </li> \r\n                                        <li>El Usuario es libre de suministrar la información requerida en el formulario de recolección de datos dispuesto en la página web Garden Automotores S.A. </li> \r\n                                        <li>Para poder enviar la información requerida en el formulario de recolección de datos, el Usuario deberá proporcionar sus datos personales completos y verídicos. </li> \r\n                                        <li>Una vez leídas y aceptadas las políticas de privacidad y de protección de datos, la información suministrada por el usuario será enviada a una base de datos de Metrokia S.A. </li> \r\n                                        <li>El Usuario puede ejercitar su derecho de acceso, rectificación, cancelación y oposición. </li> \r\n                                        <li>El Usuario al aceptar las políticas de privacidad y protección de datos, autoriza a ser contactado telefónicamente o a través de la dirección diligenciada para envío de información comercial y/o aquella que Garden Automotores S.A. considere de importancia para sus usuarios. Para mayor información sobre la Política de Tratamiento de Datos Personales consulte la página web www.kia.com.py o para el ejercicio de cualquiera de los derechos de información, actualización, rectificación o supresión de los datos personales, deberá enviar un correo electrónico a:dabenitez@garden.com.py </li> \r\n                                        <li><u><b>b. Seguridad de la información</b></u></li> \r\n                                        <li>Garden Automotores S.A., ha acatado y adoptado los niveles de seguridad de protección de datos personales legalmente requeridos.<br> Se ha empleado todas las medidas para evitar la pérdida, acceso no autorizado, mal manejo o de los datos suministrados por el Usuario. No obstante, el Usuario debe ser consciente de que las medidas de seguridad en Internet no son inexpugnables. </li> \r\n                                        <li><u><b>c. Protección frente a accesos no autorizados</b></u></li> \r\n                                        <li>La base de datos recolectada a través del formulario de registro es almacenada en el servidor de la página web de Garden Automotores S.A. El servidor cuenta con las normas de seguridad brindadas por el proveedor. </li> \r\n                                        <li><u><b>d. Cesión de información personal a terceros</b></u></li> \r\n                                        <li>Garden Automotores S.A. hace uso de las bases de datos recolectadas para uso interno, y de terceros que tengan vínculos comerciales con ésta, para el desarrollo de actividades comerciales, estudios con fines estadísticos y de conocimiento del cliente, para la ejecución de servicios contratados, para informarle a sus clientes sobre novedades, productos, servicios y ofertas especiales, , dentro o fuera del país </li> \r\n                                        <li><u><b>e. Manejo y usos de los datos personales diligenciados</b></u></li> \r\n                                        <li>Garden Automotores S.A. puede remitirle correos electrónicos al Usuario, una vez este diligencie esta información requerida en el formulario de recolección de datos, además luego de haber aceptado expresamente su intención de recibir información a través de este medio electrónico. </li> \r\n                                        <li><u><b>f. Cambios en la Política de Privacidad y Protección de Datos</b></u></li> \r\n                                        <li>Garden Automotores S.A. se reserva el derecho de hacer alguna modificación en las políticas de privacidad y protección de datos<br> Los cambios que afecten el manejo de datos personales se comunicarán a través de la página web y del correo electrónico diligenciado por los Usuarios. </li> \r\n                                        <li><b>3. DERECHOS RESERVADOS</b></li> \r\n                                        <li>Todos los materiales (imágenes, presentaciones, textos, animaciones, etc.) Son propiedad de Garden Automotores S.A. y de KIA MOTORS CORP, usted no puede modificar, publicar, transmitir, crear trabajos derivados o explotar de cualquier manera ningún de estos contenidos sin la expresa autorización de Garden Automotores S.A. </li> \r\n                                        <li><b>4. AVISOS LEGALES PLANES DE FINANCIACIÓN</b></li> \r\n                                        <li>Para todos los planes financieros que se publiquen mes a mes, se debe corroborar la información con un asesor comercial en cualquier vitrina del país y con la entidad financiera correspondiente. Aplican condiciones y restricciones dependiendo del plan de financiación las cuales podrá encontrar en el sección de noticias. </li> \r\n                                    </ul>', '<strong class=\"fontBl\">1. EXACTITUD DE LA INFORMACIÓN:</strong> \r\n                                    <ul class=\"pt20 pb10\"> \r\n                                        <li>Garden Automotores S.A. ha hecho todo lo posible para que la información contenida en esta web sea lo más completa posible; no obstante debido a la política internacional de KIA MOTORS CORP de mejoramiento continuo tanto en sus productos como en la información para sus clientes, todos los datos acá expuestos están siempre en constante revisión y actualización. Es por esto que Garden Automotores S.A. se reserva el derecho de modificar, cambiar, o sustituir, las especificaciones, textos, ofertas, versiones y modelos de los accesorios y de los vehículos y demás información sin previo aviso y en cualquier momento. </li> \r\n                                        <li>La información de esta web está dirigida a los compradores residentes en Paraguay, es por esto que no podemos cumplir con cualquier solicitud de fichas técnicas o información de los residentes fuera de Paraguay con respecto a versiones, disponibilidad, servicios, precios o tarifas de los vehículos y accesorios. </li> \r\n                                        <li>La información contenida en este sitio cumple con las leyes del territorio paraguayo, por esto no es posible para Garden Automotores S.A.. aplicar las normas o disposiciones de cualquier otro país para la adquisición de productos o servicios. </li> \r\n                                        <li>Las imágenes expuestas en este sitio son de referencia y algunos accesorios hacen parte de la ambientación fotográfica, razón por la cual se hace necesario que usted se acerque al concesionario o showroom más cercana para conocer las especificaciones del producto que desea adquirir. </li> \r\n                                        <li>Usted debe consultar en el showroom de su preferencia sobre la veracidad de la información suministrada en este sitio antes de realizar alguna acción. Tenga en cuenta que los precios o algunas versiones están sujetos a disponibilidad de inventario o dispuestos a cambios sin previo aviso. </li> \r\n                                        <li>Catálogo público:</li> \r\n                                        <li>Cada galería publicada en esta página web, es tomada del catálogo de producto desarrollado por la Corporación Kia Motors Internacional el cual debe ser tomado sólo como referencia. El vehículo presentado hace referencia a la versión full existente en diferentes mercados, el cual podrá tener variaciones locales en equipamiento y colores, de acuerdo a las estandarizaciones y necesidades de cada país. Se recomienda preguntar por la ficha técnica en el concesionario más cercano y verificar las especificaciones del producto que desea adquirir. </li> \r\n                                        <li><b>Precio:</b></li> \r\n                                        <li>El precio *DESDE, publicado en cada galería corresponde al precio mínimo de cada vehículo y a la versión menos equipada. Este precio debe ser tomado como referencia. Se recomienda consultar cada precio, con un asesor comercial en el concesionario Kia más cercano. </li> \r\n                                    </ul>');
 
 -- ----------------------------
--- Table structure for preferencia_contacto
+-- Table structure for `preferencia_contacto`
 -- ----------------------------
 DROP TABLE IF EXISTS `preferencia_contacto`;
 CREATE TABLE `preferencia_contacto` (
@@ -1991,14 +1992,14 @@ INSERT INTO `preferencia_contacto` VALUES ('2', 'Celular', '1');
 INSERT INTO `preferencia_contacto` VALUES ('3', 'Casa', '1');
 
 -- ----------------------------
--- Table structure for promociones
+-- Table structure for `promociones`
 -- ----------------------------
 DROP TABLE IF EXISTS `promociones`;
 CREATE TABLE `promociones` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `img` varchar(80) DEFAULT NULL,
   `url` varchar(120) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -2013,7 +2014,7 @@ INSERT INTO `promociones` VALUES ('4', 'soul.jpg', '#', '2017-11-05 08:57:01', '
 INSERT INTO `promociones` VALUES ('5', 'sportage.jpg', '#', '2017-11-05 08:57:17', '1');
 
 -- ----------------------------
--- Table structure for redes
+-- Table structure for `redes`
 -- ----------------------------
 DROP TABLE IF EXISTS `redes`;
 CREATE TABLE `redes` (
@@ -2034,7 +2035,7 @@ INSERT INTO `redes` VALUES ('3', 'Youtube', 'https://www.youtube.com/channel/UC6
 INSERT INTO `redes` VALUES ('4', 'Instagram', 'http://instagram.com/kiaparaguay', 'spr_instagram', '1');
 
 -- ----------------------------
--- Table structure for respuestos_accesorios
+-- Table structure for `respuestos_accesorios`
 -- ----------------------------
 DROP TABLE IF EXISTS `respuestos_accesorios`;
 CREATE TABLE `respuestos_accesorios` (
@@ -2053,7 +2054,7 @@ INSERT INTO `respuestos_accesorios` VALUES ('2', 'Beneficios de los Repuestos Or
 INSERT INTO `respuestos_accesorios` VALUES ('3', 'Importancia y Derechos de usar Repuestos Originales KIA', '<p>Los repuestos originales KIA están fabricados bajo las mismas normas de seguridad y calidad que las piezas originales de su vehículo. Cada vez que utiliza repuestos originales usted contribuye no solamente a la conservación del valor de su Kia sino también a conservar el medio ambiente y la seguridad durante la conducción, asegurando mayor economía del combustible y el buen desempeño de su vehículo.</p>', '1');
 
 -- ----------------------------
--- Table structure for seccion_contacto
+-- Table structure for `seccion_contacto`
 -- ----------------------------
 DROP TABLE IF EXISTS `seccion_contacto`;
 CREATE TABLE `seccion_contacto` (
@@ -2074,7 +2075,7 @@ INSERT INTO `seccion_contacto` VALUES ('4', 'Marketing', 'rcolman@garden.com.py'
 INSERT INTO `seccion_contacto` VALUES ('5', 'Recursos Humanos', 'seleccion@garden.com.py', '1');
 
 -- ----------------------------
--- Table structure for servicio
+-- Table structure for `servicio`
 -- ----------------------------
 DROP TABLE IF EXISTS `servicio`;
 CREATE TABLE `servicio` (
@@ -2089,7 +2090,7 @@ CREATE TABLE `servicio` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for servicio_local
+-- Table structure for `servicio_local`
 -- ----------------------------
 DROP TABLE IF EXISTS `servicio_local`;
 CREATE TABLE `servicio_local` (
@@ -2104,7 +2105,7 @@ CREATE TABLE `servicio_local` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for slider
+-- Table structure for `slider`
 -- ----------------------------
 DROP TABLE IF EXISTS `slider`;
 CREATE TABLE `slider` (
@@ -2124,7 +2125,7 @@ CREATE TABLE `slider` (
 INSERT INTO `slider` VALUES ('1', '1', 'kia-gt-interbrand-b-1610-01-w.jpg', 'kia-gt-interbrand-b-1610-01-t.jpg', 'kia-gt-interbrand-b-1610-01-m.jpg', '1_cerato_galeria.jpg', '1');
 
 -- ----------------------------
--- Table structure for solicitud_contacto
+-- Table structure for `solicitud_contacto`
 -- ----------------------------
 DROP TABLE IF EXISTS `solicitud_contacto`;
 CREATE TABLE `solicitud_contacto` (
@@ -2137,7 +2138,7 @@ CREATE TABLE `solicitud_contacto` (
   `celular` varchar(30) DEFAULT NULL,
   `telefono` varchar(30) DEFAULT NULL,
   `mensaje` text,
-  `fecha` datetime DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `leido` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
@@ -2150,7 +2151,7 @@ INSERT INTO `solicitud_contacto` VALUES ('2', '2', '1', 'Raúl', 'Ramírez', 'ho
 INSERT INTO `solicitud_contacto` VALUES ('3', null, null, 'raul', '', 'hola@hola.com', null, '232323', '', '2017-11-02 15:49:16', '0');
 
 -- ----------------------------
--- Table structure for solicitud_cotizador
+-- Table structure for `solicitud_cotizador`
 -- ----------------------------
 DROP TABLE IF EXISTS `solicitud_cotizador`;
 CREATE TABLE `solicitud_cotizador` (
@@ -2173,7 +2174,7 @@ CREATE TABLE `solicitud_cotizador` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for solicitud_testdrive
+-- Table structure for `solicitud_testdrive`
 -- ----------------------------
 DROP TABLE IF EXISTS `solicitud_testdrive`;
 CREATE TABLE `solicitud_testdrive` (
@@ -2185,7 +2186,7 @@ CREATE TABLE `solicitud_testdrive` (
   `email` varchar(45) DEFAULT NULL,
   `ciudad` varchar(60) DEFAULT NULL,
   `direccion` varchar(120) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `leido` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -2196,7 +2197,7 @@ CREATE TABLE `solicitud_testdrive` (
 INSERT INTO `solicitud_testdrive` VALUES ('1', '1', 'Raúl Ramírez', '3749219', '601606', 'hola@hola.com', 'Asunción', 'Sarací 588', '2017-11-02 16:08:35', '0');
 
 -- ----------------------------
--- Table structure for solicitud_turno
+-- Table structure for `solicitud_turno`
 -- ----------------------------
 DROP TABLE IF EXISTS `solicitud_turno`;
 CREATE TABLE `solicitud_turno` (
@@ -2211,7 +2212,7 @@ CREATE TABLE `solicitud_turno` (
   `barrio` varchar(45) DEFAULT NULL,
   `modelo` varchar(45) DEFAULT NULL,
   `kilometraje` int(8) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `leido` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -2223,14 +2224,14 @@ INSERT INTO `solicitud_turno` VALUES ('1', '1', 'RaÃºl RamÃ­rez', '3749219',
 INSERT INTO `solicitud_turno` VALUES ('2', '2', 'Raúl Ramírez', '3749219', '0976921801', '601606', 'Saravi', 'Asuncion', 'Recoleta', 'Sorento', '55555', '2017-11-04 08:25:53', '0');
 
 -- ----------------------------
--- Table structure for sostenibilidad
+-- Table structure for `sostenibilidad`
 -- ----------------------------
 DROP TABLE IF EXISTS `sostenibilidad`;
 CREATE TABLE `sostenibilidad` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `titulo` varchar(120) DEFAULT NULL,
   `archivo` varchar(120) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
@@ -2248,7 +2249,7 @@ INSERT INTO `sostenibilidad` VALUES ('7', 'Informe de sustentabilidad 2015', '20
 INSERT INTO `sostenibilidad` VALUES ('8', 'Informe de Sustentabilidad 2016', '2016+Sustainability+Magazine+Move.pdf', '2016-05-25 00:00:00', '1');
 
 -- ----------------------------
--- Table structure for sucursal
+-- Table structure for `sucursal`
 -- ----------------------------
 DROP TABLE IF EXISTS `sucursal`;
 CREATE TABLE `sucursal` (
@@ -2276,7 +2277,7 @@ INSERT INTO `sucursal` VALUES ('6', 'Encarnación:', ' (021) 238 9500 | (071) 20
 INSERT INTO `sucursal` VALUES ('7', 'Caaguazu:', '(021) 338 6339', 'Ruta Internacional Nº 7, José Gaspar Rodríguez de Francia Km 182 (Barrio Industrial)', 'Lunes a Viernes 8:00 a 18:00, Sábados 8:00 a 12:00', '-25.460485', '-55.995753', '0', '1');
 
 -- ----------------------------
--- Table structure for talleres
+-- Table structure for `talleres`
 -- ----------------------------
 DROP TABLE IF EXISTS `talleres`;
 CREATE TABLE `talleres` (
@@ -2314,7 +2315,7 @@ INSERT INTO `talleres` VALUES ('18', 'Mecanica y Chaperia Do Kady', 'Fraccion Al
 INSERT INTO `talleres` VALUES ('19', 'Taller H.P. Peters', 'Avenida Industrial', 'Colonia Neuland (Chaco)', '(595 0493) 240 656', null, '1');
 
 -- ----------------------------
--- Table structure for tipo_servicio
+-- Table structure for `tipo_servicio`
 -- ----------------------------
 DROP TABLE IF EXISTS `tipo_servicio`;
 CREATE TABLE `tipo_servicio` (
@@ -2331,7 +2332,7 @@ INSERT INTO `tipo_servicio` VALUES ('1', 'Service en Casa', '1');
 INSERT INTO `tipo_servicio` VALUES ('2', 'Service en Taller Kia', '1');
 
 -- ----------------------------
--- Table structure for tipo_vehiculo
+-- Table structure for `tipo_vehiculo`
 -- ----------------------------
 DROP TABLE IF EXISTS `tipo_vehiculo`;
 CREATE TABLE `tipo_vehiculo` (
@@ -2352,7 +2353,7 @@ INSERT INTO `tipo_vehiculo` VALUES ('4', 'Suv', '4', '1');
 INSERT INTO `tipo_vehiculo` VALUES ('5', 'Comerciales', '5', '1');
 
 -- ----------------------------
--- Table structure for turno
+-- Table structure for `turno`
 -- ----------------------------
 DROP TABLE IF EXISTS `turno`;
 CREATE TABLE `turno` (
@@ -2367,7 +2368,7 @@ CREATE TABLE `turno` (
 INSERT INTO `turno` VALUES ('1', 'reserva_turnos.jpg');
 
 -- ----------------------------
--- Table structure for vida_0
+-- Table structure for `vida_0`
 -- ----------------------------
 DROP TABLE IF EXISTS `vida_0`;
 CREATE TABLE `vida_0` (
@@ -2381,4 +2382,3 @@ CREATE TABLE `vida_0` (
 -- Records of vida_0
 -- ----------------------------
 INSERT INTO `vida_0` VALUES ('1', 'vida0-2017.jpg', null);
-SET FOREIGN_KEY_CHECKS=1;

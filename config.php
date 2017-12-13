@@ -9,13 +9,13 @@
 $host = getHost();
 switch ($host) {
     case 'kia.com.py':
-        define('URL', 'http://www.kia.com.py/');
+        define('URL', 'http://www.kia.com.py/v2');
         define('DB_USER', 'web');
         define('DB_PASS', 'WebG@rdenMKT');
         define('DB_NAME', 'kia_site');
         break;
     case 'www.kia.com.py':
-        define('URL', 'http://www.kia.com.py/');
+        define('URL', 'http://www.kia.com.py/v2');
         define('DB_USER', 'web');
         define('DB_PASS', 'WebG@rdenMKT');
         define('DB_NAME', 'kia_site');
