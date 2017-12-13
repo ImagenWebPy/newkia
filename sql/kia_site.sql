@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-12 18:33:02
+Date: 2017-12-13 11:59:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -203,24 +203,26 @@ CREATE TABLE `modelo` (
   `img_w` varchar(80) DEFAULT NULL,
   `img_t` varchar(80) DEFAULT NULL,
   `img_m` varchar(80) DEFAULT NULL,
+  `orden` int(3) DEFAULT NULL,
   `estado` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo
 -- ----------------------------
-INSERT INTO `modelo` VALUES ('1', '1', 'Cerato', '5 años o 100.00 Km.', 'cerato.png', '1_cerato-thumb-menu.png', '1_Cerato_2017_baja.pdf', 'Deje que el nuevo Cerato lo lleve a lugares que usted sólo había imaginado.', '1_kia-cerato-forte-yd-byo-w.png', '1_kia-cerato-forte-yd-byo-t.png', '1_kia-cerato-forte-yd-byo-m.png', '1');
-INSERT INTO `modelo` VALUES ('2', '1', 'All New Rio Sedán', '5 años o 100.00 Km.', 'all-new-rio', '2_rio-sedan-thumb-menu.png', '2_Volante_NEW_RIO_2018_baja.pdf', 'Talentoso. Elegante. Supremo y funcional. El Kia Rio Sedán 4 Puertas es sencillamente el mejor coche de su clase. Compruebe su precio, interior y exterior.\r\n', '2_rio-sedan-w.png', '2_rio-sedan-t.png', '2_rio-sedan-m.png', '1');
-INSERT INTO `modelo` VALUES ('3', '1', 'All New Rio Hatch', '5 años o 100.00 Km.', 'all-new-rio', '3_rio_hatch-thumb.png', '3_all_new_Rio_Hatch.pdf', 'Entra ahora y conoce el All New Rio, un Hatchback que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '3_rio_hatch_w.png', '3_rio_hatch_t.png', '3_rio_hatch_m.png', '1');
-INSERT INTO `modelo` VALUES ('4', '1', 'Picanto', '5 años o 100.00 Km.', '4_picanto.png', '4_picanto_thumb.png', '4_picanto_baja.pdf', 'Descubre el deportivo Kia Picanto con la mejor garantía del mercado. Conozca más sobre su precio, rendimiento, seguridad y características.', '4_kia_picanto_w.png', '4_kia_picanto_t.png', '4_kia_picanto_m.png', '1');
-INSERT INTO `modelo` VALUES ('5', '4', 'Soul', '5 años o 100.00 Km.', '5_kia-new-cars-soul-logo.png', '5_soul_thumb.png', '5_Volante_Soul_baja.pdf', 'Entra ahora y conoce el Kia Soul, una Camioneta SUV que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '5_kia_soul_w.png', '5_kia_soul_t.png', '5_kia_soul_m.png', '1');
-INSERT INTO `modelo` VALUES ('6', '4', 'Sportage', '5 años o 100.00 Km.', '6_sportage.png', '6_sportage_thumb.png', '6_Volante Sportage baja.pdf', 'Kia Sportage, un SUV siempre listo para la aventura, sin importar el camino que tienes por delante. Explore su manejo ágil y características de suave conducción. Cotízalo ya.', '6_sportage_w.png', '6_sportage_t.png', '6_sportage_m.png', '1');
-INSERT INTO `modelo` VALUES ('7', '2', 'Grand Carnival', '5 años o 100.00 Km.', '7_grand_carnival.png', '7_grand_carnival_thumb.png', '7_Volante_Carnival_baja.pdf', 'Grand Carnival es un vehículo familiar con características de lujo. Eche un vistazo a su hermosa consola central, asientos altos y otros aspectos prometedores.', '7_grand-carnival-w.png', '7_grand-carnival-t.png', '7_grand-carnival-m.png', '1');
-INSERT INTO `modelo` VALUES ('8', '4', 'Sorento', '5 años o 100.00 Km.', '8_sorento.png', '8_sorento_thumb.png', '8_Volante_Sorento_baja.pdf', '¡Un todoterreno robusto, masculino y capaz! Prestigio renacido, Sorento. Ver imágenes e información de Sorento aquí.', '8_sorento_w.png', '8_sorento_t.png', '8_sorento_m.png', '1');
-INSERT INTO `modelo` VALUES ('9', '1', 'Optima', '5 años o 100.00 Km.', '9_optima.png', '9_optima_thumb.png', '9_Volante_Optima_baja.pdf', 'Una forma nueva y audaz. Detalles atractivos. Emocionante nueva tecnología. Y una distancia entre ejes extendida para una mejor estabilidad y comodidad. El todo nuevo y espacioso Kia Optima pone el refinamiento en un paquete irresistible.', '9_optima_w.png', '9_optima_t.png', '9_optima_m.png', '1');
-INSERT INTO `modelo` VALUES ('10', '1', 'Cadenza', '5 años o 100.00 Km.', '10_cadenza.png', '10_cadenza_thumb.png', '10_Volante_Cadenza_2017_baja.pdf', 'He aquí un virtuoso entre los sedanes de hoy en día. Desplegando una tecnología inteligente, un rendimiento emocionante y un encanto innegable que comienza con una nueva parrilla cóncava inspirada en el deporte clásico, la Cadenza, completamente nueva, da un nuevo significado al lujo moderno.', '10_cadenza_w.png', '10_cadenza_t.png', '10_cadenza_m.png', '1');
-INSERT INTO `modelo` VALUES ('11', '5', 'K2700', '5 años o 100.00 Km.', '11_k2700.png', '11_k2700_thumb.png', '11_Volante_KIA_K2700_2017.pdf', 'Kia K2700 está diseñado para transportar cargas pesadas en carreteras difíciles. Eche un vistazo a sus características y averigue por qué es la mejor relación calidad-precio para su negocio.', '11_k2700-w.png', '11_k2700-t.png', '11_k2700-m.png', '1');
+INSERT INTO `modelo` VALUES ('1', '1', 'Cerato', '5 años o 100.00 Km.', 'cerato.png', '1_cerato-thumb-menu.png', '1_Cerato_2017_baja.pdf', 'Deje que el nuevo Cerato lo lleve a lugares que usted sólo había imaginado.', '1_kia-cerato-forte-yd-byo-w.png', '1_kia-cerato-forte-yd-byo-t.png', '1_kia-cerato-forte-yd-byo-m.png', '4', '1');
+INSERT INTO `modelo` VALUES ('2', '1', 'All New Rio Sedán', '5 años o 100.00 Km.', 'all-new-rio', '2_rio-sedan-thumb-menu.png', '2_Volante_NEW_RIO_2018_baja.pdf', 'Talentoso. Elegante. Supremo y funcional. El Kia Rio Sedán 4 Puertas es sencillamente el mejor coche de su clase. Compruebe su precio, interior y exterior.\r\n', '2_rio-sedan-w.png', '2_rio-sedan-t.png', '2_rio-sedan-m.png', '2', '1');
+INSERT INTO `modelo` VALUES ('3', '1', 'All New Rio Hatch', '5 años o 100.00 Km.', 'all-new-rio', '3_rio_hatch-thumb.png', '3_all_new_Rio_Hatch.pdf', 'Entra ahora y conoce el All New Rio, un Hatchback que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '3_rio_hatch_w.png', '3_rio_hatch_t.png', '3_rio_hatch_m.png', '3', '1');
+INSERT INTO `modelo` VALUES ('4', '1', 'Picanto', '5 años o 100.00 Km.', '4_picanto.png', '4_picanto_thumb.png', '4_picanto_baja.pdf', 'Descubre el deportivo Kia Picanto con la mejor garantía del mercado. Conozca más sobre su precio, rendimiento, seguridad y características.', '4_kia_picanto_w.png', '4_kia_picanto_t.png', '4_kia_picanto_m.png', '1', '1');
+INSERT INTO `modelo` VALUES ('5', '4', 'Soul', '5 años o 100.00 Km.', '5_kia-new-cars-soul-logo.png', '5_soul_thumb.png', '5_Volante_Soul_baja.pdf', 'Entra ahora y conoce el Kia Soul, una Camioneta SUV que te va a encantar. Descubre todas sus características y cotiza el modelo que más te guste.', '5_kia_soul_w.png', '5_kia_soul_t.png', '5_kia_soul_m.png', '8', '1');
+INSERT INTO `modelo` VALUES ('6', '4', 'Sportage', '5 años o 100.00 Km.', '6_sportage.png', '6_sportage_thumb.png', '6_Volante Sportage baja.pdf', 'Kia Sportage, un SUV siempre listo para la aventura, sin importar el camino que tienes por delante. Explore su manejo ágil y características de suave conducción. Cotízalo ya.', '6_sportage_w.png', '6_sportage_t.png', '6_sportage_m.png', '9', '1');
+INSERT INTO `modelo` VALUES ('7', '2', 'Grand Carnival', '5 años o 100.00 Km.', '7_grand_carnival.png', '7_grand_carnival_thumb.png', '7_Volante_Carnival_baja.pdf', 'Grand Carnival es un vehículo familiar con características de lujo. Eche un vistazo a su hermosa consola central, asientos altos y otros aspectos prometedores.', '7_grand-carnival-w.png', '7_grand-carnival-t.png', '7_grand-carnival-m.png', '11', '1');
+INSERT INTO `modelo` VALUES ('8', '4', 'Sorento', '5 años o 100.00 Km.', '8_sorento.png', '8_sorento_thumb.png', '8_Volante_Sorento_baja.pdf', '¡Un todoterreno robusto, masculino y capaz! Prestigio renacido, Sorento. Ver imágenes e información de Sorento aquí.', '8_sorento_w.png', '8_sorento_t.png', '8_sorento_m.png', '10', '1');
+INSERT INTO `modelo` VALUES ('9', '1', 'Optima', '5 años o 100.00 Km.', '9_optima.png', '9_optima_thumb.png', '9_Volante_Optima_baja.pdf', 'Una forma nueva y audaz. Detalles atractivos. Emocionante nueva tecnología. Y una distancia entre ejes extendida para una mejor estabilidad y comodidad. El todo nuevo y espacioso Kia Optima pone el refinamiento en un paquete irresistible.', '9_optima_w.png', '9_optima_t.png', '9_optima_m.png', '5', '1');
+INSERT INTO `modelo` VALUES ('10', '1', 'Cadenza', '5 años o 100.00 Km.', '10_cadenza.png', '10_cadenza_thumb.png', '10_Volante_Cadenza_2017_baja.pdf', 'He aquí un virtuoso entre los sedanes de hoy en día. Desplegando una tecnología inteligente, un rendimiento emocionante y un encanto innegable que comienza con una nueva parrilla cóncava inspirada en el deporte clásico, la Cadenza, completamente nueva, da un nuevo significado al lujo moderno.', '10_cadenza_w.png', '10_cadenza_t.png', '10_cadenza_m.png', '6', '1');
+INSERT INTO `modelo` VALUES ('11', '5', 'K2700', '5 años o 100.00 Km.', '11_k2700.png', '11_k2700_thumb.png', '11_Volante_KIA_K2700_2017.pdf', 'Kia K2700 está diseñado para transportar cargas pesadas en carreteras difíciles. Eche un vistazo a sus características y averigue por qué es la mejor relación calidad-precio para su negocio.', '11_k2700-w.png', '11_k2700-t.png', '11_k2700-m.png', '12', '1');
+INSERT INTO `modelo` VALUES ('12', '1', 'Quoris', '5 años o 100.00 Km.', '12_quoris.png', '12_kia-quoris-thumb.png', '12_Volante_Quoris_baja.pdf', 'Prepárate para ser mimado! Presentando al Kia Quoris, un lujoso sedán de 4 puertas equipado con características innovadoras para darle una experiencia de conducción de primera calidad', '12_kia-quoris-w.png', '12_kia-quoris-t.png', '12_kia-quoris-m.png', '7', '1');
 
 -- ----------------------------
 -- Table structure for modelo_360
@@ -234,7 +236,7 @@ CREATE TABLE `modelo_360` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_360` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=685 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=757 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_360
@@ -923,6 +925,78 @@ INSERT INTO `modelo_360` VALUES ('681', '10', null, '10_cadenza_0068.png', '1');
 INSERT INTO `modelo_360` VALUES ('682', '10', null, '10_cadenza_0069.png', '1');
 INSERT INTO `modelo_360` VALUES ('683', '10', null, '10_cadenza_0070.png', '1');
 INSERT INTO `modelo_360` VALUES ('684', '10', null, '10_cadenza_0071.png', '1');
+INSERT INTO `modelo_360` VALUES ('685', '12', null, '12_quoris_00000.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('686', '12', null, '12_quoris_00001.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('687', '12', null, '12_quoris_00002.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('688', '12', null, '12_quoris_00003.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('689', '12', null, '12_quoris_00004.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('690', '12', null, '12_quoris_00005.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('691', '12', null, '12_quoris_00006.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('692', '12', null, '12_quoris_00007.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('693', '12', null, '12_quoris_00008.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('694', '12', null, '12_quoris_00009.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('695', '12', null, '12_quoris_00010.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('696', '12', null, '12_quoris_00011.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('697', '12', null, '12_quoris_00012.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('698', '12', null, '12_quoris_00013.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('699', '12', null, '12_quoris_00014.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('700', '12', null, '12_quoris_00015.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('701', '12', null, '12_quoris_00016.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('702', '12', null, '12_quoris_00017.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('703', '12', null, '12_quoris_00018.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('704', '12', null, '12_quoris_00019.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('705', '12', null, '12_quoris_00020.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('706', '12', null, '12_quoris_00021.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('707', '12', null, '12_quoris_00022.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('708', '12', null, '12_quoris_00023.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('709', '12', null, '12_quoris_00024.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('710', '12', null, '12_quoris_00025.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('711', '12', null, '12_quoris_00026.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('712', '12', null, '12_quoris_00027.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('713', '12', null, '12_quoris_00028.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('714', '12', null, '12_quoris_00029.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('715', '12', null, '12_quoris_00030.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('716', '12', null, '12_quoris_00031.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('717', '12', null, '12_quoris_00032.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('718', '12', null, '12_quoris_00033.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('719', '12', null, '12_quoris_00034.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('720', '12', null, '12_quoris_00035.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('721', '12', null, '12_quoris_00036.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('722', '12', null, '12_quoris_00037.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('723', '12', null, '12_quoris_00038.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('724', '12', null, '12_quoris_00039.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('725', '12', null, '12_quoris_00040.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('726', '12', null, '12_quoris_00041.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('727', '12', null, '12_quoris_00042.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('728', '12', null, '12_quoris_00043.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('729', '12', null, '12_quoris_00044.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('730', '12', null, '12_quoris_00045.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('731', '12', null, '12_quoris_00046.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('732', '12', null, '12_quoris_00047.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('733', '12', null, '12_quoris_00048.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('734', '12', null, '12_quoris_00049.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('735', '12', null, '12_quoris_00050.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('736', '12', null, '12_quoris_00051.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('737', '12', null, '12_quoris_00052.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('738', '12', null, '12_quoris_00053.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('739', '12', null, '12_quoris_00054.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('740', '12', null, '12_quoris_00055.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('741', '12', null, '12_quoris_00056.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('742', '12', null, '12_quoris_00057.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('743', '12', null, '12_quoris_00058.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('744', '12', null, '12_quoris_00059.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('745', '12', null, '12_quoris_00060.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('746', '12', null, '12_quoris_00061.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('747', '12', null, '12_quoris_00062.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('748', '12', null, '12_quoris_00063.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('749', '12', null, '12_quoris_00064.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('750', '12', null, '12_quoris_00065.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('751', '12', null, '12_quoris_00066.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('752', '12', null, '12_quoris_00067.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('753', '12', null, '12_quoris_00068.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('754', '12', null, '12_quoris_00069.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('755', '12', null, '12_quoris_00070.jpg', '1');
+INSERT INTO `modelo_360` VALUES ('756', '12', null, '12_quoris_00071.jpg', '1');
 
 -- ----------------------------
 -- Table structure for modelo_color
@@ -957,7 +1031,7 @@ CREATE TABLE `modelo_desempeno` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_desempeno` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_desempeno
@@ -997,6 +1071,11 @@ INSERT INTO `modelo_desempeno` VALUES ('35', '9', 'Reflejos rápidos como relám
 INSERT INTO `modelo_desempeno` VALUES ('36', '9', 'Transmisión automática de 6 velocidades', 'Una transmisión que es automática y controlada electrónicamente le ofrece un cambio suave y sin fisuras.', '9_kia-pop-optima-jf-17my-performance-01-w.jpg', '9_kia-pop-optima-jf-17my-performance-01-t.jpg', '9_kia-pop-optima-jf-17my-performance-01-m.jpg', '0', '1');
 INSERT INTO `modelo_desempeno` VALUES ('37', '9', 'Freno de estacionamiento electrónico (EPB)', 'Aplique el freno de estacionamiento simplemente tirando de un botón y sin ninguna preocupación de si está bien acoplado o no.', '9_kia-pop-optima-jf-17my-performance-02-w.jpg', '9_kia-pop-optima-jf-17my-performance-02-t.jpg', '9_kia-pop-optima-jf-17my-performance-02-m.jpg', '0', '1');
 INSERT INTO `modelo_desempeno` VALUES ('38', '11', '2.7 (J2) motor a diesel', 'El motor J2 mejorado de 2.700 cc es una unidad de aspiración normal la cual produce 80 ps (66 kW) a 4.000 rpm y 16.8 kg · m (165 Nm) de torsión a 2.400. Esto genera una eficiencia totalmente capaz, y eficiencia económica.', '11_kia-k2700-performance-01-w.jpg', '11_kia-k2700-performance-01-t.jpg', '11_kia-k2700-performance-01-m.jpg', '1', '1');
+INSERT INTO `modelo_desempeno` VALUES ('39', '12', 'Avanzado Tren Motriz de la Tracción Trasera', 'El Kia Quoris se caracteriza por la plataforma de tracción trasera completamente nueva, señalando así una nueva era de función para la marca de Kia. Prepárese para un nivel inesperado de poder y control dinámico.', '12_kia-quoris-performance-01-w.jpg', '12_kia-quoris-performance-01-t.jpg', '12_kia-quoris-performance-01-m.jpg', '1', '1');
+INSERT INTO `modelo_desempeno` VALUES ('40', '12', 'Transmisión automática con 8 velocidades', 'La nueva transmisión automática de 8 velocidades de Kia garantiza una rápida aceleración, un refinamiento de alta velocidad y una mayor eficiencia de combustible. Se puede escoge cuatro modos totalmente automáticos (Eco, Normal, Deporte y Nieve) lo que garantiza tener características ideales para todas las condiciones de conducción.', '12_kia-quoris-performance-02-w.jpg', '12_kia-quoris-performance-02-t.jpg', '12_kia-quoris-performance-02-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('41', '12', 'Interruptor de retención automática', 'Esta característica innovadora mantiene automáticamente el vehículo en reposo después de que el conductor pare el vehículo por completo a través del freno de pie, luego se libera por la aceleración. Ya no es necesario mantener el pie en el pedal del freno evitando que el vehículo se mueva accidentalmente cuando se detiene en una pendiente o se encuentra en tráfico lento.', '12_kia-quoris-performance-03-w.jpg', '12_kia-quoris-performance-03-t.jpg', '12_kia-quoris-performance-03-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('42', '12', 'Motor de 3.8 lMPI V6', 'En el corazón de la Kia Quoris representa un motor Lambda V6 que cuenta con una serie de mejoramientos y modificaciones de reducción de fricción para aumentar la potencia, aumentar la eficiencia y mejorar el refinamiento. Con doble CVVT y construcción de bloque totalmente de aluminio, este motor produce un robusto 290 ps @ 6.200 rpm con un par máximo de 36.5 kg.m @ 4.500 rpm.', '12_kia-quoris-performance-04-w.jpg', '12_kia-quoris-performance-04-t.jpg', '12_kia-quoris-performance-04-m.jpg', '0', '1');
+INSERT INTO `modelo_desempeno` VALUES ('43', '12', 'Suspensión de Aire', 'El óptimo control de carrocería está garantizado gracias a los modos de conducción que atienden a las necesidades en las diferentes condiciones de manejo.', '12_kia-quoris-performance-05-w.jpg', '12_kia-quoris-performance-05-t.jpg', '12_kia-quoris-performance-05-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_destacado
@@ -1013,7 +1092,7 @@ CREATE TABLE `modelo_destacado` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_destacado
@@ -1031,6 +1110,11 @@ INSERT INTO `modelo_destacado` VALUES ('10', '8', 'Puerta trasera eléctrica int
 INSERT INTO `modelo_destacado` VALUES ('11', '8', 'Sistema de selección en modo de manejo.', 'Elija el modo Normal, Eco o Sport para adaptarse a sus preferencias. Estándar en modelos de transmisión automática.', '8_kia-pop-sorento-um-17my-highlights-02-w.jpg', '8_kia-pop-sorento-um-17my-highlights-02-t.jpg', '8_kia-pop-sorento-um-17my-highlights-02-m.jpg', '0', '1');
 INSERT INTO `modelo_destacado` VALUES ('12', '8', 'Función de la memoria de la puerta trasera.', 'Los ángulos de apertura para el portón trasero se pueden almacenar en la memoria presionando y sosteniendo un botón, bajo el portón trasero durante 3 segundos. Opcional en modelos EX.', '8_kia-pop-sorento-um-17my-highlights-03-w.jpg', '8_kia-pop-sorento-um-17my-highlights-03-t.jpg', '8_kia-pop-sorento-um-17my-highlights-03-m.jpg', '0', '1');
 INSERT INTO `modelo_destacado` VALUES ('13', '10', 'Compromiso total con la seguridad', null, '10_kia-cadenza-yg-highlights-01-w.jpg', '10_kia-cadenza-yg-highlights-01-t.jpg', '10_kia-cadenza-yg-highlights-01-m.jpg', '1', '1');
+INSERT INTO `modelo_destacado` VALUES ('15', '12', 'ASCC (Control de Crucero Inteligente)', 'Un sensor radar en la parte delantera de el automóvil monitorea la distancia con el vehículo que va adelante. El sistema pone en marcha automáticamente el frenado con el fin de mantener la distancia de seguridad pre-determinada y hasta hace frenar completamente el automóvil si fuera necesario. El sistema arrancará cuando el automóvil de adelante comienza a moverse.', '12_kia-quoris-highlights-01-w.jpg', '12_kia-quoris-highlights-01-t.jpg', '12_kia-quoris-highlights-01-m.jpg', '1', '1');
+INSERT INTO `modelo_destacado` VALUES ('16', '12', 'HUD (Pantalla de Visualización Frontal)', 'Una variedad de información incluyendo la velocidad actual, las direcciones de navegador y el aviso de salida de carril se proyecta discretamente sobre el parabrisa del lado del conductor. El brillo de la visualización se ajusta en forma automática adaptándose a los cambios en niveles de luz de ambiente.', '12_kia-quoris-highlights-02-w.jpg', '12_kia-quoris-highlights-02-t.jpg', '12_kia-quoris-highlights-02-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('17', '12', 'Una Sinfonía en Todo el Auto', 'Sumérjase en el mundo mágico del sistema de audio premium con 17 altavoces del Kia Quoris. Con un sonido tan exuberante y real la cabina del vehículo se convertirá en su propia sala de conciertos.', '12_kia-quoris-highlights-04-w.jpg', '12_kia-quoris-highlights-04-t.jpg', '12_kia-quoris-highlights-04-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('18', '12', 'Asientos del Soporte Lumbar con Celdas de Aire', 'Las celdas neumáticas del aire montadas en el respaldo de los asientos traseros se inflan en varios niveles a fin de proporcionar un máximo confort y aliviar el cansancio de los viajes largos.', '12_kia-quoris-highlights-06-w.jpg', '12_kia-quoris-highlights-06-t.jpg', '12_kia-quoris-highlights-06-m.jpg', '0', '1');
+INSERT INTO `modelo_destacado` VALUES ('19', '12', 'Sistema de Entretenimiento Trasero (Monitores Duales de 9.2 pulgadas)', 'Los pasajeros traseros disfrutarán de una experiencia de diversión de primera clase gracias a los monitores gemelos de 9.2 pulgadas colocados en el respaldo de cada asiento delantero. Acomódese y disfrute de un multimedia rico en formatos de video con un sonido de calidad premium.', '12_kia-quoris-highlights-05-w.jpg', '12_kia-quoris-highlights-05-t.jpg', '12_kia-quoris-highlights-05-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension
@@ -1048,7 +1132,7 @@ CREATE TABLE `modelo_dimension` (
   `capacidad_carga` varchar(30) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension
@@ -1064,6 +1148,7 @@ INSERT INTO `modelo_dimension` VALUES ('8', '8', '4.780', '1.890', '1.685', '2.7
 INSERT INTO `modelo_dimension` VALUES ('9', '9', '4.845', '1.830', '1.455', '2.795', '9_kia-optima-dimensions-all-view.png', null, null, '1');
 INSERT INTO `modelo_dimension` VALUES ('10', '10', '4.970', '1.870', '1.470', '2.855', '10_kia-cadenza-dimensions-all-view.png', null, null, '1');
 INSERT INTO `modelo_dimension` VALUES ('11', '11', '4.825', '1.740', '1.975', '2.415', null, '60', '1.500kg.', '1');
+INSERT INTO `modelo_dimension` VALUES ('12', '12', '5.090', '1.900', '1.490', '3.045', '12_kia-quoris-dimensions-all-view.png', null, null, '1');
 
 -- ----------------------------
 -- Table structure for modelo_dimension_img
@@ -1077,7 +1162,7 @@ CREATE TABLE `modelo_dimension_img` (
   `img_t` varchar(120) DEFAULT NULL,
   `img_m` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_dimension_img
@@ -1112,6 +1197,9 @@ INSERT INTO `modelo_dimension_img` VALUES ('27', '9', 'LATERAL', '9_kia-optima-d
 INSERT INTO `modelo_dimension_img` VALUES ('28', '10', 'FRENTE', '10_kia-cadenza-yg-dimensions-slide-list-01-w.png', '10_kia-cadenza-yg-dimensions-slide-list-01-t.png', '10_kia-cadenza-yg-dimensions-slide-list-01-m.png');
 INSERT INTO `modelo_dimension_img` VALUES ('29', '10', 'ATRAS', '10_kia-cadenza-yg-dimensions-slide-list-02-w.png', '10_kia-cadenza-yg-dimensions-slide-list-02-t.png', '10_kia-cadenza-yg-dimensions-slide-list-02-m.png');
 INSERT INTO `modelo_dimension_img` VALUES ('30', '10', 'LATERAL', '10_kia-cadenza-yg-dimensions-slide-list-03-w.png', '10_kia-cadenza-yg-dimensions-slide-list-03-t.png', '10_kia-cadenza-yg-dimensions-slide-list-03-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('31', '12', 'FRENTE', '12_quoris-showroom-specificaion-dimensions-slide-list-01-w.png', '12_quoris-showroom-specificaion-dimensions-slide-list-01-t.png', '12_quoris-showroom-specificaion-dimensions-slide-list-01-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('32', '12', 'ATRAS', '12_quoris-showroom-specificaion-dimensions-slide-list-02-w.png', '12_quoris-showroom-specificaion-dimensions-slide-list-02-t.png', '12_quoris-showroom-specificaion-dimensions-slide-list-02-m.png');
+INSERT INTO `modelo_dimension_img` VALUES ('33', '12', 'LATERAL', '12_quoris-showroom-specificaion-dimensions-slide-list-03-w.png', '12_quoris-showroom-specificaion-dimensions-slide-list-03-t.png', '12_quoris-showroom-specificaion-dimensions-slide-list-03-m.png');
 
 -- ----------------------------
 -- Table structure for modelo_especificacion
@@ -1159,7 +1247,7 @@ CREATE TABLE `modelo_general` (
   `descripcion` text,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_general
@@ -1175,6 +1263,7 @@ INSERT INTO `modelo_general` VALUES ('8', '8', '8_kia-sorento-um-17my-overview-0
 INSERT INTO `modelo_general` VALUES ('9', '9', '9_kia-optima-jf-overview-01-w.jpg', '9_kia-optima-jf-overview-01-t.jpg', '9_kia-optima-jf-overview-01-m.jpg', 'Optima, fascinante perfección', null, '1');
 INSERT INTO `modelo_general` VALUES ('10', '10', '10_kia-cadenza-yg-overview-01-w.jpg', '10_kia-cadenza-yg-overview-01-t.jpg', '10_kia-cadenza-yg-overview-01-m.jpg', 'Cadenza: inteligencia dinámica', 'Prepárese para un nivel totalmente inesperado de belleza estética, rendimiento refinado y destreza tecnológica. El Cadenza ha sido rediseñado con el objetivo de crear la mezcla perfecta de estilo dinámico, lujo maravilloso y características de alta tecnología. Es un sedan superior sorprendente que va a fascinar tanto a su mente como a sus sentidos.', '1');
 INSERT INTO `modelo_general` VALUES ('11', '11', '11_kia-k2700-overview-01-w.jpg', '11_kia-k2700-overview-01-t.jpg', '11_kia-k2700-overview-01-m.jpg', 'Disfruta de tu trabajo K2700', 'La refrescada serie K del camión de Kia cambiará la forma en que miras los camiones. Con una mejor utilidad y añadiendo un nivel de refinación el cual tu esperarías hallar solamente en un automóvil de pasajeros, el camión de la serie K no sólo facilita el trabajo, si no que además le permite hacerlo con confort.', '1');
+INSERT INTO `modelo_general` VALUES ('12', '12', '12_kia-quoris-overview-01-w.jpg', '12_kia-quoris-overview-01-t.jpg', '12_kia-quoris-overview-01-m.jpg', 'Un cautivante líder de su clase', 'Es momento de dejarte seducir por un automóvil que nunca terminará de sorprenderte. Quoris es una invitación a descubrir un nuevo nivel de conducción en cada detalle de tu viaje.', '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes
@@ -1201,7 +1290,7 @@ CREATE TABLE `modelo_imagenes` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_imagenes` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=318 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=356 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_imagenes
@@ -1521,6 +1610,44 @@ INSERT INTO `modelo_imagenes` VALUES ('314', '11', 'EXT', null, null, null, '11_
 INSERT INTO `modelo_imagenes` VALUES ('315', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-11.jpg', '11_kia-k2700-wide-b-exterior-11-w.jpg', '11_kia-k2700-wide-b-exterior-11-t.jpg', '11_kia-k2700-wide-b-exterior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 INSERT INTO `modelo_imagenes` VALUES ('316', '11', 'EXT', null, null, null, '11_kia-k2700-wide-exterior-12.jpg', '11_kia-k2700-wide-b-exterior-12-w.jpg', '11_kia-k2700-wide-b-exterior-12-t.jpg', '11_kia-k2700-wide-b-exterior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 INSERT INTO `modelo_imagenes` VALUES ('317', '11', 'INT', null, null, null, '11_kia-k2700-wide-interior-01.jpg', '11_kia-k2700-wide-b-interior-01-w.jpg', '11_kia-k2700-wide-b-interior-01-t.jpg', '11_kia-k2700-wide-b-interior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('318', '12', 'EXT', 'Su percepción de un sedán emblemático nunca será la misma.', 'El Kia Quoris es un sedán de lujo innovador que empuja los horizontes de su segmento. Se ha prestado especial atención a los más mínimos detalles que incluyen toques de innovación y alta tecnología que mejoran la funcionalidad y el atractivo estético del Kia Quoris.', null, '12_ico_gt_kiaquoris_paging1_1_on.png', '12_kia-quoris-exterior-01-w.jpg', '12_kia-quoris-exterior-01-t.jpg', '12_kia-quoris-exterior-01-m.jpg', '0', '0', '1', '0', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('319', '12', 'EXT', 'Experimienta El Nuevo Lujo', 'Para un sedán premium, la belleza consiste en las proporciones. Un largo hombro de barrido y saliente trasero extendido se combinan para dar Kia Quoris una postura robusta y un aura de poder y dignidad.', null, '12_ico_gt_kiaquoris_paging_on.png', '12_kia-quoris-exterior-02-w.jpg', '12_kia-quoris-exterior-02-t.jpg', '12_kia-quoris-exterior-02-m.jpg', '0', '0', '1', '0', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('320', '12', 'EXT', 'Estimula los sentidos con un diseño futurista', 'La silueta lateral elegante y aerodinámica se ve acentuada por una línea de carácter simple pero robusto que le provee al Kia Quoris una sensación de espacio mientras enfatiza su diseño basado en el desempeño.', null, '12_ico_kiaquoris_paging3_on.png', '12_kia-quoris-exterior-03-w.jpg', '12_kia-quoris-exterior-03-t.jpg', '12_kia-quoris-exterior-03-m.jpg', '0', '0', '1', '0', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('321', '12', 'EXT', 'Faros Led', null, null, null, '12_kia-quoris-extrior-04-w.jpg', '12_kia-quoris-extrior-04-t.jpg', '12_kia-quoris-extrior-04-m.jpg', '0', '0', '0', '1', '0', '0', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('322', '12', 'EXT', 'Moldura cromada de lujo en guardabarros', 'Una moldura cromoda que realza el diseño sofisticado y refinado, agregando un toque deportivo', null, null, '12_kia-quoris-extrior-10-w.jpg', '12_kia-quoris-extrior-10-t.jpg', '12_kia-quoris-extrior-10-m.jpg', '0', '0', '0', '1', '0', '0', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('323', '12', 'EXT', 'Luces Antiniebla', null, null, null, '12_kia-quoris-extrior-05-w.jpg', '12_kia-quoris-extrior-05-t.jpg', '12_kia-quoris-extrior-05-m.jpg', '0', '0', '0', '1', '0', '0', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('324', '12', 'EXT', 'Luces Traseras LED', 'Las luces traseras de combinación LED además de ofrecer una gran visibilidad posterior, también logran proyectar un diseño moderno y estilizado. Diseño y seguridad, todo en uno.', null, null, '12_kia-quoris-extrior-06-w.jpg', '12_kia-quoris-extrior-06-t.jpg', '12_kia-quoris-extrior-06-m.jpg', '0', '0', '0', '1', '0', '0', '4', '1');
+INSERT INTO `modelo_imagenes` VALUES ('325', '12', 'INT', 'La perfecta armonía entre el lujo y la tecnología', 'Con una cabina diseñada con la más alta tecnología de punta y pensada para grandes comodidades al conductor, el Kia Quoris llega a un nuevo nivel de sofisticación y refinamiento, encontrado solo en los Sedanes Europeos Premium.', null, null, '12_kia-quoris-interior-01-w.jpg', '12_kia-quoris-interior-01-t.jpg', '12_kia-quoris-interior-01-m.jpg', '0', '0', '0', '0', '1', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('326', '12', 'INT', 'Asientos ergonómicos con ajuste electrónico', 'Ajuste electrónico en los asientos para una mayor comodidad', null, null, '12_kia-quoris-interior-05-w.jpg', '12_kia-quoris-interior-05-t.jpg', '12_kia-quoris-interior-05-m.jpg', '0', '0', '0', '0', '0', '1', '1', '1');
+INSERT INTO `modelo_imagenes` VALUES ('327', '12', 'INT', 'Mandos de control en el apoyabrazos ', 'Acceso conveniente a varias funciones multimedia tanto en la parte delantera como en el apoyabrazos posterior.', null, null, '12_kia-quoris-interior-09-w.jpg', '12_kia-quoris-interior-09-t.jpg', '12_kia-quoris-interior-09-m.jpg', '0', '0', '0', '0', '0', '1', '2', '1');
+INSERT INTO `modelo_imagenes` VALUES ('328', '12', 'INT', 'Pantalla de Supervisión LCD 12.3\"', 'La pantalla de supervisión con tecnologís TFT y de alta definición cuenta con gráficos precisos y amplia información con notable claridad. Las prioridades de visualización, los colores gráficos y el tamaño se pueden personalizar para adaptarse a sus preferencias.', null, null, '12_kia-quoris-interior-06-w.jpg', '12_kia-quoris-interior-06-t.jpg', '12_kia-quoris-interior-06-m.jpg', '0', '0', '0', '0', '0', '1', '3', '1');
+INSERT INTO `modelo_imagenes` VALUES ('329', '12', 'INT', 'Espacio y comodidad', 'Un concepto de sencillez y elegancia con proporciones equilibradas en el interior del Kia Quoris recrea una espaciosa cabina en su estilo. Materiales lujosos y un sofiticado diseño estético garantizan a los ocupantes una sensación de alta calidad.', null, null, '12_kia-quoris-interior-02-w.jpg', '12_kia-quoris-interior-02-t.jpg', '12_kia-quoris-interior-02-m.jpg', '0', '0', '0', '0', '0', '1', '4', '1');
+INSERT INTO `modelo_imagenes` VALUES ('330', '12', 'EXT', null, null, '12_kia-quoris-gallery-01.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('331', '12', 'INT', null, null, '12_kia-quoris-gallery-02.jpg', null, null, null, null, '1', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('332', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-01.jpg', '12_kia-quoris-wide-b-exterior-01-w.jpg', '12_kia-quoris-wide-b-exterior-01-t.jpg', '12_kia-quoris-wide-b-exterior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('333', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-02.jpg', '12_kia-quoris-wide-b-exterior-02-w.jpg', '12_kia-quoris-wide-b-exterior-02-t.jpg', '12_kia-quoris-wide-b-exterior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('334', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-03.jpg', '12_kia-quoris-wide-b-exterior-03-w.jpg', '12_kia-quoris-wide-b-exterior-03-t.jpg', '12_kia-quoris-wide-b-exterior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('335', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-04.jpg', '12_kia-quoris-wide-b-exterior-04-w.jpg', '12_kia-quoris-wide-b-exterior-04-t.jpg', '12_kia-quoris-wide-b-exterior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('336', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-05.jpg', '12_kia-quoris-wide-b-exterior-05-w.jpg', '12_kia-quoris-wide-b-exterior-05-t.jpg', '12_kia-quoris-wide-b-exterior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('337', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-06.jpg', '12_kia-quoris-wide-b-exterior-06-w.jpg', '12_kia-quoris-wide-b-exterior-06-t.jpg', '12_kia-quoris-wide-b-exterior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('338', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-07.jpg', '12_kia-quoris-wide-b-exterior-07-w.jpg', '12_kia-quoris-wide-b-exterior-07-t.jpg', '12_kia-quoris-wide-b-exterior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('339', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-08.jpg', '12_kia-quoris-wide-b-exterior-08-w.jpg', '12_kia-quoris-wide-b-exterior-08-t.jpg', '12_kia-quoris-wide-b-exterior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('340', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-09.jpg', '12_kia-quoris-wide-b-exterior-09-w.jpg', '12_kia-quoris-wide-b-exterior-09-t.jpg', '12_kia-quoris-wide-b-exterior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('341', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-10.jpg', '12_kia-quoris-wide-b-exterior-10-w.jpg', '12_kia-quoris-wide-b-exterior-10-t.jpg', '12_kia-quoris-wide-b-exterior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('342', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-11.jpg', '12_kia-quoris-wide-b-exterior-11-w.jpg', '12_kia-quoris-wide-b-exterior-11-t.jpg', '12_kia-quoris-wide-b-exterior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('343', '12', 'EXT', null, null, null, '12_kia-quoris-wide-exterior-12.jpg', '12_kia-quoris-wide-b-exterior-12-w.jpg', '12_kia-quoris-wide-b-exterior-12-t.jpg', '12_kia-quoris-wide-b-exterior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('344', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-01.jpg', '12_kia-quoris-wide-b-interior-01-w.jpg', '12_kia-quoris-wide-b-interior-01-t.jpg', '12_kia-quoris-wide-b-interior-01-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('345', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-02.jpg', '12_kia-quoris-wide-b-interior-02-w.jpg', '12_kia-quoris-wide-b-interior-02-t.jpg', '12_kia-quoris-wide-b-interior-02-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('346', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-03.jpg', '12_kia-quoris-wide-b-interior-03-w.jpg', '12_kia-quoris-wide-b-interior-03-t.jpg', '12_kia-quoris-wide-b-interior-03-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('347', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-04.jpg', '12_kia-quoris-wide-b-interior-04-w.jpg', '12_kia-quoris-wide-b-interior-04-t.jpg', '12_kia-quoris-wide-b-interior-04-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('348', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-05.jpg', '12_kia-quoris-wide-b-interior-05-w.jpg', '12_kia-quoris-wide-b-interior-05-t.jpg', '12_kia-quoris-wide-b-interior-05-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('349', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-06.jpg', '12_kia-quoris-wide-b-interior-06-w.jpg', '12_kia-quoris-wide-b-interior-06-t.jpg', '12_kia-quoris-wide-b-interior-06-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('350', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-07.jpg', '12_kia-quoris-wide-b-interior-07-w.jpg', '12_kia-quoris-wide-b-interior-07-t.jpg', '12_kia-quoris-wide-b-interior-07-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('351', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-08.jpg', '12_kia-quoris-wide-b-interior-08-w.jpg', '12_kia-quoris-wide-b-interior-08-t.jpg', '12_kia-quoris-wide-b-interior-08-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('352', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-09.jpg', '12_kia-quoris-wide-b-interior-09-w.jpg', '12_kia-quoris-wide-b-interior-09-t.jpg', '12_kia-quoris-wide-b-interior-09-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('353', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-10.jpg', '12_kia-quoris-wide-b-interior-10-w.jpg', '12_kia-quoris-wide-b-interior-10-t.jpg', '12_kia-quoris-wide-b-interior-10-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('354', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-11.jpg', '12_kia-quoris-wide-b-interior-11-w.jpg', '12_kia-quoris-wide-b-interior-11-t.jpg', '12_kia-quoris-wide-b-interior-11-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
+INSERT INTO `modelo_imagenes` VALUES ('355', '12', 'INT', null, null, null, '12_kia-quoris-wide-interior-12.jpg', '12_kia-quoris-wide-b-interior-12-w.jpg', '12_kia-quoris-wide-b-interior-12-t.jpg', '12_kia-quoris-wide-b-interior-12-m.jpg', '0', '1', '0', '0', '0', '0', null, '1');
 
 -- ----------------------------
 -- Table structure for modelo_imagenes_thumb
@@ -1556,7 +1683,7 @@ CREATE TABLE `modelo_llantas` (
   `img` varchar(60) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_llantas
@@ -1585,6 +1712,7 @@ INSERT INTO `modelo_llantas` VALUES ('21', '21', '235/60 R18', 'Llanta de Aleaci
 INSERT INTO `modelo_llantas` VALUES ('22', '22', '235/60 R18', 'Llanta de Aleación', '8_kia-sorento-um-17my-wheel-slide-02.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('23', '23', '215/55R17 ', 'Llanta de Aleación', '9_kia-optima-wheel-slide-01.png', '1');
 INSERT INTO `modelo_llantas` VALUES ('24', '24', '225/55R17', 'Llanta de Aleación', '10_kia-cadenza-wheel-slide-01.png', '1');
+INSERT INTO `modelo_llantas` VALUES ('25', '30', '195/65 R18', 'Llanta de Aleación', '12_kia-quoris-wheel-slide-01.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_motor
@@ -1603,7 +1731,7 @@ CREATE TABLE `modelo_motor` (
   `img` varchar(120) DEFAULT NULL,
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_motor
@@ -1637,6 +1765,7 @@ INSERT INTO `modelo_motor` VALUES ('26', '26', '2', '2.7 (J2) A DIESEL', '2.700 
 INSERT INTO `modelo_motor` VALUES ('27', '27', '2', '2.7 (J2) A DIESEL', '2.700 c.c.', '80/4000', '16.8/2400', '4 en Línea', null, '11_kia-k2700-engine-slide-02.png', '1');
 INSERT INTO `modelo_motor` VALUES ('28', '28', '2', '2.7 (J2) A DIESEL', '2.700 c.c.', '80/4000', '16.8/2400', '4 en Línea', null, '11_kia-k2700-engine-slide-02.png', '1');
 INSERT INTO `modelo_motor` VALUES ('29', '29', '2', '2.7 (J2) A DIESEL', '2.700 c.c.', '80/4000', '16.8/2400', '4 en Línea', null, '11_kia-k2700-engine-slide-02.png', '1');
+INSERT INTO `modelo_motor` VALUES ('30', '30', '1', '3.8 Inyección Multi Punto V6', '3.800 c.c.', '294/6200', '36.5/4500', '6 cilindros en línea', null, '12_kia-quoris-engine-silde-01.png', '1');
 
 -- ----------------------------
 -- Table structure for modelo_seguridad
@@ -1653,7 +1782,7 @@ CREATE TABLE `modelo_seguridad` (
   `portada` int(1) DEFAULT '0',
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_seguridad
@@ -1685,6 +1814,9 @@ INSERT INTO `modelo_seguridad` VALUES ('24', '9', 'Materiales avanzados para su 
 INSERT INTO `modelo_seguridad` VALUES ('25', '9', 'Control de estabilidad electrónico (ESC)', 'El ESC se activa en situaciones de frenado repentino, lo que regula el torque del motor y aplica fuerza de frenado a cada neumático para disminuir la velocidad en forma segura.', '9_kia-optima-safety-03-w.jpg', '9_kia-optima-safety-03-t.jpg', '9_kia-optima-safety-03-m.jpg', '0', '1');
 INSERT INTO `modelo_seguridad` VALUES ('26', '9', 'Frenos de Disco', 'Viene equipados con discos de frenos más grandes que proporcionan un frenado potente y más seguro.', '9_pa-optima-2017-showroom-features-safety-thumbnail-06-w.jpg', '9_pa-optima-2017-showroom-features-safety-thumbnail-06-t.jpg', '9_pa-optima-2017-showroom-features-safety-thumbnail-06-m.jpg', '0', '1');
 INSERT INTO `modelo_seguridad` VALUES ('27', '11', 'Estructura', null, '11_pa-K2700-2017-showroom-features-safety-KV-02-w.jpg', '11_pa-K2700-2017-showroom-features-safety-KV-02-t.jpg', '11_pa-K2700-2017-showroom-features-safety-KV-02-m.jpg', '1', '1');
+INSERT INTO `modelo_seguridad` VALUES ('28', '12', 'Seguridad activa inteligente para quedar tranquilo', 'Los sistemas de seguridad y de vanguardia basados en la avanzada tecnología de radar y de sensor ayuda a impedir los accidentes dando aviso y atendiéndole en las situaciones de conducción peligrosas. En ciertos casos se activan automáticamente a fin de dejarle a usted concentrasrse completamente en el placer de conducción.', '12_kia-quoris-safety-01-w.jpg', '12_kia-quoris-safety-01-t.jpg', '12_kia-quoris-safety-01-m.jpg', '1', '1');
+INSERT INTO `modelo_seguridad` VALUES ('29', '12', 'Sistema Avanzado de 9 airbags', null, '12_kia-quoris-safety-03-w.jpg', '12_kia-quoris-safety-03-t.jpg', '12_kia-quoris-safety-03-m.jpg', '0', '1');
+INSERT INTO `modelo_seguridad` VALUES ('30', '12', 'Portaequipajes inteligente', 'La inteligencia de Kia Quoris se demuestra, cuando el vehículo reconoce al conductor que sostiene la llave inteligente, abriendo automáticamente el portaequipaje después de tres segundos.', '12_kia-quoris-safety-06-w.jpg', '12_kia-quoris-safety-06-t.jpg', '12_kia-quoris-safety-06-m.jpg', '0', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version
@@ -1700,7 +1832,7 @@ CREATE TABLE `modelo_version` (
   `estado` int(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_id_modelo_version` (`id_modelo`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of modelo_version
@@ -1734,6 +1866,7 @@ INSERT INTO `modelo_version` VALUES ('26', '11', 'C/S Mec. 2,7 DSL SENCILLO C/C 
 INSERT INTO `modelo_version` VALUES ('27', '11', 'C/S Mec. 2,7 DSL DUAL C/C ', '17200.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('28', '11', 'C/S Mec. 2,7 DSL 4X4 C/C & A/A', '19600.000', '0', '2018', '1');
 INSERT INTO `modelo_version` VALUES ('29', '11', 'D/C Mec. 2,7 DSL 4X4 C/C & A/A', '21200.000', '0', '2018', '1');
+INSERT INTO `modelo_version` VALUES ('30', '12', '3.8 CVVT', null, '0', '2016', '1');
 
 -- ----------------------------
 -- Table structure for modelo_version_cuotas

@@ -369,7 +369,7 @@ class Helper {
     public function getModelos($tipo = NULL) {
         $where = "";
         if (!empty($tipo))
-            $where = "and tv.id IN ($tipo)";
+            $where = "and tv.id IN ($tipo) ";
         $sql = $this->db->select("SELECT m.id, 
                                         m.descripcion, 
                                         m.img_thumb,
@@ -377,7 +377,8 @@ class Helper {
                                 FROM modelo m
                                 LEFT JOIN tipo_vehiculo tv on tv.id = m.id_tipo_vehiculo
                                 where m.estado = 1
-                                $where");
+                                $where
+                                ORDER BY m.orden ASC");
         return $sql;
     }
 
