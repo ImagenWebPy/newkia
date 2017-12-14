@@ -63,7 +63,7 @@ ul:after,ol:after{content:'';clear:both;display:block}
 .form_spr:before,.form_spr:after{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_form.png)}
 .btnIcon:before,.btnIcon:after{content:'';display:inline-block;background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_button.png)!important;background-repeat:no-repeat;vertical-align:top}
 .tab_tspr:before{background-image:url(../../public/img/spr_tab.png)}
-@media screen and (-webkit-min-device-pixel-ratio:1.5){.cmm_spr,.cmm_tspr:before,.cmm_tspr:after,.util_a:before,.dth1_a:after,[class*=bl_type]:before,.pg_arrow,.pg_btn,.pg_btn_on{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_common_x2.png);background-size:175px 75px}
+@media screen and (-webkit-min-device-pixel-ratio:1.5){.cmm_spr,.cmm_tspr:before,.cmm_tspr:after,.util_a:before,.dth1_a:after,[class*=bl_type]:before,.pg_arrow,.pg_btn,.pg_btn_on{background-image:url(../../public/img/spr_common_x2.png);background-size:175px 75px}
                                                        .sns_spr{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_sns_x2.png);background-size:175px 50px}
                                                        .map_spr{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_map2_x2.png);background-size:37px 29px}
                                                        .tool_spr,.tool_tspr:before{background-image:url(http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/spr_tool.png);background-size:192px 140px}

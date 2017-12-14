@@ -7,6 +7,18 @@ class Modelo_Model extends Model {
     }
 
     public function headerBarModelos($url) {
+        $pagina = $this->helper->getPage();
+        switch ($pagina[1]) {
+            case 'galeria':
+                $seccionInterna = 'Galería';
+                break;
+            case 'caracteristica':
+                $seccionInterna = 'Caracteristica';
+                break;
+            case 'especificacion':
+                $seccionInterna = 'Especificaciones';
+                break;
+        }
         $caracteristica = '';
         $galeria = '';
         $especificacion = '';
@@ -33,7 +45,7 @@ class Modelo_Model extends Model {
                         <!-- SNB -->
                         <div class="snb_area">
                             <!-- open_snb open -->
-                            <a class="open_snb pointer"><span class="cmm_tspr spr_snb">gallery</span></a>
+                            <a class="open_snb pointer"><span class="cmm_tspr spr_snb">' . $seccionInterna . '</span></a>
                             <!-- snb_nav open -->
                             <ul class="snb_nav">
                                 <li class="sdth1_l ' . $caracteristica . '"><a href="' . URL . 'modelo/caracteristica/' . $idModelo . '/' . $this->helper->cleanUrl(utf8_encode($sqlModelo[0]['descripcion'])) . '" class="sdth1_a">Características</a></li>

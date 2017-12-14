@@ -1090,7 +1090,7 @@
                                  .keyVisualWrap .dots{display:block;position:absolute;left:0;top:70px;width:100%;z-index:5;text-align:center}
                                  .keyVisualWrap .dots ul{width:70px;overflow:hidden;margin:10px auto 0;display:block}
                                  .keyVisualWrap .dots ul li{display:inline-block;height:auto}
-                                 .keyVisualWrap .dots ul li a{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:200%;overflow:hidden}
+                                 .keyVisualWrap .dots ul li a{background:url('../../../public/img/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:200%;overflow:hidden}
                                  .keyVisualWrap .dots ul li.on a{background-position:0 0}
                                  .keyVisualWrap .keyVisual02 .car_view{width:470px;left:50%;top:75px;margin-left:-230px}
                                  .keyVisualWrap .exVrArea{width:470px;margin:0 auto}
@@ -1126,7 +1126,7 @@
                                  .pipLayout .textArea h3{position:relative;z-index:1000;color:#333!important;font-size:18px;line-height:21px;padding:14px 15px 30px 15px;text-shadow:none}
                                  .pipLayout .textArea .subTxt{padding:12px 15px 30px 15px;color:#666!important;font-size:13px;line-height:16px}
                                  .pipLayout .screenPaging{position:absolute;left:0;bottom:0;padding:0 0 30px 0;background:#fff}
-                                 .pipLayout .screenPaging ul li a{display:block;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_list_dot.png') no-repeat -14px 0;width:10px;height:10px;text-indent:200%;overflow:hidden;margin:2px}
+                                 .pipLayout .screenPaging ul li a{display:block;background:url('../../../public/img/btn_list_dot.png') no-repeat -14px 0;width:10px;height:10px;text-indent:200%;overflow:hidden;margin:2px}
                                  .pipLayout .screenPaging ul li.on a{background-position:0 0}
                                  .pipLayout .screenPaging ul li img{display:none}
                                  .pipLayout .imgList{background:#fff}
@@ -1148,7 +1148,7 @@
                                  .pipLayout .imgListPaging{display:block;text-align:center}
                                  .pipLayout .imgListPaging ul{display:inline-block;margin:15px auto 38px}
                                  .pipLayout .imgListPaging li{float:left}
-                                 .pipLayout .imgListPaging li a{display:block;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_list_dot.png') no-repeat -14px 0;width:10px;height:10px;text-indent:200%;overflow:hidden;margin:2px}
+                                 .pipLayout .imgListPaging li a{display:block;background:url('../../../public/img/btn_list_dot.png') no-repeat -14px 0;width:10px;height:10px;text-indent:200%;overflow:hidden;margin:2px}
                                  .pipLayout .imgListPaging li.on a{background-position:0 0}
                                  .pipLayout .imgList.type5 li.list1{width:290px;margin:0 auto;text-align:center}
                                  .pipLayout .imgList.type5 li.list2{width:290px;margin:0 auto;text-align:center}
@@ -1216,7 +1216,7 @@
                                  .gallery_paging{display:block;text-align:center;margin-top:15px}
                                  .gallery_paging ul{display:inline-block;margin:0 auto}
                                  .gallery_paging ul li{float:left}
-                                 .gallery_paging ul li a{position:relative!important;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:-9999px;overflow:hidden;margin:2px}
+                                 .gallery_paging ul li a{position:relative!important;background:url('../../../public/img/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:-9999px;overflow:hidden;margin:2px}
                                  .gallery_paging ul li.on a{background-position:0 0}
                                  .gallery_notice{width:100%;margin-top:15px;padding:0}
                                  .gallery_notice ul{padding:0 15px}
@@ -1271,7 +1271,7 @@
                                  .spec_visual .control{display:block;text-align:center}
                                  .spec_visual .control .num{display:inline-block;margin:0 auto}
                                  .spec_visual .control .num li{float:left}
-                                 .spec_visual .control .num li a{position:relative!important;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:-9999px;overflow:hidden;margin:2px}
+                                 .spec_visual .control .num li a{position:relative!important;background:url('../../../public/img/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:-9999px;overflow:hidden;margin:2px}
                                  .spec_visual .control .num li.on a{background-position:0 0}
                                  .spec_visual .spec_allview_area{display:none}
                                  .spec_list{width:auto;margin:0 auto 30px}
@@ -1332,7 +1332,7 @@
                                  .engine_visual .control{display:block;text-align:center;margin-left:-20px}
                                  .engine_visual .control .num{display:inline-block;margin:0 auto}
                                  .engine_visual .control .num li{float:left}
-                                 .engine_visual .control .num li a{position:relative!important;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:-9999px;overflow:hidden;margin:2px}
+                                 .engine_visual .control .num li a{position:relative!important;background:url('../../../public/img/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:-9999px;overflow:hidden;margin:2px}
                                  .engine_visual .control .num li.on a{background-position:0 0}
                                  .engine_allview_area{display:none}
                                  .wheel_visual{height:auto;overflow:hidden}
@@ -1354,7 +1354,7 @@
                                  .wheel_visual .control{display:block;text-align:center;margin-left:-20px}
                                  .wheel_visual .control .num{display:inline-block;margin:0 auto}
                                  .wheel_visual .control .num li{float:left}
-                                 .wheel_visual .control .num li a{position:relative!important;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:-9999px;overflow:hidden;margin:2px}
+                                 .wheel_visual .control .num li a{position:relative!important;background:url('../../../public/img/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:-9999px;overflow:hidden;margin:2px}
                                  .wheel_visual .control .num li.on a{background-position:0 0}
                                  .wheel_allview_area{display:none}
                                  .pip_wheel .spec_list{width:auto;margin:0 auto 30px}

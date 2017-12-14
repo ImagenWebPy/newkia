@@ -2,7 +2,7 @@
     <div class="snb_pip snb_wrap">
         <div class="inner">
             <div class="snb_area">
-                <a href="#" class="open_snb"><span class="cmm_tspr spr_snb">features</span></a>
+                <a href="#" class="open_snb"><span class="cmm_tspr spr_snb">Página no encontrada.</span></a>
                 <ul class="snb_nav">
                     <li class="sdth1_l sdth_on"><a href='#' class="sdth1_a">Lo sentimos</a></li>
                 </ul>
