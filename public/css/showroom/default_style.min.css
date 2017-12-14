@@ -168,7 +168,7 @@
 .pipLayout .pip_prev{display:none}
 .pipLayout .pip_next{display:none}
 .pipLayout .description{display:none}
-.pipLayout .btnCarPlay{display:block;position:absolute;left:50%;top:50%;z-index:99;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/img_pip_play.png') no-repeat 0 0;text-indent:-9999px;width:57px;height:57px;margin:-29px 0 0 -29px}
+.pipLayout .btnCarPlay{display:block;position:absolute;left:50%;top:50%;z-index:99;background:url('../../../public/img/img_pip_play.png') no-repeat 0 0;text-indent:-9999px;width:57px;height:57px;margin:-29px 0 0 -29px}
 .pipLayout.temp06 dl dt,.pipLayout.temp07 dl dt{position:relative}
 .pipLayout.temp08 .imgListImg{position:relative}
 .pipLayout .snsWrap .con_share .mSnsPrev{display:none}
@@ -556,7 +556,7 @@
 .spec_list.form3 .spec_view .scroll_inner table tbody td:first-child{border-left:0}
 .num{display:inline-block;overflow:hidden;margin:0 auto}
 .num li{float:left}
-.num li a{background:url('../../../public/img/showroom/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:200%;white-space:nowrap;overflow:hidden;margin-left:4px}
+.num li a{background:url('../../../public/img/btn_list_dot.png') no-repeat -14px 0;display:block;width:10px;height:10px;text-indent:200%;white-space:nowrap;overflow:hidden;margin-left:4px}
 .num li:first-child a{margin-left:0}
 .num li.on a{background-position:0 0}
 .control{top:0}
@@ -567,11 +567,11 @@
 .review a.next{right:-50px}
 .review .img img.web{display:inline-block}
 .review .img img.mobile,.review .img img.tablet{display:none}
-.review{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_review_visual.jpg') no-repeat center top;font-family:'kiaM'}
+.review{background:url('../../../public/img/bg_review_visual.jpg') no-repeat center top;font-family:'kiaM'}
 .review .review_visual{padding:50px 15px 0}
-.review h3{margin-bottom:4px;padding:11px 0 0;text-transform:uppercase;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/spec_data_title_underline.gif') no-repeat 0 0;font-size:22px;font-family:'kiaB';color:#fff}
+.review h3{margin-bottom:4px;padding:11px 0 0;text-transform:uppercase;background:url('../../../public/img/spec_data_title_underline.gif') no-repeat 0 0;font-size:22px;font-family:'kiaB';color:#fff}
 .review .review_visual>h3,.review .review_visual>div{width:940px;margin:0 auto}
-.review h2{margin-bottom:4px;padding:11px 0 0;text-transform:uppercase;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/spec_data_title_underline.gif') no-repeat 0 0;font-size:22px;font-family:'kiaB';color:#fff}
+.review h2{margin-bottom:4px;padding:11px 0 0;text-transform:uppercase;background:url('../../../public/img/spec_data_title_underline.gif') no-repeat 0 0;font-size:22px;font-family:'kiaB';color:#fff}
 .review .review_visual>h2,.review .review_visual>div{width:940px;margin:0 auto}
 .review .review_visual #slide_area{height:200px;margin:5%}
 .review .review_visual .review_interaction{padding:14px 0 0;position:relative}
@@ -589,14 +589,14 @@
 .review .review_visual .review_interaction .review_data .address{color:#333;display:block;font-size:13px;padding:13px 12px 0}
 .review .review_visual .review_interaction .review_data .address span{color:#999}
 .review .review_visual .review_interaction .review_data .btn_review{display:block;text-align:right;position:absolute;bottom:20px;right:10px}
-.review .review_visual .review_interaction .review_data .btn_review a{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/history_more_btn.png') no-repeat 0 -57px;display:inline-block;padding:0 0 0 15px}
+.review .review_visual .review_interaction .review_data .btn_review a{background:url('../../../public/img/history_more_btn.png') no-repeat 0 -57px;display:inline-block;padding:0 0 0 15px}
 .review .review_visual .review_interaction .review_data .btn_review a span{display:inline-block}
-.review .review_visual .review_interaction .review_data .btn_review a div{background:#fff url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/history_more_btn.png') no-repeat 100% -57px;display:inline-block;color:#fff;display:inline-block;font-size:14px;font-family:'kiaB';line-height:30px;padding:0 37px 0 0;text-transform:uppercase}
+.review .review_visual .review_interaction .review_data .btn_review a div{background:#fff url('../../../public/img/history_more_btn.png') no-repeat 100% -57px;display:inline-block;color:#fff;display:inline-block;font-size:14px;font-family:'kiaB';line-height:30px;padding:0 37px 0 0;text-transform:uppercase}
 .review .review_visual .num li a{background-position:-28px 0}
 .review .review_visual .num li.on a{background-position:0 0}
 .review .media_review a.roll{display:block}
 .review .media_review a.roll{display:inline-block;position:absolute;top:210px}
-.review .media_review a.roll{display:block;text-indent:200%;white-space:nowrap;overflow:hidden;width:30px;height:58px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/spec_visual_roll_light.png') no-repeat;height:51px}
+.review .media_review a.roll{display:block;text-indent:200%;white-space:nowrap;overflow:hidden;width:30px;height:58px;background:url('../../../public/img/spec_visual_roll_light.png') no-repeat;height:51px}
 .review .media_review a.next{background-position:-60px 0}
 .review .media_review a.prev{left:-50px}
 .review .media_review a.next{right:-50px}
@@ -612,7 +612,7 @@
 .review .media_review .mediaCon>ul li .txt h3{display:block;font-family:'kiaB';font-size:15px;text-transform:uppercase;margin:0 0 1px;padding:5px 0 4px;background:0}
 .review .media_review .mediaCon>ul li .txt span{color:#999;font-size:13px;line-height:19px;display:block}
 .review .media_review .mediaCon>ul li .txt a{color:#e4e4e4!important}
-.review .media_review .mediaCon>ul li .txt>a{margin-top:13px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_red.png') no-repeat 0 center;display:block;font-size:12px;font-family:'kiaB';text-transform:uppercase;padding:0 0 0 10px}
+.review .media_review .mediaCon>ul li .txt>a{margin-top:13px;background:url('../../../public/img/icon_red.png') no-repeat 0 center;display:block;font-size:12px;font-family:'kiaB';text-transform:uppercase;padding:0 0 0 10px}
 .review .media_review .control{text-align:center;position:relative;bottom:20px;margin-bottom:16px}
 .review .media_review .num li a{background-position:-14px 0}
 .review .media_review .num li.on a{background-position:0 0}
@@ -626,22 +626,22 @@
 .btn_more a div{background:#fff url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/about/history_more_btn.png') no-repeat 100% 0;display:inline-block;padding:0 20px 0 0;color:#fff;display:inline-block;font-size:18px;font-family:'kiaB';line-height:38px;text-transform:uppercase}
 .sns_wrap{padding-bottom:70px;margin-right:-1px}
 .sns_wrap .sns_top{background:#b8b8b8;text-align:center;color:#fff;font-size:22px;font-family:'KiaB';border-top:1px solid #a5a5a5;border-bottom:1px solid #a5a5a5}
-.sns_wrap .sns_top span{display:inline-block;line-height:56px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/icon_sns.png') no-repeat right center;padding-right:48px;vertical-align:middle}
+.sns_wrap .sns_top span{display:inline-block;line-height:56px;background:url('../../../public/img/icon_sns.png') no-repeat right center;padding-right:48px;vertical-align:middle}
 .sns_wrap .sns_list li{position:relative;float:left;width:20%;height:478px;border-right:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
 .sns_wrap .sns_list li.nLine{border-left:1px solid #fff}
 .sns_wrap .sns_list li span{display:block}
 .sns_wrap .sns_list li .sns_img{background:#000;width:100%;text-align:center;overflow:hidden}
 .sns_wrap .sns_list li.type1 .sns_img{position:relative;height:244px}
 .sns_wrap .sns_list li.type1 .sns_img img{height:100%;width:auto}
-.sns_wrap .sns_list li.type1 .sns_img .play_video{display:block;position:absolute;left:50%;top:50%;margin:-23px 0 0 -22px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_play.png') no-repeat 0 0;width:45px;height:45px}
+.sns_wrap .sns_list li.type1 .sns_img .play_video{display:block;position:absolute;left:50%;top:50%;margin:-23px 0 0 -22px;background:url('../../../public/img/btn_play.png') no-repeat 0 0;width:45px;height:45px}
 .sns_wrap .sns_list li.type3 .sns_img{display:block;width:100%;height:384px;overflow:hidden}
-.sns_wrap .sns_list li.type3 .play_video{display:block;position:absolute;left:50%;top:50%;margin:-45px 0 0 -22px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_play.png') no-repeat 0 0;width:45px;height:45px}
+.sns_wrap .sns_list li.type3 .play_video{display:block;position:absolute;left:50%;top:50%;margin:-45px 0 0 -22px;background:url('../../../public/img/btn_play.png') no-repeat 0 0;width:45px;height:45px}
 .sns_wrap .sns_list .sns_txt{font-family:kiaM;font-size:14px;color:#666;margin-top:19px;overflow:hidden}
 .sns_wrap .sns_list li.type1 .sns_txt{height:56px}
 .sns_wrap .sns_list li.type2 .sns_txt{height:272px}
-.sns_wrap .sns_list li.type1 .sns_contents{position:relative;z-index:10;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_triangle.png') no-repeat center 0;padding:35px 30px 0;margin:-14px 0 0}
+.sns_wrap .sns_list li.type1 .sns_contents{position:relative;z-index:10;background:url('../../../public/img/bg_triangle.png') no-repeat center 0;padding:35px 30px 0;margin:-14px 0 0}
 .sns_wrap .sns_list li.type2 .sns_contents{background:0;padding:48px 30px 0;margin:0}
-.sns_wrap .sns_list li.type3 .sns_contents{position:relative;z-index:10;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_triangle.png') no-repeat center 0;padding:30px 30px 0;margin:-14px 0 0;height:20px;overflow:hidden}
+.sns_wrap .sns_list li.type3 .sns_contents{position:relative;z-index:10;background:url('../../../public/img/bg_triangle.png') no-repeat center 0;padding:30px 30px 0;margin:-14px 0 0;height:20px;overflow:hidden}
 .sns_wrap .sns_list li.type3 .sns_contents .type3_tit{font-family:kiaB;font-size:15px}
 .sns_wrap .sns_list li.type3 .sns_contents .type3_txt{display:inline;font-family:kiaM;font-size:15px;color:#595959}
 .sns_wrap .sns_list .user_area:after{content:'';clear:both;display:block}
@@ -651,16 +651,16 @@
 .sns_wrap .sns_list .user_area .user_infor .time{font-family:'KiaM';margin-top:2px}
 .sns_wrap .sns_list .user_area .user_infor .sns_id{font-family:'KiaM';margin-top:2px}
 .sns_infor{position:absolute;left:0;bottom:25px;width:100%;padding:0 30px;font-family:kiaM;font-size:12px;color:#666;vertical-align:middle}
-.sns_infor span{display:inline-block;float:left;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_sns_icon.png') no-repeat;text-indent:-9999px}
+.sns_infor span{display:inline-block;float:left;background:url('../../../public/img/bg_sns_icon.png') no-repeat;text-indent:-9999px}
 .sns_infor .facebook{background-position:0 0;width:16px}
 .sns_infor .google{background-position:0 -77px;width:21px}
 .sns_infor .twitter{background-position:0 -39px;width:23px}
 .sns_infor .youtube{float:left;background-position:0 -112px;width:41px}
 .sns_infor .youtube_share{float:right;background-position:0 -160px;width:26px;height:26px;margin:-8px 60px 0 0}
 .sns_infor .youtube_share a{display:block;width:26px;height:26px}
-.safety_wrap .safety_visual{width:100%;height:480px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_safety.jpg') no-repeat center center}
+.safety_wrap .safety_visual{width:100%;height:480px;background:url('../../../public/img/bg_safety.jpg') no-repeat center center}
 .safety_wrap .safety_data{width:940px;margin:0 auto;padding:50px 10px 0}
-.safety_wrap .safety_data h3{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_redline_safety.gif') no-repeat 0 0;font-family:'KiaB';font-size:35px;line-height:35px;padding:18px 0 0 0}
+.safety_wrap .safety_data h3{background:url('../../../public/img/bg_redline_safety.gif') no-repeat 0 0;font-family:'KiaB';font-size:35px;line-height:35px;padding:18px 0 0 0}
 .safety_wrap .safety_data h3 strong{display:block;color:#bb162b;margin-top:11px}
 .safety_wrap .safety_data .year{margin-top:20px;font-size:15px;color:#333}
 .safety_wrap .safety_data .year img{margin-right:14px}
@@ -676,10 +676,10 @@
 .safety_wrap .safety_tab_contents .tab_type2.col8 li:nth-child(even){min-width:118px}
 .safety_wrap .safety_tab_contents .tab_type2.col8 li a{padding:12px 0 12px 0}
 .safety_wrap .tab_area{width:940px;margin:0 auto}
-.safety_wrap .tab_contents_area{border-top:1px solid #d0d0d0;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_safety2.gif') repeat}
+.safety_wrap .tab_contents_area{border-top:1px solid #d0d0d0;background:url('../../../public/img/bg_safety2.gif') repeat}
 .safety_wrap .tab_con{width:940px;margin:0 auto;padding:50px 0 100px}
-.safety_wrap .tab_con h4{padding:10px 0 27px 0;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_m_redline_safety_02.gif') no-repeat 0 0;font-family:'KiaB';font-size:22px;line-height:22px}
-.safety_wrap .tab_con h5{padding:0 0 15px 14px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bl_01.png') no-repeat 0 3px;font-family:'KiaB';font-size:16px;line-height:16px}
+.safety_wrap .tab_con h4{padding:10px 0 27px 0;background:url('../../../public/img/bg_m_redline_safety_02.gif') no-repeat 0 0;font-family:'KiaB';font-size:22px;line-height:22px}
+.safety_wrap .tab_con h5{padding:0 0 15px 14px;background:url('../../../public/img/bl_01.png') no-repeat 0 3px;font-family:'KiaB';font-size:16px;line-height:16px}
 .safety_contents{padding:0 0 50px}
 .safety_contents:after{content:'';clear:both;display:block}
 .fl{float:left}
@@ -725,9 +725,9 @@
 .safety_wrap .safety_tb.tb_type02 th,.safety_wrap .safety_tb.tb_type02 td{text-align:left;padding-left:15px}
 .safety_wrap .safety_tb.tb_type02 td.img img{display:inline-block;margin-top:8px}
 .safety_wrap .safety_assessment{width:940px;margin:50px auto 0}
-.safety_wrap .safety_assessment .title{display:block;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_list_title.gif');padding:10px 20px;font-size:15px;color:#fff;text-transform:uppercase}
+.safety_wrap .safety_assessment .title{display:block;background:url('../../../public/img/bg_list_title.gif');padding:10px 20px;font-size:15px;color:#fff;text-transform:uppercase}
 .safety_wrap .safety_box{padding:50px 0 0;border-top:1px solid #d1d1d1}
-.safety_wrap .safety_box dt{display:block;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/icon_question.gif') no-repeat 0 0;padding-left:30px;height:22px;line-height:22px;margin-bottom:15px;font-size:16px;color:#333}
+.safety_wrap .safety_box dt{display:block;background:url('../../../public/img/icon_question.gif') no-repeat 0 0;padding-left:30px;height:22px;line-height:22px;margin-bottom:15px;font-size:16px;color:#333}
 .safety_wrap .safety_box dd{color:#666;font-size:13px;line-height:20px}
 .tb_wrap{width:940px}
 .tb_wrap li{display:table}
@@ -771,7 +771,7 @@
 .business{width:940px;margin:50px auto 100px}
 .business h3{font-size:22px;margin-bottom:40px}
 .business h3:before{content:'';display:block;width:70px;height:2px;background:#bb162b;margin-bottom:13px}
-.business .business_title{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_list_title.gif');padding:0 20px;color:#fff;height:38px;line-height:38px}
+.business .business_title{background:url('../../../public/img/bg_list_title.gif');padding:0 20px;color:#fff;height:38px;line-height:38px}
 .business .business_tb{width:100%;border-bottom:2px solid #7d7d7d}
 .business .business_tb thead th{background:#f5f5f5;padding:7px 0;border-bottom:1px solid #d6d6d6;border-right:1px solid #d6d6d6}
 .business .business_tb thead th:last-child{border-right:0}
@@ -822,9 +822,9 @@
                                   .keyVisualWrap .exVrArea img{margin-top:0}
                                   .keyVisualWrap .car_refresh{margin:180px 0 0 -33px}
                                   .keyVisualWrap .notiTxt{top:405px;width:600px;margin-left:-300px}
-                                  .keyVisualWrap .keyBtnLeft{top:470px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_btn_key3.png') no-repeat 0 0;text-indent:-9999px}
+                                  .keyVisualWrap .keyBtnLeft{top:470px;background:url('../../../public/img/bg_btn_key3.png') no-repeat 0 0;text-indent:-9999px}
                                   .keyVisualWrap .keyBtnLeft a{padding-top:0;width:96px;height:96px}
-                                  .keyVisualWrap .keyBtnRight{top:470px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_btn_key4.png') no-repeat 0 0;text-indent:-9999px}
+                                  .keyVisualWrap .keyBtnRight{top:470px;background:url('../../../public/img/bg_btn_key4.png') no-repeat 0 0;text-indent:-9999px}
                                   .keyVisualWrap .keyBtnRight a{padding-top:0;width:96px;height:96px}
                                   .keyVisualWrap .roomView .car_view{position:relative;top:auto;left:auto;margin:0 auto}
                                   .keyVisualWrap .roomView .car_view img{margin-top:0}
@@ -893,7 +893,7 @@
                                   .gallery_video .video_box ul li{width:163px;margin:0 4px 10px 0}
                                   .gallery_video .video_box ul li.wide{width:330px}
                                   .gallery_video .video_box ul li.wide img{margin:0}
-                                  .gallery_video .video_box .play_video{display:block;position:absolute;left:50%;top:50%;margin:-22px 0 0 -22px;z-index:10;width:45px;height:45px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_play.png') no-repeat;text-indent:-9999px}
+                                  .gallery_video .video_box .play_video{display:block;position:absolute;left:50%;top:50%;margin:-22px 0 0 -22px;z-index:10;width:45px;height:45px;background:url('../../../public/img/btn_play.png') no-repeat;text-indent:-9999px}
                                   .gallery_video .video_box .summary{background:#fff;border:1px solid #d7d7d7;border-top:0;padding:10px 10px 10px 20px}
                                   .gallery_video .video_box .summary .title{font-size:15px;font-family:'kiaB';text-transform:uppercase;margin-bottom:3px;height:36px;white-space:normal;text-overflow:clip;overflow:hidden}
                                   .gallery_video .video_box .summary .overview{color:#666;font-size:12px;height:36px;white-space:normal;text-overflow:none;overflow:hidden}
@@ -1122,7 +1122,7 @@
                                  .pipLayout .bgArea .bgInner{width:100%;height:auto;position:static;left:0;top:0}
                                  .pipLayout .bgArea img{width:100%;position:static;left:0;top:0;bottom:0;right:0;margin:auto}
                                  .pipLayout .textArea{position:relative;margin:0;padding:0}
-                                 .pipLayout .textArea h2{left:0;top:15px;z-index:10;color:#fff;font-family:kiaB;font-size:15px;text-transform:uppercase;padding:10px 0 0 15px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') no-repeat 15px 0}
+                                 .pipLayout .textArea h2{left:0;top:15px;z-index:10;color:#fff;font-family:kiaB;font-size:15px;text-transform:uppercase;padding:10px 0 0 15px;background:url('../../../public/img/bg_title_redline.gif') no-repeat 15px 0}
                                  .pipLayout .textArea h3{position:relative;z-index:1000;color:#333!important;font-size:18px;line-height:21px;padding:14px 15px 30px 15px;text-shadow:none}
                                  .pipLayout .textArea .subTxt{padding:12px 15px 30px 15px;color:#666!important;font-size:13px;line-height:16px}
                                  .pipLayout .screenPaging{position:absolute;left:0;bottom:0;padding:0 0 30px 0;background:#fff}
@@ -1169,16 +1169,16 @@
                                  .pipLayout .imgList.type8 .imgListTit a{color:#333}
                                  .pipLayout .imgList.type8+.imgList.type8{margin-top:0;margin-bottom:0}
                                  .pipLayout.temp10 .car_play a{margin:-28px 0 0 -33px}
-                                 .pipLayout .pip_prev{position:absolute;display:block;z-index:20;text-indent:-9999px;top:50%;left:15px;width:15px;height:28px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/btn_arrow_left.png') no-repeat 0 0;background-size:15px 28px;margin-top:-14px}
-                                 .pipLayout .pip_next{position:absolute;display:block;z-index:20;text-indent:-9999px;top:50%;right:15px;width:15px;height:28px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/btn_arrow_right.png') no-repeat 0 0;background-size:15px 28px;margin-top:-14px}
+                                 .pipLayout .pip_prev{position:absolute;display:block;z-index:20;text-indent:-9999px;top:50%;left:15px;width:15px;height:28px;background:url('../../../public/img/btn_arrow_left.png') no-repeat 0 0;background-size:15px 28px;margin-top:-14px}
+                                 .pipLayout .pip_next{position:absolute;display:block;z-index:20;text-indent:-9999px;top:50%;right:15px;width:15px;height:28px;background:url('../../../public/img/btn_arrow_right.png') no-repeat 0 0;background-size:15px 28px;margin-top:-14px}
                                  .pipLayout .mInner{width:290px;margin:0 auto;position:relative}
                                  .pipLayout .snsWrap{width:auto;margin:0}
                                  .pipLayout .snsWrap .snsBtn{float:left;text-align:left;padding:0 8px;letter-spacing:-0.05em;min-width:100px}
-                                 .pipLayout .snsWrap .snsBtn span{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/ico_sns_search2.png') no-repeat 0 50%;background-size:7px 9px;padding-left:14px}
+                                 .pipLayout .snsWrap .snsBtn span{background:url('../../../public/img/ico_sns_search2.png') no-repeat 0 50%;background-size:7px 9px;padding-left:14px}
                                  .pipLayout .snsWrap .con_share{position:relative;width:154px;height:50px;overflow:hidden}
                                  .pipLayout .snsWrap .con_share ul{width:500px}
-                                 .pipLayout .snsWrap .con_share .mSnsPrev{position:absolute;right:26px;top:0;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_sns_left.gif') no-repeat 0 0;background-size:26px 50px;width:26px}
-                                 .pipLayout .snsWrap .con_share .mSnsNext{position:absolute;right:0;top:0;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/btn_sns_right.gif') no-repeat 0 0;background-size:26px 50px;width:26px}
+                                 .pipLayout .snsWrap .con_share .mSnsPrev{position:absolute;right:26px;top:0;background:url('../../../public/img/btn_sns_left.gif') no-repeat 0 0;background-size:26px 50px;width:26px}
+                                 .pipLayout .snsWrap .con_share .mSnsNext{position:absolute;right:0;top:0;background:url('../../../public/img/btn_sns_right.gif') no-repeat 0 0;background-size:26px 50px;width:26px}
                                  .video_popup .pop_con .img_more{padding:10px 12px 15px}
                                  .video_popup .pop_con .img_more dt{font-size:16px;line-height:20px;margin-bottom:5px}
                                  .video_popup .pop_con .img_more dd{font-size:12px;line-height:16px}
@@ -1204,7 +1204,7 @@
                                  .pip_gallery .screen li img.tabletImg{display:none}
                                  .pip_gallery .screen li img.mobileImg{display:block}
                                  .wide_gallery{display:block!important;position:static;background:0;height:auto}
-                                 .wide_gallery h3{padding-top:8px;margin:20px 0 9px;text-transform:uppercase;display:block;color:#000;font-size:15px;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
+                                 .wide_gallery h3{padding-top:8px;margin:20px 0 9px;text-transform:uppercase;display:block;color:#000;font-size:15px;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
                                  .wide_gallery .width_wrap{width:100%;overflow:visible}
                                  .wide_gallery .wide_wrap .img_wrap{position:relative;width:auto;height:auto;padding:0 15px}
                                  .pipContents{overflow:visible}
@@ -1221,7 +1221,7 @@
                                  .gallery_notice{width:100%;margin-top:15px;padding:0}
                                  .gallery_notice ul{padding:0 15px}
                                  .gallery_video{padding:0 15px 0;background-size:635px 635px}
-                                 .gallery_video h3{width:100%;margin:20px 0 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
+                                 .gallery_video h3{width:100%;margin:20px 0 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
                                  .gallery_video .video_wrap{width:100%;margin:0}
                                  .gallery_video .video_inner{margin-top:10px;width:100%;padding:0;overflow:hidden}
                                  .gallery_video .video_box{width:100%;overflow:hidden}
@@ -1248,8 +1248,8 @@
                                  .video_popup .pop_con{height:auto}
                                  .video_popup .closeBtn{padding:7px;right:-28px}
                                  .videoArea{padding:5px 0 30px;margin-top:15px}
-                                 .wide_gallery .wide_wrap .wide_prev{top:50%;width:15px;height:28px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/btn_arrow_left.png') no-repeat 0 0;background-size:15px 28px;left:30px;margin-top:-14px}
-                                 .wide_gallery .wide_wrap .wide_next{top:50%;width:15px;height:28px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/btn_arrow_right.png') no-repeat 0 0;background-size:15px 28px;right:30px;margin-top:-14px}
+                                 .wide_gallery .wide_wrap .wide_prev{top:50%;width:15px;height:28px;background:url('../../../public/img/btn_arrow_left.png') no-repeat 0 0;background-size:15px 28px;left:30px;margin-top:-14px}
+                                 .wide_gallery .wide_wrap .wide_next{top:50%;width:15px;height:28px;background:url('../../../public/img/btn_arrow_right.png') no-repeat 0 0;background-size:15px 28px;right:30px;margin-top:-14px}
                                  .galleryTxt{position:relative;top:10px;margin:0;width:100%;margin-bottom:20px}
                                  .galleryTxt strong{font-size:18px;color:#000!important}
                                  .galleryTxt p{font-size:13px;margin-top:6px;color:#000!important}
@@ -1259,8 +1259,8 @@
                                  .m_none{display:none}
                                  .spec_visual{height:414px}
                                  .spec_visual .spec_data{width:100%;margin:0;padding:25px 0 0 0}
-                                 .spec_visual .spec_data h3{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
-                                 .spec_visual .spec_data h1{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
+                                 .spec_visual .spec_data h3{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
+                                 .spec_visual .spec_data h1{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
                                  .spec_visual .spec_slide_area{width:auto;margin:0 auto;padding:0 15px}
                                  .spec_visual .spec_slide_area .spec_img{width:290px;margin:0 auto;overflow:hidden}
                                  .spec_visual .spec_slide_area .spec_img ul{width:100000px;padding-bottom:20px;overflow:hidden;margin-top:60px}
@@ -1276,8 +1276,8 @@
                                  .spec_visual .spec_allview_area{display:none}
                                  .spec_list{width:auto;margin:0 auto 30px}
                                  .spec_list_title{padding:0 15px}
-                                 .pip_spec .spec_list .spec_list_title a{display:block;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/ico_arrow_down.png') no-repeat right 50%;background-size:9px 6px}
-                                 .pip_spec .spec_list .spec_list_title a.on{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/ico_arrow_up.png') no-repeat right 50%;background-size:9px 6px}
+                                 .pip_spec .spec_list .spec_list_title a{display:block;background:url('../../../public/img/ico_arrow_down.png') no-repeat right 50%;background-size:9px 6px}
+                                 .pip_spec .spec_list .spec_list_title a.on{background:url('../../../public/img/ico_arrow_up.png') no-repeat right 50%;background-size:9px 6px}
                                  .pip_spec .spec_list .spec_list_title span{line-height:35px}
                                  .spec_list.form1 .spec_view ul.type1 li.division{height:auto;line-height:normal}
                                  .spec_list.form1 .spec_view ul.type1 li ul li{float:left;text-align:left;height:auto;line-height:16px;font-size:13px;border-right:0;border-left:0;border-top:1px solid #d6d6d6;border-bottom:0;padding:6px 15px}
@@ -1285,8 +1285,8 @@
                                  .spec_list.form1 .spec_view ul.type1 li ul li:last-child{text-align:right;border-right:0;color:#666;padding:6px 15px}
                                  .pip_engine .spec_list h4{padding:0 15px}
                                  .pip_engine .spec_list .spec_view+.spec_list_title{margin-top:1px}
-                                 .spec_list.form2 .spec_list_title a{display:block;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/ico_arrow_down.png') no-repeat right 50%;background-size:9px 6px}
-                                 .spec_list.form2 .spec_list_title a.on{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/ico_arrow_up.png') no-repeat right 50%;background-size:9px 6px;border-top:0}
+                                 .spec_list.form2 .spec_list_title a{display:block;background:url('../../../public/img/ico_arrow_down.png') no-repeat right 50%;background-size:9px 6px}
+                                 .spec_list.form2 .spec_list_title a.on{background:url('../../../public/img/ico_arrow_up.png') no-repeat right 50%;background-size:9px 6px;border-top:0}
                                  .spec_list.form2 .spec_list_title span{line-height:35px}
                                  .spec_list.form2 .spec_view ul.type1 li{display:table}
                                  .spec_list.form2 .spec_view ul.type1 li span{display:table-cell;width:50%;text-align:left;border-right:0;border-bottom:1px solid #d6d6d6;font-size:13px;padding:8px 0 8px 25px}
@@ -1307,9 +1307,9 @@
                                  .spec_notice{padding:0 15px}
                                  .engine_visual{height:auto;overflow:hidden}
                                  .engine_visual .engine_data{width:100%;margin:0;top:25px;left:0}
-                                 .engine_visual .engine_data h3{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#fff;font-size:15px;line-height:normal;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
+                                 .engine_visual .engine_data h3{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#fff;font-size:15px;line-height:normal;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
                                  .engine_visual .engine_data h3:after{content:'';display:block;width:auto;height:0;margin-top:0}
-                                 .engine_visual .engine_data h2{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#fff;font-size:15px;line-height:normal;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
+                                 .engine_visual .engine_data h2{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#fff;font-size:15px;line-height:normal;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
                                  .engine_visual .engine_data h2:after{content:'';display:block;width:auto;height:0;margin-top:0}
                                  .engine_visual .engine_data p{display:none}
                                  .engine_visual a.spec_next{display:none!important}
@@ -1337,9 +1337,9 @@
                                  .engine_allview_area{display:none}
                                  .wheel_visual{height:auto;overflow:hidden}
                                  .wheel_visual .wheel_data{width:100%;margin:0;top:25px;left:0}
-                                 .wheel_visual .wheel_data h3{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;line-height:normal;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
+                                 .wheel_visual .wheel_data h3{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;line-height:normal;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
                                  .wheel_visual .wheel_data h3:after{content:'';display:block;width:auto;height:0;margin-top:0}
-                                 .wheel_visual .wheel_data h2{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;line-height:normal;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
+                                 .wheel_visual .wheel_data h2{margin:0 15px 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;line-height:normal;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
                                  .wheel_visual .wheel_data h2:after{content:'';display:block;width:auto;height:0;margin-top:0}
                                  .wheel_visual .wheel_data p{display:none}
                                  .wheel_visual a.spec_next{display:none!important}
@@ -1358,8 +1358,8 @@
                                  .wheel_visual .control .num li.on a{background-position:0 0}
                                  .wheel_allview_area{display:none}
                                  .pip_wheel .spec_list{width:auto;margin:0 auto 30px}
-                                 .pip_wheel .spec_list .spec_list_title a{display:block;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/ico_arrow_down.png') no-repeat right 50%;background-size:9px 6px}
-                                 .pip_wheel .spec_list .spec_list_title a.on{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/ico_arrow_up.png') no-repeat right 50%;background-size:9px 6px;border-top:0}
+                                 .pip_wheel .spec_list .spec_list_title a{display:block;background:url('../../../public/img/ico_arrow_down.png') no-repeat right 50%;background-size:9px 6px}
+                                 .pip_wheel .spec_list .spec_list_title a.on{background:url('../../../public/img/ico_arrow_up.png') no-repeat right 50%;background-size:9px 6px;border-top:0}
                                  .pip_wheel .spec_list .spec_list_title span{line-height:35px}
                                  .spec_list.form3 .spec_view .scroll_inner{width:320px;overflow-x:scroll}
                                  .spec_list.form3 .spec_view .scroll_inner table{width:730px;border-bottom:2px solid #7d7d7d}
@@ -1410,7 +1410,7 @@
                                  .sns_infor .youtube_share{margin:-8px 15px 0 0}
                                  .safety_wrap .safety_visual{height:auto;padding-bottom:25px}
                                  .safety_wrap .safety_data{width:100%;padding:25px 0 0}
-                                 .safety_wrap .safety_data h3{background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_m_redline_safety.gif') no-repeat 15px 0;font-size:20px;line-height:20px;padding:10px 15px 0}
+                                 .safety_wrap .safety_data h3{background:url('../../../public/img/bg_m_redline_safety.gif') no-repeat 15px 0;font-size:20px;line-height:20px;padding:10px 15px 0}
                                  .safety_wrap .safety_data h3 strong{margin-top:5px}
                                  .safety_wrap .safety_data .year{margin-top:15px;padding-left:15px;font-size:15px;color:#333}
                                  .safety_wrap .safety_data .year img{margin-right:14px}
@@ -1420,7 +1420,7 @@
                                  .safety_wrap .safety_tab_contents{display:none}
                                  .evaluation_info{padding-left:15px}
                                  .safety_wrap .safety_assessment{width:auto;margin:25px auto 0;padding:0 15px}
-                                 .safety_wrap .safety_assessment .title{padding:0 0 0 16px;margin-bottom:12px;color:#333;font-size:15px;background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/common/bl_red_triangle.png') no-repeat 0 center;background-size:8px 10px}
+                                 .safety_wrap .safety_assessment .title{padding:0 0 0 16px;margin-bottom:12px;color:#333;font-size:15px;background:url('../../../public/img/bl_red_triangle.png') no-repeat 0 center;background-size:8px 10px}
                                  .tb_wrap{width:auto;border-top:3px solid #bb162b;border-bottom:2px solid #bb162b}
                                  .tb_wrap.carTest li{display:block;background:#f5f5f5}
                                  .tb_wrap.carTest li .stit{display:block;float:left;font-size:12px;padding:10px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;border-bottom:0;border-top:1px solid #d6d6d6}
@@ -1442,8 +1442,8 @@
                                  .tb_wrap.carTest li.col3 .stxt:last-child{border-right:0}
                                  .tb_wrap.carTest li strong{display:block}
                                  .accessory{width:auto;margin:0 auto;padding:25px 15px 0}
-                                 .accessory h3{margin:0 0 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;line-height:normal;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
-                                 .accessory h1{margin:0 0 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;line-height:normal;font-family:'KiaB';background:url('http://org-www.kia.com/content/dam/kwcms/gt/en/images/showroom/bg_title_redline.gif') left top no-repeat}
+                                 .accessory h3{margin:0 0 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;line-height:normal;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
+                                 .accessory h1{margin:0 0 9px;padding:8px 0 0;text-transform:uppercase;display:block;color:#000;font-size:15px;line-height:normal;font-family:'KiaB';background:url('../../../public/img/bg_title_redline.gif') left top no-repeat}
                                  .accessory .acc_box{margin-bottom:40px}
                                  .accessory .acc_box ul{width:100%;overflow:hidden}
                                  .accessory .acc_box ul li{position:relative;float:none;width:100%;margin:0 0 7px 0}
@@ -1490,13 +1490,13 @@
 .sns_wrap .sns_list .li.type1 .sns_img{height:244px}
 .sns_wrap .sns_list .li.type1 .sns_img img{height:100%;width:auto}
 .sns_wrap .sns_list .li.type3 .sns_img{display:block;width:100%;height:384px;overflow:hidden}
-.sns_wrap .sns_list .li.type3 .play_video{display:block;position:absolute;left:50%;top:50%;margin:-45px 0 0 -22px;background:url(default_style/css/default_style/images/showroom/btn_play.png) no-repeat 0 0;width:45px;height:45px}
+.sns_wrap .sns_list .li.type3 .play_video{display:block;position:absolute;left:50%;top:50%;margin:-45px 0 0 -22px;background:url(../../../public/img/btn_play.png) no-repeat 0 0;width:45px;height:45px}
 .sns_wrap .sns_list .sns_txt{font-family:kiaM;font-size:14px;color:#666;margin-top:19px;overflow:hidden}
 .sns_wrap .sns_list .li.type1 .sns_txt{height:56px}
 .sns_wrap .sns_list .li.type2 .sns_txt{height:272px}
-.sns_wrap .sns_list .li.type1 .sns_contents{position:relative;z-index:10;background:url(default_style/css/default_style/images/showroom/bg_triangle.png) no-repeat center 0;padding:35px 30px 0;margin:-14px 0 0}
+.sns_wrap .sns_list .li.type1 .sns_contents{position:relative;z-index:10;background:url(../../../public/img/bg_triangle.png) no-repeat center 0;padding:35px 30px 0;margin:-14px 0 0}
 .sns_wrap .sns_list .li.type2 .sns_contents{background:0;padding:48px 30px 0;margin:0}
-.sns_wrap .sns_list .li.type3 .sns_contents{position:relative;z-index:10;background:url(default_style/css/default_style/images/showroom/bg_triangle.png) no-repeat center 0;padding:30px 30px 0;margin:-14px 0 0;height:20px;overflow:hidden}
+.sns_wrap .sns_list .li.type3 .sns_contents{position:relative;z-index:10;background:url(../../../public/img/bg_triangle.png) no-repeat center 0;padding:30px 30px 0;margin:-14px 0 0;height:20px;overflow:hidden}
 .sns_wrap .sns_list .li.type3 .sns_contents .type3_tit{font-family:kiaB;font-size:15px}
 .sns_wrap .sns_list .li.type3 .sns_contents .type3_txt{display:inline;font-family:kiaM;font-size:15px;color:#595959}
 .pip_gallery{min-height:200px}
@@ -1546,13 +1546,13 @@
 .sns_wrap .sns_list .li.type1 .sns_img{height:244px}
 .sns_wrap .sns_list .li.type1 .sns_img img{height:100%;width:auto}
 .sns_wrap .sns_list .li.type3 .sns_img{display:block;width:100%;height:384px;overflow:hidden}
-.sns_wrap .sns_list .li.type3 .play_video{display:block;position:absolute;left:50%;top:50%;margin:-45px 0 0 -22px;background:url(default_style/images/showroom/btn_play.png) no-repeat 0 0;width:45px;height:45px}
+.sns_wrap .sns_list .li.type3 .play_video{display:block;position:absolute;left:50%;top:50%;margin:-45px 0 0 -22px;background:url(../../../public/img/btn_play.png) no-repeat 0 0;width:45px;height:45px}
 .sns_wrap .sns_list .sns_txt{font-family:kiaM;font-size:14px;color:#666;margin-top:19px;overflow:hidden}
 .sns_wrap .sns_list .li.type1 .sns_txt{height:56px}
 .sns_wrap .sns_list .li.type2 .sns_txt{height:272px}
-.sns_wrap .sns_list .li.type1 .sns_contents{position:relative;z-index:10;background:url(default_style/images/showroom/bg_triangle.png) no-repeat center 0;padding:35px 30px 0;margin:-14px 0 0}
+.sns_wrap .sns_list .li.type1 .sns_contents{position:relative;z-index:10;background:url(../../../public/img/bg_triangle.png) no-repeat center 0;padding:35px 30px 0;margin:-14px 0 0}
 .sns_wrap .sns_list .li.type2 .sns_contents{background:0;padding:48px 30px 0;margin:0}
-.sns_wrap .sns_list .li.type3 .sns_contents{position:relative;z-index:10;background:url(default_style/images/showroom/bg_triangle.png) no-repeat center 0;padding:30px 30px 0;margin:-14px 0 0;height:20px;overflow:hidden}
+.sns_wrap .sns_list .li.type3 .sns_contents{position:relative;z-index:10;background:url(../../../public/img/bg_triangle.png) no-repeat center 0;padding:30px 30px 0;margin:-14px 0 0;height:20px;overflow:hidden}
 .sns_wrap .sns_list .li.type3 .sns_contents .type3_tit{font-family:kiaB;font-size:15px}
 .sns_wrap .sns_list .li.type3 .sns_contents .type3_txt{display:inline;font-family:kiaM;font-size:15px;color:#595959}
 .pip_gallery{min-height:200px}
