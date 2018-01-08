@@ -1,3 +1,5 @@
+#CORS policy
+Header add Access-Control-Allow-Origin "kia.com.py"
 #Listado de Directorios
 Options -Indexes
 
