@@ -73,6 +73,7 @@ $helper = new Helper();
 <script>
     $(function () {
         $("#tblModelos").DataTable({
+            "scrollX": true,
             //"aaSorting": [[0, "asc"]],
             "paging": true,
             "orderCellsTop": true,
@@ -115,8 +116,14 @@ $helper = new Helper();
                     case 'exterior':
                         enlace = "<?= URL; ?>admin/modalEditarExterior";
                         break;
+                    case 'exterior_seccion':
+                        enlace = "<?= URL; ?>admin/modalEditarExteriorSeccion";
+                        break;
                     case 'interior':
                         enlace = "<?= URL; ?>admin/modalEditarInterior";
+                        break;
+                    case 'interior_seccion':
+                        enlace = "<?= URL; ?>admin/modalEditarInteriorSeccion";
                         break;
                     case 'destacado':
                         enlace = "<?= URL; ?>admin/modalEditarDestacado";
@@ -129,6 +136,9 @@ $helper = new Helper();
                         break;
                     case 'version':
                         enlace = "<?= URL; ?>admin/modalEditarVersion";
+                        break;
+                    case 'cuotas':
+                        enlace = "<?= URL; ?>admin/modalEditarCuotas";
                         break;
                     case 'dimension':
                         enlace = "<?= URL; ?>admin/modalEditarDimension";
@@ -155,6 +165,211 @@ $helper = new Helper();
                     $(".genericModal").modal("toggle");
                 });
 
+            }
+            e.handled = true;
+        });
+
+        $(document).on("submit", "#frmEditarModelo", function (e) {
+            var url = "<?= URL ?>admin/frmEditarModelo"; // the script where you handle the form input.
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $("#frmEditarModelo").serialize(), // serializes the form's elements.
+                success: function (data)
+                {
+                    $("#modelo_" + data.id).html(data.content);
+                    $(".genericModal").modal("toggle");
+                }
+            });
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+        });
+        $(document).on("submit", "#frmEditarImagenModelo", function (e) {
+            var url = "<?= URL ?>admin/frmEditarImagenModelo"; // the script where you handle the form input.
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $("#frmEditarImagenModelo").serialize(), // serializes the form's elements.
+                success: function (data)
+                {
+                    $(".genericModal").modal("toggle");
+                }
+            });
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+        });
+        $(document).on("click", ".btnCambiarEstado", function (e) {
+            if (e.handled !== true) // This will prevent event triggering more then once
+            {
+                var id = $(this).attr("data-id");
+                var estadoActual = $(this).attr("data-estado");
+                $.ajax({
+                    url: "<?= URL; ?>admin/cambiarEstadoModelo",
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                        id: id,
+                        estado: estadoActual
+                    },
+                    success: function (data) {
+                        $('#modelo_' + data.id).html(data.content);
+                    }
+                }); //END AJAX
+            }
+            e.handled = true;
+        });
+        $(document).on("click", ".btnCambiarEstadoVersion", function (e) {
+            if (e.handled !== true) // This will prevent event triggering more then once
+            {
+                var id = $(this).attr("data-id");
+                var estadoActual = $(this).attr("data-estado");
+                $.ajax({
+                    url: "<?= URL; ?>admin/cambiarEstadoModeloVersion",
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                        id: id,
+                        estado: estadoActual
+                    },
+                    success: function (data) {
+                        $('#versionModelo' + data.id).html(data.content);
+                    }
+                }); //END AJAX
+            }
+            e.handled = true;
+        });
+        $(document).on("click", ".editVersionDatos", function (e) {
+            if (e.handled !== true) // This will prevent event triggering more then once
+            {
+                var id = $(this).attr("data-id");
+                var campo = $(this).attr("data-campo");
+                $.ajax({
+                    url: "<?= URL; ?>admin/editVersionDatos",
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                        id: id,
+                        campo: campo
+                    },
+                    success: function (data) {
+                        $(data.campo).css('display', 'none');
+                        $(data.campoMostrar).css('display', 'block');
+                        $(data.campoMostrar).html(data.input);
+                    }
+                }); //END AJAX
+            }
+            e.handled = true;
+        });
+        $(document).on("keydown", ".inputModeloDescripcionVersion", function (e) {
+            if (e.handled !== true) // This will prevent event triggering more then once
+            {
+                if (e.which == 13) {
+                    var id = $(this).attr("data-id");
+                    var val = $(this).val();
+                    $.ajax({
+                        url: "<?= URL; ?>admin/editInputDescripcion",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            id: id,
+                            value: val
+                        },
+                        success: function (data) {
+                            $(data.campo).css('display', 'block');
+                            $(data.campoMostrar).css('display', 'none');
+                            $(data.campo).html(data.input);
+                        }
+                    }); //END AJAX
+                }
+            }
+            e.handled = true;
+        });
+        $(document).on("keydown", ".inputModeloPrecioVersion", function (e) {
+            if (e.handled !== true) // This will prevent event triggering more then once
+            {
+                if (e.which == 13) {
+                    var id = $(this).attr("data-id");
+                    var val = $(this).val();
+                    $.ajax({
+                        url: "<?= URL; ?>admin/editInputPrecio",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            id: id,
+                            value: val
+                        },
+                        success: function (data) {
+                            $(data.campo).css('display', 'block');
+                            $(data.campoMostrar).css('display', 'none');
+                            $(data.campo).html(data.input);
+                        }
+                    }); //END AJAX
+                }
+            }
+            e.handled = true;
+        });
+        $(document).on("keydown", ".inputModeloBonoVersion", function (e) {
+            if (e.handled !== true) // This will prevent event triggering more then once
+            {
+                if (e.which == 13) {
+                    var id = $(this).attr("data-id");
+                    var val = $(this).val();
+                    $.ajax({
+                        url: "<?= URL; ?>admin/editInputBono",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            id: id,
+                            value: val
+                        },
+                        success: function (data) {
+                            $(data.campo).css('display', 'block');
+                            $(data.campoMostrar).css('display', 'none');
+                            $(data.campo).html(data.input);
+                        }
+                    }); //END AJAX
+                }
+            }
+            e.handled = true;
+        });
+        $(document).on("keydown", ".inputModeloAnoVersion", function (e) {
+            if (e.handled !== true) // This will prevent event triggering more then once
+            {
+                if (e.which == 13) {
+                    var id = $(this).attr("data-id");
+                    var val = $(this).val();
+                    $.ajax({
+                        url: "<?= URL; ?>admin/editInputAno",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            id: id,
+                            value: val
+                        },
+                        success: function (data) {
+                            $(data.campo).css('display', 'block');
+                            $(data.campoMostrar).css('display', 'none');
+                            $(data.campo).html(data.input);
+                        }
+                    }); //END AJAX
+                }
+            }
+            e.handled = true;
+        });
+        $(document).on("click", ".editVersionCuota", function (e) {
+            if (e.handled !== true) // This will prevent event triggering more then once
+            {
+                var id = $(this).attr("data-id");
+                var campo = $(this).attr("data-campo");
+                var enlace = "<?= URL; ?>admin/inputEditarDatosCuotas";
+                $.ajax({
+                    url: enlace,
+                    type: "POST",
+                    data: {id: id, campo: campo},
+                    dataType: "json"
+                }).done(function (data) {
+                    $(data.campo).css('display', 'none');
+                    $(data.campoMostrar).css('display', 'block');
+                    $(data.campoMostrar).html(data.input);
+                });
             }
             e.handled = true;
         });

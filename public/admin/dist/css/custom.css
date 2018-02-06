@@ -1,2 +1,6 @@
 .btnSmall{ padding: 5px 5px; height: 45px; margin: 0 5px;}
 .pointer{cursor: pointer;}
+.separador {border-top: 4px solid #8c8b8b;
+            margin: 10px;}
+.fichaTecnica{height: 500px;}
+.subirImagenes {margin-top: 30px;}

@@ -1,5 +1,5 @@
 #CORS policy
-Header add Access-Control-Allow-Origin "kia.com.py"
+#Header add Access-Control-Allow-Origin "kia.com.py"
 #Listado de Directorios
 Options -Indexes
 
@@ -35,8 +35,8 @@ RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=/([a-z0-9_.]//?)+ [NC]
 RewriteRule .* - [F]
 
 #MVC RULES
-#RewriteBase /v2-kia/
-RewriteBase /v2/
+RewriteBase /v2-kia/
+#RewriteBase /v2/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -45,8 +45,8 @@ RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 
 #CORS
-<IfModule mod_headers.c>
-<FilesMatch "\.(svg|ttf|otf|eot|woff|woff2)$">
-    Header set Access-Control-Allow-Origin "*"
-</FilesMatch>
-</IfModule>
+#<IfModule mod_headers.c>
+#<FilesMatch "\.(svg|ttf|otf|eot|woff|woff2)$">
+#    Header set Access-Control-Allow-Origin "*"
+#</FilesMatch>
+#</IfModule>

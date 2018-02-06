@@ -84,14 +84,11 @@
                                     <li class="user-header">
                                         <img src="<?= URL; ?>public/admin/img/<?= $img; ?>" class="img-circle" alt="User Image">
                                         <p>
-                                            <?= $_SESSION['usuario']['nombre'] . ' ' . $_SESSION['usuario']['permiso']; ?>
+                                            <?= $_SESSION['usuario']['nombre']; ?>
                                         </p>
                                     </li>
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
-                                        <div class="pull-left">
-                                            <a href="<?= URL; ?>login/perfil/" class="btn btn-default btn-flat"><i class="fa fa-user" aria-hidden="true"></i> Perfil</a>
-                                        </div>
                                         <div class="pull-right">
                                             <a href="<?= URL; ?>login/salir/" class="btn btn-danger btn-flat"><i class="fa fa-sign-out" aria-hidden="true"></i> Salir</a>
                                         </div>
